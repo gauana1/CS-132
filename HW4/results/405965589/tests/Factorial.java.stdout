@@ -1,0 +1,51 @@
+func main()
+v0 = 1
+v1 = 4
+v2 = v0 * v1
+v3 = alloc(v2)
+v4 = 4
+vmt_Fac = alloc(v4)
+[v3 + 0] = vmt_Fac
+v5 = @Fac_ComputeFac
+[vmt_Fac + 0] = v5
+if0 v3 goto v3Error
+goto v3End
+v3Error:
+error("null pointer")
+v3End:
+if0 v3 goto v6Error
+goto v6Continue
+v6Error:
+error("null pointer")
+v6Continue:
+v7 = [v3 + 0]
+v8 = [v7 + 0]
+v9 = 10
+v10 = call v8(v3 v9)
+print(v10)
+v11 = 0
+return v11
+func Fac_ComputeFac(this num)
+v12 = 1
+v13=num < v12
+if0 v13 goto v13Else
+v14 = 1
+v15 = v14
+num_aux = v15
+goto v13End
+v13Else:
+if0 this goto v16Error
+goto v16Continue
+v16Error:
+error("null pointer")
+v16Continue:
+v17 = [this + 0]
+v18 = [v17 + 0]
+v19 = 1
+v20=num - v19
+v21 = call v18(this v20)
+v22=num * v21
+v23 = v22
+num_aux = v23
+v13End:
+return num_aux

@@ -1,0 +1,8 @@
+{
+    "java.project.sourcePaths": [
+        "results/405965589/src",
+        "results/405965589",
+        "src/main/java"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
+}

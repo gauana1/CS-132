@@ -1,0 +1,62 @@
+func main()
+v0 = 1
+v1 = 4
+v2 = v0 * v1
+v3 = alloc(v2)
+v4 = 8
+vmt_A = alloc(v4)
+[v3 + 0] = vmt_A
+v5 = @A_helper
+[vmt_A + 4] = v5
+v6 = @A_run
+[vmt_A + 0] = v6
+if0 v3 goto v3Error
+goto v3End
+v3Error:
+error("null pointer")
+v3End:
+if0 v3 goto v7Error
+goto v7Continue
+v7Error:
+error("null pointer")
+v7Continue:
+v8 = [v3 + 0]
+v9 = [v8 + 0]
+v10 = call v9(v3)
+print(v10)
+v11 = 0
+return v11
+func A_run(this)
+if0 this goto v12Error
+goto v12Continue
+v12Error:
+error("null pointer")
+v12Continue:
+v13 = [this + 0]
+v14 = [v13 + 4]
+v15 = 12
+v16 = call v14(this v15)
+v17 = v16
+a = v17
+if0 this goto v18Error
+goto v18Continue
+v18Error:
+error("null pointer")
+v18Continue:
+v19 = [this + 0]
+v20 = [v19 + 4]
+v21 = 15
+v22 = call v20(this v21)
+v23 = v22
+b = v23
+v24=a + b
+return v24
+func A_helper(this param)
+v25 = param
+x = v25
+v26 = 1
+v27=param + v26
+v28 = v27
+param = v28
+print(x)
+return x

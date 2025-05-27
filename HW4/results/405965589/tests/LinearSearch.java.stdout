@@ -1,0 +1,272 @@
+func main()
+v0 = 3
+v1 = 4
+v2 = v0 * v1
+v3 = alloc(v2)
+v4 = 16
+vmt_LS = alloc(v4)
+[v3 + 0] = vmt_LS
+v5 = @LS_Print
+[vmt_LS + 4] = v5
+v6 = @LS_Init
+[vmt_LS + 12] = v6
+v7 = @LS_Start
+[vmt_LS + 0] = v7
+v8 = @LS_Search
+[vmt_LS + 8] = v8
+if0 v3 goto v3Error
+goto v3End
+v3Error:
+error("null pointer")
+v3End:
+if0 v3 goto v9Error
+goto v9Continue
+v9Error:
+error("null pointer")
+v9Continue:
+v10 = [v3 + 0]
+v11 = [v10 + 0]
+v12 = 10
+v13 = call v11(v3 v12)
+print(v13)
+v14 = 0
+return v14
+func LS_Start(this sz)
+if0 this goto v15Error
+goto v15Continue
+v15Error:
+error("null pointer")
+v15Continue:
+v16 = [this + 0]
+v17 = [v16 + 12]
+v18 = call v17(this sz)
+v19 = v18
+aux01 = v19
+if0 this goto v20Error
+goto v20Continue
+v20Error:
+error("null pointer")
+v20Continue:
+v21 = [this + 0]
+v22 = [v21 + 4]
+v23 = call v22(this)
+v24 = v23
+aux02 = v24
+v25 = 9999
+print(v25)
+if0 this goto v26Error
+goto v26Continue
+v26Error:
+error("null pointer")
+v26Continue:
+v27 = [this + 0]
+v28 = [v27 + 8]
+v29 = 8
+v30 = call v28(this v29)
+print(v30)
+if0 this goto v31Error
+goto v31Continue
+v31Error:
+error("null pointer")
+v31Continue:
+v32 = [this + 0]
+v33 = [v32 + 8]
+v34 = 12
+v35 = call v33(this v34)
+print(v35)
+if0 this goto v36Error
+goto v36Continue
+v36Error:
+error("null pointer")
+v36Continue:
+v37 = [this + 0]
+v38 = [v37 + 8]
+v39 = 17
+v40 = call v38(this v39)
+print(v40)
+if0 this goto v41Error
+goto v41Continue
+v41Error:
+error("null pointer")
+v41Continue:
+v42 = [this + 0]
+v43 = [v42 + 8]
+v44 = 50
+v45 = call v43(this v44)
+print(v45)
+v46 = 55
+return v46
+func LS_Print(this)
+v47 = 1
+v48 = v47
+j = v48
+loopv49:
+v50 = [this + 8]
+v51=j < v50
+if0 v51 goto loopv49End
+v52 = [this + 4]
+v53 = 0
+v54 = 1
+v55 = v53 - v54
+v56 = v55 < j
+v57 = [v52 + 0]
+v58 = j < v57
+v59 = v56 * v58
+if0 v59 goto v56Error
+goto v56End
+v56Error:
+error("array index out of bounds")
+v56End:
+v60 = 4
+v62 = j + v54
+v61 = v62 * v60
+v63 = v52 + v61
+v63 = [v63 + 0]
+print(v63)
+v64 = 1
+v65=j + v64
+v66 = v65
+j = v66
+goto loopv49
+loopv49End:
+v67 = 0
+return v67
+func LS_Search(this num)
+v68 = 1
+v69 = v68
+j = v69
+v70 = 0
+v71 = v70
+ls01 = v71
+v72 = 0
+v73 = v72
+ifound = v73
+loopv74:
+v75 = [this + 8]
+v76=j < v75
+if0 v76 goto loopv74End
+v77 = [this + 4]
+v78 = 0
+v79 = 1
+v80 = v78 - v79
+v81 = v80 < j
+v82 = [v77 + 0]
+v83 = j < v82
+v84 = v81 * v83
+if0 v84 goto v81Error
+goto v81End
+v81Error:
+error("array index out of bounds")
+v81End:
+v85 = 4
+v87 = j + v79
+v86 = v87 * v85
+v88 = v77 + v86
+v88 = [v88 + 0]
+v89 = v88
+aux01 = v89
+v90 = 1
+v91=num + v90
+v92 = v91
+aux02 = v92
+v93=aux01 < num
+if0 v93 goto v93Else
+v94 = 0
+v95 = v94
+nt = v95
+goto v93End
+v93Else:
+v96=aux01 < aux02
+v98 = 1
+v97 = v98 - v96
+if0 v97 goto v97Else
+v99 = 0
+v100 = v99
+nt = v100
+goto v97End
+v97Else:
+v101 = 1
+v102 = v101
+ls01 = v102
+v103 = 1
+v104 = v103
+ifound = v104
+v105 = [this + 8]
+v106 = v105
+j = v106
+v97End:
+v93End:
+v107 = 1
+v108=j + v107
+v109 = v108
+j = v109
+goto loopv74
+loopv74End:
+return ifound
+func LS_Init(this sz)
+[this + 8]=sz
+v111 = 0
+v112 = v111 < sz
+if0 v112 goto v112Error
+goto v112End
+v112Error:
+error("array index out of bounds")
+v112End:
+v113 = 1
+v114 = sz + v113
+v115 = 4
+v116 = v114 * v115
+v117 = alloc(v116)
+[ v117 + 0 ] = sz
+[this + 4]=v117
+v119 = 1
+v120 = v119
+j = v120
+v121 = [this + 8]
+v122 = 1
+v123=v121 + v122
+v124 = v123
+k = v124
+loopv125:
+v126 = [this + 8]
+v127=j < v126
+if0 v127 goto loopv125End
+v128 = 2
+v129=v128 * j
+v130 = v129
+aux01 = v130
+v131 = 3
+v132=k - v131
+v133 = v132
+aux02 = v133
+v134 = [this + 4]
+v135=aux01 + aux02
+v136 = 0
+v137 = 1
+v138 = v136 - v137
+v139 = v138 < j
+v140 = [v134 + 0]
+v141 = j < v140
+v142 = v139 * v141
+if0 v142 goto v139Error
+goto v139End
+v139Error:
+error("array index out of bounds")
+v139End:
+v143 =  4 
+v145 = j + v137
+v144 = v145 * v143
+v146 = v134 + v144
+[ v146+ 0 ] = v135
+v147 = 1
+v148=j + v147
+v149 = v148
+j = v149
+v150 = 1
+v151=k - v150
+v152 = v151
+k = v152
+goto loopv125
+loopv125End:
+v153 = 0
+return v153

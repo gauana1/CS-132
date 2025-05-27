@@ -1,0 +1,20 @@
+func bar()
+    a = 5
+    b = 3
+Outer:
+    if0 a goto Done
+    x = 1
+    c = b + x
+    d = 0
+Inner:
+    if0 c goto OuterExit
+    y = 2
+    e = c * y
+    c = c - x
+    goto Inner
+OuterExit:
+    a = a - x
+    goto Outer
+Done:
+    f = e + d
+    return f

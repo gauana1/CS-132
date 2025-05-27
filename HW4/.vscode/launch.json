@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "S2SV",
+            "request": "launch",
+            "mainClass": "S2SV",
+            "projectName": "HW4"
+        },
+        {
+            "type": "java",
+            "name": "S2SV",
+            "request": "launch",
+            "mainClass": "S2SV",
+            "projectName": "HW4",
+            "args": "< testcases/hw4/Factorial.sparrow"
+
+        }
+    ]
+}
