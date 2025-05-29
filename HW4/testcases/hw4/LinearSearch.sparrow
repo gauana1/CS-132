@@ -1,0 +1,249 @@
+func main()
+    v0 = 12
+    v1 = 16
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @LS_Print
+    [v3 + 0] = v4
+    v5 = @LS_Init
+    [v3 + 4] = v5
+    v6 = @LS_Start
+    [v3 + 8] = v6
+    v7 = @LS_Search
+    [v3 + 12] = v7
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_8
+  goto lbl_GoodPtr_9
+lbl_NullPtr_8:
+    error("null pointer")
+lbl_GoodPtr_9:
+  if0 v2 goto lbl_NullPtr_12
+    v10 = [v2 + 0]
+    v10 = [v10 + 8]
+    v14 = 10
+    v11 = call v10(v2 v14)
+  goto lbl_GoodPtr_13
+lbl_NullPtr_12:
+    error("null pointer")
+lbl_GoodPtr_13:
+    print(v11)
+    v15 = 0
+    return v15
+
+func LS_Start(this sz)
+  if0 this goto lbl_NullPtr_18
+    v16 = [this + 0]
+    v16 = [v16 + 4]
+    v17 = call v16(this sz)
+  goto lbl_GoodPtr_19
+lbl_NullPtr_18:
+    error("null pointer")
+lbl_GoodPtr_19:
+    aux01 = v17
+  if0 this goto lbl_NullPtr_22
+    v20 = [this + 0]
+    v20 = [v20 + 0]
+    v21 = call v20(this)
+  goto lbl_GoodPtr_23
+lbl_NullPtr_22:
+    error("null pointer")
+lbl_GoodPtr_23:
+    aux02 = v21
+    v24 = 9999
+    print(v24)
+  if0 this goto lbl_NullPtr_27
+    v25 = [this + 0]
+    v25 = [v25 + 12]
+    v29 = 8
+    v26 = call v25(this v29)
+  goto lbl_GoodPtr_28
+lbl_NullPtr_27:
+    error("null pointer")
+lbl_GoodPtr_28:
+    print(v26)
+  if0 this goto lbl_NullPtr_32
+    v30 = [this + 0]
+    v30 = [v30 + 12]
+    v34 = 12
+    v31 = call v30(this v34)
+  goto lbl_GoodPtr_33
+lbl_NullPtr_32:
+    error("null pointer")
+lbl_GoodPtr_33:
+    print(v31)
+  if0 this goto lbl_NullPtr_37
+    v35 = [this + 0]
+    v35 = [v35 + 12]
+    v39 = 17
+    v36 = call v35(this v39)
+  goto lbl_GoodPtr_38
+lbl_NullPtr_37:
+    error("null pointer")
+lbl_GoodPtr_38:
+    print(v36)
+  if0 this goto lbl_NullPtr_42
+    v40 = [this + 0]
+    v40 = [v40 + 12]
+    v44 = 50
+    v41 = call v40(this v44)
+  goto lbl_GoodPtr_43
+lbl_NullPtr_42:
+    error("null pointer")
+lbl_GoodPtr_43:
+    print(v41)
+    v45 = 55
+    return v45
+
+func LS_Print(this)
+    v46 = 1
+    j = v46
+lbl_While_47:
+    v50 = [this + 8]
+    v49 = j < v50
+  if0 v49 goto lbl_WhileExit_48
+    v51 = [this + 4]
+    v52 = 4
+    v53 = 5
+    v54 = v52 - v53
+    v55 = [v51 + 0]
+    v56 = v54 < j
+    v57 = j < v55
+    v58 = v56 * v57
+  if0 v58 goto lbl_OutOfBounds_59
+  goto lbl_Inbound_60
+lbl_OutOfBounds_59:
+    error("array index out of bounds")
+lbl_Inbound_60:
+    v61 = v52 * j
+    v61 = v61 + v52
+    v61 = v51 + v61
+    v62 = [v61 + 0]
+    print(v62)
+    v64 = 1
+    v63 = j + v64
+    j = v63
+  goto lbl_While_47
+lbl_WhileExit_48:
+    v65 = 0
+    return v65
+
+func LS_Search(this num)
+    v66 = 1
+    j = v66
+    v67 = 0
+    ls01 = v67
+    v68 = 0
+    ifound = v68
+lbl_While_69:
+    v72 = [this + 8]
+    v71 = j < v72
+  if0 v71 goto lbl_WhileExit_70
+    v73 = [this + 4]
+    v74 = 4
+    v75 = 5
+    v76 = v74 - v75
+    v77 = [v73 + 0]
+    v78 = v76 < j
+    v79 = j < v77
+    v80 = v78 * v79
+  if0 v80 goto lbl_OutOfBounds_81
+  goto lbl_Inbound_82
+lbl_OutOfBounds_81:
+    error("array index out of bounds")
+lbl_Inbound_82:
+    v83 = v74 * j
+    v83 = v83 + v74
+    v83 = v73 + v83
+    v84 = [v83 + 0]
+    aux01 = v84
+    v86 = 1
+    v85 = num + v86
+    aux02 = v85
+    v89 = aux01 < num
+  if0 v89 goto lbl_Else_87
+    v90 = 0
+    nt = v90
+  goto lbl_IfEnd_88
+lbl_Else_87:
+    v93 = aux01 < aux02
+    v94 = 1
+    v95 = v93 < v94
+  if0 v95 goto lbl_Else_91
+    v96 = 0
+    nt = v96
+  goto lbl_IfEnd_92
+lbl_Else_91:
+    v97 = 1
+    ls01 = v97
+    v98 = 1
+    ifound = v98
+    v99 = [this + 8]
+    j = v99
+lbl_IfEnd_92:
+lbl_IfEnd_88:
+    v101 = 1
+    v100 = j + v101
+    j = v100
+  goto lbl_While_69
+lbl_WhileExit_70:
+    return ifound
+
+func LS_Init(this sz)
+    [this + 8] = sz
+    v102 = 1
+    v103 = 4
+    v104 = sz + v102
+    v104 = v104 * v103
+    v105 = alloc(v104)
+  if0 v105 goto lbl_NullPtr_106
+  goto lbl_GoodPtr_107
+lbl_NullPtr_106:
+    error("null pointer")
+lbl_GoodPtr_107:
+    [v105 + 0] = sz
+    [this + 4] = v105
+    v108 = 1
+    j = v108
+    v110 = [this + 8]
+    v111 = 1
+    v109 = v110 + v111
+    k = v109
+lbl_While_112:
+    v115 = [this + 8]
+    v114 = j < v115
+  if0 v114 goto lbl_WhileExit_113
+    v117 = 2
+    v116 = v117 * j
+    aux01 = v116
+    v119 = 3
+    v118 = k - v119
+    aux02 = v118
+    v120 = [this + 4]
+    v121 = aux01 + aux02
+    v122 = 4
+    v123 = 5
+    v124 = v122 - v123
+    v125 = [v120 + 0]
+    v126 = v124 < j
+    v127 = j < v125
+    v128 = v126 * v127
+  if0 v128 goto lbl_OutOfBounds_129
+  goto lbl_Inbound_130
+lbl_OutOfBounds_129:
+    error("array index out of bounds")
+lbl_Inbound_130:
+    v131 = v122 * j
+    v131 = v131 + v122
+    v131 = v120 + v131
+    [v131 + 0] = v121
+    v133 = 1
+    v132 = j + v133
+    j = v132
+    v135 = 1
+    v134 = k - v135
+    k = v134
+  goto lbl_While_112
+lbl_WhileExit_113:
+    v136 = 0
+    return v136
+

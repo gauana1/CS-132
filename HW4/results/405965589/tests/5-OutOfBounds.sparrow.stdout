@@ -1,0 +1,144 @@
+func main()
+stack_s2 = s2
+stack_s3 = s3
+stack_s4 = s4
+stack_s1 = s1
+t2 = 4
+t3 = 4
+t4 = alloc(t2)
+t5 = alloc(t3)
+s1 = @A_run
+[t5 + 0] =s1
+[t4 + 0] =t5
+if0 t4 goto lbl_NullPtr_5
+goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+error ("null pointer")
+lbl_GoodPtr_6:
+if0 t4 goto lbl_NullPtr_9
+s2 = [t4 + 0]
+s2 = [s2 + 0]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v2 = t4
+s3 = call s2(v2)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_10
+lbl_NullPtr_9:
+error ("null pointer")
+lbl_GoodPtr_10:
+print (s3)
+s4 = 0
+v11 = s4
+s2 = stack_s2
+s3 = stack_s3
+s4 = stack_s4
+s1 = stack_s1
+return v11
+func A_run(this)
+t2 = this
+stack_s9 = s9
+stack_s2 = s2
+stack_s5 = s5
+stack_s11 = s11
+stack_s4 = s4
+stack_s6 = s6
+stack_s10 = s10
+stack_s3 = s3
+stack_s1 = s1
+stack_s7 = s7
+stack_s8 = s8
+t0 = 20
+v12 = t0
+t4 = 1
+t5 = 4
+t0 = v12
+t3 = t0 + t4
+t3 = t3 * t5
+s1 = alloc(t3)
+if0 s1 goto lbl_NullPtr_17
+goto lbl_GoodPtr_18
+lbl_NullPtr_17:
+error ("null pointer")
+lbl_GoodPtr_18:
+t1 = v12
+[s1 + 0] =t1
+t1 = s1
+a= t1
+t0 = 10
+v19 = t0
+t0 = 4
+v20 = t0
+s2 = 5
+t0 = v20
+s4 = t0 - s2
+t0 = a
+s5 = [t0 + 0]
+t1 = v19
+s3 = s4 < t1
+t0 = v19
+s6 = t0 < s5
+s7 = s3 * s6
+if0 s7 goto lbl_OutOfBounds_27
+goto lbl_Inbound_28
+lbl_OutOfBounds_27:
+error ("array index out of bounds")
+lbl_Inbound_28:
+t0 = v20
+t1 = v19
+s8 = t0 * t1
+t1 = v20
+s8 = s8 + t1
+t0 = a
+s8 = t0 + s8
+s9 = [s8 + 0]
+print (s9)
+t0 = 40
+v31 = t0
+t0 = 4
+v32 = t0
+a2 = 5
+t0 = v32
+s11 = t0 - a2
+t0 = a
+a3 = [t0 + 0]
+t1 = v31
+s10 = s11 < t1
+t0 = v31
+a4 = t0 < a3
+a5 = s10 * a4
+if0 a5 goto lbl_OutOfBounds_39
+goto lbl_Inbound_40
+lbl_OutOfBounds_39:
+error ("array index out of bounds")
+lbl_Inbound_40:
+t0 = v32
+t1 = v31
+a6 = t0 * t1
+t1 = v32
+a6 = a6 + t1
+t0 = a
+a6 = t0 + a6
+a7 = [a6 + 0]
+v42 = a7
+s9 = stack_s9
+s2 = stack_s2
+s5 = stack_s5
+s11 = stack_s11
+s4 = stack_s4
+s6 = stack_s6
+s10 = stack_s10
+s3 = stack_s3
+s1 = stack_s1
+s7 = stack_s7
+s8 = stack_s8
+return v42

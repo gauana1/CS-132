@@ -1,0 +1,114 @@
+func main()
+stack_s7 = s7
+stack_s2 = s2
+stack_s3 = s3
+stack_s4 = s4
+stack_s5 = s5
+stack_s6 = s6
+stack_s8 = s8
+stack_s1 = s1
+t2 = 8
+t3 = 4
+t4 = alloc(t2)
+t5 = alloc(t3)
+s1 = @Keeper_storeAndSpeak
+[t5 + 0] =s1
+[t4 + 0] =t5
+if0 t4 goto lbl_NullPtr_5
+goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+error ("null pointer")
+lbl_GoodPtr_6:
+s2 = t4
+if0 s2 goto lbl_NullPtr_9
+t0 =[s2 + 0]
+v7 = t0
+t0 = v7
+t0 =[t0 + 0]
+v7 = t0
+s4 = 4
+s3 = 4
+t1 = alloc(s4)
+v13 = t1
+s5 = alloc(s3)
+s6 = @Cow_sound
+[s5 + 0] =s6
+t0 = v13
+[t0 + 0] =s5
+t0 = v13
+if0 t0 goto lbl_NullPtr_16
+goto lbl_GoodPtr_17
+lbl_NullPtr_16:
+error ("null pointer")
+lbl_GoodPtr_17:
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t0 = v7
+k = s2
+s7 = call t0(k v13)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_10
+lbl_NullPtr_9:
+error ("null pointer")
+lbl_GoodPtr_10:
+print (s7)
+s8 = 0
+v18 = s8
+s7 = stack_s7
+s2 = stack_s2
+s3 = stack_s3
+s4 = stack_s4
+s5 = stack_s5
+s6 = stack_s6
+s8 = stack_s8
+s1 = stack_s1
+return v18
+func Animal_sound(this)
+t2 = this
+t3 = 0
+v19 = t3
+return v19
+func Cow_sound(this)
+t2 = this
+t3 = 3
+v20 = t3
+return v20
+func Keeper_storeAndSpeak(this x)
+t2 = this
+t3 = x
+stack_s1 = s1
+[t2 + 4] =t3
+t4 = [t2 + 4]
+if0 t4 goto lbl_NullPtr_24
+t5 = [t4 + 0]
+t5 = [t5 + 0]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v21 = t4
+s1 = call t5(v21)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_25
+lbl_NullPtr_24:
+error ("null pointer")
+lbl_GoodPtr_25:
+v23 = s1
+s1 = stack_s1
+return v23

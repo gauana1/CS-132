@@ -1,0 +1,53 @@
+func main()
+stack_s2 = s2
+stack_s3 = s3
+stack_s4 = s4
+stack_s1 = s1
+t2 = 4
+t3 = 4
+t4 = alloc(t2)
+t5 = alloc(t3)
+s1 = @A_run
+[t5 + 0] =s1
+[t4 + 0] =t5
+if0 t4 goto lbl_NullPtr_5
+goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+error ("null pointer")
+lbl_GoodPtr_6:
+if0 t4 goto lbl_NullPtr_9
+s2 = [t4 + 0]
+s2 = [s2 + 0]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v2 = t4
+s3 = call s2(v2)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_10
+lbl_NullPtr_9:
+error ("null pointer")
+lbl_GoodPtr_10:
+print (s3)
+s4 = 0
+v11 = s4
+s2 = stack_s2
+s3 = stack_s3
+s4 = stack_s4
+s1 = stack_s1
+return v11
+func A_run(this)
+t2 = this
+t3 = 42
+print (t3)
+t4 = 99
+v13 = t4
+return v13

@@ -1,0 +1,106 @@
+> Task :compileJava
+> Task :processResources NO-SOURCE
+> Task :classes
+> Task :sourcesTar
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test
+
+> Task :pregrade
+
+Testing 'build/distributions/405965589.tar' against all       45 tests
+Results in 'results'
+Testing that 405965589 is a student id.
+Untaring into 'results/405965589/src'
+Testing tar content.
+Checking ./visitors/temp.java
+Checking ./visitors/S2SVVisitor.java
+Checking ./visitors/LivenessVisitor.java
+Checking ./S2SV.java
+Checking ./other/LinearScan.java
+Checking ./utils/RegisterStruct.java
+Checking ./utils/LivenessObject.java
+Checking ./utils/Pair.java
+Checking ./utils/Interval.java
+Checking ./utils/Temp.java
+Checking ./utils/LinesArray.java
+Checking ./utils/Triple.java
+Checking ./utils/SparrowVStruct.java
+Checking ./utils/LabelMap.java
+Compiling sources.
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T13.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T3.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/Simple.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/strech copy.sparrow'
+./grade.sh: line 150: tests/strech: No such file or directory
+WARN: /Users/gauana/Downloads/cs132/HW4/testcases/hw4/strech copy.sparrow.out does not exist
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/DynamicDispatch.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/MoreThan4.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/TreeVisitor.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T12.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/Factorial.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T2.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/1-PrintLiteral.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T10.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/PolyHierarchy.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/QuickSort.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T1.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T11.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/BinaryTree.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/LinkedList.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T18.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/0-TestProg.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/strech.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/4-Vars.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T22.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/LinearSearch.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/ArrayTest.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/5-OutOfBounds.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/BasicOverriding.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T4.sparrow'
+WARN: Failed '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T4.sparrow'
+5,7c5
+< --- Error (Explicit) ---
+< Error: s6 = [a7 + 0]
+< Wrong argument type in Load
+---
+> 90
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/IndirectPoly.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T14.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T5.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T15.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/3-Call.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/InheritanceOverride.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T17.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T7.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/BubbleSort.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T21.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/2-Add.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/Shadowing.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T20.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/LinearConGen.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T16.sparrow'
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/Factorial copy.sparrow'
+./grade.sh: line 150: tests/Factorial: No such file or directory
+WARN: /Users/gauana/Downloads/cs132/HW4/testcases/hw4/Factorial copy.sparrow.out does not exist
+Testing '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T6.sparrow'
+WARN: Failed '/Users/gauana/Downloads/cs132/HW4/testcases/hw4/T6.sparrow'
+5,7c5
+< --- Error (Explicit) ---
+< Error: s6 = [a7 + 0]
+< Wrong argument type in Load
+---
+> 90
+405965589 91 bec7035013a241a7dd1363a783614456deebe773c3b9bb65d3df8e535f83a704
+
+[Incubating] Problems report is available at: file:///Users/gauana/Downloads/cs132/HW4/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 12s
+5 actionable tasks: 4 executed, 1 up-to-date

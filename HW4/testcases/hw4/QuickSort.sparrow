@@ -1,0 +1,623 @@
+func main()
+    v0 = 12
+    v1 = 16
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @QS_Print
+    [v3 + 0] = v4
+    v5 = @QS_Init
+    [v3 + 4] = v5
+    v6 = @QS_Start
+    [v3 + 8] = v6
+    v7 = @QS_Sort
+    [v3 + 12] = v7
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_8
+  goto lbl_GoodPtr_9
+lbl_NullPtr_8:
+    error("null pointer")
+lbl_GoodPtr_9:
+  if0 v2 goto lbl_NullPtr_12
+    v10 = [v2 + 0]
+    v10 = [v10 + 8]
+    v14 = 10
+    v11 = call v10(v2 v14)
+  goto lbl_GoodPtr_13
+lbl_NullPtr_12:
+    error("null pointer")
+lbl_GoodPtr_13:
+    print(v11)
+    v15 = 0
+    return v15
+
+func QS_Start(this sz)
+  if0 this goto lbl_NullPtr_18
+    v16 = [this + 0]
+    v16 = [v16 + 4]
+    v17 = call v16(this sz)
+  goto lbl_GoodPtr_19
+lbl_NullPtr_18:
+    error("null pointer")
+lbl_GoodPtr_19:
+    aux01 = v17
+  if0 this goto lbl_NullPtr_22
+    v20 = [this + 0]
+    v20 = [v20 + 0]
+    v21 = call v20(this)
+  goto lbl_GoodPtr_23
+lbl_NullPtr_22:
+    error("null pointer")
+lbl_GoodPtr_23:
+    aux01 = v21
+    v24 = 9999
+    print(v24)
+    v26 = [this + 8]
+    v27 = 1
+    v25 = v26 - v27
+    aux01 = v25
+  if0 this goto lbl_NullPtr_30
+    v28 = [this + 0]
+    v28 = [v28 + 12]
+    v32 = 0
+    v29 = call v28(this v32 aux01)
+  goto lbl_GoodPtr_31
+lbl_NullPtr_30:
+    error("null pointer")
+lbl_GoodPtr_31:
+    aux01 = v29
+  if0 this goto lbl_NullPtr_35
+    v33 = [this + 0]
+    v33 = [v33 + 0]
+    v34 = call v33(this)
+  goto lbl_GoodPtr_36
+lbl_NullPtr_35:
+    error("null pointer")
+lbl_GoodPtr_36:
+    aux01 = v34
+    v37 = 0
+    return v37
+
+func QS_Sort(this left right)
+    v38 = 0
+    t = v38
+    v41 = left < right
+  if0 v41 goto lbl_Else_39
+    v42 = [this + 4]
+    v43 = 4
+    v44 = 5
+    v45 = v43 - v44
+    v46 = [v42 + 0]
+    v47 = v45 < right
+    v48 = right < v46
+    v49 = v47 * v48
+  if0 v49 goto lbl_OutOfBounds_50
+  goto lbl_Inbound_51
+lbl_OutOfBounds_50:
+    error("array index out of bounds")
+lbl_Inbound_51:
+    v52 = v43 * right
+    v52 = v52 + v43
+    v52 = v42 + v52
+    v53 = [v52 + 0]
+    v = v53
+    v55 = 1
+    v54 = left - v55
+    i = v54
+    j = right
+    v56 = 1
+    cont01 = v56
+lbl_While_57:
+  if0 cont01 goto lbl_WhileExit_58
+    v59 = 1
+    cont02 = v59
+lbl_While_60:
+  if0 cont02 goto lbl_WhileExit_61
+    v63 = 1
+    v62 = i + v63
+    i = v62
+    v64 = [this + 4]
+    v65 = 4
+    v66 = 5
+    v67 = v65 - v66
+    v68 = [v64 + 0]
+    v69 = v67 < i
+    v70 = i < v68
+    v71 = v69 * v70
+  if0 v71 goto lbl_OutOfBounds_72
+  goto lbl_Inbound_73
+lbl_OutOfBounds_72:
+    error("array index out of bounds")
+lbl_Inbound_73:
+    v74 = v65 * i
+    v74 = v74 + v65
+    v74 = v64 + v74
+    v75 = [v74 + 0]
+    aux03 = v75
+    v78 = aux03 < v
+    v79 = 1
+    v80 = v78 < v79
+  if0 v80 goto lbl_Else_76
+    v81 = 0
+    cont02 = v81
+  goto lbl_IfEnd_77
+lbl_Else_76:
+    v82 = 1
+    cont02 = v82
+lbl_IfEnd_77:
+  goto lbl_While_60
+lbl_WhileExit_61:
+    v83 = 1
+    cont02 = v83
+lbl_While_84:
+  if0 cont02 goto lbl_WhileExit_85
+    v87 = 1
+    v86 = j - v87
+    j = v86
+    v88 = [this + 4]
+    v89 = 4
+    v90 = 5
+    v91 = v89 - v90
+    v92 = [v88 + 0]
+    v93 = v91 < j
+    v94 = j < v92
+    v95 = v93 * v94
+  if0 v95 goto lbl_OutOfBounds_96
+  goto lbl_Inbound_97
+lbl_OutOfBounds_96:
+    error("array index out of bounds")
+lbl_Inbound_97:
+    v98 = v89 * j
+    v98 = v98 + v89
+    v98 = v88 + v98
+    v99 = [v98 + 0]
+    aux03 = v99
+    v102 = v < aux03
+    v103 = 1
+    v104 = v102 < v103
+  if0 v104 goto lbl_Else_100
+    v105 = 0
+    cont02 = v105
+  goto lbl_IfEnd_101
+lbl_Else_100:
+    v106 = 1
+    cont02 = v106
+lbl_IfEnd_101:
+  goto lbl_While_84
+lbl_WhileExit_85:
+    v107 = [this + 4]
+    v108 = 4
+    v109 = 5
+    v110 = v108 - v109
+    v111 = [v107 + 0]
+    v112 = v110 < i
+    v113 = i < v111
+    v114 = v112 * v113
+  if0 v114 goto lbl_OutOfBounds_115
+  goto lbl_Inbound_116
+lbl_OutOfBounds_115:
+    error("array index out of bounds")
+lbl_Inbound_116:
+    v117 = v108 * i
+    v117 = v117 + v108
+    v117 = v107 + v117
+    v118 = [v117 + 0]
+    t = v118
+    v119 = [this + 4]
+    v120 = [this + 4]
+    v121 = 4
+    v122 = 5
+    v123 = v121 - v122
+    v124 = [v120 + 0]
+    v125 = v123 < j
+    v126 = j < v124
+    v127 = v125 * v126
+  if0 v127 goto lbl_OutOfBounds_128
+  goto lbl_Inbound_129
+lbl_OutOfBounds_128:
+    error("array index out of bounds")
+lbl_Inbound_129:
+    v130 = v121 * j
+    v130 = v130 + v121
+    v130 = v120 + v130
+    v131 = [v130 + 0]
+    v132 = 4
+    v133 = 5
+    v134 = v132 - v133
+    v135 = [v119 + 0]
+    v136 = v134 < i
+    v137 = i < v135
+    v138 = v136 * v137
+  if0 v138 goto lbl_OutOfBounds_139
+  goto lbl_Inbound_140
+lbl_OutOfBounds_139:
+    error("array index out of bounds")
+lbl_Inbound_140:
+    v141 = v132 * i
+    v141 = v141 + v132
+    v141 = v119 + v141
+    [v141 + 0] = v131
+    v142 = [this + 4]
+    v143 = 4
+    v144 = 5
+    v145 = v143 - v144
+    v146 = [v142 + 0]
+    v147 = v145 < j
+    v148 = j < v146
+    v149 = v147 * v148
+  if0 v149 goto lbl_OutOfBounds_150
+  goto lbl_Inbound_151
+lbl_OutOfBounds_150:
+    error("array index out of bounds")
+lbl_Inbound_151:
+    v152 = v143 * j
+    v152 = v152 + v143
+    v152 = v142 + v152
+    [v152 + 0] = t
+    v157 = 1
+    v156 = i + v157
+    v155 = j < v156
+  if0 v155 goto lbl_Else_153
+    v158 = 0
+    cont01 = v158
+  goto lbl_IfEnd_154
+lbl_Else_153:
+    v159 = 1
+    cont01 = v159
+lbl_IfEnd_154:
+  goto lbl_While_57
+lbl_WhileExit_58:
+    v160 = [this + 4]
+    v161 = [this + 4]
+    v162 = 4
+    v163 = 5
+    v164 = v162 - v163
+    v165 = [v161 + 0]
+    v166 = v164 < i
+    v167 = i < v165
+    v168 = v166 * v167
+  if0 v168 goto lbl_OutOfBounds_169
+  goto lbl_Inbound_170
+lbl_OutOfBounds_169:
+    error("array index out of bounds")
+lbl_Inbound_170:
+    v171 = v162 * i
+    v171 = v171 + v162
+    v171 = v161 + v171
+    v172 = [v171 + 0]
+    v173 = 4
+    v174 = 5
+    v175 = v173 - v174
+    v176 = [v160 + 0]
+    v177 = v175 < j
+    v178 = j < v176
+    v179 = v177 * v178
+  if0 v179 goto lbl_OutOfBounds_180
+  goto lbl_Inbound_181
+lbl_OutOfBounds_180:
+    error("array index out of bounds")
+lbl_Inbound_181:
+    v182 = v173 * j
+    v182 = v182 + v173
+    v182 = v160 + v182
+    [v182 + 0] = v172
+    v183 = [this + 4]
+    v184 = [this + 4]
+    v185 = 4
+    v186 = 5
+    v187 = v185 - v186
+    v188 = [v184 + 0]
+    v189 = v187 < right
+    v190 = right < v188
+    v191 = v189 * v190
+  if0 v191 goto lbl_OutOfBounds_192
+  goto lbl_Inbound_193
+lbl_OutOfBounds_192:
+    error("array index out of bounds")
+lbl_Inbound_193:
+    v194 = v185 * right
+    v194 = v194 + v185
+    v194 = v184 + v194
+    v195 = [v194 + 0]
+    v196 = 4
+    v197 = 5
+    v198 = v196 - v197
+    v199 = [v183 + 0]
+    v200 = v198 < i
+    v201 = i < v199
+    v202 = v200 * v201
+  if0 v202 goto lbl_OutOfBounds_203
+  goto lbl_Inbound_204
+lbl_OutOfBounds_203:
+    error("array index out of bounds")
+lbl_Inbound_204:
+    v205 = v196 * i
+    v205 = v205 + v196
+    v205 = v183 + v205
+    [v205 + 0] = v195
+    v206 = [this + 4]
+    v207 = 4
+    v208 = 5
+    v209 = v207 - v208
+    v210 = [v206 + 0]
+    v211 = v209 < right
+    v212 = right < v210
+    v213 = v211 * v212
+  if0 v213 goto lbl_OutOfBounds_214
+  goto lbl_Inbound_215
+lbl_OutOfBounds_214:
+    error("array index out of bounds")
+lbl_Inbound_215:
+    v216 = v207 * right
+    v216 = v216 + v207
+    v216 = v206 + v216
+    [v216 + 0] = t
+  if0 this goto lbl_NullPtr_219
+    v217 = [this + 0]
+    v217 = [v217 + 12]
+    v222 = 1
+    v221 = i - v222
+    v218 = call v217(this left v221)
+  goto lbl_GoodPtr_220
+lbl_NullPtr_219:
+    error("null pointer")
+lbl_GoodPtr_220:
+    nt = v218
+  if0 this goto lbl_NullPtr_225
+    v223 = [this + 0]
+    v223 = [v223 + 12]
+    v228 = 1
+    v227 = i + v228
+    v224 = call v223(this v227 right)
+  goto lbl_GoodPtr_226
+lbl_NullPtr_225:
+    error("null pointer")
+lbl_GoodPtr_226:
+    nt = v224
+  goto lbl_IfEnd_40
+lbl_Else_39:
+    v229 = 0
+    nt = v229
+lbl_IfEnd_40:
+    v230 = 0
+    return v230
+
+func QS_Print(this)
+    v231 = 0
+    j = v231
+lbl_While_232:
+    v235 = [this + 8]
+    v234 = j < v235
+  if0 v234 goto lbl_WhileExit_233
+    v236 = [this + 4]
+    v237 = 4
+    v238 = 5
+    v239 = v237 - v238
+    v240 = [v236 + 0]
+    v241 = v239 < j
+    v242 = j < v240
+    v243 = v241 * v242
+  if0 v243 goto lbl_OutOfBounds_244
+  goto lbl_Inbound_245
+lbl_OutOfBounds_244:
+    error("array index out of bounds")
+lbl_Inbound_245:
+    v246 = v237 * j
+    v246 = v246 + v237
+    v246 = v236 + v246
+    v247 = [v246 + 0]
+    print(v247)
+    v249 = 1
+    v248 = j + v249
+    j = v248
+  goto lbl_While_232
+lbl_WhileExit_233:
+    v250 = 0
+    return v250
+
+func QS_Init(this sz)
+    [this + 8] = sz
+    v251 = 1
+    v252 = 4
+    v253 = sz + v251
+    v253 = v253 * v252
+    v254 = alloc(v253)
+  if0 v254 goto lbl_NullPtr_255
+  goto lbl_GoodPtr_256
+lbl_NullPtr_255:
+    error("null pointer")
+lbl_GoodPtr_256:
+    [v254 + 0] = sz
+    [this + 4] = v254
+    v257 = 0
+    v258 = [this + 4]
+    v259 = 20
+    v260 = 4
+    v261 = 5
+    v262 = v260 - v261
+    v263 = [v258 + 0]
+    v264 = v262 < v257
+    v265 = v257 < v263
+    v266 = v264 * v265
+  if0 v266 goto lbl_OutOfBounds_267
+  goto lbl_Inbound_268
+lbl_OutOfBounds_267:
+    error("array index out of bounds")
+lbl_Inbound_268:
+    v269 = v260 * v257
+    v269 = v269 + v260
+    v269 = v258 + v269
+    [v269 + 0] = v259
+    v270 = 1
+    v271 = [this + 4]
+    v272 = 7
+    v273 = 4
+    v274 = 5
+    v275 = v273 - v274
+    v276 = [v271 + 0]
+    v277 = v275 < v270
+    v278 = v270 < v276
+    v279 = v277 * v278
+  if0 v279 goto lbl_OutOfBounds_280
+  goto lbl_Inbound_281
+lbl_OutOfBounds_280:
+    error("array index out of bounds")
+lbl_Inbound_281:
+    v282 = v273 * v270
+    v282 = v282 + v273
+    v282 = v271 + v282
+    [v282 + 0] = v272
+    v283 = 2
+    v284 = [this + 4]
+    v285 = 12
+    v286 = 4
+    v287 = 5
+    v288 = v286 - v287
+    v289 = [v284 + 0]
+    v290 = v288 < v283
+    v291 = v283 < v289
+    v292 = v290 * v291
+  if0 v292 goto lbl_OutOfBounds_293
+  goto lbl_Inbound_294
+lbl_OutOfBounds_293:
+    error("array index out of bounds")
+lbl_Inbound_294:
+    v295 = v286 * v283
+    v295 = v295 + v286
+    v295 = v284 + v295
+    [v295 + 0] = v285
+    v296 = 3
+    v297 = [this + 4]
+    v298 = 18
+    v299 = 4
+    v300 = 5
+    v301 = v299 - v300
+    v302 = [v297 + 0]
+    v303 = v301 < v296
+    v304 = v296 < v302
+    v305 = v303 * v304
+  if0 v305 goto lbl_OutOfBounds_306
+  goto lbl_Inbound_307
+lbl_OutOfBounds_306:
+    error("array index out of bounds")
+lbl_Inbound_307:
+    v308 = v299 * v296
+    v308 = v308 + v299
+    v308 = v297 + v308
+    [v308 + 0] = v298
+    v309 = 4
+    v310 = [this + 4]
+    v311 = 2
+    v312 = 4
+    v313 = 5
+    v314 = v312 - v313
+    v315 = [v310 + 0]
+    v316 = v314 < v309
+    v317 = v309 < v315
+    v318 = v316 * v317
+  if0 v318 goto lbl_OutOfBounds_319
+  goto lbl_Inbound_320
+lbl_OutOfBounds_319:
+    error("array index out of bounds")
+lbl_Inbound_320:
+    v321 = v312 * v309
+    v321 = v321 + v312
+    v321 = v310 + v321
+    [v321 + 0] = v311
+    v322 = 5
+    v323 = [this + 4]
+    v324 = 11
+    v325 = 4
+    v326 = 5
+    v327 = v325 - v326
+    v328 = [v323 + 0]
+    v329 = v327 < v322
+    v330 = v322 < v328
+    v331 = v329 * v330
+  if0 v331 goto lbl_OutOfBounds_332
+  goto lbl_Inbound_333
+lbl_OutOfBounds_332:
+    error("array index out of bounds")
+lbl_Inbound_333:
+    v334 = v325 * v322
+    v334 = v334 + v325
+    v334 = v323 + v334
+    [v334 + 0] = v324
+    v335 = 6
+    v336 = [this + 4]
+    v337 = 6
+    v338 = 4
+    v339 = 5
+    v340 = v338 - v339
+    v341 = [v336 + 0]
+    v342 = v340 < v335
+    v343 = v335 < v341
+    v344 = v342 * v343
+  if0 v344 goto lbl_OutOfBounds_345
+  goto lbl_Inbound_346
+lbl_OutOfBounds_345:
+    error("array index out of bounds")
+lbl_Inbound_346:
+    v347 = v338 * v335
+    v347 = v347 + v338
+    v347 = v336 + v347
+    [v347 + 0] = v337
+    v348 = 7
+    v349 = [this + 4]
+    v350 = 9
+    v351 = 4
+    v352 = 5
+    v353 = v351 - v352
+    v354 = [v349 + 0]
+    v355 = v353 < v348
+    v356 = v348 < v354
+    v357 = v355 * v356
+  if0 v357 goto lbl_OutOfBounds_358
+  goto lbl_Inbound_359
+lbl_OutOfBounds_358:
+    error("array index out of bounds")
+lbl_Inbound_359:
+    v360 = v351 * v348
+    v360 = v360 + v351
+    v360 = v349 + v360
+    [v360 + 0] = v350
+    v361 = 8
+    v362 = [this + 4]
+    v363 = 19
+    v364 = 4
+    v365 = 5
+    v366 = v364 - v365
+    v367 = [v362 + 0]
+    v368 = v366 < v361
+    v369 = v361 < v367
+    v370 = v368 * v369
+  if0 v370 goto lbl_OutOfBounds_371
+  goto lbl_Inbound_372
+lbl_OutOfBounds_371:
+    error("array index out of bounds")
+lbl_Inbound_372:
+    v373 = v364 * v361
+    v373 = v373 + v364
+    v373 = v362 + v373
+    [v373 + 0] = v363
+    v374 = 9
+    v375 = [this + 4]
+    v376 = 5
+    v377 = 4
+    v378 = 5
+    v379 = v377 - v378
+    v380 = [v375 + 0]
+    v381 = v379 < v374
+    v382 = v374 < v380
+    v383 = v381 * v382
+  if0 v383 goto lbl_OutOfBounds_384
+  goto lbl_Inbound_385
+lbl_OutOfBounds_384:
+    error("array index out of bounds")
+lbl_Inbound_385:
+    v386 = v377 * v374
+    v386 = v386 + v377
+    v386 = v375 + v386
+    [v386 + 0] = v376
+    v387 = 0
+    return v387
+

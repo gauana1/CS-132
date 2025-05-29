@@ -1,0 +1,114 @@
+func main()
+    v0 = 24
+    v1 = 4
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @X_compute
+    [v3 + 0] = v4
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_5
+  goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+    error("null pointer")
+lbl_GoodPtr_6:
+    x = v2
+    v7 = 44
+    v8 = 4
+    v9 = alloc(v7)
+    v10 = alloc(v8)
+    v11 = @Y_compute
+    [v10 + 0] = v11
+    [v9 + 0] = v10
+  if0 v9 goto lbl_NullPtr_12
+  goto lbl_GoodPtr_13
+lbl_NullPtr_12:
+    error("null pointer")
+lbl_GoodPtr_13:
+    y = v9
+  if0 x goto lbl_NullPtr_16
+    v14 = [x + 0]
+    v14 = [v14 + 0]
+    v18 = 10
+    v19 = 20
+    v20 = 30
+    v21 = 40
+    v22 = 50
+    v15 = call v14(x v18 v19 v20 v21 v22)
+  goto lbl_GoodPtr_17
+lbl_NullPtr_16:
+    error("null pointer")
+lbl_GoodPtr_17:
+    result = v15
+    print(result)
+  if0 y goto lbl_NullPtr_25
+    v23 = [y + 0]
+    v23 = [v23 + 0]
+    v27 = 10
+    v28 = 20
+    v29 = 30
+    v30 = 40
+    v31 = 50
+    v24 = call v23(y v27 v28 v29 v30 v31)
+  goto lbl_GoodPtr_26
+lbl_NullPtr_25:
+    error("null pointer")
+lbl_GoodPtr_26:
+    result = v24
+    print(result)
+    v32 = 0
+    return v32
+
+func X_compute(this a b c d e)
+    v33 = 0
+    result = v33
+    v36 = a + b
+    v37 = c + d
+    v35 = v36 + v37
+    v34 = v35 + e
+    result = v34
+    a = result
+    v39 = 1
+    v38 = result + v39
+    b = v38
+    v41 = 2
+    v40 = result + v41
+    c = v40
+    v43 = 3
+    v42 = result + v43
+    d = v42
+    v45 = 4
+    v44 = result + v45
+    e = v44
+    v48 = a + b
+    v49 = c + d
+    v47 = v48 + v49
+    v46 = v47 + e
+    return v46
+
+func Y_compute(this a b c d e)
+    v50 = 1
+    result = v50
+    v53 = a * b
+    v54 = c * d
+    v52 = v53 * v54
+    v51 = v52 * e
+    result = v51
+    a = result
+    v56 = 1
+    v55 = result + v56
+    b = v55
+    v58 = 2
+    v57 = result + v58
+    c = v57
+    v60 = 3
+    v59 = result + v60
+    d = v59
+    v62 = 4
+    v61 = result + v62
+    e = v61
+    v65 = a + b
+    v66 = c + d
+    v64 = v65 + v66
+    v63 = v64 + e
+    return v63
+

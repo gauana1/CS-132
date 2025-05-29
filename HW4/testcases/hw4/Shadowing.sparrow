@@ -1,0 +1,177 @@
+func main()
+    v0 = 52
+    v1 = 24
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @C_printC
+    [v3 + 16] = v4
+    v5 = @C_initC
+    [v3 + 20] = v5
+    v6 = @B_initB
+    [v3 + 12] = v6
+    v7 = @A_printA
+    [v3 + 0] = v7
+    v8 = @A_initA
+    [v3 + 4] = v8
+    v9 = @B_printB
+    [v3 + 8] = v9
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_10
+  goto lbl_GoodPtr_11
+lbl_NullPtr_10:
+    error("null pointer")
+lbl_GoodPtr_11:
+    c = v2
+  if0 c goto lbl_NullPtr_14
+    v12 = [c + 0]
+    v12 = [v12 + 20]
+    v16 = 1
+    v17 = 2
+    v18 = 3
+    v19 = 4
+    v20 = 5
+    v21 = 6
+    v22 = 7
+    v13 = call v12(c v16 v17 v18 v19 v20 v21 v22)
+  goto lbl_GoodPtr_15
+lbl_NullPtr_14:
+    error("null pointer")
+lbl_GoodPtr_15:
+    _ = v13
+  if0 c goto lbl_NullPtr_25
+    v23 = [c + 0]
+    v23 = [v23 + 12]
+    v27 = 8
+    v28 = 9
+    v29 = 10
+    v30 = 11
+    v31 = 12
+    v32 = 13
+    v24 = call v23(c v27 v28 v29 v30 v31 v32)
+  goto lbl_GoodPtr_26
+lbl_NullPtr_25:
+    error("null pointer")
+lbl_GoodPtr_26:
+    _ = v24
+  if0 c goto lbl_NullPtr_35
+    v33 = [c + 0]
+    v33 = [v33 + 4]
+    v37 = 14
+    v38 = 15
+    v39 = 16
+    v40 = 17
+    v34 = call v33(c v37 v38 v39 v40)
+  goto lbl_GoodPtr_36
+lbl_NullPtr_35:
+    error("null pointer")
+lbl_GoodPtr_36:
+    _ = v34
+  if0 c goto lbl_NullPtr_43
+    v41 = [c + 0]
+    v41 = [v41 + 0]
+    v42 = call v41(c)
+  goto lbl_GoodPtr_44
+lbl_NullPtr_43:
+    error("null pointer")
+lbl_GoodPtr_44:
+    _ = v42
+    v45 = 100
+    print(v45)
+  if0 c goto lbl_NullPtr_48
+    v46 = [c + 0]
+    v46 = [v46 + 8]
+    v47 = call v46(c)
+  goto lbl_GoodPtr_49
+lbl_NullPtr_48:
+    error("null pointer")
+lbl_GoodPtr_49:
+    _ = v47
+    v50 = 100
+    print(v50)
+  if0 c goto lbl_NullPtr_53
+    v51 = [c + 0]
+    v51 = [v51 + 16]
+    v52 = call v51(c)
+  goto lbl_GoodPtr_54
+lbl_NullPtr_53:
+    error("null pointer")
+lbl_GoodPtr_54:
+    _ = v52
+    v55 = 0
+    return v55
+
+func A_initA(this n1 n2 n3 n4)
+    [this + 4] = n1
+    [this + 8] = n2
+    [this + 12] = n3
+    [this + 16] = n4
+    v56 = 0
+    return v56
+
+func A_printA(this)
+    v57 = [this + 4]
+    print(v57)
+    v58 = [this + 8]
+    print(v58)
+    v59 = [this + 12]
+    print(v59)
+    v60 = [this + 16]
+    print(v60)
+    v61 = 0
+    return v61
+
+func B_initB(this n1 n2 n3 n4 n5 n6)
+    [this + 28] = n1
+    [this + 20] = n2
+    [this + 24] = n3
+    [this + 32] = n4
+    [this + 4] = n5
+    [this + 12] = n6
+    v62 = 0
+    return v62
+
+func B_printB(this)
+    v63 = [this + 4]
+    print(v63)
+    v64 = [this + 28]
+    print(v64)
+    v65 = [this + 20]
+    print(v65)
+    v66 = [this + 12]
+    print(v66)
+    v67 = [this + 24]
+    print(v67)
+    v68 = [this + 32]
+    print(v68)
+    v69 = 0
+    return v69
+
+func C_initC(this n1 n2 n3 n4 n5 n6 n7)
+    [this + 44] = n1
+    [this + 40] = n2
+    [this + 36] = n3
+    [this + 48] = n4
+    [this + 4] = n5
+    [this + 20] = n6
+    [this + 28] = n7
+    v70 = 0
+    return v70
+
+func C_printC(this)
+    v71 = [this + 4]
+    print(v71)
+    v72 = [this + 28]
+    print(v72)
+    v73 = [this + 44]
+    print(v73)
+    v74 = [this + 20]
+    print(v74)
+    v75 = [this + 40]
+    print(v75)
+    v76 = [this + 36]
+    print(v76)
+    v77 = [this + 48]
+    print(v77)
+    v78 = 0
+    return v78
+

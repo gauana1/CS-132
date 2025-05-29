@@ -1,0 +1,212 @@
+func main()
+    v0 = 4
+    v1 = 4
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @A_Fib
+    [v3 + 0] = v4
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_5
+  goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+    error("null pointer")
+lbl_GoodPtr_6:
+    F = v2
+  if0 F goto lbl_NullPtr_9
+    v7 = [F + 0]
+    v7 = [v7 + 0]
+    v11 = 20
+    v8 = call v7(F v11)
+  goto lbl_GoodPtr_10
+lbl_NullPtr_9:
+    error("null pointer")
+lbl_GoodPtr_10:
+    print(v8)
+    v12 = 0
+    return v12
+
+func A_Fib(this k)
+    v13 = 4
+    v14 = 8
+    v15 = alloc(v13)
+    v16 = alloc(v14)
+    v17 = @B_Helper
+    [v16 + 4] = v17
+    v18 = @B_Fib
+    [v16 + 0] = v18
+    [v15 + 0] = v16
+  if0 v15 goto lbl_NullPtr_19
+  goto lbl_GoodPtr_20
+lbl_NullPtr_19:
+    error("null pointer")
+lbl_GoodPtr_20:
+    b = v15
+    v21 = 4
+    v22 = 8
+    v23 = alloc(v21)
+    v24 = alloc(v22)
+    v25 = @C_Helper
+    [v24 + 4] = v25
+    v26 = @C_Fib
+    [v24 + 0] = v26
+    [v23 + 0] = v24
+  if0 v23 goto lbl_NullPtr_27
+  goto lbl_GoodPtr_28
+lbl_NullPtr_27:
+    error("null pointer")
+lbl_GoodPtr_28:
+    c = v23
+    v32 = 3
+    v31 = k < v32
+  if0 v31 goto lbl_Else_29
+    rt = k
+  goto lbl_IfEnd_30
+lbl_Else_29:
+  if0 this goto lbl_NullPtr_38
+    v36 = [this + 0]
+    v36 = [v36 + 0]
+    v41 = 2
+    v40 = k - v41
+    v37 = call v36(this v40)
+  goto lbl_GoodPtr_39
+lbl_NullPtr_38:
+    error("null pointer")
+lbl_GoodPtr_39:
+  if0 this goto lbl_NullPtr_44
+    v42 = [this + 0]
+    v42 = [v42 + 0]
+    v47 = 1
+    v46 = k - v47
+    v43 = call v42(this v46)
+  goto lbl_GoodPtr_45
+lbl_NullPtr_44:
+    error("null pointer")
+lbl_GoodPtr_45:
+    v35 = v37 + v43
+  if0 b goto lbl_NullPtr_50
+    v48 = [b + 0]
+    v48 = [v48 + 0]
+    v53 = 1
+    v52 = k - v53
+    v49 = call v48(b v52)
+  goto lbl_GoodPtr_51
+lbl_NullPtr_50:
+    error("null pointer")
+lbl_GoodPtr_51:
+    v34 = v35 + v49
+  if0 c goto lbl_NullPtr_56
+    v54 = [c + 0]
+    v54 = [v54 + 0]
+    v59 = 1
+    v58 = k - v59
+    v55 = call v54(c v58)
+  goto lbl_GoodPtr_57
+lbl_NullPtr_56:
+    error("null pointer")
+lbl_GoodPtr_57:
+    v33 = v34 + v55
+    rt = v33
+lbl_IfEnd_30:
+    return rt
+
+func B_Fib(this k)
+    v63 = 3
+    v62 = k < v63
+  if0 v62 goto lbl_Else_60
+    rt = k
+  goto lbl_IfEnd_61
+lbl_Else_60:
+  if0 this goto lbl_NullPtr_67
+    v65 = [this + 0]
+    v65 = [v65 + 0]
+    v70 = 2
+    v69 = k - v70
+    v66 = call v65(this v69)
+  goto lbl_GoodPtr_68
+lbl_NullPtr_67:
+    error("null pointer")
+lbl_GoodPtr_68:
+  if0 this goto lbl_NullPtr_73
+    v71 = [this + 0]
+    v71 = [v71 + 4]
+    v72 = call v71(this k)
+  goto lbl_GoodPtr_74
+lbl_NullPtr_73:
+    error("null pointer")
+lbl_GoodPtr_74:
+    v64 = v66 + v72
+    rt = v64
+lbl_IfEnd_61:
+    return rt
+
+func B_Helper(this k)
+  if0 this goto lbl_NullPtr_77
+    v75 = [this + 0]
+    v75 = [v75 + 0]
+    v80 = 2
+    v79 = k - v80
+    v76 = call v75(this v79)
+  goto lbl_GoodPtr_78
+lbl_NullPtr_77:
+    error("null pointer")
+lbl_GoodPtr_78:
+    result = v76
+    return result
+
+func C_Fib(this k)
+    v84 = 4
+    v83 = k < v84
+  if0 v83 goto lbl_Else_81
+    rt = k
+  goto lbl_IfEnd_82
+lbl_Else_81:
+  if0 this goto lbl_NullPtr_89
+    v87 = [this + 0]
+    v87 = [v87 + 4]
+    v92 = 2
+    v91 = k - v92
+    v88 = call v87(this v91)
+  goto lbl_GoodPtr_90
+lbl_NullPtr_89:
+    error("null pointer")
+lbl_GoodPtr_90:
+  if0 this goto lbl_NullPtr_95
+    v93 = [this + 0]
+    v93 = [v93 + 4]
+    v98 = 1
+    v97 = k - v98
+    v94 = call v93(this v97)
+  goto lbl_GoodPtr_96
+lbl_NullPtr_95:
+    error("null pointer")
+lbl_GoodPtr_96:
+    v86 = v88 + v94
+  if0 this goto lbl_NullPtr_101
+    v99 = [this + 0]
+    v99 = [v99 + 0]
+    v104 = 3
+    v103 = k - v104
+    v100 = call v99(this v103)
+  goto lbl_GoodPtr_102
+lbl_NullPtr_101:
+    error("null pointer")
+lbl_GoodPtr_102:
+    v85 = v86 + v100
+    rt = v85
+lbl_IfEnd_82:
+    return rt
+
+func C_Helper(this k)
+  if0 this goto lbl_NullPtr_107
+    v105 = [this + 0]
+    v105 = [v105 + 0]
+    v110 = 2
+    v109 = k - v110
+    v106 = call v105(this v109)
+  goto lbl_GoodPtr_108
+lbl_NullPtr_107:
+    error("null pointer")
+lbl_GoodPtr_108:
+    result = v106
+    return result
+

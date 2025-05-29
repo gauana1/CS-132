@@ -1,0 +1,59 @@
+func main()
+    v0 = 8
+    v1 = 4
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @Keeper_storeAndSpeak
+    [v3 + 0] = v4
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_5
+  goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+    error("null pointer")
+lbl_GoodPtr_6:
+    k = v2
+  if0 k goto lbl_NullPtr_9
+    v7 = [k + 0]
+    v7 = [v7 + 0]
+    v11 = 4
+    v12 = 4
+    v13 = alloc(v11)
+    v14 = alloc(v12)
+    v15 = @Cow_sound
+    [v14 + 0] = v15
+    [v13 + 0] = v14
+  if0 v13 goto lbl_NullPtr_16
+  goto lbl_GoodPtr_17
+lbl_NullPtr_16:
+    error("null pointer")
+lbl_GoodPtr_17:
+    v8 = call v7(k v13)
+  goto lbl_GoodPtr_10
+lbl_NullPtr_9:
+    error("null pointer")
+lbl_GoodPtr_10:
+    print(v8)
+    v18 = 0
+    return v18
+
+func Animal_sound(this)
+    v19 = 0
+    return v19
+
+func Cow_sound(this)
+    v20 = 3
+    return v20
+
+func Keeper_storeAndSpeak(this x)
+    [this + 4] = x
+    v21 = [this + 4]
+  if0 v21 goto lbl_NullPtr_24
+    v22 = [v21 + 0]
+    v22 = [v22 + 0]
+    v23 = call v22(v21)
+  goto lbl_GoodPtr_25
+lbl_NullPtr_24:
+    error("null pointer")
+lbl_GoodPtr_25:
+    return v23
+

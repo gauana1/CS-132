@@ -1,0 +1,115 @@
+func main()
+    v0 = 24
+    v1 = 4
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @M_sum
+    [v3 + 0] = v4
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_5
+  goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+    error("null pointer")
+lbl_GoodPtr_6:
+    m = v2
+    v7 = 44
+    v8 = 4
+    v9 = alloc(v7)
+    v10 = alloc(v8)
+    v11 = @N_sum
+    [v10 + 0] = v11
+    [v9 + 0] = v10
+  if0 v9 goto lbl_NullPtr_12
+  goto lbl_GoodPtr_13
+lbl_NullPtr_12:
+    error("null pointer")
+lbl_GoodPtr_13:
+    n = v9
+  if0 m goto lbl_NullPtr_16
+    v14 = [m + 0]
+    v14 = [v14 + 0]
+    v18 = 1
+    v19 = 2
+    v20 = 3
+    v21 = 4
+    v22 = 5
+    v15 = call v14(m v18 v19 v20 v21 v22)
+  goto lbl_GoodPtr_17
+lbl_NullPtr_16:
+    error("null pointer")
+lbl_GoodPtr_17:
+    result = v15
+    print(result)
+  if0 n goto lbl_NullPtr_25
+    v23 = [n + 0]
+    v23 = [v23 + 0]
+    v27 = 1
+    v28 = 2
+    v29 = 3
+    v30 = 4
+    v31 = 5
+    v24 = call v23(n v27 v28 v29 v30 v31)
+  goto lbl_GoodPtr_26
+lbl_NullPtr_25:
+    error("null pointer")
+lbl_GoodPtr_26:
+    result = v24
+    print(result)
+    v32 = 0
+    return v32
+
+func M_sum(this a b c d e)
+    v35 = a + b
+    v36 = c + d
+    v34 = v35 + v36
+    v33 = v34 + e
+    sum = v33
+    [this + 12] = sum
+    v38 = 1
+    v37 = sum + v38
+    [this + 16] = v37
+    v40 = 2
+    v39 = sum + v40
+    [this + 20] = v39
+    v42 = 3
+    v41 = sum + v42
+    [this + 8] = v41
+    v44 = 4
+    v43 = sum + v44
+    [this + 4] = v43
+    v48 = [this + 12]
+    v49 = [this + 16]
+    v47 = v48 + v49
+    v51 = [this + 20]
+    v52 = [this + 8]
+    v50 = v51 + v52
+    v46 = v47 + v50
+    v53 = [this + 4]
+    v45 = v46 + v53
+    return v45
+
+func N_sum(this a b c d e)
+    v56 = a + b
+    v57 = c + d
+    v55 = v56 + v57
+    v54 = v55 + e
+    total = v54
+    a = total
+    v59 = 1
+    v58 = total + v59
+    b = v58
+    v61 = 2
+    v60 = total + v61
+    c = v60
+    v63 = 3
+    v62 = total + v63
+    d = v62
+    v65 = 4
+    v64 = total + v65
+    e = v64
+    v68 = a + b
+    v69 = c + d
+    v67 = v68 + v69
+    v66 = v67 + e
+    return v66
+

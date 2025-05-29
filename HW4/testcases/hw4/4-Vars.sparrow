@@ -1,0 +1,59 @@
+func main()
+    v0 = 4
+    v1 = 8
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @A_helper
+    [v3 + 0] = v4
+    v5 = @A_run
+    [v3 + 4] = v5
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_6
+  goto lbl_GoodPtr_7
+lbl_NullPtr_6:
+    error("null pointer")
+lbl_GoodPtr_7:
+  if0 v2 goto lbl_NullPtr_10
+    v8 = [v2 + 0]
+    v8 = [v8 + 4]
+    v9 = call v8(v2)
+  goto lbl_GoodPtr_11
+lbl_NullPtr_10:
+    error("null pointer")
+lbl_GoodPtr_11:
+    print(v9)
+    v12 = 0
+    return v12
+
+func A_run(this)
+  if0 this goto lbl_NullPtr_15
+    v13 = [this + 0]
+    v13 = [v13 + 0]
+    v17 = 12
+    v14 = call v13(this v17)
+  goto lbl_GoodPtr_16
+lbl_NullPtr_15:
+    error("null pointer")
+lbl_GoodPtr_16:
+    a = v14
+  if0 this goto lbl_NullPtr_20
+    v18 = [this + 0]
+    v18 = [v18 + 0]
+    v22 = 15
+    v19 = call v18(this v22)
+  goto lbl_GoodPtr_21
+lbl_NullPtr_20:
+    error("null pointer")
+lbl_GoodPtr_21:
+    b = v19
+    v23 = a + b
+    return v23
+
+func A_helper(this param)
+    x = param
+    v25 = 1
+    v24 = param + v25
+    param = v24
+    print(x)
+    return x
+

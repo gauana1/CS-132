@@ -1,0 +1,426 @@
+func main()
+    v0 = 4
+    v1 = 4
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @Mammal_eat
+    [v3 + 0] = v4
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_5
+  goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+    error("null pointer")
+lbl_GoodPtr_6:
+    hm = v2
+    v7 = 8
+    v8 = 16
+    v9 = alloc(v7)
+    v10 = alloc(v8)
+    v11 = @Printer_logF
+    [v10 + 0] = v11
+    v12 = @Printer_print
+    [v10 + 4] = v12
+    v13 = @Printer_logT
+    [v10 + 8] = v13
+    v14 = @Printer_internal
+    [v10 + 12] = v14
+    [v9 + 0] = v10
+  if0 v9 goto lbl_NullPtr_15
+  goto lbl_GoodPtr_16
+lbl_NullPtr_15:
+    error("null pointer")
+lbl_GoodPtr_16:
+    log = v9
+    v17 = 5
+    a = v17
+    v18 = a + a
+    a = v18
+    v19 = 5
+    b = v19
+    v20 = b * b
+    b = v20
+    print(a)
+    print(b)
+    v21 = b - a
+    print(v21)
+    v22 = 8
+    v23 = 12
+    v24 = alloc(v22)
+    v25 = alloc(v23)
+    v26 = @Aggregator_set
+    [v25 + 0] = v26
+    v27 = @Aggregator_get
+    [v25 + 4] = v27
+    v28 = @Aggregator_sum
+    [v25 + 8] = v28
+    [v24 + 0] = v25
+  if0 v24 goto lbl_NullPtr_29
+  goto lbl_GoodPtr_30
+lbl_NullPtr_29:
+    error("null pointer")
+lbl_GoodPtr_30:
+    agg = v24
+  if0 agg goto lbl_NullPtr_33
+    v31 = [agg + 0]
+    v31 = [v31 + 0]
+    v35 = 5
+    v32 = call v31(agg v35)
+  goto lbl_GoodPtr_34
+lbl_NullPtr_33:
+    error("null pointer")
+lbl_GoodPtr_34:
+    print(v32)
+  if0 agg goto lbl_NullPtr_38
+    v36 = [agg + 0]
+    v36 = [v36 + 8]
+    v40 = 5
+    v37 = call v36(agg v40)
+  goto lbl_GoodPtr_39
+lbl_NullPtr_38:
+    error("null pointer")
+lbl_GoodPtr_39:
+    print(v37)
+  if0 agg goto lbl_NullPtr_43
+    v41 = [agg + 0]
+    v41 = [v41 + 8]
+    v45 = 5
+    v42 = call v41(agg v45)
+  goto lbl_GoodPtr_44
+lbl_NullPtr_43:
+    error("null pointer")
+lbl_GoodPtr_44:
+    print(v42)
+    v46 = 4
+    v47 = 4
+    v48 = alloc(v46)
+    v49 = alloc(v47)
+    v50 = @Manip_doit
+    [v49 + 0] = v50
+    [v48 + 0] = v49
+  if0 v48 goto lbl_NullPtr_51
+  goto lbl_GoodPtr_52
+lbl_NullPtr_51:
+    error("null pointer")
+lbl_GoodPtr_52:
+    mnp = v48
+  if0 mnp goto lbl_NullPtr_55
+    v53 = [mnp + 0]
+    v53 = [v53 + 0]
+    v54 = call v53(mnp agg)
+  goto lbl_GoodPtr_56
+lbl_NullPtr_55:
+    error("null pointer")
+lbl_GoodPtr_56:
+    a = v54
+  if0 agg goto lbl_NullPtr_59
+    v57 = [agg + 0]
+    v57 = [v57 + 4]
+    v58 = call v57(agg)
+  goto lbl_GoodPtr_60
+lbl_NullPtr_59:
+    error("null pointer")
+lbl_GoodPtr_60:
+    print(v58)
+  if0 mnp goto lbl_NullPtr_63
+    v61 = [mnp + 0]
+    v61 = [v61 + 0]
+    v62 = call v61(mnp agg)
+  goto lbl_GoodPtr_64
+lbl_NullPtr_63:
+    error("null pointer")
+lbl_GoodPtr_64:
+    a = v62
+  if0 agg goto lbl_NullPtr_67
+    v65 = [agg + 0]
+    v65 = [v65 + 4]
+    v66 = call v65(agg)
+  goto lbl_GoodPtr_68
+lbl_NullPtr_67:
+    error("null pointer")
+lbl_GoodPtr_68:
+    print(v66)
+  if0 mnp goto lbl_NullPtr_71
+    v69 = [mnp + 0]
+    v69 = [v69 + 0]
+    v70 = call v69(mnp agg)
+  goto lbl_GoodPtr_72
+lbl_NullPtr_71:
+    error("null pointer")
+lbl_GoodPtr_72:
+    a = v70
+  if0 agg goto lbl_NullPtr_75
+    v73 = [agg + 0]
+    v73 = [v73 + 4]
+    v74 = call v73(agg)
+  goto lbl_GoodPtr_76
+lbl_NullPtr_75:
+    error("null pointer")
+lbl_GoodPtr_76:
+    print(v74)
+  if0 log goto lbl_NullPtr_85
+    v83 = [log + 0]
+    v83 = [v83 + 8]
+    v84 = call v83(log)
+  goto lbl_GoodPtr_86
+lbl_NullPtr_85:
+    error("null pointer")
+lbl_GoodPtr_86:
+  if0 v84 goto lbl_FullAnd_81
+  if0 log goto lbl_NullPtr_89
+    v87 = [log + 0]
+    v87 = [v87 + 8]
+    v88 = call v87(log)
+  goto lbl_GoodPtr_90
+lbl_NullPtr_89:
+    error("null pointer")
+lbl_GoodPtr_90:
+    v80 = v88
+  goto lbl_ShortAnd_82
+lbl_FullAnd_81:
+    v80 = 0
+lbl_ShortAnd_82:
+  if0 v80 goto lbl_FullAnd_78
+  if0 log goto lbl_NullPtr_93
+    v91 = [log + 0]
+    v91 = [v91 + 0]
+    v92 = call v91(log)
+  goto lbl_GoodPtr_94
+lbl_NullPtr_93:
+    error("null pointer")
+lbl_GoodPtr_94:
+    v77 = v92
+  goto lbl_ShortAnd_79
+lbl_FullAnd_78:
+    v77 = 0
+lbl_ShortAnd_79:
+    bb1 = v77
+    v96 = 0
+    v97 = 1
+    v95 = v96 - v97
+    print(v95)
+  if0 log goto lbl_NullPtr_103
+    v101 = [log + 0]
+    v101 = [v101 + 0]
+    v102 = call v101(log)
+  goto lbl_GoodPtr_104
+lbl_NullPtr_103:
+    error("null pointer")
+lbl_GoodPtr_104:
+  if0 v102 goto lbl_FullAnd_99
+  if0 log goto lbl_NullPtr_110
+    v108 = [log + 0]
+    v108 = [v108 + 8]
+    v109 = call v108(log)
+  goto lbl_GoodPtr_111
+lbl_NullPtr_110:
+    error("null pointer")
+lbl_GoodPtr_111:
+  if0 v109 goto lbl_FullAnd_106
+  if0 log goto lbl_NullPtr_114
+    v112 = [log + 0]
+    v112 = [v112 + 0]
+    v113 = call v112(log)
+  goto lbl_GoodPtr_115
+lbl_NullPtr_114:
+    error("null pointer")
+lbl_GoodPtr_115:
+    v105 = v113
+  goto lbl_ShortAnd_107
+lbl_FullAnd_106:
+    v105 = 0
+lbl_ShortAnd_107:
+    v98 = v105
+  goto lbl_ShortAnd_100
+lbl_FullAnd_99:
+    v98 = 0
+lbl_ShortAnd_100:
+    bb1 = v98
+    v117 = 0
+    v118 = 1
+    v116 = v117 - v118
+    print(v116)
+  if0 log goto lbl_NullPtr_124
+    v122 = [log + 0]
+    v122 = [v122 + 0]
+    v123 = call v122(log)
+  goto lbl_GoodPtr_125
+lbl_NullPtr_124:
+    error("null pointer")
+lbl_GoodPtr_125:
+  if0 v123 goto lbl_FullAnd_120
+  if0 log goto lbl_NullPtr_128
+    v126 = [log + 0]
+    v126 = [v126 + 8]
+    v127 = call v126(log)
+  goto lbl_GoodPtr_129
+lbl_NullPtr_128:
+    error("null pointer")
+lbl_GoodPtr_129:
+    v119 = v127
+  goto lbl_ShortAnd_121
+lbl_FullAnd_120:
+    v119 = 0
+lbl_ShortAnd_121:
+    bb1 = v119
+    v131 = 0
+    v132 = 1
+    v130 = v131 - v132
+    print(v130)
+  if0 log goto lbl_NullPtr_135
+    v133 = [log + 0]
+    v133 = [v133 + 12]
+    v137 = 1
+    v134 = call v133(log v137)
+  goto lbl_GoodPtr_136
+lbl_NullPtr_135:
+    error("null pointer")
+lbl_GoodPtr_136:
+    bb1 = v134
+    v139 = 0
+    v140 = 1
+    v138 = v139 - v140
+    print(v138)
+  if0 log goto lbl_NullPtr_143
+    v141 = [log + 0]
+    v141 = [v141 + 12]
+    v145 = 0
+    v142 = call v141(log v145)
+  goto lbl_GoodPtr_144
+lbl_NullPtr_143:
+    error("null pointer")
+lbl_GoodPtr_144:
+    bb1 = v142
+    v147 = 0
+    v148 = 1
+    v146 = v147 - v148
+    print(v146)
+  if0 log goto lbl_NullPtr_151
+    v149 = [log + 0]
+    v149 = [v149 + 12]
+    v153 = 1
+    v150 = call v149(log v153)
+  goto lbl_GoodPtr_152
+lbl_NullPtr_151:
+    error("null pointer")
+lbl_GoodPtr_152:
+    bb1 = v150
+    v155 = 0
+    v156 = 1
+    v154 = v155 - v156
+    print(v154)
+  if0 log goto lbl_NullPtr_159
+    v157 = [log + 0]
+    v157 = [v157 + 12]
+    v161 = 0
+    v158 = call v157(log v161)
+  goto lbl_GoodPtr_160
+lbl_NullPtr_159:
+    error("null pointer")
+lbl_GoodPtr_160:
+    bb1 = v158
+  if0 hm goto lbl_NullPtr_164
+    v162 = [hm + 0]
+    v162 = [v162 + 0]
+    v163 = call v162(hm)
+  goto lbl_GoodPtr_165
+lbl_NullPtr_164:
+    error("null pointer")
+lbl_GoodPtr_165:
+    bb1 = v163
+    v168 = 0
+    v169 = 1
+    v170 = v168 < v169
+  if0 v170 goto lbl_Else_166
+    v171 = 50
+    print(v171)
+  goto lbl_IfEnd_167
+lbl_Else_166:
+    v173 = 0
+    v174 = 50
+    v172 = v173 - v174
+    print(v172)
+lbl_IfEnd_167:
+    v175 = 0
+    return v175
+
+func Printer_print(this)
+    v176 = 100000001
+    print(v176)
+    v177 = 0
+    return v177
+
+func Printer_logT(this)
+    v179 = [this + 4]
+    v180 = 1
+    v178 = v179 + v180
+    [this + 4] = v178
+    v181 = [this + 4]
+    print(v181)
+    v182 = 1
+    return v182
+
+func Printer_logF(this)
+    v184 = [this + 4]
+    v185 = 1
+    v183 = v184 + v185
+    [this + 4] = v183
+    v186 = [this + 4]
+    print(v186)
+    v187 = 0
+    return v187
+
+func Printer_internal(this t)
+  if0 t goto lbl_Else_188
+  if0 this goto lbl_NullPtr_192
+    v190 = [this + 0]
+    v190 = [v190 + 12]
+    v194 = 0
+    v191 = call v190(this v194)
+  goto lbl_GoodPtr_193
+lbl_NullPtr_192:
+    error("null pointer")
+lbl_GoodPtr_193:
+    dummy = v191
+    v195 = 123
+    print(v195)
+  goto lbl_IfEnd_189
+lbl_Else_188:
+    v196 = 789
+    print(v196)
+lbl_IfEnd_189:
+    return t
+
+func Aggregator_get(this)
+    v197 = [this + 4]
+    return v197
+
+func Aggregator_set(this a)
+    [this + 4] = a
+    v198 = [this + 4]
+    return v198
+
+func Aggregator_sum(this a)
+    v200 = [this + 4]
+    v199 = v200 + a
+    [this + 4] = v199
+    v201 = [this + 4]
+    return v201
+
+func Manip_doit(this ag)
+  if0 ag goto lbl_NullPtr_204
+    v202 = [ag + 0]
+    v202 = [v202 + 8]
+    v206 = 3
+    v203 = call v202(ag v206)
+  goto lbl_GoodPtr_205
+lbl_NullPtr_204:
+    error("null pointer")
+lbl_GoodPtr_205:
+    dummy = v203
+    v207 = 0
+    return v207
+
+func Mammal_eat(this)
+    v208 = 1
+    return v208
+

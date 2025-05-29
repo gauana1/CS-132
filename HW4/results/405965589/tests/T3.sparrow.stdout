@@ -1,0 +1,1481 @@
+func main()
+stack_s3 = s3
+stack_s4 = s4
+stack_s2 = s2
+stack_s7 = s7
+stack_s5 = s5
+stack_s1 = s1
+stack_s6 = s6
+stack_s8 = s8
+stack_s4 = s4
+stack_s3 = s3
+stack_s7 = s7
+stack_s6 = s6
+stack_s9 = s9
+stack_s11 = s11
+stack_s10 = s10
+stack_s5 = s5
+stack_s9 = s9
+stack_s2 = s2
+stack_s8 = s8
+stack_s11 = s11
+stack_s10 = s10
+stack_s1 = s1
+t2 = 128
+t3 = 4
+t4 = alloc(t2)
+t5 = alloc(t3)
+s1 = @P_calculate
+[t5 + 0] =s1
+[t4 + 0] =t5
+if0 t4 goto lbl_NullPtr_5
+goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+error ("null pointer")
+lbl_GoodPtr_6:
+t1 = t4
+p= t1
+s3 = 108
+s4 = 4
+s2 = alloc(s3)
+s5 = alloc(s4)
+s6 = @Q_calculate
+[s5 + 0] =s6
+[s2 + 0] =s5
+if0 s2 goto lbl_NullPtr_12
+goto lbl_GoodPtr_13
+lbl_NullPtr_12:
+error ("null pointer")
+lbl_GoodPtr_13:
+t1 = s2
+q= t1
+s8 = 88
+s9 = 4
+s7 = alloc(s8)
+s10 = alloc(s9)
+s11 = @R_calculate
+[s10 + 0] =s11
+[s7 + 0] =s10
+if0 s7 goto lbl_NullPtr_19
+goto lbl_GoodPtr_20
+lbl_NullPtr_19:
+error ("null pointer")
+lbl_GoodPtr_20:
+t1 = s7
+r= t1
+a3 = 68
+a4 = 4
+a2 = alloc(a3)
+a5 = alloc(a4)
+a6 = @S_calculate
+[a5 + 0] =a6
+[a2 + 0] =a5
+if0 a2 goto lbl_NullPtr_26
+goto lbl_GoodPtr_27
+lbl_NullPtr_26:
+error ("null pointer")
+lbl_GoodPtr_27:
+t1 = a2
+s= t1
+t2 = 48
+t3 = 4
+a7 = alloc(t2)
+s1 = alloc(t3)
+t5 = @T_calculate
+[s1 + 0] =t5
+[a7 + 0] =s1
+if0 a7 goto lbl_NullPtr_33
+goto lbl_GoodPtr_34
+lbl_NullPtr_33:
+error ("null pointer")
+lbl_GoodPtr_34:
+t1 = a7
+t= t1
+s3 = 28
+s4 = 4
+t4 = alloc(s3)
+s6 = alloc(s4)
+s5 = @U_calculate
+[s6 + 0] =s5
+[t4 + 0] =s6
+if0 t4 goto lbl_NullPtr_40
+goto lbl_GoodPtr_41
+lbl_NullPtr_40:
+error ("null pointer")
+lbl_GoodPtr_41:
+s2 = t4
+t0 = p
+if0 t0 goto lbl_NullPtr_44
+t0 = p
+s8 = [t0 + 0]
+s8 = [s8 + 0]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s9 = call s8(p)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_45
+lbl_NullPtr_44:
+error ("null pointer")
+lbl_GoodPtr_45:
+t1 = s9
+result= t1
+t0 = result
+print (t0)
+t0 = q
+if0 t0 goto lbl_NullPtr_48
+t0 = q
+s10 = [t0 + 0]
+s10 = [s10 + 0]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s11 = call s10(q)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_49
+lbl_NullPtr_48:
+error ("null pointer")
+lbl_GoodPtr_49:
+t1 = s11
+result= t1
+t0 = result
+print (t0)
+t0 = r
+if0 t0 goto lbl_NullPtr_52
+t0 = r
+s7 = [t0 + 0]
+s7 = [s7 + 0]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a3 = call s7(r)
+a2 = stack_a2
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_53
+lbl_NullPtr_52:
+error ("null pointer")
+lbl_GoodPtr_53:
+t1 = a3
+result= t1
+t0 = result
+print (t0)
+t0 = s
+if0 t0 goto lbl_NullPtr_56
+t0 = s
+a4 = [t0 + 0]
+a4 = [a4 + 0]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a6 = call a4(s)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a7 = stack_a7
+goto lbl_GoodPtr_57
+lbl_NullPtr_56:
+error ("null pointer")
+lbl_GoodPtr_57:
+t1 = a6
+result= t1
+t0 = result
+print (t0)
+t0 = t
+if0 t0 goto lbl_NullPtr_60
+t0 = t
+a5 = [t0 + 0]
+a5 = [a5 + 0]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a2 = call a5(t)
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_61
+lbl_NullPtr_60:
+error ("null pointer")
+lbl_GoodPtr_61:
+t1 = a2
+result= t1
+t0 = result
+print (t0)
+if0 s2 goto lbl_NullPtr_64
+t2 = [s2 + 0]
+t2 = [t2 + 0]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+u = s2
+t3 = call t2(u)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_65
+lbl_NullPtr_64:
+error ("null pointer")
+lbl_GoodPtr_65:
+t1 = t3
+result= t1
+t0 = result
+print (t0)
+t5 = 0
+v66 = t5
+s3 = stack_s3
+s4 = stack_s4
+s2 = stack_s2
+s7 = stack_s7
+s5 = stack_s5
+s1 = stack_s1
+s6 = stack_s6
+s8 = stack_s8
+s4 = stack_s4
+s3 = stack_s3
+s7 = stack_s7
+s6 = stack_s6
+s9 = stack_s9
+s11 = stack_s11
+s10 = stack_s10
+s5 = stack_s5
+s9 = stack_s9
+s2 = stack_s2
+s8 = stack_s8
+s11 = stack_s11
+s10 = stack_s10
+s1 = stack_s1
+return v66
+func U_calculate(this)
+stack_s3 = s3
+stack_s1 = s1
+stack_s2 = s2
+stack_s6 = s6
+stack_s7 = s7
+stack_s4 = s4
+stack_s8 = s8
+stack_s10 = s10
+stack_s6 = s6
+stack_s5 = s5
+stack_s5 = s5
+stack_s8 = s8
+stack_s3 = s3
+stack_s4 = s4
+stack_s10 = s10
+stack_s2 = s2
+stack_s7 = s7
+stack_s11 = s11
+stack_s1 = s1
+stack_s9 = s9
+t3 = 0
+t1 = t3
+sum= t1
+t0 = 10
+v68 = t0
+t4 = 1
+t2 = 4
+t0 = v68
+t5 = t0 + t4
+t5 = t5 * t2
+s1 = alloc(t5)
+if0 s1 goto lbl_NullPtr_73
+goto lbl_GoodPtr_74
+lbl_NullPtr_73:
+error ("null pointer")
+lbl_GoodPtr_74:
+t1 = v68
+[s1 + 0] =t1
+t0 = this
+[t0 + 16] =s1
+s2 = 0
+t1 = s2
+i= t1
+lbl_While_76:
+t0 = this
+s4 = [t0 + 16]
+s5 = [s4 + 0]
+t0 = i
+s6 = t0 < s5
+if0 s6 goto lbl_WhileExit_77
+t0 = this
+t0 =[t0 + 16]
+v81 = t0
+s8 = 2
+t0 = i
+t0 =t0 * s8
+v82 = t0
+t0 = 4
+v84 = t0
+s3 = 5
+t0 = v84
+s7 = t0 - s3
+t0 = v81
+s10 = [t0 + 0]
+t1 = i
+s9 = s7 < t1
+t0 = i
+s11 = t0 < s10
+a2 = s9 * s11
+if0 a2 goto lbl_OutOfBounds_91
+goto lbl_Inbound_92
+lbl_OutOfBounds_91:
+error ("array index out of bounds")
+lbl_Inbound_92:
+t0 = v84
+t1 = i
+a3 = t0 * t1
+t1 = v84
+a3 = a3 + t1
+t0 = v81
+a3 = t0 + a3
+t1 = v82
+[a3 + 0] =t1
+a4 = 1
+t0 = i
+a5 = t0 + a4
+t1 = a5
+i= t1
+goto lbl_While_76
+lbl_WhileExit_77:
+a6 = 0
+t1 = a6
+i= t1
+lbl_While_97:
+t0 = this
+a7 = [t0 + 16]
+t3 = [a7 + 0]
+t0 = i
+t4 = t0 < t3
+if0 t4 goto lbl_WhileExit_98
+t0 = this
+t0 =[t0 + 16]
+v103 = t0
+t0 = 4
+v104 = t0
+s1 = 5
+t0 = v104
+t2 = t0 - s1
+t0 = v103
+s2 = [t0 + 0]
+t1 = i
+t5 = t2 < t1
+t0 = i
+s4 = t0 < s2
+s5 = t5 * s4
+if0 s5 goto lbl_OutOfBounds_111
+goto lbl_Inbound_112
+lbl_OutOfBounds_111:
+error ("array index out of bounds")
+lbl_Inbound_112:
+t0 = v104
+t1 = i
+s6 = t0 * t1
+t1 = v104
+s6 = s6 + t1
+t0 = v103
+s6 = t0 + s6
+s8 = [s6 + 0]
+t0 = sum
+s3 = t0 + s8
+t1 = s3
+sum= t1
+s7 = 1
+t0 = i
+s10 = t0 + s7
+t1 = s10
+i= t1
+goto lbl_While_97
+lbl_WhileExit_98:
+s3 = stack_s3
+s1 = stack_s1
+s2 = stack_s2
+s6 = stack_s6
+s7 = stack_s7
+s4 = stack_s4
+s8 = stack_s8
+s10 = stack_s10
+s6 = stack_s6
+s5 = stack_s5
+s5 = stack_s5
+s8 = stack_s8
+s3 = stack_s3
+s4 = stack_s4
+s10 = stack_s10
+s2 = stack_s2
+s7 = stack_s7
+s11 = stack_s11
+s1 = stack_s1
+s9 = stack_s9
+return sum
+func T_calculate(this)
+stack_s5 = s5
+stack_s2 = s2
+stack_s10 = s10
+stack_s1 = s1
+stack_s7 = s7
+stack_s6 = s6
+stack_s8 = s8
+stack_s9 = s9
+stack_s11 = s11
+stack_s7 = s7
+stack_s10 = s10
+stack_s4 = s4
+stack_s3 = s3
+stack_s2 = s2
+stack_s8 = s8
+stack_s1 = s1
+stack_s5 = s5
+stack_s3 = s3
+stack_s4 = s4
+stack_s6 = s6
+t3 = 1
+t1 = t3
+product= t1
+t0 = 10
+v118 = t0
+t4 = 1
+t2 = 4
+t0 = v118
+t5 = t0 + t4
+t5 = t5 * t2
+s1 = alloc(t5)
+if0 s1 goto lbl_NullPtr_123
+goto lbl_GoodPtr_124
+lbl_NullPtr_123:
+error ("null pointer")
+lbl_GoodPtr_124:
+t1 = v118
+[s1 + 0] =t1
+t0 = this
+[t0 + 16] =s1
+s2 = 0
+t1 = s2
+i= t1
+lbl_While_126:
+t0 = this
+s4 = [t0 + 16]
+s5 = [s4 + 0]
+t0 = i
+s6 = t0 < s5
+if0 s6 goto lbl_WhileExit_127
+t0 = this
+t0 =[t0 + 16]
+v131 = t0
+s8 = 3
+t0 = i
+t0 =t0 * s8
+v132 = t0
+t0 = 4
+v134 = t0
+s3 = 5
+t0 = v134
+s7 = t0 - s3
+t0 = v131
+s10 = [t0 + 0]
+t1 = i
+s9 = s7 < t1
+t0 = i
+s11 = t0 < s10
+a2 = s9 * s11
+if0 a2 goto lbl_OutOfBounds_141
+goto lbl_Inbound_142
+lbl_OutOfBounds_141:
+error ("array index out of bounds")
+lbl_Inbound_142:
+t0 = v134
+t1 = i
+a3 = t0 * t1
+t1 = v134
+a3 = a3 + t1
+t0 = v131
+a3 = t0 + a3
+t1 = v132
+[a3 + 0] =t1
+a4 = 1
+t0 = i
+a5 = t0 + a4
+t1 = a5
+i= t1
+goto lbl_While_126
+lbl_WhileExit_127:
+a6 = 0
+t1 = a6
+i= t1
+lbl_While_147:
+t0 = this
+a7 = [t0 + 16]
+t3 = [a7 + 0]
+t0 = i
+t4 = t0 < t3
+if0 t4 goto lbl_WhileExit_148
+t0 = this
+t0 =[t0 + 16]
+v153 = t0
+t0 = 4
+v154 = t0
+s1 = 5
+t0 = v154
+t2 = t0 - s1
+t0 = v153
+s2 = [t0 + 0]
+t1 = i
+t5 = t2 < t1
+t0 = i
+s4 = t0 < s2
+s5 = t5 * s4
+if0 s5 goto lbl_OutOfBounds_161
+goto lbl_Inbound_162
+lbl_OutOfBounds_161:
+error ("array index out of bounds")
+lbl_Inbound_162:
+t0 = v154
+t1 = i
+s6 = t0 * t1
+t1 = v154
+s6 = s6 + t1
+t0 = v153
+s6 = t0 + s6
+s8 = [s6 + 0]
+t0 = product
+s3 = t0 * s8
+t1 = s3
+product= t1
+s7 = 1
+t0 = i
+s10 = t0 + s7
+t1 = s10
+i= t1
+goto lbl_While_147
+lbl_WhileExit_148:
+s5 = stack_s5
+s2 = stack_s2
+s10 = stack_s10
+s1 = stack_s1
+s7 = stack_s7
+s6 = stack_s6
+s8 = stack_s8
+s9 = stack_s9
+s11 = stack_s11
+s7 = stack_s7
+s10 = stack_s10
+s4 = stack_s4
+s3 = stack_s3
+s2 = stack_s2
+s8 = stack_s8
+s1 = stack_s1
+s5 = stack_s5
+s3 = stack_s3
+s4 = stack_s4
+s6 = stack_s6
+return product
+func S_calculate(this)
+stack_s8 = s8
+stack_s5 = s5
+stack_s9 = s9
+stack_s11 = s11
+stack_s11 = s11
+stack_s10 = s10
+stack_s10 = s10
+stack_s9 = s9
+stack_s3 = s3
+stack_s7 = s7
+stack_s7 = s7
+stack_s6 = s6
+stack_s3 = s3
+stack_s1 = s1
+stack_s5 = s5
+stack_s8 = s8
+stack_s6 = s6
+stack_s4 = s4
+stack_s2 = s2
+stack_s1 = s1
+stack_s2 = s2
+stack_s4 = s4
+stack_s2 = s2
+stack_s4 = s4
+stack_s1 = s1
+t3 = 0
+t1 = t3
+sum= t1
+t0 = 10
+v168 = t0
+t4 = 1
+t2 = 4
+t0 = v168
+t5 = t0 + t4
+t5 = t5 * t2
+s1 = alloc(t5)
+if0 s1 goto lbl_NullPtr_173
+goto lbl_GoodPtr_174
+lbl_NullPtr_173:
+error ("null pointer")
+lbl_GoodPtr_174:
+t1 = v168
+[s1 + 0] =t1
+t0 = this
+[t0 + 16] =s1
+s2 = 0
+t1 = s2
+i= t1
+lbl_While_176:
+t0 = this
+s4 = [t0 + 16]
+s5 = [s4 + 0]
+t0 = i
+s6 = t0 < s5
+if0 s6 goto lbl_WhileExit_177
+t0 = this
+t0 =[t0 + 16]
+v181 = t0
+s8 = 4
+t0 = i
+t0 =t0 * s8
+v182 = t0
+t0 = 4
+v184 = t0
+s3 = 5
+t0 = v184
+s7 = t0 - s3
+t0 = v181
+s10 = [t0 + 0]
+t1 = i
+s9 = s7 < t1
+t0 = i
+s11 = t0 < s10
+a2 = s9 * s11
+if0 a2 goto lbl_OutOfBounds_191
+goto lbl_Inbound_192
+lbl_OutOfBounds_191:
+error ("array index out of bounds")
+lbl_Inbound_192:
+t0 = v184
+t1 = i
+a3 = t0 * t1
+t1 = v184
+a3 = a3 + t1
+t0 = v181
+a3 = t0 + a3
+t1 = v182
+[a3 + 0] =t1
+a4 = 1
+t0 = i
+a5 = t0 + a4
+t1 = a5
+i= t1
+goto lbl_While_176
+lbl_WhileExit_177:
+a6 = 0
+t1 = a6
+i= t1
+lbl_While_197:
+t0 = this
+a7 = [t0 + 16]
+t3 = [a7 + 0]
+t0 = i
+t4 = t0 < t3
+if0 t4 goto lbl_WhileExit_198
+t2 = 0
+t1 = t2
+j= t1
+lbl_While_203:
+t0 = this
+s1 = [t0 + 16]
+s2 = [s1 + 0]
+t0 = j
+s4 = t0 < s2
+if0 s4 goto lbl_WhileExit_204
+t0 = this
+t0 =[t0 + 16]
+v210 = t0
+t0 = 4
+v211 = t0
+t5 = 5
+t0 = v211
+s5 = t0 - t5
+t0 = v210
+s8 = [t0 + 0]
+t1 = i
+s6 = s5 < t1
+t0 = i
+s3 = t0 < s8
+s7 = s6 * s3
+if0 s7 goto lbl_OutOfBounds_218
+goto lbl_Inbound_219
+lbl_OutOfBounds_218:
+error ("array index out of bounds")
+lbl_Inbound_219:
+t0 = v211
+t1 = i
+s10 = t0 * t1
+t1 = v211
+s10 = s10 + t1
+t0 = v210
+s10 = t0 + s10
+t0 =[s10 + 0]
+v221 = t0
+t0 = this
+t0 =[t0 + 16]
+v222 = t0
+t0 = 4
+v223 = t0
+s9 = 5
+t0 = v223
+s11 = t0 - s9
+t0 = v222
+a3 = [t0 + 0]
+t1 = j
+a2 = s11 < t1
+t0 = j
+a4 = t0 < a3
+a5 = a2 * a4
+if0 a5 goto lbl_OutOfBounds_230
+goto lbl_Inbound_231
+lbl_OutOfBounds_230:
+error ("array index out of bounds")
+lbl_Inbound_231:
+t0 = v223
+t1 = j
+a6 = t0 * t1
+t1 = v223
+a6 = a6 + t1
+t0 = v222
+a6 = t0 + a6
+a7 = [a6 + 0]
+t0 = v221
+t3 = t0 + a7
+t0 = sum
+t4 = t0 + t3
+t1 = t4
+sum= t1
+t2 = 1
+t0 = j
+s1 = t0 + t2
+t1 = s1
+j= t1
+goto lbl_While_203
+lbl_WhileExit_204:
+s2 = 1
+t0 = i
+s4 = t0 + s2
+t1 = s4
+i= t1
+goto lbl_While_197
+lbl_WhileExit_198:
+s8 = stack_s8
+s5 = stack_s5
+s9 = stack_s9
+s11 = stack_s11
+s11 = stack_s11
+s10 = stack_s10
+s10 = stack_s10
+s9 = stack_s9
+s3 = stack_s3
+s7 = stack_s7
+s7 = stack_s7
+s6 = stack_s6
+s3 = stack_s3
+s1 = stack_s1
+s5 = stack_s5
+s8 = stack_s8
+s6 = stack_s6
+s4 = stack_s4
+s2 = stack_s2
+s1 = stack_s1
+s2 = stack_s2
+s4 = stack_s4
+s2 = stack_s2
+s4 = stack_s4
+s1 = stack_s1
+return sum
+func R_calculate(this)
+stack_s11 = s11
+stack_s9 = s9
+stack_s4 = s4
+stack_s10 = s10
+stack_s7 = s7
+stack_s10 = s10
+stack_s3 = s3
+stack_s8 = s8
+stack_s5 = s5
+stack_s9 = s9
+stack_s11 = s11
+stack_s6 = s6
+stack_s2 = s2
+stack_s7 = s7
+stack_s6 = s6
+stack_s1 = s1
+stack_s3 = s3
+stack_s5 = s5
+stack_s8 = s8
+stack_s1 = s1
+stack_s2 = s2
+stack_s4 = s4
+stack_s4 = s4
+stack_s2 = s2
+stack_s1 = s1
+t3 = 1
+t1 = t3
+product= t1
+t0 = 10
+v239 = t0
+t4 = 1
+t2 = 4
+t0 = v239
+t5 = t0 + t4
+t5 = t5 * t2
+s1 = alloc(t5)
+if0 s1 goto lbl_NullPtr_244
+goto lbl_GoodPtr_245
+lbl_NullPtr_244:
+error ("null pointer")
+lbl_GoodPtr_245:
+t1 = v239
+[s1 + 0] =t1
+t0 = this
+[t0 + 16] =s1
+s2 = 0
+t1 = s2
+i= t1
+lbl_While_247:
+t0 = this
+s4 = [t0 + 16]
+s5 = [s4 + 0]
+t0 = i
+s6 = t0 < s5
+if0 s6 goto lbl_WhileExit_248
+t0 = this
+t0 =[t0 + 16]
+v252 = t0
+s8 = 5
+t0 = i
+t0 =t0 * s8
+v253 = t0
+t0 = 4
+v255 = t0
+s3 = 5
+t0 = v255
+s7 = t0 - s3
+t0 = v252
+s10 = [t0 + 0]
+t1 = i
+s9 = s7 < t1
+t0 = i
+s11 = t0 < s10
+a2 = s9 * s11
+if0 a2 goto lbl_OutOfBounds_262
+goto lbl_Inbound_263
+lbl_OutOfBounds_262:
+error ("array index out of bounds")
+lbl_Inbound_263:
+t0 = v255
+t1 = i
+a3 = t0 * t1
+t1 = v255
+a3 = a3 + t1
+t0 = v252
+a3 = t0 + a3
+t1 = v253
+[a3 + 0] =t1
+a4 = 1
+t0 = i
+a5 = t0 + a4
+t1 = a5
+i= t1
+goto lbl_While_247
+lbl_WhileExit_248:
+a6 = 0
+t1 = a6
+i= t1
+lbl_While_268:
+t0 = this
+a7 = [t0 + 16]
+t3 = [a7 + 0]
+t0 = i
+t4 = t0 < t3
+if0 t4 goto lbl_WhileExit_269
+t2 = 0
+t1 = t2
+j= t1
+lbl_While_274:
+t0 = this
+s1 = [t0 + 16]
+s2 = [s1 + 0]
+t0 = j
+s4 = t0 < s2
+if0 s4 goto lbl_WhileExit_275
+t0 = this
+t0 =[t0 + 16]
+v281 = t0
+t0 = 4
+v282 = t0
+t5 = 5
+t0 = v282
+s5 = t0 - t5
+t0 = v281
+s8 = [t0 + 0]
+t1 = i
+s6 = s5 < t1
+t0 = i
+s3 = t0 < s8
+s7 = s6 * s3
+if0 s7 goto lbl_OutOfBounds_289
+goto lbl_Inbound_290
+lbl_OutOfBounds_289:
+error ("array index out of bounds")
+lbl_Inbound_290:
+t0 = v282
+t1 = i
+s10 = t0 * t1
+t1 = v282
+s10 = s10 + t1
+t0 = v281
+s10 = t0 + s10
+t0 =[s10 + 0]
+v292 = t0
+t0 = this
+t0 =[t0 + 16]
+v293 = t0
+t0 = 4
+v294 = t0
+s9 = 5
+t0 = v294
+s11 = t0 - s9
+t0 = v293
+a3 = [t0 + 0]
+t1 = j
+a2 = s11 < t1
+t0 = j
+a4 = t0 < a3
+a5 = a2 * a4
+if0 a5 goto lbl_OutOfBounds_301
+goto lbl_Inbound_302
+lbl_OutOfBounds_301:
+error ("array index out of bounds")
+lbl_Inbound_302:
+t0 = v294
+t1 = j
+a6 = t0 * t1
+t1 = v294
+a6 = a6 + t1
+t0 = v293
+a6 = t0 + a6
+a7 = [a6 + 0]
+t0 = v292
+t3 = t0 - a7
+t0 = product
+t4 = t0 * t3
+t1 = t4
+product= t1
+t2 = 1
+t0 = j
+s1 = t0 + t2
+t1 = s1
+j= t1
+goto lbl_While_274
+lbl_WhileExit_275:
+s2 = 1
+t0 = i
+s4 = t0 + s2
+t1 = s4
+i= t1
+goto lbl_While_268
+lbl_WhileExit_269:
+s11 = stack_s11
+s9 = stack_s9
+s4 = stack_s4
+s10 = stack_s10
+s7 = stack_s7
+s10 = stack_s10
+s3 = stack_s3
+s8 = stack_s8
+s5 = stack_s5
+s9 = stack_s9
+s11 = stack_s11
+s6 = stack_s6
+s2 = stack_s2
+s7 = stack_s7
+s6 = stack_s6
+s1 = stack_s1
+s3 = stack_s3
+s5 = stack_s5
+s8 = stack_s8
+s1 = stack_s1
+s2 = stack_s2
+s4 = stack_s4
+s4 = stack_s4
+s2 = stack_s2
+s1 = stack_s1
+return product
+func Q_calculate(this)
+stack_s4 = s4
+stack_s2 = s2
+stack_s1 = s1
+stack_s9 = s9
+stack_s11 = s11
+stack_s10 = s10
+stack_s3 = s3
+stack_s7 = s7
+stack_s8 = s8
+stack_s11 = s11
+stack_s4 = s4
+stack_s5 = s5
+stack_s9 = s9
+stack_s6 = s6
+stack_s10 = s10
+stack_s2 = s2
+stack_s1 = s1
+stack_s3 = s3
+stack_s7 = s7
+stack_s8 = s8
+stack_s6 = s6
+stack_s5 = s5
+stack_s2 = s2
+stack_s4 = s4
+stack_s1 = s1
+t3 = 0
+t1 = t3
+sum= t1
+t0 = 10
+v310 = t0
+t4 = 1
+t2 = 4
+t0 = v310
+t5 = t0 + t4
+t5 = t5 * t2
+s1 = alloc(t5)
+if0 s1 goto lbl_NullPtr_315
+goto lbl_GoodPtr_316
+lbl_NullPtr_315:
+error ("null pointer")
+lbl_GoodPtr_316:
+t1 = v310
+[s1 + 0] =t1
+t0 = this
+[t0 + 16] =s1
+s2 = 0
+t1 = s2
+i= t1
+lbl_While_318:
+t0 = this
+s4 = [t0 + 16]
+s5 = [s4 + 0]
+t0 = i
+s6 = t0 < s5
+if0 s6 goto lbl_WhileExit_319
+t0 = this
+t0 =[t0 + 16]
+v323 = t0
+s8 = 6
+t0 = i
+t0 =t0 * s8
+v324 = t0
+t0 = 4
+v326 = t0
+s3 = 5
+t0 = v326
+s7 = t0 - s3
+t0 = v323
+s10 = [t0 + 0]
+t1 = i
+s9 = s7 < t1
+t0 = i
+s11 = t0 < s10
+a2 = s9 * s11
+if0 a2 goto lbl_OutOfBounds_333
+goto lbl_Inbound_334
+lbl_OutOfBounds_333:
+error ("array index out of bounds")
+lbl_Inbound_334:
+t0 = v326
+t1 = i
+a3 = t0 * t1
+t1 = v326
+a3 = a3 + t1
+t0 = v323
+a3 = t0 + a3
+t1 = v324
+[a3 + 0] =t1
+a4 = 1
+t0 = i
+a5 = t0 + a4
+t1 = a5
+i= t1
+goto lbl_While_318
+lbl_WhileExit_319:
+a6 = 0
+t1 = a6
+i= t1
+lbl_While_339:
+t0 = this
+a7 = [t0 + 16]
+t3 = [a7 + 0]
+t0 = i
+t4 = t0 < t3
+if0 t4 goto lbl_WhileExit_340
+t2 = 0
+t1 = t2
+j= t1
+lbl_While_345:
+t0 = this
+s1 = [t0 + 16]
+s2 = [s1 + 0]
+t0 = j
+s4 = t0 < s2
+if0 s4 goto lbl_WhileExit_346
+t0 = this
+t0 =[t0 + 16]
+v352 = t0
+t0 = 4
+v353 = t0
+t5 = 5
+t0 = v353
+s5 = t0 - t5
+t0 = v352
+s8 = [t0 + 0]
+t1 = i
+s6 = s5 < t1
+t0 = i
+s3 = t0 < s8
+s7 = s6 * s3
+if0 s7 goto lbl_OutOfBounds_360
+goto lbl_Inbound_361
+lbl_OutOfBounds_360:
+error ("array index out of bounds")
+lbl_Inbound_361:
+t0 = v353
+t1 = i
+s10 = t0 * t1
+t1 = v353
+s10 = s10 + t1
+t0 = v352
+s10 = t0 + s10
+t0 =[s10 + 0]
+v363 = t0
+t0 = this
+t0 =[t0 + 16]
+v364 = t0
+t0 = 4
+v365 = t0
+s9 = 5
+t0 = v365
+s11 = t0 - s9
+t0 = v364
+a3 = [t0 + 0]
+t1 = j
+a2 = s11 < t1
+t0 = j
+a4 = t0 < a3
+a5 = a2 * a4
+if0 a5 goto lbl_OutOfBounds_372
+goto lbl_Inbound_373
+lbl_OutOfBounds_372:
+error ("array index out of bounds")
+lbl_Inbound_373:
+t0 = v365
+t1 = j
+a6 = t0 * t1
+t1 = v365
+a6 = a6 + t1
+t0 = v364
+a6 = t0 + a6
+a7 = [a6 + 0]
+t0 = v363
+t3 = t0 * a7
+t0 = sum
+t4 = t0 + t3
+t1 = t4
+sum= t1
+t2 = 1
+t0 = j
+s1 = t0 + t2
+t1 = s1
+j= t1
+goto lbl_While_345
+lbl_WhileExit_346:
+s2 = 1
+t0 = i
+s4 = t0 + s2
+t1 = s4
+i= t1
+goto lbl_While_339
+lbl_WhileExit_340:
+s4 = stack_s4
+s2 = stack_s2
+s1 = stack_s1
+s9 = stack_s9
+s11 = stack_s11
+s10 = stack_s10
+s3 = stack_s3
+s7 = stack_s7
+s8 = stack_s8
+s11 = stack_s11
+s4 = stack_s4
+s5 = stack_s5
+s9 = stack_s9
+s6 = stack_s6
+s10 = stack_s10
+s2 = stack_s2
+s1 = stack_s1
+s3 = stack_s3
+s7 = stack_s7
+s8 = stack_s8
+s6 = stack_s6
+s5 = stack_s5
+s2 = stack_s2
+s4 = stack_s4
+s1 = stack_s1
+return sum
+func P_calculate(this)
+stack_s2 = s2
+stack_s2 = s2
+stack_s1 = s1
+stack_s1 = s1
+stack_s4 = s4
+stack_s2 = s2
+stack_s4 = s4
+stack_s11 = s11
+stack_s1 = s1
+stack_s10 = s10
+stack_s9 = s9
+stack_s9 = s9
+stack_s11 = s11
+stack_s4 = s4
+stack_s5 = s5
+stack_s6 = s6
+stack_s10 = s10
+stack_s3 = s3
+stack_s7 = s7
+stack_s8 = s8
+stack_s7 = s7
+stack_s6 = s6
+stack_s3 = s3
+stack_s5 = s5
+stack_s8 = s8
+t3 = 1
+t1 = t3
+result= t1
+t0 = 10
+v381 = t0
+t4 = 1
+t2 = 4
+t0 = v381
+t5 = t0 + t4
+t5 = t5 * t2
+s1 = alloc(t5)
+if0 s1 goto lbl_NullPtr_386
+goto lbl_GoodPtr_387
+lbl_NullPtr_386:
+error ("null pointer")
+lbl_GoodPtr_387:
+t1 = v381
+[s1 + 0] =t1
+t0 = this
+[t0 + 16] =s1
+s2 = 0
+t1 = s2
+i= t1
+lbl_While_389:
+t0 = this
+s4 = [t0 + 16]
+s5 = [s4 + 0]
+t0 = i
+s6 = t0 < s5
+if0 s6 goto lbl_WhileExit_390
+t0 = this
+t0 =[t0 + 16]
+v394 = t0
+s8 = 7
+t0 = i
+t0 =t0 * s8
+v395 = t0
+t0 = 4
+v397 = t0
+s3 = 5
+t0 = v397
+s7 = t0 - s3
+t0 = v394
+s10 = [t0 + 0]
+t1 = i
+s9 = s7 < t1
+t0 = i
+s11 = t0 < s10
+a2 = s9 * s11
+if0 a2 goto lbl_OutOfBounds_404
+goto lbl_Inbound_405
+lbl_OutOfBounds_404:
+error ("array index out of bounds")
+lbl_Inbound_405:
+t0 = v397
+t1 = i
+a3 = t0 * t1
+t1 = v397
+a3 = a3 + t1
+t0 = v394
+a3 = t0 + a3
+t1 = v395
+[a3 + 0] =t1
+a4 = 1
+t0 = i
+a5 = t0 + a4
+t1 = a5
+i= t1
+goto lbl_While_389
+lbl_WhileExit_390:
+a6 = 0
+t1 = a6
+i= t1
+lbl_While_410:
+t0 = this
+a7 = [t0 + 16]
+t3 = [a7 + 0]
+t0 = i
+t4 = t0 < t3
+if0 t4 goto lbl_WhileExit_411
+t2 = 0
+t1 = t2
+j= t1
+lbl_While_416:
+t0 = this
+s1 = [t0 + 16]
+s2 = [s1 + 0]
+t0 = j
+s4 = t0 < s2
+if0 s4 goto lbl_WhileExit_417
+t0 = this
+t0 =[t0 + 16]
+v423 = t0
+t0 = 4
+v424 = t0
+t5 = 5
+t0 = v424
+s5 = t0 - t5
+t0 = v423
+s8 = [t0 + 0]
+t1 = i
+s6 = s5 < t1
+t0 = i
+s3 = t0 < s8
+s7 = s6 * s3
+if0 s7 goto lbl_OutOfBounds_431
+goto lbl_Inbound_432
+lbl_OutOfBounds_431:
+error ("array index out of bounds")
+lbl_Inbound_432:
+t0 = v424
+t1 = i
+s10 = t0 * t1
+t1 = v424
+s10 = s10 + t1
+t0 = v423
+s10 = t0 + s10
+t0 =[s10 + 0]
+v434 = t0
+t0 = this
+t0 =[t0 + 16]
+v435 = t0
+t0 = 4
+v436 = t0
+s9 = 5
+t0 = v436
+s11 = t0 - s9
+t0 = v435
+a3 = [t0 + 0]
+t1 = j
+a2 = s11 < t1
+t0 = j
+a4 = t0 < a3
+a5 = a2 * a4
+if0 a5 goto lbl_OutOfBounds_443
+goto lbl_Inbound_444
+lbl_OutOfBounds_443:
+error ("array index out of bounds")
+lbl_Inbound_444:
+t0 = v436
+t1 = j
+a6 = t0 * t1
+t1 = v436
+a6 = a6 + t1
+t0 = v435
+a6 = t0 + a6
+a7 = [a6 + 0]
+t0 = v434
+t3 = t0 + a7
+t0 = result
+t4 = t0 * t3
+t1 = t4
+result= t1
+t2 = 1
+t0 = j
+s1 = t0 + t2
+t1 = s1
+j= t1
+goto lbl_While_416
+lbl_WhileExit_417:
+s2 = 1
+t0 = i
+s4 = t0 + s2
+t1 = s4
+i= t1
+goto lbl_While_410
+lbl_WhileExit_411:
+s2 = stack_s2
+s2 = stack_s2
+s1 = stack_s1
+s1 = stack_s1
+s4 = stack_s4
+s2 = stack_s2
+s4 = stack_s4
+s11 = stack_s11
+s1 = stack_s1
+s10 = stack_s10
+s9 = stack_s9
+s9 = stack_s9
+s11 = stack_s11
+s4 = stack_s4
+s5 = stack_s5
+s6 = stack_s6
+s10 = stack_s10
+s3 = stack_s3
+s7 = stack_s7
+s8 = stack_s8
+s7 = stack_s7
+s6 = stack_s6
+s3 = stack_s3
+s5 = stack_s5
+s8 = stack_s8
+return result

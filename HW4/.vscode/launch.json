@@ -14,7 +14,7 @@
             "request": "launch",
             "mainClass": "S2SV",
             "projectName": "HW4",
-            "args": "< testcases/hw4/Factorial.sparrow"
+            "args": "< testcases/hw4/TreeVisitor.sparrow"
 
         }
     ]

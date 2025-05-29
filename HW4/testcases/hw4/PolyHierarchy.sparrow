@@ -1,0 +1,60 @@
+func main()
+    v0 = 4
+    v1 = 4
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @Dog_speak
+    [v3 + 0] = v4
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_5
+  goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+    error("null pointer")
+lbl_GoodPtr_6:
+    a = v2
+  if0 a goto lbl_NullPtr_9
+    v7 = [a + 0]
+    v7 = [v7 + 0]
+    v8 = call v7(a)
+  goto lbl_GoodPtr_10
+lbl_NullPtr_9:
+    error("null pointer")
+lbl_GoodPtr_10:
+    print(v8)
+    v11 = 4
+    v12 = 4
+    v13 = alloc(v11)
+    v14 = alloc(v12)
+    v15 = @Cat_speak
+    [v14 + 0] = v15
+    [v13 + 0] = v14
+  if0 v13 goto lbl_NullPtr_16
+  goto lbl_GoodPtr_17
+lbl_NullPtr_16:
+    error("null pointer")
+lbl_GoodPtr_17:
+    a = v13
+  if0 a goto lbl_NullPtr_20
+    v18 = [a + 0]
+    v18 = [v18 + 0]
+    v19 = call v18(a)
+  goto lbl_GoodPtr_21
+lbl_NullPtr_20:
+    error("null pointer")
+lbl_GoodPtr_21:
+    print(v19)
+    v22 = 0
+    return v22
+
+func Animal_speak(this)
+    v23 = 0
+    return v23
+
+func Dog_speak(this)
+    v24 = 1
+    return v24
+
+func Cat_speak(this)
+    v25 = 2
+    return v25
+

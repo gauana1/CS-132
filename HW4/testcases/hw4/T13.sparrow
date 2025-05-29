@@ -1,0 +1,608 @@
+func main()
+    v0 = 16
+    v1 = 16
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @Element_Init
+    [v3 + 0] = v4
+    v5 = @Element_GetFlag
+    [v3 + 4] = v5
+    v6 = @Element_GetID
+    [v3 + 8] = v6
+    v7 = @Element_GetValue
+    [v3 + 12] = v7
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_8
+  goto lbl_GoodPtr_9
+lbl_NullPtr_8:
+    error("null pointer")
+lbl_GoodPtr_9:
+    e1 = v2
+  if0 e1 goto lbl_NullPtr_12
+    v10 = [e1 + 0]
+    v10 = [v10 + 0]
+    v14 = 10
+    v15 = 100
+    v16 = 1
+    v11 = call v10(e1 v14 v15 v16)
+  goto lbl_GoodPtr_13
+lbl_NullPtr_12:
+    error("null pointer")
+lbl_GoodPtr_13:
+    rt = v11
+    v17 = 16
+    v18 = 16
+    v19 = alloc(v17)
+    v20 = alloc(v18)
+    v21 = @Element_Init
+    [v20 + 0] = v21
+    v22 = @Element_GetFlag
+    [v20 + 4] = v22
+    v23 = @Element_GetID
+    [v20 + 8] = v23
+    v24 = @Element_GetValue
+    [v20 + 12] = v24
+    [v19 + 0] = v20
+  if0 v19 goto lbl_NullPtr_25
+  goto lbl_GoodPtr_26
+lbl_NullPtr_25:
+    error("null pointer")
+lbl_GoodPtr_26:
+    e2 = v19
+  if0 e2 goto lbl_NullPtr_29
+    v27 = [e2 + 0]
+    v27 = [v27 + 0]
+    v31 = 20
+    v32 = 200
+    v33 = 0
+    v28 = call v27(e2 v31 v32 v33)
+  goto lbl_GoodPtr_30
+lbl_NullPtr_29:
+    error("null pointer")
+lbl_GoodPtr_30:
+    rt = v28
+    v34 = 16
+    v35 = 16
+    v36 = alloc(v34)
+    v37 = alloc(v35)
+    v38 = @Element_Init
+    [v37 + 0] = v38
+    v39 = @Element_GetFlag
+    [v37 + 4] = v39
+    v40 = @Element_GetID
+    [v37 + 8] = v40
+    v41 = @Element_GetValue
+    [v37 + 12] = v41
+    [v36 + 0] = v37
+  if0 v36 goto lbl_NullPtr_42
+  goto lbl_GoodPtr_43
+lbl_NullPtr_42:
+    error("null pointer")
+lbl_GoodPtr_43:
+    e3 = v36
+  if0 e3 goto lbl_NullPtr_46
+    v44 = [e3 + 0]
+    v44 = [v44 + 0]
+    v48 = 30
+    v49 = 300
+    v50 = 1
+    v45 = call v44(e3 v48 v49 v50)
+  goto lbl_GoodPtr_47
+lbl_NullPtr_46:
+    error("null pointer")
+lbl_GoodPtr_47:
+    rt = v45
+    v51 = 16
+    v52 = 16
+    v53 = alloc(v51)
+    v54 = alloc(v52)
+    v55 = @Element_Init
+    [v54 + 0] = v55
+    v56 = @Element_GetFlag
+    [v54 + 4] = v56
+    v57 = @Element_GetID
+    [v54 + 8] = v57
+    v58 = @Element_GetValue
+    [v54 + 12] = v58
+    [v53 + 0] = v54
+  if0 v53 goto lbl_NullPtr_59
+  goto lbl_GoodPtr_60
+lbl_NullPtr_59:
+    error("null pointer")
+lbl_GoodPtr_60:
+    e4 = v53
+  if0 e4 goto lbl_NullPtr_63
+    v61 = [e4 + 0]
+    v61 = [v61 + 0]
+    v65 = 40
+    v66 = 400
+    v67 = 0
+    v62 = call v61(e4 v65 v66 v67)
+  goto lbl_GoodPtr_64
+lbl_NullPtr_63:
+    error("null pointer")
+lbl_GoodPtr_64:
+    rt = v62
+    v68 = 16
+    v69 = 16
+    v70 = alloc(v68)
+    v71 = alloc(v69)
+    v72 = @Element_Init
+    [v71 + 0] = v72
+    v73 = @Element_GetFlag
+    [v71 + 4] = v73
+    v74 = @Element_GetID
+    [v71 + 8] = v74
+    v75 = @Element_GetValue
+    [v71 + 12] = v75
+    [v70 + 0] = v71
+  if0 v70 goto lbl_NullPtr_76
+  goto lbl_GoodPtr_77
+lbl_NullPtr_76:
+    error("null pointer")
+lbl_GoodPtr_77:
+    e5 = v70
+  if0 e5 goto lbl_NullPtr_80
+    v78 = [e5 + 0]
+    v78 = [v78 + 0]
+    v82 = 50
+    v83 = 500
+    v84 = 1
+    v79 = call v78(e5 v82 v83 v84)
+  goto lbl_GoodPtr_81
+lbl_NullPtr_80:
+    error("null pointer")
+lbl_GoodPtr_81:
+    rt = v79
+    v85 = 24
+    v86 = 4
+    v87 = alloc(v85)
+    v88 = alloc(v86)
+    v89 = @A_calculate
+    [v88 + 0] = v89
+    [v87 + 0] = v88
+  if0 v87 goto lbl_NullPtr_90
+  goto lbl_GoodPtr_91
+lbl_NullPtr_90:
+    error("null pointer")
+lbl_GoodPtr_91:
+    a = v87
+    v92 = 44
+    v93 = 4
+    v94 = alloc(v92)
+    v95 = alloc(v93)
+    v96 = @B_calculate
+    [v95 + 0] = v96
+    [v94 + 0] = v95
+  if0 v94 goto lbl_NullPtr_97
+  goto lbl_GoodPtr_98
+lbl_NullPtr_97:
+    error("null pointer")
+lbl_GoodPtr_98:
+    b = v94
+  if0 a goto lbl_NullPtr_101
+    v99 = [a + 0]
+    v99 = [v99 + 0]
+    v100 = call v99(a e1 e2 e3 e4 e5)
+  goto lbl_GoodPtr_102
+lbl_NullPtr_101:
+    error("null pointer")
+lbl_GoodPtr_102:
+    result = v100
+    print(result)
+  if0 b goto lbl_NullPtr_105
+    v103 = [b + 0]
+    v103 = [v103 + 0]
+    v104 = call v103(b e1 e2 e3 e4 e5)
+  goto lbl_GoodPtr_106
+lbl_NullPtr_105:
+    error("null pointer")
+lbl_GoodPtr_106:
+    result = v104
+    print(result)
+    v107 = 0
+    return v107
+
+func Element_Init(this v i f)
+    [this + 12] = v
+    [this + 8] = i
+    [this + 4] = f
+    v108 = 1
+    return v108
+
+func Element_GetValue(this)
+    v109 = [this + 12]
+    return v109
+
+func Element_GetID(this)
+    v110 = [this + 8]
+    return v110
+
+func Element_GetFlag(this)
+    v111 = [this + 4]
+    return v111
+
+func A_calculate(this e1 e2 e3 e4 e5)
+  if0 e1 goto lbl_NullPtr_117
+    v115 = [e1 + 0]
+    v115 = [v115 + 12]
+    v116 = call v115(e1)
+  goto lbl_GoodPtr_118
+lbl_NullPtr_117:
+    error("null pointer")
+lbl_GoodPtr_118:
+  if0 e2 goto lbl_NullPtr_121
+    v119 = [e2 + 0]
+    v119 = [v119 + 12]
+    v120 = call v119(e2)
+  goto lbl_GoodPtr_122
+lbl_NullPtr_121:
+    error("null pointer")
+lbl_GoodPtr_122:
+    v114 = v116 + v120
+  if0 e3 goto lbl_NullPtr_126
+    v124 = [e3 + 0]
+    v124 = [v124 + 12]
+    v125 = call v124(e3)
+  goto lbl_GoodPtr_127
+lbl_NullPtr_126:
+    error("null pointer")
+lbl_GoodPtr_127:
+  if0 e4 goto lbl_NullPtr_130
+    v128 = [e4 + 0]
+    v128 = [v128 + 12]
+    v129 = call v128(e4)
+  goto lbl_GoodPtr_131
+lbl_NullPtr_130:
+    error("null pointer")
+lbl_GoodPtr_131:
+    v123 = v125 + v129
+    v113 = v114 + v123
+  if0 e5 goto lbl_NullPtr_134
+    v132 = [e5 + 0]
+    v132 = [v132 + 12]
+    v133 = call v132(e5)
+  goto lbl_GoodPtr_135
+lbl_NullPtr_134:
+    error("null pointer")
+lbl_GoodPtr_135:
+    v112 = v113 + v133
+    [this + 12] = v112
+  if0 e1 goto lbl_NullPtr_141
+    v139 = [e1 + 0]
+    v139 = [v139 + 8]
+    v140 = call v139(e1)
+  goto lbl_GoodPtr_142
+lbl_NullPtr_141:
+    error("null pointer")
+lbl_GoodPtr_142:
+  if0 e2 goto lbl_NullPtr_145
+    v143 = [e2 + 0]
+    v143 = [v143 + 8]
+    v144 = call v143(e2)
+  goto lbl_GoodPtr_146
+lbl_NullPtr_145:
+    error("null pointer")
+lbl_GoodPtr_146:
+    v138 = v140 + v144
+  if0 e3 goto lbl_NullPtr_150
+    v148 = [e3 + 0]
+    v148 = [v148 + 8]
+    v149 = call v148(e3)
+  goto lbl_GoodPtr_151
+lbl_NullPtr_150:
+    error("null pointer")
+lbl_GoodPtr_151:
+  if0 e4 goto lbl_NullPtr_154
+    v152 = [e4 + 0]
+    v152 = [v152 + 8]
+    v153 = call v152(e4)
+  goto lbl_GoodPtr_155
+lbl_NullPtr_154:
+    error("null pointer")
+lbl_GoodPtr_155:
+    v147 = v149 + v153
+    v137 = v138 + v147
+  if0 e5 goto lbl_NullPtr_158
+    v156 = [e5 + 0]
+    v156 = [v156 + 8]
+    v157 = call v156(e5)
+  goto lbl_GoodPtr_159
+lbl_NullPtr_158:
+    error("null pointer")
+lbl_GoodPtr_159:
+    v136 = v137 + v157
+    [this + 16] = v136
+    v160 = 0
+    [this + 20] = v160
+  if0 e1 goto lbl_NullPtr_165
+    v163 = [e1 + 0]
+    v163 = [v163 + 4]
+    v164 = call v163(e1)
+  goto lbl_GoodPtr_166
+lbl_NullPtr_165:
+    error("null pointer")
+lbl_GoodPtr_166:
+  if0 v164 goto lbl_Else_161
+    v168 = [this + 20]
+    v169 = 1
+    v167 = v168 + v169
+    [this + 20] = v167
+  goto lbl_IfEnd_162
+lbl_Else_161:
+lbl_IfEnd_162:
+  if0 e2 goto lbl_NullPtr_174
+    v172 = [e2 + 0]
+    v172 = [v172 + 4]
+    v173 = call v172(e2)
+  goto lbl_GoodPtr_175
+lbl_NullPtr_174:
+    error("null pointer")
+lbl_GoodPtr_175:
+  if0 v173 goto lbl_Else_170
+    v177 = [this + 20]
+    v178 = 1
+    v176 = v177 + v178
+    [this + 20] = v176
+  goto lbl_IfEnd_171
+lbl_Else_170:
+lbl_IfEnd_171:
+  if0 e3 goto lbl_NullPtr_183
+    v181 = [e3 + 0]
+    v181 = [v181 + 4]
+    v182 = call v181(e3)
+  goto lbl_GoodPtr_184
+lbl_NullPtr_183:
+    error("null pointer")
+lbl_GoodPtr_184:
+  if0 v182 goto lbl_Else_179
+    v186 = [this + 20]
+    v187 = 1
+    v185 = v186 + v187
+    [this + 20] = v185
+  goto lbl_IfEnd_180
+lbl_Else_179:
+lbl_IfEnd_180:
+  if0 e4 goto lbl_NullPtr_192
+    v190 = [e4 + 0]
+    v190 = [v190 + 4]
+    v191 = call v190(e4)
+  goto lbl_GoodPtr_193
+lbl_NullPtr_192:
+    error("null pointer")
+lbl_GoodPtr_193:
+  if0 v191 goto lbl_Else_188
+    v195 = [this + 20]
+    v196 = 1
+    v194 = v195 + v196
+    [this + 20] = v194
+  goto lbl_IfEnd_189
+lbl_Else_188:
+lbl_IfEnd_189:
+  if0 e5 goto lbl_NullPtr_201
+    v199 = [e5 + 0]
+    v199 = [v199 + 4]
+    v200 = call v199(e5)
+  goto lbl_GoodPtr_202
+lbl_NullPtr_201:
+    error("null pointer")
+lbl_GoodPtr_202:
+  if0 v200 goto lbl_Else_197
+    v204 = [this + 20]
+    v205 = 1
+    v203 = v204 + v205
+    [this + 20] = v203
+  goto lbl_IfEnd_198
+lbl_Else_197:
+lbl_IfEnd_198:
+    v207 = [this + 12]
+    v208 = [this + 16]
+    v206 = v207 * v208
+    [this + 8] = v206
+    v210 = [this + 8]
+    v211 = [this + 20]
+    v209 = v210 + v211
+    [this + 4] = v209
+    v215 = [this + 12]
+    v216 = [this + 16]
+    v214 = v215 + v216
+    v218 = [this + 20]
+    v219 = [this + 8]
+    v217 = v218 + v219
+    v213 = v214 + v217
+    v220 = [this + 4]
+    v212 = v213 + v220
+    return v212
+
+func B_calculate(this e1 e2 e3 e4 e5)
+  if0 e1 goto lbl_NullPtr_226
+    v224 = [e1 + 0]
+    v224 = [v224 + 12]
+    v225 = call v224(e1)
+  goto lbl_GoodPtr_227
+lbl_NullPtr_226:
+    error("null pointer")
+lbl_GoodPtr_227:
+  if0 e2 goto lbl_NullPtr_230
+    v228 = [e2 + 0]
+    v228 = [v228 + 12]
+    v229 = call v228(e2)
+  goto lbl_GoodPtr_231
+lbl_NullPtr_230:
+    error("null pointer")
+lbl_GoodPtr_231:
+    v223 = v225 * v229
+  if0 e3 goto lbl_NullPtr_235
+    v233 = [e3 + 0]
+    v233 = [v233 + 12]
+    v234 = call v233(e3)
+  goto lbl_GoodPtr_236
+lbl_NullPtr_235:
+    error("null pointer")
+lbl_GoodPtr_236:
+  if0 e4 goto lbl_NullPtr_239
+    v237 = [e4 + 0]
+    v237 = [v237 + 12]
+    v238 = call v237(e4)
+  goto lbl_GoodPtr_240
+lbl_NullPtr_239:
+    error("null pointer")
+lbl_GoodPtr_240:
+    v232 = v234 * v238
+    v222 = v223 * v232
+  if0 e5 goto lbl_NullPtr_243
+    v241 = [e5 + 0]
+    v241 = [v241 + 12]
+    v242 = call v241(e5)
+  goto lbl_GoodPtr_244
+lbl_NullPtr_243:
+    error("null pointer")
+lbl_GoodPtr_244:
+    v221 = v222 * v242
+    [this + 24] = v221
+  if0 e1 goto lbl_NullPtr_250
+    v248 = [e1 + 0]
+    v248 = [v248 + 8]
+    v249 = call v248(e1)
+  goto lbl_GoodPtr_251
+lbl_NullPtr_250:
+    error("null pointer")
+lbl_GoodPtr_251:
+  if0 e2 goto lbl_NullPtr_254
+    v252 = [e2 + 0]
+    v252 = [v252 + 8]
+    v253 = call v252(e2)
+  goto lbl_GoodPtr_255
+lbl_NullPtr_254:
+    error("null pointer")
+lbl_GoodPtr_255:
+    v247 = v249 * v253
+  if0 e3 goto lbl_NullPtr_259
+    v257 = [e3 + 0]
+    v257 = [v257 + 8]
+    v258 = call v257(e3)
+  goto lbl_GoodPtr_260
+lbl_NullPtr_259:
+    error("null pointer")
+lbl_GoodPtr_260:
+  if0 e4 goto lbl_NullPtr_263
+    v261 = [e4 + 0]
+    v261 = [v261 + 8]
+    v262 = call v261(e4)
+  goto lbl_GoodPtr_264
+lbl_NullPtr_263:
+    error("null pointer")
+lbl_GoodPtr_264:
+    v256 = v258 * v262
+    v246 = v247 * v256
+  if0 e5 goto lbl_NullPtr_267
+    v265 = [e5 + 0]
+    v265 = [v265 + 8]
+    v266 = call v265(e5)
+  goto lbl_GoodPtr_268
+lbl_NullPtr_267:
+    error("null pointer")
+lbl_GoodPtr_268:
+    v245 = v246 * v266
+    [this + 28] = v245
+    v269 = 0
+    [this + 32] = v269
+  if0 e1 goto lbl_NullPtr_274
+    v272 = [e1 + 0]
+    v272 = [v272 + 4]
+    v273 = call v272(e1)
+  goto lbl_GoodPtr_275
+lbl_NullPtr_274:
+    error("null pointer")
+lbl_GoodPtr_275:
+  if0 v273 goto lbl_Else_270
+    v277 = [this + 32]
+    v278 = 1
+    v276 = v277 + v278
+    [this + 32] = v276
+  goto lbl_IfEnd_271
+lbl_Else_270:
+lbl_IfEnd_271:
+  if0 e2 goto lbl_NullPtr_283
+    v281 = [e2 + 0]
+    v281 = [v281 + 4]
+    v282 = call v281(e2)
+  goto lbl_GoodPtr_284
+lbl_NullPtr_283:
+    error("null pointer")
+lbl_GoodPtr_284:
+  if0 v282 goto lbl_Else_279
+    v286 = [this + 32]
+    v287 = 1
+    v285 = v286 + v287
+    [this + 32] = v285
+  goto lbl_IfEnd_280
+lbl_Else_279:
+lbl_IfEnd_280:
+  if0 e3 goto lbl_NullPtr_292
+    v290 = [e3 + 0]
+    v290 = [v290 + 4]
+    v291 = call v290(e3)
+  goto lbl_GoodPtr_293
+lbl_NullPtr_292:
+    error("null pointer")
+lbl_GoodPtr_293:
+  if0 v291 goto lbl_Else_288
+    v295 = [this + 32]
+    v296 = 1
+    v294 = v295 + v296
+    [this + 32] = v294
+  goto lbl_IfEnd_289
+lbl_Else_288:
+lbl_IfEnd_289:
+  if0 e4 goto lbl_NullPtr_301
+    v299 = [e4 + 0]
+    v299 = [v299 + 4]
+    v300 = call v299(e4)
+  goto lbl_GoodPtr_302
+lbl_NullPtr_301:
+    error("null pointer")
+lbl_GoodPtr_302:
+  if0 v300 goto lbl_Else_297
+    v304 = [this + 32]
+    v305 = 1
+    v303 = v304 + v305
+    [this + 32] = v303
+  goto lbl_IfEnd_298
+lbl_Else_297:
+lbl_IfEnd_298:
+  if0 e5 goto lbl_NullPtr_310
+    v308 = [e5 + 0]
+    v308 = [v308 + 4]
+    v309 = call v308(e5)
+  goto lbl_GoodPtr_311
+lbl_NullPtr_310:
+    error("null pointer")
+lbl_GoodPtr_311:
+  if0 v309 goto lbl_Else_306
+    v313 = [this + 32]
+    v314 = 1
+    v312 = v313 + v314
+    [this + 32] = v312
+  goto lbl_IfEnd_307
+lbl_Else_306:
+lbl_IfEnd_307:
+    v316 = [this + 24]
+    v317 = [this + 28]
+    v315 = v316 * v317
+    [this + 36] = v315
+    v319 = [this + 36]
+    v320 = [this + 32]
+    v318 = v319 + v320
+    [this + 40] = v318
+    v324 = [this + 24]
+    v325 = [this + 28]
+    v323 = v324 + v325
+    v327 = [this + 32]
+    v328 = [this + 36]
+    v326 = v327 + v328
+    v322 = v323 + v326
+    v329 = [this + 40]
+    v321 = v322 + v329
+    return v321
+

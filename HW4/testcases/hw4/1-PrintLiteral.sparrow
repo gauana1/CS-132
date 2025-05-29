@@ -1,0 +1,6 @@
+func main()
+    v0 = 12
+    print(v0)
+    v1 = 0
+    return v1
+

@@ -1,0 +1,76 @@
+func main()
+    v0 = 4
+    v1 = 4
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @A_run
+    [v3 + 0] = v4
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_5
+  goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+    error("null pointer")
+lbl_GoodPtr_6:
+  if0 v2 goto lbl_NullPtr_9
+    v7 = [v2 + 0]
+    v7 = [v7 + 0]
+    v8 = call v7(v2)
+  goto lbl_GoodPtr_10
+lbl_NullPtr_9:
+    error("null pointer")
+lbl_GoodPtr_10:
+    print(v8)
+    v11 = 0
+    return v11
+
+func A_run(this)
+    v12 = 20
+    v13 = 1
+    v14 = 4
+    v15 = v12 + v13
+    v15 = v15 * v14
+    v16 = alloc(v15)
+  if0 v16 goto lbl_NullPtr_17
+  goto lbl_GoodPtr_18
+lbl_NullPtr_17:
+    error("null pointer")
+lbl_GoodPtr_18:
+    [v16 + 0] = v12
+    a = v16
+    v19 = 10
+    v20 = 4
+    v21 = 5
+    v22 = v20 - v21
+    v23 = [a + 0]
+    v24 = v22 < v19
+    v25 = v19 < v23
+    v26 = v24 * v25
+  if0 v26 goto lbl_OutOfBounds_27
+  goto lbl_Inbound_28
+lbl_OutOfBounds_27:
+    error("array index out of bounds")
+lbl_Inbound_28:
+    v29 = v20 * v19
+    v29 = v29 + v20
+    v29 = a + v29
+    v30 = [v29 + 0]
+    print(v30)
+    v31 = 40
+    v32 = 4
+    v33 = 5
+    v34 = v32 - v33
+    v35 = [a + 0]
+    v36 = v34 < v31
+    v37 = v31 < v35
+    v38 = v36 * v37
+  if0 v38 goto lbl_OutOfBounds_39
+  goto lbl_Inbound_40
+lbl_OutOfBounds_39:
+    error("array index out of bounds")
+lbl_Inbound_40:
+    v41 = v32 * v31
+    v41 = v41 + v32
+    v41 = a + v41
+    v42 = [v41 + 0]
+    return v42
+

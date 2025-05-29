@@ -1,0 +1,91 @@
+func main()
+    v0 = 7
+    half = v0
+    v2 = 2
+    v1 = half * v2
+    size = v1
+    v3 = 1
+    v4 = 4
+    v5 = size + v3
+    v5 = v5 * v4
+    v6 = alloc(v5)
+  if0 v6 goto lbl_NullPtr_7
+  goto lbl_GoodPtr_8
+lbl_NullPtr_7:
+    error("null pointer")
+lbl_GoodPtr_8:
+    [v6 + 0] = size
+    arr = v6
+    v9 = [arr + 0]
+    print(v9)
+    v10 = 0
+    i = v10
+lbl_While_11:
+    v13 = i < size
+  if0 v13 goto lbl_WhileExit_12
+    v16 = i < half
+  if0 v16 goto lbl_Else_14
+    v17 = i * i
+    v18 = 4
+    v19 = 5
+    v20 = v18 - v19
+    v21 = [arr + 0]
+    v22 = v20 < i
+    v23 = i < v21
+    v24 = v22 * v23
+  if0 v24 goto lbl_OutOfBounds_25
+  goto lbl_Inbound_26
+lbl_OutOfBounds_25:
+    error("array index out of bounds")
+lbl_Inbound_26:
+    v27 = v18 * i
+    v27 = v27 + v18
+    v27 = arr + v27
+    [v27 + 0] = v17
+  goto lbl_IfEnd_15
+lbl_Else_14:
+    v29 = 0
+    v30 = i * i
+    v28 = v29 - v30
+    v31 = 4
+    v32 = 5
+    v33 = v31 - v32
+    v34 = [arr + 0]
+    v35 = v33 < i
+    v36 = i < v34
+    v37 = v35 * v36
+  if0 v37 goto lbl_OutOfBounds_38
+  goto lbl_Inbound_39
+lbl_OutOfBounds_38:
+    error("array index out of bounds")
+lbl_Inbound_39:
+    v40 = v31 * i
+    v40 = v40 + v31
+    v40 = arr + v40
+    [v40 + 0] = v28
+lbl_IfEnd_15:
+    v41 = 4
+    v42 = 5
+    v43 = v41 - v42
+    v44 = [arr + 0]
+    v45 = v43 < i
+    v46 = i < v44
+    v47 = v45 * v46
+  if0 v47 goto lbl_OutOfBounds_48
+  goto lbl_Inbound_49
+lbl_OutOfBounds_48:
+    error("array index out of bounds")
+lbl_Inbound_49:
+    v50 = v41 * i
+    v50 = v50 + v41
+    v50 = arr + v50
+    v51 = [v50 + 0]
+    print(v51)
+    v53 = 1
+    v52 = i + v53
+    i = v52
+  goto lbl_While_11
+lbl_WhileExit_12:
+    v54 = 0
+    return v54
+

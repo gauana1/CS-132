@@ -1,0 +1,99 @@
+func main()
+    v0 = 24
+    v1 = 4
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @A_calculate
+    [v3 + 0] = v4
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_5
+  goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+    error("null pointer")
+lbl_GoodPtr_6:
+    a = v2
+    v7 = 44
+    v8 = 4
+    v9 = alloc(v7)
+    v10 = alloc(v8)
+    v11 = @B_calculate
+    [v10 + 0] = v11
+    [v9 + 0] = v10
+  if0 v9 goto lbl_NullPtr_12
+  goto lbl_GoodPtr_13
+lbl_NullPtr_12:
+    error("null pointer")
+lbl_GoodPtr_13:
+    b = v9
+  if0 a goto lbl_NullPtr_16
+    v14 = [a + 0]
+    v14 = [v14 + 0]
+    v18 = 10
+    v19 = 20
+    v20 = 30
+    v21 = 40
+    v22 = 50
+    v15 = call v14(a v18 v19 v20 v21 v22)
+  goto lbl_GoodPtr_17
+lbl_NullPtr_16:
+    error("null pointer")
+lbl_GoodPtr_17:
+    result = v15
+    print(result)
+  if0 b goto lbl_NullPtr_25
+    v23 = [b + 0]
+    v23 = [v23 + 0]
+    v27 = 10
+    v28 = 20
+    v29 = 30
+    v30 = 40
+    v31 = 50
+    v24 = call v23(b v27 v28 v29 v30 v31)
+  goto lbl_GoodPtr_26
+lbl_NullPtr_25:
+    error("null pointer")
+lbl_GoodPtr_26:
+    result = v24
+    print(result)
+    v32 = 0
+    return v32
+
+func A_calculate(this a b c d e)
+    v33 = a + b
+    [this + 12] = v33
+    v34 = b + c
+    [this + 16] = v34
+    v35 = c + d
+    [this + 20] = v35
+    v36 = d + e
+    [this + 8] = v36
+    v37 = e + a
+    [this + 4] = v37
+    v41 = [this + 12]
+    v42 = [this + 16]
+    v40 = v41 + v42
+    v44 = [this + 20]
+    v45 = [this + 8]
+    v43 = v44 + v45
+    v39 = v40 + v43
+    v46 = [this + 4]
+    v38 = v39 + v46
+    return v38
+
+func B_calculate(this a b c d e)
+    v47 = a * b
+    a = v47
+    v48 = b * c
+    b = v48
+    v49 = c * d
+    c = v49
+    v50 = d * e
+    d = v50
+    v51 = e * a
+    e = v51
+    v54 = a + b
+    v55 = c + d
+    v53 = v54 + v55
+    v52 = v53 + e
+    return v52
+

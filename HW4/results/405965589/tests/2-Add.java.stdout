@@ -1,7 +1,0 @@
-func main()
-v0 = 12
-v1 = 21
-v2=v0 + v1
-print(v2)
-v3 = 0
-return v3

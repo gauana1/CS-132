@@ -1,0 +1,38 @@
+func main()
+    v0 = 4
+    v1 = 4
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @Leaf_value
+    [v3 + 0] = v4
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_5
+  goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+    error("null pointer")
+lbl_GoodPtr_6:
+    b = v2
+  if0 b goto lbl_NullPtr_9
+    v7 = [b + 0]
+    v7 = [v7 + 0]
+    v8 = call v7(b)
+  goto lbl_GoodPtr_10
+lbl_NullPtr_9:
+    error("null pointer")
+lbl_GoodPtr_10:
+    print(v8)
+    v11 = 0
+    return v11
+
+func Base_value(this)
+    v12 = 10
+    return v12
+
+func Mid_value(this)
+    v13 = 20
+    return v13
+
+func Leaf_value(this)
+    v14 = 30
+    return v14
+

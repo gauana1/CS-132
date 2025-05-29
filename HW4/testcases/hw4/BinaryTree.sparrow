@@ -1,0 +1,1095 @@
+func main()
+    v0 = 4
+    v1 = 4
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @BT_Start
+    [v3 + 0] = v4
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_5
+  goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+    error("null pointer")
+lbl_GoodPtr_6:
+  if0 v2 goto lbl_NullPtr_9
+    v7 = [v2 + 0]
+    v7 = [v7 + 0]
+    v8 = call v7(v2)
+  goto lbl_GoodPtr_10
+lbl_NullPtr_9:
+    error("null pointer")
+lbl_GoodPtr_10:
+    print(v8)
+    v11 = 0
+    return v11
+
+func BT_Start(this)
+    v12 = 28
+    v13 = 80
+    v14 = alloc(v12)
+    v15 = alloc(v13)
+    v16 = @Tree_Delete
+    [v15 + 0] = v16
+    v17 = @Tree_SetHas_Left
+    [v15 + 4] = v17
+    v18 = @Tree_RemoveLeft
+    [v15 + 8] = v18
+    v19 = @Tree_GetKey
+    [v15 + 12] = v19
+    v20 = @Tree_SetRight
+    [v15 + 16] = v20
+    v21 = @Tree_GetLeft
+    [v15 + 20] = v21
+    v22 = @Tree_GetRight
+    [v15 + 24] = v22
+    v23 = @Tree_Remove
+    [v15 + 28] = v23
+    v24 = @Tree_SetLeft
+    [v15 + 32] = v24
+    v25 = @Tree_Insert
+    [v15 + 36] = v25
+    v26 = @Tree_Print
+    [v15 + 40] = v26
+    v27 = @Tree_Init
+    [v15 + 44] = v27
+    v28 = @Tree_GetHas_Right
+    [v15 + 48] = v28
+    v29 = @Tree_GetHas_Left
+    [v15 + 52] = v29
+    v30 = @Tree_RemoveRight
+    [v15 + 56] = v30
+    v31 = @Tree_Search
+    [v15 + 60] = v31
+    v32 = @Tree_SetKey
+    [v15 + 64] = v32
+    v33 = @Tree_Compare
+    [v15 + 68] = v33
+    v34 = @Tree_SetHas_Right
+    [v15 + 72] = v34
+    v35 = @Tree_RecPrint
+    [v15 + 76] = v35
+    [v14 + 0] = v15
+  if0 v14 goto lbl_NullPtr_36
+  goto lbl_GoodPtr_37
+lbl_NullPtr_36:
+    error("null pointer")
+lbl_GoodPtr_37:
+    root = v14
+  if0 root goto lbl_NullPtr_40
+    v38 = [root + 0]
+    v38 = [v38 + 44]
+    v42 = 16
+    v39 = call v38(root v42)
+  goto lbl_GoodPtr_41
+lbl_NullPtr_40:
+    error("null pointer")
+lbl_GoodPtr_41:
+    ntb = v39
+  if0 root goto lbl_NullPtr_45
+    v43 = [root + 0]
+    v43 = [v43 + 40]
+    v44 = call v43(root)
+  goto lbl_GoodPtr_46
+lbl_NullPtr_45:
+    error("null pointer")
+lbl_GoodPtr_46:
+    ntb = v44
+    v47 = 100000000
+    print(v47)
+  if0 root goto lbl_NullPtr_50
+    v48 = [root + 0]
+    v48 = [v48 + 36]
+    v52 = 8
+    v49 = call v48(root v52)
+  goto lbl_GoodPtr_51
+lbl_NullPtr_50:
+    error("null pointer")
+lbl_GoodPtr_51:
+    ntb = v49
+  if0 root goto lbl_NullPtr_55
+    v53 = [root + 0]
+    v53 = [v53 + 40]
+    v54 = call v53(root)
+  goto lbl_GoodPtr_56
+lbl_NullPtr_55:
+    error("null pointer")
+lbl_GoodPtr_56:
+    ntb = v54
+  if0 root goto lbl_NullPtr_59
+    v57 = [root + 0]
+    v57 = [v57 + 36]
+    v61 = 24
+    v58 = call v57(root v61)
+  goto lbl_GoodPtr_60
+lbl_NullPtr_59:
+    error("null pointer")
+lbl_GoodPtr_60:
+    ntb = v58
+  if0 root goto lbl_NullPtr_64
+    v62 = [root + 0]
+    v62 = [v62 + 36]
+    v66 = 4
+    v63 = call v62(root v66)
+  goto lbl_GoodPtr_65
+lbl_NullPtr_64:
+    error("null pointer")
+lbl_GoodPtr_65:
+    ntb = v63
+  if0 root goto lbl_NullPtr_69
+    v67 = [root + 0]
+    v67 = [v67 + 36]
+    v71 = 12
+    v68 = call v67(root v71)
+  goto lbl_GoodPtr_70
+lbl_NullPtr_69:
+    error("null pointer")
+lbl_GoodPtr_70:
+    ntb = v68
+  if0 root goto lbl_NullPtr_74
+    v72 = [root + 0]
+    v72 = [v72 + 36]
+    v76 = 20
+    v73 = call v72(root v76)
+  goto lbl_GoodPtr_75
+lbl_NullPtr_74:
+    error("null pointer")
+lbl_GoodPtr_75:
+    ntb = v73
+  if0 root goto lbl_NullPtr_79
+    v77 = [root + 0]
+    v77 = [v77 + 36]
+    v81 = 28
+    v78 = call v77(root v81)
+  goto lbl_GoodPtr_80
+lbl_NullPtr_79:
+    error("null pointer")
+lbl_GoodPtr_80:
+    ntb = v78
+  if0 root goto lbl_NullPtr_84
+    v82 = [root + 0]
+    v82 = [v82 + 36]
+    v86 = 14
+    v83 = call v82(root v86)
+  goto lbl_GoodPtr_85
+lbl_NullPtr_84:
+    error("null pointer")
+lbl_GoodPtr_85:
+    ntb = v83
+  if0 root goto lbl_NullPtr_89
+    v87 = [root + 0]
+    v87 = [v87 + 40]
+    v88 = call v87(root)
+  goto lbl_GoodPtr_90
+lbl_NullPtr_89:
+    error("null pointer")
+lbl_GoodPtr_90:
+    ntb = v88
+  if0 root goto lbl_NullPtr_93
+    v91 = [root + 0]
+    v91 = [v91 + 60]
+    v95 = 24
+    v92 = call v91(root v95)
+  goto lbl_GoodPtr_94
+lbl_NullPtr_93:
+    error("null pointer")
+lbl_GoodPtr_94:
+    print(v92)
+  if0 root goto lbl_NullPtr_98
+    v96 = [root + 0]
+    v96 = [v96 + 60]
+    v100 = 12
+    v97 = call v96(root v100)
+  goto lbl_GoodPtr_99
+lbl_NullPtr_98:
+    error("null pointer")
+lbl_GoodPtr_99:
+    print(v97)
+  if0 root goto lbl_NullPtr_103
+    v101 = [root + 0]
+    v101 = [v101 + 60]
+    v105 = 16
+    v102 = call v101(root v105)
+  goto lbl_GoodPtr_104
+lbl_NullPtr_103:
+    error("null pointer")
+lbl_GoodPtr_104:
+    print(v102)
+  if0 root goto lbl_NullPtr_108
+    v106 = [root + 0]
+    v106 = [v106 + 60]
+    v110 = 50
+    v107 = call v106(root v110)
+  goto lbl_GoodPtr_109
+lbl_NullPtr_108:
+    error("null pointer")
+lbl_GoodPtr_109:
+    print(v107)
+  if0 root goto lbl_NullPtr_113
+    v111 = [root + 0]
+    v111 = [v111 + 60]
+    v115 = 12
+    v112 = call v111(root v115)
+  goto lbl_GoodPtr_114
+lbl_NullPtr_113:
+    error("null pointer")
+lbl_GoodPtr_114:
+    print(v112)
+  if0 root goto lbl_NullPtr_118
+    v116 = [root + 0]
+    v116 = [v116 + 0]
+    v120 = 12
+    v117 = call v116(root v120)
+  goto lbl_GoodPtr_119
+lbl_NullPtr_118:
+    error("null pointer")
+lbl_GoodPtr_119:
+    ntb = v117
+  if0 root goto lbl_NullPtr_123
+    v121 = [root + 0]
+    v121 = [v121 + 40]
+    v122 = call v121(root)
+  goto lbl_GoodPtr_124
+lbl_NullPtr_123:
+    error("null pointer")
+lbl_GoodPtr_124:
+    ntb = v122
+  if0 root goto lbl_NullPtr_127
+    v125 = [root + 0]
+    v125 = [v125 + 60]
+    v129 = 12
+    v126 = call v125(root v129)
+  goto lbl_GoodPtr_128
+lbl_NullPtr_127:
+    error("null pointer")
+lbl_GoodPtr_128:
+    print(v126)
+    v130 = 0
+    return v130
+
+func Tree_Init(this v_key)
+    [this + 24] = v_key
+    v131 = 0
+    [this + 20] = v131
+    v132 = 0
+    [this + 8] = v132
+    v133 = 1
+    return v133
+
+func Tree_SetRight(this rn)
+    [this + 16] = rn
+    v134 = 1
+    return v134
+
+func Tree_SetLeft(this ln)
+    [this + 4] = ln
+    v135 = 1
+    return v135
+
+func Tree_GetRight(this)
+    v136 = [this + 16]
+    return v136
+
+func Tree_GetLeft(this)
+    v137 = [this + 4]
+    return v137
+
+func Tree_GetKey(this)
+    v138 = [this + 24]
+    return v138
+
+func Tree_SetKey(this v_key)
+    [this + 24] = v_key
+    v139 = 1
+    return v139
+
+func Tree_GetHas_Right(this)
+    v140 = [this + 8]
+    return v140
+
+func Tree_GetHas_Left(this)
+    v141 = [this + 20]
+    return v141
+
+func Tree_SetHas_Left(this val)
+    [this + 20] = val
+    v142 = 1
+    return v142
+
+func Tree_SetHas_Right(this val)
+    [this + 8] = val
+    v143 = 1
+    return v143
+
+func Tree_Compare(this num1 num2)
+    v144 = 0
+    ntb = v144
+    v146 = 1
+    v145 = num2 + v146
+    nti = v145
+    v149 = num1 < num2
+  if0 v149 goto lbl_Else_147
+    v150 = 0
+    ntb = v150
+  goto lbl_IfEnd_148
+lbl_Else_147:
+    v153 = num1 < nti
+    v154 = 1
+    v155 = v153 < v154
+  if0 v155 goto lbl_Else_151
+    v156 = 0
+    ntb = v156
+  goto lbl_IfEnd_152
+lbl_Else_151:
+    v157 = 1
+    ntb = v157
+lbl_IfEnd_152:
+lbl_IfEnd_148:
+    return ntb
+
+func Tree_Insert(this v_key)
+    v158 = 28
+    v159 = 80
+    v160 = alloc(v158)
+    v161 = alloc(v159)
+    v162 = @Tree_Delete
+    [v161 + 0] = v162
+    v163 = @Tree_SetHas_Left
+    [v161 + 4] = v163
+    v164 = @Tree_RemoveLeft
+    [v161 + 8] = v164
+    v165 = @Tree_GetKey
+    [v161 + 12] = v165
+    v166 = @Tree_SetRight
+    [v161 + 16] = v166
+    v167 = @Tree_GetLeft
+    [v161 + 20] = v167
+    v168 = @Tree_GetRight
+    [v161 + 24] = v168
+    v169 = @Tree_Remove
+    [v161 + 28] = v169
+    v170 = @Tree_SetLeft
+    [v161 + 32] = v170
+    v171 = @Tree_Insert
+    [v161 + 36] = v171
+    v172 = @Tree_Print
+    [v161 + 40] = v172
+    v173 = @Tree_Init
+    [v161 + 44] = v173
+    v174 = @Tree_GetHas_Right
+    [v161 + 48] = v174
+    v175 = @Tree_GetHas_Left
+    [v161 + 52] = v175
+    v176 = @Tree_RemoveRight
+    [v161 + 56] = v176
+    v177 = @Tree_Search
+    [v161 + 60] = v177
+    v178 = @Tree_SetKey
+    [v161 + 64] = v178
+    v179 = @Tree_Compare
+    [v161 + 68] = v179
+    v180 = @Tree_SetHas_Right
+    [v161 + 72] = v180
+    v181 = @Tree_RecPrint
+    [v161 + 76] = v181
+    [v160 + 0] = v161
+  if0 v160 goto lbl_NullPtr_182
+  goto lbl_GoodPtr_183
+lbl_NullPtr_182:
+    error("null pointer")
+lbl_GoodPtr_183:
+    new_node = v160
+  if0 new_node goto lbl_NullPtr_186
+    v184 = [new_node + 0]
+    v184 = [v184 + 44]
+    v185 = call v184(new_node v_key)
+  goto lbl_GoodPtr_187
+lbl_NullPtr_186:
+    error("null pointer")
+lbl_GoodPtr_187:
+    ntb = v185
+    current_node = this
+    v188 = 1
+    cont = v188
+lbl_While_189:
+  if0 cont goto lbl_WhileExit_190
+  if0 current_node goto lbl_NullPtr_193
+    v191 = [current_node + 0]
+    v191 = [v191 + 12]
+    v192 = call v191(current_node)
+  goto lbl_GoodPtr_194
+lbl_NullPtr_193:
+    error("null pointer")
+lbl_GoodPtr_194:
+    key_aux = v192
+    v197 = v_key < key_aux
+  if0 v197 goto lbl_Else_195
+  if0 current_node goto lbl_NullPtr_202
+    v200 = [current_node + 0]
+    v200 = [v200 + 52]
+    v201 = call v200(current_node)
+  goto lbl_GoodPtr_203
+lbl_NullPtr_202:
+    error("null pointer")
+lbl_GoodPtr_203:
+  if0 v201 goto lbl_Else_198
+  if0 current_node goto lbl_NullPtr_206
+    v204 = [current_node + 0]
+    v204 = [v204 + 20]
+    v205 = call v204(current_node)
+  goto lbl_GoodPtr_207
+lbl_NullPtr_206:
+    error("null pointer")
+lbl_GoodPtr_207:
+    current_node = v205
+  goto lbl_IfEnd_199
+lbl_Else_198:
+    v208 = 0
+    cont = v208
+  if0 current_node goto lbl_NullPtr_211
+    v209 = [current_node + 0]
+    v209 = [v209 + 4]
+    v213 = 1
+    v210 = call v209(current_node v213)
+  goto lbl_GoodPtr_212
+lbl_NullPtr_211:
+    error("null pointer")
+lbl_GoodPtr_212:
+    ntb = v210
+  if0 current_node goto lbl_NullPtr_216
+    v214 = [current_node + 0]
+    v214 = [v214 + 32]
+    v215 = call v214(current_node new_node)
+  goto lbl_GoodPtr_217
+lbl_NullPtr_216:
+    error("null pointer")
+lbl_GoodPtr_217:
+    ntb = v215
+lbl_IfEnd_199:
+  goto lbl_IfEnd_196
+lbl_Else_195:
+  if0 current_node goto lbl_NullPtr_222
+    v220 = [current_node + 0]
+    v220 = [v220 + 48]
+    v221 = call v220(current_node)
+  goto lbl_GoodPtr_223
+lbl_NullPtr_222:
+    error("null pointer")
+lbl_GoodPtr_223:
+  if0 v221 goto lbl_Else_218
+  if0 current_node goto lbl_NullPtr_226
+    v224 = [current_node + 0]
+    v224 = [v224 + 24]
+    v225 = call v224(current_node)
+  goto lbl_GoodPtr_227
+lbl_NullPtr_226:
+    error("null pointer")
+lbl_GoodPtr_227:
+    current_node = v225
+  goto lbl_IfEnd_219
+lbl_Else_218:
+    v228 = 0
+    cont = v228
+  if0 current_node goto lbl_NullPtr_231
+    v229 = [current_node + 0]
+    v229 = [v229 + 72]
+    v233 = 1
+    v230 = call v229(current_node v233)
+  goto lbl_GoodPtr_232
+lbl_NullPtr_231:
+    error("null pointer")
+lbl_GoodPtr_232:
+    ntb = v230
+  if0 current_node goto lbl_NullPtr_236
+    v234 = [current_node + 0]
+    v234 = [v234 + 16]
+    v235 = call v234(current_node new_node)
+  goto lbl_GoodPtr_237
+lbl_NullPtr_236:
+    error("null pointer")
+lbl_GoodPtr_237:
+    ntb = v235
+lbl_IfEnd_219:
+lbl_IfEnd_196:
+  goto lbl_While_189
+lbl_WhileExit_190:
+    v238 = 1
+    return v238
+
+func Tree_Delete(this v_key)
+    current_node = this
+    parent_node = this
+    v239 = 1
+    cont = v239
+    v240 = 0
+    found = v240
+    v241 = 1
+    is_root = v241
+lbl_While_242:
+  if0 cont goto lbl_WhileExit_243
+  if0 current_node goto lbl_NullPtr_246
+    v244 = [current_node + 0]
+    v244 = [v244 + 12]
+    v245 = call v244(current_node)
+  goto lbl_GoodPtr_247
+lbl_NullPtr_246:
+    error("null pointer")
+lbl_GoodPtr_247:
+    key_aux = v245
+    v250 = v_key < key_aux
+  if0 v250 goto lbl_Else_248
+  if0 current_node goto lbl_NullPtr_255
+    v253 = [current_node + 0]
+    v253 = [v253 + 52]
+    v254 = call v253(current_node)
+  goto lbl_GoodPtr_256
+lbl_NullPtr_255:
+    error("null pointer")
+lbl_GoodPtr_256:
+  if0 v254 goto lbl_Else_251
+    parent_node = current_node
+  if0 current_node goto lbl_NullPtr_259
+    v257 = [current_node + 0]
+    v257 = [v257 + 20]
+    v258 = call v257(current_node)
+  goto lbl_GoodPtr_260
+lbl_NullPtr_259:
+    error("null pointer")
+lbl_GoodPtr_260:
+    current_node = v258
+  goto lbl_IfEnd_252
+lbl_Else_251:
+    v261 = 0
+    cont = v261
+lbl_IfEnd_252:
+  goto lbl_IfEnd_249
+lbl_Else_248:
+    v264 = key_aux < v_key
+  if0 v264 goto lbl_Else_262
+  if0 current_node goto lbl_NullPtr_269
+    v267 = [current_node + 0]
+    v267 = [v267 + 48]
+    v268 = call v267(current_node)
+  goto lbl_GoodPtr_270
+lbl_NullPtr_269:
+    error("null pointer")
+lbl_GoodPtr_270:
+  if0 v268 goto lbl_Else_265
+    parent_node = current_node
+  if0 current_node goto lbl_NullPtr_273
+    v271 = [current_node + 0]
+    v271 = [v271 + 24]
+    v272 = call v271(current_node)
+  goto lbl_GoodPtr_274
+lbl_NullPtr_273:
+    error("null pointer")
+lbl_GoodPtr_274:
+    current_node = v272
+  goto lbl_IfEnd_266
+lbl_Else_265:
+    v275 = 0
+    cont = v275
+lbl_IfEnd_266:
+  goto lbl_IfEnd_263
+lbl_Else_262:
+  if0 is_root goto lbl_Else_276
+  if0 current_node goto lbl_NullPtr_285
+    v283 = [current_node + 0]
+    v283 = [v283 + 48]
+    v284 = call v283(current_node)
+  goto lbl_GoodPtr_286
+lbl_NullPtr_285:
+    error("null pointer")
+lbl_GoodPtr_286:
+    v287 = 1
+    v288 = v284 < v287
+  if0 v288 goto lbl_FullAnd_281
+  if0 current_node goto lbl_NullPtr_291
+    v289 = [current_node + 0]
+    v289 = [v289 + 52]
+    v290 = call v289(current_node)
+  goto lbl_GoodPtr_292
+lbl_NullPtr_291:
+    error("null pointer")
+lbl_GoodPtr_292:
+    v293 = 1
+    v294 = v290 < v293
+    v280 = v294
+  goto lbl_ShortAnd_282
+lbl_FullAnd_281:
+    v280 = 0
+lbl_ShortAnd_282:
+  if0 v280 goto lbl_Else_278
+    v295 = 1
+    ntb = v295
+  goto lbl_IfEnd_279
+lbl_Else_278:
+  if0 this goto lbl_NullPtr_298
+    v296 = [this + 0]
+    v296 = [v296 + 28]
+    v297 = call v296(this parent_node current_node)
+  goto lbl_GoodPtr_299
+lbl_NullPtr_298:
+    error("null pointer")
+lbl_GoodPtr_299:
+    ntb = v297
+lbl_IfEnd_279:
+  goto lbl_IfEnd_277
+lbl_Else_276:
+  if0 this goto lbl_NullPtr_302
+    v300 = [this + 0]
+    v300 = [v300 + 28]
+    v301 = call v300(this parent_node current_node)
+  goto lbl_GoodPtr_303
+lbl_NullPtr_302:
+    error("null pointer")
+lbl_GoodPtr_303:
+    ntb = v301
+lbl_IfEnd_277:
+    v304 = 1
+    found = v304
+    v305 = 0
+    cont = v305
+lbl_IfEnd_263:
+lbl_IfEnd_249:
+    v306 = 0
+    is_root = v306
+  goto lbl_While_242
+lbl_WhileExit_243:
+    return found
+
+func Tree_Remove(this p_node c_node)
+  if0 c_node goto lbl_NullPtr_311
+    v309 = [c_node + 0]
+    v309 = [v309 + 52]
+    v310 = call v309(c_node)
+  goto lbl_GoodPtr_312
+lbl_NullPtr_311:
+    error("null pointer")
+lbl_GoodPtr_312:
+  if0 v310 goto lbl_Else_307
+  if0 this goto lbl_NullPtr_315
+    v313 = [this + 0]
+    v313 = [v313 + 8]
+    v314 = call v313(this p_node c_node)
+  goto lbl_GoodPtr_316
+lbl_NullPtr_315:
+    error("null pointer")
+lbl_GoodPtr_316:
+    ntb = v314
+  goto lbl_IfEnd_308
+lbl_Else_307:
+  if0 c_node goto lbl_NullPtr_321
+    v319 = [c_node + 0]
+    v319 = [v319 + 48]
+    v320 = call v319(c_node)
+  goto lbl_GoodPtr_322
+lbl_NullPtr_321:
+    error("null pointer")
+lbl_GoodPtr_322:
+  if0 v320 goto lbl_Else_317
+  if0 this goto lbl_NullPtr_325
+    v323 = [this + 0]
+    v323 = [v323 + 56]
+    v324 = call v323(this p_node c_node)
+  goto lbl_GoodPtr_326
+lbl_NullPtr_325:
+    error("null pointer")
+lbl_GoodPtr_326:
+    ntb = v324
+  goto lbl_IfEnd_318
+lbl_Else_317:
+  if0 c_node goto lbl_NullPtr_329
+    v327 = [c_node + 0]
+    v327 = [v327 + 12]
+    v328 = call v327(c_node)
+  goto lbl_GoodPtr_330
+lbl_NullPtr_329:
+    error("null pointer")
+lbl_GoodPtr_330:
+    auxkey1 = v328
+  if0 p_node goto lbl_NullPtr_333
+    v331 = [p_node + 0]
+    v331 = [v331 + 20]
+    v332 = call v331(p_node)
+  goto lbl_GoodPtr_334
+lbl_NullPtr_333:
+    error("null pointer")
+lbl_GoodPtr_334:
+  if0 v332 goto lbl_NullPtr_337
+    v335 = [v332 + 0]
+    v335 = [v335 + 12]
+    v336 = call v335(v332)
+  goto lbl_GoodPtr_338
+lbl_NullPtr_337:
+    error("null pointer")
+lbl_GoodPtr_338:
+    auxkey2 = v336
+  if0 this goto lbl_NullPtr_343
+    v341 = [this + 0]
+    v341 = [v341 + 68]
+    v342 = call v341(this auxkey1 auxkey2)
+  goto lbl_GoodPtr_344
+lbl_NullPtr_343:
+    error("null pointer")
+lbl_GoodPtr_344:
+  if0 v342 goto lbl_Else_339
+  if0 p_node goto lbl_NullPtr_347
+    v345 = [p_node + 0]
+    v345 = [v345 + 32]
+    v349 = [this + 12]
+    v346 = call v345(p_node v349)
+  goto lbl_GoodPtr_348
+lbl_NullPtr_347:
+    error("null pointer")
+lbl_GoodPtr_348:
+    ntb = v346
+  if0 p_node goto lbl_NullPtr_352
+    v350 = [p_node + 0]
+    v350 = [v350 + 4]
+    v354 = 0
+    v351 = call v350(p_node v354)
+  goto lbl_GoodPtr_353
+lbl_NullPtr_352:
+    error("null pointer")
+lbl_GoodPtr_353:
+    ntb = v351
+  goto lbl_IfEnd_340
+lbl_Else_339:
+  if0 p_node goto lbl_NullPtr_357
+    v355 = [p_node + 0]
+    v355 = [v355 + 16]
+    v359 = [this + 12]
+    v356 = call v355(p_node v359)
+  goto lbl_GoodPtr_358
+lbl_NullPtr_357:
+    error("null pointer")
+lbl_GoodPtr_358:
+    ntb = v356
+  if0 p_node goto lbl_NullPtr_362
+    v360 = [p_node + 0]
+    v360 = [v360 + 72]
+    v364 = 0
+    v361 = call v360(p_node v364)
+  goto lbl_GoodPtr_363
+lbl_NullPtr_362:
+    error("null pointer")
+lbl_GoodPtr_363:
+    ntb = v361
+lbl_IfEnd_340:
+lbl_IfEnd_318:
+lbl_IfEnd_308:
+    v365 = 1
+    return v365
+
+func Tree_RemoveRight(this p_node c_node)
+lbl_While_366:
+  if0 c_node goto lbl_NullPtr_370
+    v368 = [c_node + 0]
+    v368 = [v368 + 48]
+    v369 = call v368(c_node)
+  goto lbl_GoodPtr_371
+lbl_NullPtr_370:
+    error("null pointer")
+lbl_GoodPtr_371:
+  if0 v369 goto lbl_WhileExit_367
+  if0 c_node goto lbl_NullPtr_374
+    v372 = [c_node + 0]
+    v372 = [v372 + 64]
+  if0 c_node goto lbl_NullPtr_378
+    v376 = [c_node + 0]
+    v376 = [v376 + 24]
+    v377 = call v376(c_node)
+  goto lbl_GoodPtr_379
+lbl_NullPtr_378:
+    error("null pointer")
+lbl_GoodPtr_379:
+  if0 v377 goto lbl_NullPtr_382
+    v380 = [v377 + 0]
+    v380 = [v380 + 12]
+    v381 = call v380(v377)
+  goto lbl_GoodPtr_383
+lbl_NullPtr_382:
+    error("null pointer")
+lbl_GoodPtr_383:
+    v373 = call v372(c_node v381)
+  goto lbl_GoodPtr_375
+lbl_NullPtr_374:
+    error("null pointer")
+lbl_GoodPtr_375:
+    ntb = v373
+    p_node = c_node
+  if0 c_node goto lbl_NullPtr_386
+    v384 = [c_node + 0]
+    v384 = [v384 + 24]
+    v385 = call v384(c_node)
+  goto lbl_GoodPtr_387
+lbl_NullPtr_386:
+    error("null pointer")
+lbl_GoodPtr_387:
+    c_node = v385
+  goto lbl_While_366
+lbl_WhileExit_367:
+  if0 p_node goto lbl_NullPtr_390
+    v388 = [p_node + 0]
+    v388 = [v388 + 16]
+    v392 = [this + 12]
+    v389 = call v388(p_node v392)
+  goto lbl_GoodPtr_391
+lbl_NullPtr_390:
+    error("null pointer")
+lbl_GoodPtr_391:
+    ntb = v389
+  if0 p_node goto lbl_NullPtr_395
+    v393 = [p_node + 0]
+    v393 = [v393 + 72]
+    v397 = 0
+    v394 = call v393(p_node v397)
+  goto lbl_GoodPtr_396
+lbl_NullPtr_395:
+    error("null pointer")
+lbl_GoodPtr_396:
+    ntb = v394
+    v398 = 1
+    return v398
+
+func Tree_RemoveLeft(this p_node c_node)
+lbl_While_399:
+  if0 c_node goto lbl_NullPtr_403
+    v401 = [c_node + 0]
+    v401 = [v401 + 52]
+    v402 = call v401(c_node)
+  goto lbl_GoodPtr_404
+lbl_NullPtr_403:
+    error("null pointer")
+lbl_GoodPtr_404:
+  if0 v402 goto lbl_WhileExit_400
+  if0 c_node goto lbl_NullPtr_407
+    v405 = [c_node + 0]
+    v405 = [v405 + 64]
+  if0 c_node goto lbl_NullPtr_411
+    v409 = [c_node + 0]
+    v409 = [v409 + 20]
+    v410 = call v409(c_node)
+  goto lbl_GoodPtr_412
+lbl_NullPtr_411:
+    error("null pointer")
+lbl_GoodPtr_412:
+  if0 v410 goto lbl_NullPtr_415
+    v413 = [v410 + 0]
+    v413 = [v413 + 12]
+    v414 = call v413(v410)
+  goto lbl_GoodPtr_416
+lbl_NullPtr_415:
+    error("null pointer")
+lbl_GoodPtr_416:
+    v406 = call v405(c_node v414)
+  goto lbl_GoodPtr_408
+lbl_NullPtr_407:
+    error("null pointer")
+lbl_GoodPtr_408:
+    ntb = v406
+    p_node = c_node
+  if0 c_node goto lbl_NullPtr_419
+    v417 = [c_node + 0]
+    v417 = [v417 + 20]
+    v418 = call v417(c_node)
+  goto lbl_GoodPtr_420
+lbl_NullPtr_419:
+    error("null pointer")
+lbl_GoodPtr_420:
+    c_node = v418
+  goto lbl_While_399
+lbl_WhileExit_400:
+  if0 p_node goto lbl_NullPtr_423
+    v421 = [p_node + 0]
+    v421 = [v421 + 32]
+    v425 = [this + 12]
+    v422 = call v421(p_node v425)
+  goto lbl_GoodPtr_424
+lbl_NullPtr_423:
+    error("null pointer")
+lbl_GoodPtr_424:
+    ntb = v422
+  if0 p_node goto lbl_NullPtr_428
+    v426 = [p_node + 0]
+    v426 = [v426 + 4]
+    v430 = 0
+    v427 = call v426(p_node v430)
+  goto lbl_GoodPtr_429
+lbl_NullPtr_428:
+    error("null pointer")
+lbl_GoodPtr_429:
+    ntb = v427
+    v431 = 1
+    return v431
+
+func Tree_Search(this v_key)
+    current_node = this
+    v432 = 1
+    cont = v432
+    v433 = 0
+    ifound = v433
+lbl_While_434:
+  if0 cont goto lbl_WhileExit_435
+  if0 current_node goto lbl_NullPtr_438
+    v436 = [current_node + 0]
+    v436 = [v436 + 12]
+    v437 = call v436(current_node)
+  goto lbl_GoodPtr_439
+lbl_NullPtr_438:
+    error("null pointer")
+lbl_GoodPtr_439:
+    key_aux = v437
+    v442 = v_key < key_aux
+  if0 v442 goto lbl_Else_440
+  if0 current_node goto lbl_NullPtr_447
+    v445 = [current_node + 0]
+    v445 = [v445 + 52]
+    v446 = call v445(current_node)
+  goto lbl_GoodPtr_448
+lbl_NullPtr_447:
+    error("null pointer")
+lbl_GoodPtr_448:
+  if0 v446 goto lbl_Else_443
+  if0 current_node goto lbl_NullPtr_451
+    v449 = [current_node + 0]
+    v449 = [v449 + 20]
+    v450 = call v449(current_node)
+  goto lbl_GoodPtr_452
+lbl_NullPtr_451:
+    error("null pointer")
+lbl_GoodPtr_452:
+    current_node = v450
+  goto lbl_IfEnd_444
+lbl_Else_443:
+    v453 = 0
+    cont = v453
+lbl_IfEnd_444:
+  goto lbl_IfEnd_441
+lbl_Else_440:
+    v456 = key_aux < v_key
+  if0 v456 goto lbl_Else_454
+  if0 current_node goto lbl_NullPtr_461
+    v459 = [current_node + 0]
+    v459 = [v459 + 48]
+    v460 = call v459(current_node)
+  goto lbl_GoodPtr_462
+lbl_NullPtr_461:
+    error("null pointer")
+lbl_GoodPtr_462:
+  if0 v460 goto lbl_Else_457
+  if0 current_node goto lbl_NullPtr_465
+    v463 = [current_node + 0]
+    v463 = [v463 + 24]
+    v464 = call v463(current_node)
+  goto lbl_GoodPtr_466
+lbl_NullPtr_465:
+    error("null pointer")
+lbl_GoodPtr_466:
+    current_node = v464
+  goto lbl_IfEnd_458
+lbl_Else_457:
+    v467 = 0
+    cont = v467
+lbl_IfEnd_458:
+  goto lbl_IfEnd_455
+lbl_Else_454:
+    v468 = 1
+    ifound = v468
+    v469 = 0
+    cont = v469
+lbl_IfEnd_455:
+lbl_IfEnd_441:
+  goto lbl_While_434
+lbl_WhileExit_435:
+    return ifound
+
+func Tree_Print(this)
+    current_node = this
+  if0 this goto lbl_NullPtr_472
+    v470 = [this + 0]
+    v470 = [v470 + 76]
+    v471 = call v470(this current_node)
+  goto lbl_GoodPtr_473
+lbl_NullPtr_472:
+    error("null pointer")
+lbl_GoodPtr_473:
+    ntb = v471
+    v474 = 1
+    return v474
+
+func Tree_RecPrint(this node)
+  if0 node goto lbl_NullPtr_479
+    v477 = [node + 0]
+    v477 = [v477 + 52]
+    v478 = call v477(node)
+  goto lbl_GoodPtr_480
+lbl_NullPtr_479:
+    error("null pointer")
+lbl_GoodPtr_480:
+  if0 v478 goto lbl_Else_475
+  if0 this goto lbl_NullPtr_483
+    v481 = [this + 0]
+    v481 = [v481 + 76]
+  if0 node goto lbl_NullPtr_487
+    v485 = [node + 0]
+    v485 = [v485 + 20]
+    v486 = call v485(node)
+  goto lbl_GoodPtr_488
+lbl_NullPtr_487:
+    error("null pointer")
+lbl_GoodPtr_488:
+    v482 = call v481(this v486)
+  goto lbl_GoodPtr_484
+lbl_NullPtr_483:
+    error("null pointer")
+lbl_GoodPtr_484:
+    ntb = v482
+  goto lbl_IfEnd_476
+lbl_Else_475:
+    v489 = 1
+    ntb = v489
+lbl_IfEnd_476:
+  if0 node goto lbl_NullPtr_492
+    v490 = [node + 0]
+    v490 = [v490 + 12]
+    v491 = call v490(node)
+  goto lbl_GoodPtr_493
+lbl_NullPtr_492:
+    error("null pointer")
+lbl_GoodPtr_493:
+    print(v491)
+  if0 node goto lbl_NullPtr_498
+    v496 = [node + 0]
+    v496 = [v496 + 48]
+    v497 = call v496(node)
+  goto lbl_GoodPtr_499
+lbl_NullPtr_498:
+    error("null pointer")
+lbl_GoodPtr_499:
+  if0 v497 goto lbl_Else_494
+  if0 this goto lbl_NullPtr_502
+    v500 = [this + 0]
+    v500 = [v500 + 76]
+  if0 node goto lbl_NullPtr_506
+    v504 = [node + 0]
+    v504 = [v504 + 24]
+    v505 = call v504(node)
+  goto lbl_GoodPtr_507
+lbl_NullPtr_506:
+    error("null pointer")
+lbl_GoodPtr_507:
+    v501 = call v500(this v505)
+  goto lbl_GoodPtr_503
+lbl_NullPtr_502:
+    error("null pointer")
+lbl_GoodPtr_503:
+    ntb = v501
+  goto lbl_IfEnd_495
+lbl_Else_494:
+    v508 = 1
+    ntb = v508
+lbl_IfEnd_495:
+    v509 = 1
+    return v509
+

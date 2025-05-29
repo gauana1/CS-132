@@ -1,0 +1,34 @@
+func main()
+    v0 = 4
+    v1 = 4
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @LoudPrinter_print
+    [v3 + 0] = v4
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_5
+  goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+    error("null pointer")
+lbl_GoodPtr_6:
+    p = v2
+  if0 p goto lbl_NullPtr_9
+    v7 = [p + 0]
+    v7 = [v7 + 0]
+    v8 = call v7(p)
+  goto lbl_GoodPtr_10
+lbl_NullPtr_9:
+    error("null pointer")
+lbl_GoodPtr_10:
+    print(v8)
+    v11 = 0
+    return v11
+
+func Printer_print(this)
+    v12 = 5
+    return v12
+
+func LoudPrinter_print(this)
+    v13 = 9
+    return v13
+

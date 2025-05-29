@@ -1,0 +1,1247 @@
+func main()
+    v0 = 20
+    v1 = 16
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @Generator_set_seed
+    [v3 + 0] = v4
+    v5 = @Generator_mod
+    [v3 + 4] = v5
+    v6 = @Generator_initialize
+    [v3 + 8] = v6
+    v7 = @Generator_advance
+    [v3 + 12] = v7
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_8
+  goto lbl_GoodPtr_9
+lbl_NullPtr_8:
+    error("null pointer")
+lbl_GoodPtr_9:
+    gen = v2
+    v10 = 28
+    v11 = 28
+    v12 = alloc(v10)
+    v13 = alloc(v11)
+    v14 = @Matrix_5xn_equal
+    [v13 + 0] = v14
+    v15 = @Matrix_5xn_set
+    [v13 + 4] = v15
+    v16 = @Matrix_5xn_col_size
+    [v13 + 8] = v16
+    v17 = @Matrix_5xn_equalP
+    [v13 + 12] = v17
+    v18 = @Matrix_5xn_get
+    [v13 + 16] = v18
+    v19 = @Matrix_5xn_initialize
+    [v13 + 20] = v19
+    v20 = @Matrix_5xn_row_size
+    [v13 + 24] = v20
+    [v12 + 0] = v13
+  if0 v12 goto lbl_NullPtr_21
+  goto lbl_GoodPtr_22
+lbl_NullPtr_21:
+    error("null pointer")
+lbl_GoodPtr_22:
+    mtx = v12
+  if0 gen goto lbl_NullPtr_25
+    v23 = [gen + 0]
+    v23 = [v23 + 8]
+    v27 = 10
+    v28 = 15625
+    v29 = 15586
+    v30 = 7981
+    v24 = call v23(gen v27 v28 v29 v30)
+  goto lbl_GoodPtr_26
+lbl_NullPtr_25:
+    error("null pointer")
+lbl_GoodPtr_26:
+    dummy_int = v24
+    v31 = 20
+    cols = v31
+  if0 mtx goto lbl_NullPtr_34
+    v32 = [mtx + 0]
+    v32 = [v32 + 20]
+    v33 = call v32(mtx cols)
+  goto lbl_GoodPtr_35
+lbl_NullPtr_34:
+    error("null pointer")
+lbl_GoodPtr_35:
+    dummy_int = v33
+  if0 mtx goto lbl_NullPtr_38
+    v36 = [mtx + 0]
+    v36 = [v36 + 24]
+    v37 = call v36(mtx)
+  goto lbl_GoodPtr_39
+lbl_NullPtr_38:
+    error("null pointer")
+lbl_GoodPtr_39:
+    rows = v37
+    v40 = 0
+    r = v40
+lbl_While_41:
+    v43 = r < rows
+  if0 v43 goto lbl_WhileExit_42
+    v44 = 0
+    c = v44
+lbl_While_45:
+    v47 = c < cols
+  if0 v47 goto lbl_WhileExit_46
+  if0 mtx goto lbl_NullPtr_50
+    v48 = [mtx + 0]
+    v48 = [v48 + 4]
+  if0 gen goto lbl_NullPtr_54
+    v52 = [gen + 0]
+    v52 = [v52 + 12]
+    v53 = call v52(gen)
+  goto lbl_GoodPtr_55
+lbl_NullPtr_54:
+    error("null pointer")
+lbl_GoodPtr_55:
+    v49 = call v48(mtx r c v53)
+  goto lbl_GoodPtr_51
+lbl_NullPtr_50:
+    error("null pointer")
+lbl_GoodPtr_51:
+    print(v49)
+    v57 = 1
+    v56 = c + v57
+    c = v56
+  goto lbl_While_45
+lbl_WhileExit_46:
+    v59 = 1
+    v58 = r + v59
+    r = v58
+  goto lbl_While_41
+lbl_WhileExit_42:
+    v60 = 6
+    bins = v60
+    v61 = 8
+    v62 = 16
+    v63 = alloc(v61)
+    v64 = alloc(v62)
+    v65 = @BinHistogram_div
+    [v64 + 0] = v65
+    v66 = @BinHistogram_find_range
+    [v64 + 4] = v66
+    v67 = @BinHistogram_initialize
+    [v64 + 8] = v67
+    v68 = @BinHistogram_get_bins
+    [v64 + 12] = v68
+    [v63 + 0] = v64
+  if0 v63 goto lbl_NullPtr_69
+  goto lbl_GoodPtr_70
+lbl_NullPtr_69:
+    error("null pointer")
+lbl_GoodPtr_70:
+    hist_gen = v63
+  if0 hist_gen goto lbl_NullPtr_73
+    v71 = [hist_gen + 0]
+    v71 = [v71 + 8]
+    v72 = call v71(hist_gen bins)
+  goto lbl_GoodPtr_74
+lbl_NullPtr_73:
+    error("null pointer")
+lbl_GoodPtr_74:
+    dummy_int = v72
+  if0 hist_gen goto lbl_NullPtr_77
+    v75 = [hist_gen + 0]
+    v75 = [v75 + 12]
+    v76 = call v75(hist_gen mtx)
+  goto lbl_GoodPtr_78
+lbl_NullPtr_77:
+    error("null pointer")
+lbl_GoodPtr_78:
+    hist = v76
+    v79 = 0
+    i = v79
+lbl_While_80:
+    v82 = i < bins
+  if0 v82 goto lbl_WhileExit_81
+    v83 = 4
+    v84 = 5
+    v85 = v83 - v84
+    v86 = [hist + 0]
+    v87 = v85 < i
+    v88 = i < v86
+    v89 = v87 * v88
+  if0 v89 goto lbl_OutOfBounds_90
+  goto lbl_Inbound_91
+lbl_OutOfBounds_90:
+    error("array index out of bounds")
+lbl_Inbound_91:
+    v92 = v83 * i
+    v92 = v92 + v83
+    v92 = hist + v92
+    v93 = [v92 + 0]
+    print(v93)
+    v95 = 1
+    v94 = i + v95
+    i = v94
+  goto lbl_While_80
+lbl_WhileExit_81:
+    v96 = 0
+    return v96
+
+func BinHistogram_initialize(this size)
+    [this + 4] = size
+    return size
+
+func BinHistogram_get_bins(this matrix)
+    v97 = [this + 4]
+    b_max = v97
+    v98 = 1
+    v99 = 4
+    v100 = b_max + v98
+    v100 = v100 * v99
+    v101 = alloc(v100)
+  if0 v101 goto lbl_NullPtr_102
+  goto lbl_GoodPtr_103
+lbl_NullPtr_102:
+    error("null pointer")
+lbl_GoodPtr_103:
+    [v101 + 0] = b_max
+    bins = v101
+    v104 = 1
+    v105 = 4
+    v106 = b_max + v104
+    v106 = v106 * v105
+    v107 = alloc(v106)
+  if0 v107 goto lbl_NullPtr_108
+  goto lbl_GoodPtr_109
+lbl_NullPtr_108:
+    error("null pointer")
+lbl_GoodPtr_109:
+    [v107 + 0] = b_max
+    histogram = v107
+  if0 matrix goto lbl_NullPtr_112
+    v110 = [matrix + 0]
+    v110 = [v110 + 8]
+    v111 = call v110(matrix)
+  goto lbl_GoodPtr_113
+lbl_NullPtr_112:
+    error("null pointer")
+lbl_GoodPtr_113:
+    cols = v111
+  if0 matrix goto lbl_NullPtr_116
+    v114 = [matrix + 0]
+    v114 = [v114 + 24]
+    v115 = call v114(matrix)
+  goto lbl_GoodPtr_117
+lbl_NullPtr_116:
+    error("null pointer")
+lbl_GoodPtr_117:
+    rows = v115
+  if0 this goto lbl_NullPtr_120
+    v118 = [this + 0]
+    v118 = [v118 + 4]
+    v119 = call v118(this matrix)
+  goto lbl_GoodPtr_121
+lbl_NullPtr_120:
+    error("null pointer")
+lbl_GoodPtr_121:
+    range = v119
+    v122 = 0
+    v123 = 4
+    v124 = 5
+    v125 = v123 - v124
+    v126 = [range + 0]
+    v127 = v125 < v122
+    v128 = v122 < v126
+    v129 = v127 * v128
+  if0 v129 goto lbl_OutOfBounds_130
+  goto lbl_Inbound_131
+lbl_OutOfBounds_130:
+    error("array index out of bounds")
+lbl_Inbound_131:
+    v132 = v123 * v122
+    v132 = v132 + v123
+    v132 = range + v132
+    v133 = [v132 + 0]
+    min = v133
+    v134 = 1
+    v135 = 4
+    v136 = 5
+    v137 = v135 - v136
+    v138 = [range + 0]
+    v139 = v137 < v134
+    v140 = v134 < v138
+    v141 = v139 * v140
+  if0 v141 goto lbl_OutOfBounds_142
+  goto lbl_Inbound_143
+lbl_OutOfBounds_142:
+    error("array index out of bounds")
+lbl_Inbound_143:
+    v144 = v135 * v134
+    v144 = v144 + v135
+    v144 = range + v144
+    v145 = [v144 + 0]
+    max = v145
+  if0 this goto lbl_NullPtr_148
+    v146 = [this + 0]
+    v146 = [v146 + 0]
+    v150 = max - min
+    v147 = call v146(this v150 b_max)
+  goto lbl_GoodPtr_149
+lbl_NullPtr_148:
+    error("null pointer")
+lbl_GoodPtr_149:
+    step = v147
+    print(min)
+    print(max)
+    v151 = 0
+    i = v151
+    s = min
+lbl_While_152:
+    v154 = i < b_max
+  if0 v154 goto lbl_WhileExit_153
+    v155 = 4
+    v156 = 5
+    v157 = v155 - v156
+    v158 = [bins + 0]
+    v159 = v157 < i
+    v160 = i < v158
+    v161 = v159 * v160
+  if0 v161 goto lbl_OutOfBounds_162
+  goto lbl_Inbound_163
+lbl_OutOfBounds_162:
+    error("array index out of bounds")
+lbl_Inbound_163:
+    v164 = v155 * i
+    v164 = v164 + v155
+    v164 = bins + v164
+    [v164 + 0] = s
+    v166 = 1
+    v165 = i + v166
+    i = v165
+    v167 = s + step
+    s = v167
+  goto lbl_While_152
+lbl_WhileExit_153:
+    v168 = 0
+    r = v168
+lbl_While_169:
+    v171 = r < rows
+  if0 v171 goto lbl_WhileExit_170
+    v172 = 0
+    c = v172
+lbl_While_173:
+    v175 = c < cols
+  if0 v175 goto lbl_WhileExit_174
+    v176 = 0
+    i = v176
+lbl_While_177:
+    v179 = i < b_max
+  if0 v179 goto lbl_WhileExit_178
+  if0 matrix goto lbl_NullPtr_182
+    v180 = [matrix + 0]
+    v180 = [v180 + 16]
+    v181 = call v180(matrix r c)
+  goto lbl_GoodPtr_183
+lbl_NullPtr_182:
+    error("null pointer")
+lbl_GoodPtr_183:
+    value = v181
+    v187 = 4
+    v188 = 5
+    v189 = v187 - v188
+    v190 = [bins + 0]
+    v191 = v189 < i
+    v192 = i < v190
+    v193 = v191 * v192
+  if0 v193 goto lbl_OutOfBounds_194
+  goto lbl_Inbound_195
+lbl_OutOfBounds_194:
+    error("array index out of bounds")
+lbl_Inbound_195:
+    v196 = v187 * i
+    v196 = v196 + v187
+    v196 = bins + v196
+    v197 = [v196 + 0]
+    v186 = value < v197
+  if0 v186 goto lbl_Else_184
+    v199 = 4
+    v200 = 5
+    v201 = v199 - v200
+    v202 = [histogram + 0]
+    v203 = v201 < i
+    v204 = i < v202
+    v205 = v203 * v204
+  if0 v205 goto lbl_OutOfBounds_206
+  goto lbl_Inbound_207
+lbl_OutOfBounds_206:
+    error("array index out of bounds")
+lbl_Inbound_207:
+    v208 = v199 * i
+    v208 = v208 + v199
+    v208 = histogram + v208
+    v209 = [v208 + 0]
+    v210 = 1
+    v198 = v209 + v210
+    v211 = 4
+    v212 = 5
+    v213 = v211 - v212
+    v214 = [histogram + 0]
+    v215 = v213 < i
+    v216 = i < v214
+    v217 = v215 * v216
+  if0 v217 goto lbl_OutOfBounds_218
+  goto lbl_Inbound_219
+lbl_OutOfBounds_218:
+    error("array index out of bounds")
+lbl_Inbound_219:
+    v220 = v211 * i
+    v220 = v220 + v211
+    v220 = histogram + v220
+    [v220 + 0] = v198
+  goto lbl_IfEnd_185
+lbl_Else_184:
+lbl_IfEnd_185:
+    v222 = 1
+    v221 = i + v222
+    i = v221
+  goto lbl_While_177
+lbl_WhileExit_178:
+    v224 = 1
+    v223 = c + v224
+    c = v223
+  goto lbl_While_173
+lbl_WhileExit_174:
+    v226 = 1
+    v225 = r + v226
+    r = v225
+  goto lbl_While_169
+lbl_WhileExit_170:
+    return histogram
+
+func BinHistogram_find_range(this matrix)
+    v227 = 2
+    v228 = 1
+    v229 = 4
+    v230 = v227 + v228
+    v230 = v230 * v229
+    v231 = alloc(v230)
+  if0 v231 goto lbl_NullPtr_232
+  goto lbl_GoodPtr_233
+lbl_NullPtr_232:
+    error("null pointer")
+lbl_GoodPtr_233:
+    [v231 + 0] = v227
+    min_max = v231
+  if0 matrix goto lbl_NullPtr_236
+    v234 = [matrix + 0]
+    v234 = [v234 + 8]
+    v235 = call v234(matrix)
+  goto lbl_GoodPtr_237
+lbl_NullPtr_236:
+    error("null pointer")
+lbl_GoodPtr_237:
+    cols = v235
+  if0 matrix goto lbl_NullPtr_240
+    v238 = [matrix + 0]
+    v238 = [v238 + 24]
+    v239 = call v238(matrix)
+  goto lbl_GoodPtr_241
+lbl_NullPtr_240:
+    error("null pointer")
+lbl_GoodPtr_241:
+    rows = v239
+  if0 matrix goto lbl_NullPtr_244
+    v242 = [matrix + 0]
+    v242 = [v242 + 16]
+    v246 = 0
+    v247 = 0
+    v243 = call v242(matrix v246 v247)
+  goto lbl_GoodPtr_245
+lbl_NullPtr_244:
+    error("null pointer")
+lbl_GoodPtr_245:
+    min = v243
+    max = min
+    v248 = 0
+    r = v248
+lbl_While_249:
+    v251 = r < rows
+  if0 v251 goto lbl_WhileExit_250
+    v252 = 0
+    c = v252
+lbl_While_253:
+    v255 = c < cols
+  if0 v255 goto lbl_WhileExit_254
+  if0 matrix goto lbl_NullPtr_258
+    v256 = [matrix + 0]
+    v256 = [v256 + 16]
+    v257 = call v256(matrix r c)
+  goto lbl_GoodPtr_259
+lbl_NullPtr_258:
+    error("null pointer")
+lbl_GoodPtr_259:
+    value = v257
+    v262 = value < min
+  if0 v262 goto lbl_Else_260
+    min = value
+  goto lbl_IfEnd_261
+lbl_Else_260:
+lbl_IfEnd_261:
+    v265 = max < value
+  if0 v265 goto lbl_Else_263
+    max = value
+  goto lbl_IfEnd_264
+lbl_Else_263:
+lbl_IfEnd_264:
+    v267 = 1
+    v266 = c + v267
+    c = v266
+  goto lbl_While_253
+lbl_WhileExit_254:
+    v269 = 1
+    v268 = r + v269
+    r = v268
+  goto lbl_While_249
+lbl_WhileExit_250:
+    v270 = 0
+    v271 = 4
+    v272 = 5
+    v273 = v271 - v272
+    v274 = [min_max + 0]
+    v275 = v273 < v270
+    v276 = v270 < v274
+    v277 = v275 * v276
+  if0 v277 goto lbl_OutOfBounds_278
+  goto lbl_Inbound_279
+lbl_OutOfBounds_278:
+    error("array index out of bounds")
+lbl_Inbound_279:
+    v280 = v271 * v270
+    v280 = v280 + v271
+    v280 = min_max + v280
+    [v280 + 0] = min
+    v281 = 1
+    v282 = 4
+    v283 = 5
+    v284 = v282 - v283
+    v285 = [min_max + 0]
+    v286 = v284 < v281
+    v287 = v281 < v285
+    v288 = v286 * v287
+  if0 v288 goto lbl_OutOfBounds_289
+  goto lbl_Inbound_290
+lbl_OutOfBounds_289:
+    error("array index out of bounds")
+lbl_Inbound_290:
+    v291 = v282 * v281
+    v291 = v291 + v282
+    v291 = min_max + v291
+    [v291 + 0] = max
+    return min_max
+
+func BinHistogram_div(this a b)
+    v292 = 0
+    quotient = v292
+lbl_While_293:
+    v295 = a < b
+    v296 = 1
+    v297 = v295 < v296
+  if0 v297 goto lbl_WhileExit_294
+    v298 = a - b
+    a = v298
+    v300 = 1
+    v299 = quotient + v300
+    quotient = v299
+  goto lbl_While_293
+lbl_WhileExit_294:
+    return quotient
+
+func Generator_initialize(this x m a c)
+    [this + 12] = x
+    [this + 16] = m
+    [this + 4] = a
+    [this + 8] = c
+    v301 = [this + 12]
+    return v301
+
+func Generator_set_seed(this seed)
+    v302 = [this + 12]
+    prev = v302
+    [this + 12] = seed
+    return prev
+
+func Generator_advance(this)
+  if0 this goto lbl_NullPtr_305
+    v303 = [this + 0]
+    v303 = [v303 + 4]
+    v309 = [this + 12]
+    v310 = [this + 4]
+    v308 = v309 * v310
+    v311 = [this + 8]
+    v307 = v308 + v311
+    v312 = [this + 16]
+    v304 = call v303(this v307 v312)
+  goto lbl_GoodPtr_306
+lbl_NullPtr_305:
+    error("null pointer")
+lbl_GoodPtr_306:
+    [this + 12] = v304
+    v313 = [this + 12]
+    return v313
+
+func Generator_mod(this a b)
+lbl_While_314:
+    v316 = a < b
+    v317 = 1
+    v318 = v316 < v317
+  if0 v318 goto lbl_WhileExit_315
+    v319 = a - b
+    a = v319
+  goto lbl_While_314
+lbl_WhileExit_315:
+    return a
+
+func Matrix_5xn_initialize(this cols)
+    [this + 12] = cols
+    v320 = 1
+    v321 = 4
+    v322 = cols + v320
+    v322 = v322 * v321
+    v323 = alloc(v322)
+  if0 v323 goto lbl_NullPtr_324
+  goto lbl_GoodPtr_325
+lbl_NullPtr_324:
+    error("null pointer")
+lbl_GoodPtr_325:
+    [v323 + 0] = cols
+    [this + 8] = v323
+    v326 = 1
+    v327 = 4
+    v328 = cols + v326
+    v328 = v328 * v327
+    v329 = alloc(v328)
+  if0 v329 goto lbl_NullPtr_330
+  goto lbl_GoodPtr_331
+lbl_NullPtr_330:
+    error("null pointer")
+lbl_GoodPtr_331:
+    [v329 + 0] = cols
+    [this + 4] = v329
+    v332 = 1
+    v333 = 4
+    v334 = cols + v332
+    v334 = v334 * v333
+    v335 = alloc(v334)
+  if0 v335 goto lbl_NullPtr_336
+  goto lbl_GoodPtr_337
+lbl_NullPtr_336:
+    error("null pointer")
+lbl_GoodPtr_337:
+    [v335 + 0] = cols
+    [this + 20] = v335
+    v338 = 1
+    v339 = 4
+    v340 = cols + v338
+    v340 = v340 * v339
+    v341 = alloc(v340)
+  if0 v341 goto lbl_NullPtr_342
+  goto lbl_GoodPtr_343
+lbl_NullPtr_342:
+    error("null pointer")
+lbl_GoodPtr_343:
+    [v341 + 0] = cols
+    [this + 16] = v341
+    v344 = 1
+    v345 = 4
+    v346 = cols + v344
+    v346 = v346 * v345
+    v347 = alloc(v346)
+  if0 v347 goto lbl_NullPtr_348
+  goto lbl_GoodPtr_349
+lbl_NullPtr_348:
+    error("null pointer")
+lbl_GoodPtr_349:
+    [v347 + 0] = cols
+    [this + 24] = v347
+    return cols
+
+func Matrix_5xn_set(this r c value)
+    v350 = 1
+    v351 = 1
+    v352 = 4
+    v353 = v350 + v351
+    v353 = v353 * v352
+    v354 = alloc(v353)
+  if0 v354 goto lbl_NullPtr_355
+  goto lbl_GoodPtr_356
+lbl_NullPtr_355:
+    error("null pointer")
+lbl_GoodPtr_356:
+    [v354 + 0] = v350
+    dummy = v354
+    v357 = 1
+    searching_row = v357
+    v364 = [this + 12]
+    v363 = c < v364
+  if0 v363 goto lbl_FullAnd_361
+    v366 = 0
+    v365 = c < v366
+    v367 = 1
+    v368 = v365 < v367
+    v360 = v368
+  goto lbl_ShortAnd_362
+lbl_FullAnd_361:
+    v360 = 0
+lbl_ShortAnd_362:
+  if0 v360 goto lbl_Else_358
+  if0 searching_row goto lbl_FullAnd_372
+  if0 this goto lbl_NullPtr_376
+    v374 = [this + 0]
+    v374 = [v374 + 12]
+    v378 = 0
+    v375 = call v374(this r v378)
+  goto lbl_GoodPtr_377
+lbl_NullPtr_376:
+    error("null pointer")
+lbl_GoodPtr_377:
+    v371 = v375
+  goto lbl_ShortAnd_373
+lbl_FullAnd_372:
+    v371 = 0
+lbl_ShortAnd_373:
+  if0 v371 goto lbl_Else_369
+    v379 = 0
+    searching_row = v379
+    v380 = [this + 8]
+    v381 = 4
+    v382 = 5
+    v383 = v381 - v382
+    v384 = [v380 + 0]
+    v385 = v383 < c
+    v386 = c < v384
+    v387 = v385 * v386
+  if0 v387 goto lbl_OutOfBounds_388
+  goto lbl_Inbound_389
+lbl_OutOfBounds_388:
+    error("array index out of bounds")
+lbl_Inbound_389:
+    v390 = v381 * c
+    v390 = v390 + v381
+    v390 = v380 + v390
+    [v390 + 0] = value
+  goto lbl_IfEnd_370
+lbl_Else_369:
+lbl_IfEnd_370:
+  if0 searching_row goto lbl_FullAnd_394
+  if0 this goto lbl_NullPtr_398
+    v396 = [this + 0]
+    v396 = [v396 + 12]
+    v400 = 1
+    v397 = call v396(this r v400)
+  goto lbl_GoodPtr_399
+lbl_NullPtr_398:
+    error("null pointer")
+lbl_GoodPtr_399:
+    v393 = v397
+  goto lbl_ShortAnd_395
+lbl_FullAnd_394:
+    v393 = 0
+lbl_ShortAnd_395:
+  if0 v393 goto lbl_Else_391
+    v401 = 0
+    searching_row = v401
+    v402 = [this + 4]
+    v403 = 4
+    v404 = 5
+    v405 = v403 - v404
+    v406 = [v402 + 0]
+    v407 = v405 < c
+    v408 = c < v406
+    v409 = v407 * v408
+  if0 v409 goto lbl_OutOfBounds_410
+  goto lbl_Inbound_411
+lbl_OutOfBounds_410:
+    error("array index out of bounds")
+lbl_Inbound_411:
+    v412 = v403 * c
+    v412 = v412 + v403
+    v412 = v402 + v412
+    [v412 + 0] = value
+  goto lbl_IfEnd_392
+lbl_Else_391:
+lbl_IfEnd_392:
+  if0 searching_row goto lbl_FullAnd_416
+  if0 this goto lbl_NullPtr_420
+    v418 = [this + 0]
+    v418 = [v418 + 12]
+    v422 = 2
+    v419 = call v418(this r v422)
+  goto lbl_GoodPtr_421
+lbl_NullPtr_420:
+    error("null pointer")
+lbl_GoodPtr_421:
+    v415 = v419
+  goto lbl_ShortAnd_417
+lbl_FullAnd_416:
+    v415 = 0
+lbl_ShortAnd_417:
+  if0 v415 goto lbl_Else_413
+    v423 = 0
+    searching_row = v423
+    v424 = [this + 20]
+    v425 = 4
+    v426 = 5
+    v427 = v425 - v426
+    v428 = [v424 + 0]
+    v429 = v427 < c
+    v430 = c < v428
+    v431 = v429 * v430
+  if0 v431 goto lbl_OutOfBounds_432
+  goto lbl_Inbound_433
+lbl_OutOfBounds_432:
+    error("array index out of bounds")
+lbl_Inbound_433:
+    v434 = v425 * c
+    v434 = v434 + v425
+    v434 = v424 + v434
+    [v434 + 0] = value
+  goto lbl_IfEnd_414
+lbl_Else_413:
+lbl_IfEnd_414:
+  if0 searching_row goto lbl_FullAnd_438
+  if0 this goto lbl_NullPtr_442
+    v440 = [this + 0]
+    v440 = [v440 + 12]
+    v444 = 3
+    v441 = call v440(this r v444)
+  goto lbl_GoodPtr_443
+lbl_NullPtr_442:
+    error("null pointer")
+lbl_GoodPtr_443:
+    v437 = v441
+  goto lbl_ShortAnd_439
+lbl_FullAnd_438:
+    v437 = 0
+lbl_ShortAnd_439:
+  if0 v437 goto lbl_Else_435
+    v445 = 0
+    searching_row = v445
+    v446 = [this + 16]
+    v447 = 4
+    v448 = 5
+    v449 = v447 - v448
+    v450 = [v446 + 0]
+    v451 = v449 < c
+    v452 = c < v450
+    v453 = v451 * v452
+  if0 v453 goto lbl_OutOfBounds_454
+  goto lbl_Inbound_455
+lbl_OutOfBounds_454:
+    error("array index out of bounds")
+lbl_Inbound_455:
+    v456 = v447 * c
+    v456 = v456 + v447
+    v456 = v446 + v456
+    [v456 + 0] = value
+  goto lbl_IfEnd_436
+lbl_Else_435:
+lbl_IfEnd_436:
+  if0 searching_row goto lbl_FullAnd_460
+  if0 this goto lbl_NullPtr_464
+    v462 = [this + 0]
+    v462 = [v462 + 12]
+    v466 = 4
+    v463 = call v462(this r v466)
+  goto lbl_GoodPtr_465
+lbl_NullPtr_464:
+    error("null pointer")
+lbl_GoodPtr_465:
+    v459 = v463
+  goto lbl_ShortAnd_461
+lbl_FullAnd_460:
+    v459 = 0
+lbl_ShortAnd_461:
+  if0 v459 goto lbl_Else_457
+    v467 = 0
+    searching_row = v467
+    v468 = [this + 24]
+    v469 = 4
+    v470 = 5
+    v471 = v469 - v470
+    v472 = [v468 + 0]
+    v473 = v471 < c
+    v474 = c < v472
+    v475 = v473 * v474
+  if0 v475 goto lbl_OutOfBounds_476
+  goto lbl_Inbound_477
+lbl_OutOfBounds_476:
+    error("array index out of bounds")
+lbl_Inbound_477:
+    v478 = v469 * c
+    v478 = v478 + v469
+    v478 = v468 + v478
+    [v478 + 0] = value
+  goto lbl_IfEnd_458
+lbl_Else_457:
+lbl_IfEnd_458:
+  if0 searching_row goto lbl_Else_479
+    v481 = 1
+    v482 = 0
+    v483 = 4
+    v484 = 5
+    v485 = v483 - v484
+    v486 = [dummy + 0]
+    v487 = v485 < v481
+    v488 = v481 < v486
+    v489 = v487 * v488
+  if0 v489 goto lbl_OutOfBounds_490
+  goto lbl_Inbound_491
+lbl_OutOfBounds_490:
+    error("array index out of bounds")
+lbl_Inbound_491:
+    v492 = v483 * v481
+    v492 = v492 + v483
+    v492 = dummy + v492
+    [v492 + 0] = v482
+  goto lbl_IfEnd_480
+lbl_Else_479:
+lbl_IfEnd_480:
+  goto lbl_IfEnd_359
+lbl_Else_358:
+    v493 = 1
+    v494 = 0
+    v495 = 4
+    v496 = 5
+    v497 = v495 - v496
+    v498 = [dummy + 0]
+    v499 = v497 < v493
+    v500 = v493 < v498
+    v501 = v499 * v500
+  if0 v501 goto lbl_OutOfBounds_502
+  goto lbl_Inbound_503
+lbl_OutOfBounds_502:
+    error("array index out of bounds")
+lbl_Inbound_503:
+    v504 = v495 * v493
+    v504 = v504 + v495
+    v504 = dummy + v504
+    [v504 + 0] = v494
+lbl_IfEnd_359:
+    return value
+
+func Matrix_5xn_get(this r c)
+    v505 = 1
+    v506 = 1
+    v507 = 4
+    v508 = v505 + v506
+    v508 = v508 * v507
+    v509 = alloc(v508)
+  if0 v509 goto lbl_NullPtr_510
+  goto lbl_GoodPtr_511
+lbl_NullPtr_510:
+    error("null pointer")
+lbl_GoodPtr_511:
+    [v509 + 0] = v505
+    dummy = v509
+    v512 = 1
+    searching_row = v512
+    v514 = 0
+    v515 = 1
+    v513 = v514 - v515
+    value = v513
+    v522 = [this + 12]
+    v521 = c < v522
+  if0 v521 goto lbl_FullAnd_519
+    v524 = 0
+    v523 = c < v524
+    v525 = 1
+    v526 = v523 < v525
+    v518 = v526
+  goto lbl_ShortAnd_520
+lbl_FullAnd_519:
+    v518 = 0
+lbl_ShortAnd_520:
+  if0 v518 goto lbl_Else_516
+  if0 searching_row goto lbl_FullAnd_530
+  if0 this goto lbl_NullPtr_534
+    v532 = [this + 0]
+    v532 = [v532 + 0]
+    v536 = 0
+    v533 = call v532(this r v536)
+  goto lbl_GoodPtr_535
+lbl_NullPtr_534:
+    error("null pointer")
+lbl_GoodPtr_535:
+    v529 = v533
+  goto lbl_ShortAnd_531
+lbl_FullAnd_530:
+    v529 = 0
+lbl_ShortAnd_531:
+  if0 v529 goto lbl_Else_527
+    v537 = 0
+    searching_row = v537
+    v538 = [this + 8]
+    v539 = 4
+    v540 = 5
+    v541 = v539 - v540
+    v542 = [v538 + 0]
+    v543 = v541 < c
+    v544 = c < v542
+    v545 = v543 * v544
+  if0 v545 goto lbl_OutOfBounds_546
+  goto lbl_Inbound_547
+lbl_OutOfBounds_546:
+    error("array index out of bounds")
+lbl_Inbound_547:
+    v548 = v539 * c
+    v548 = v548 + v539
+    v548 = v538 + v548
+    v549 = [v548 + 0]
+    value = v549
+  goto lbl_IfEnd_528
+lbl_Else_527:
+lbl_IfEnd_528:
+  if0 searching_row goto lbl_FullAnd_553
+  if0 this goto lbl_NullPtr_557
+    v555 = [this + 0]
+    v555 = [v555 + 0]
+    v559 = 1
+    v556 = call v555(this r v559)
+  goto lbl_GoodPtr_558
+lbl_NullPtr_557:
+    error("null pointer")
+lbl_GoodPtr_558:
+    v552 = v556
+  goto lbl_ShortAnd_554
+lbl_FullAnd_553:
+    v552 = 0
+lbl_ShortAnd_554:
+  if0 v552 goto lbl_Else_550
+    v560 = 0
+    searching_row = v560
+    v561 = [this + 4]
+    v562 = 4
+    v563 = 5
+    v564 = v562 - v563
+    v565 = [v561 + 0]
+    v566 = v564 < c
+    v567 = c < v565
+    v568 = v566 * v567
+  if0 v568 goto lbl_OutOfBounds_569
+  goto lbl_Inbound_570
+lbl_OutOfBounds_569:
+    error("array index out of bounds")
+lbl_Inbound_570:
+    v571 = v562 * c
+    v571 = v571 + v562
+    v571 = v561 + v571
+    v572 = [v571 + 0]
+    value = v572
+  goto lbl_IfEnd_551
+lbl_Else_550:
+lbl_IfEnd_551:
+  if0 searching_row goto lbl_FullAnd_576
+  if0 this goto lbl_NullPtr_580
+    v578 = [this + 0]
+    v578 = [v578 + 0]
+    v582 = 2
+    v579 = call v578(this r v582)
+  goto lbl_GoodPtr_581
+lbl_NullPtr_580:
+    error("null pointer")
+lbl_GoodPtr_581:
+    v575 = v579
+  goto lbl_ShortAnd_577
+lbl_FullAnd_576:
+    v575 = 0
+lbl_ShortAnd_577:
+  if0 v575 goto lbl_Else_573
+    v583 = 0
+    searching_row = v583
+    v584 = [this + 20]
+    v585 = 4
+    v586 = 5
+    v587 = v585 - v586
+    v588 = [v584 + 0]
+    v589 = v587 < c
+    v590 = c < v588
+    v591 = v589 * v590
+  if0 v591 goto lbl_OutOfBounds_592
+  goto lbl_Inbound_593
+lbl_OutOfBounds_592:
+    error("array index out of bounds")
+lbl_Inbound_593:
+    v594 = v585 * c
+    v594 = v594 + v585
+    v594 = v584 + v594
+    v595 = [v594 + 0]
+    value = v595
+  goto lbl_IfEnd_574
+lbl_Else_573:
+lbl_IfEnd_574:
+  if0 searching_row goto lbl_FullAnd_599
+  if0 this goto lbl_NullPtr_603
+    v601 = [this + 0]
+    v601 = [v601 + 0]
+    v605 = 3
+    v602 = call v601(this r v605)
+  goto lbl_GoodPtr_604
+lbl_NullPtr_603:
+    error("null pointer")
+lbl_GoodPtr_604:
+    v598 = v602
+  goto lbl_ShortAnd_600
+lbl_FullAnd_599:
+    v598 = 0
+lbl_ShortAnd_600:
+  if0 v598 goto lbl_Else_596
+    v606 = 0
+    searching_row = v606
+    v607 = [this + 16]
+    v608 = 4
+    v609 = 5
+    v610 = v608 - v609
+    v611 = [v607 + 0]
+    v612 = v610 < c
+    v613 = c < v611
+    v614 = v612 * v613
+  if0 v614 goto lbl_OutOfBounds_615
+  goto lbl_Inbound_616
+lbl_OutOfBounds_615:
+    error("array index out of bounds")
+lbl_Inbound_616:
+    v617 = v608 * c
+    v617 = v617 + v608
+    v617 = v607 + v617
+    v618 = [v617 + 0]
+    value = v618
+  goto lbl_IfEnd_597
+lbl_Else_596:
+lbl_IfEnd_597:
+  if0 searching_row goto lbl_FullAnd_622
+  if0 this goto lbl_NullPtr_626
+    v624 = [this + 0]
+    v624 = [v624 + 0]
+    v628 = 4
+    v625 = call v624(this r v628)
+  goto lbl_GoodPtr_627
+lbl_NullPtr_626:
+    error("null pointer")
+lbl_GoodPtr_627:
+    v621 = v625
+  goto lbl_ShortAnd_623
+lbl_FullAnd_622:
+    v621 = 0
+lbl_ShortAnd_623:
+  if0 v621 goto lbl_Else_619
+    v629 = 0
+    searching_row = v629
+    v630 = [this + 24]
+    v631 = 4
+    v632 = 5
+    v633 = v631 - v632
+    v634 = [v630 + 0]
+    v635 = v633 < c
+    v636 = c < v634
+    v637 = v635 * v636
+  if0 v637 goto lbl_OutOfBounds_638
+  goto lbl_Inbound_639
+lbl_OutOfBounds_638:
+    error("array index out of bounds")
+lbl_Inbound_639:
+    v640 = v631 * c
+    v640 = v640 + v631
+    v640 = v630 + v640
+    v641 = [v640 + 0]
+    value = v641
+  goto lbl_IfEnd_620
+lbl_Else_619:
+lbl_IfEnd_620:
+  if0 searching_row goto lbl_Else_642
+    v644 = 1
+    v645 = 0
+    v646 = 4
+    v647 = 5
+    v648 = v646 - v647
+    v649 = [dummy + 0]
+    v650 = v648 < v644
+    v651 = v644 < v649
+    v652 = v650 * v651
+  if0 v652 goto lbl_OutOfBounds_653
+  goto lbl_Inbound_654
+lbl_OutOfBounds_653:
+    error("array index out of bounds")
+lbl_Inbound_654:
+    v655 = v646 * v644
+    v655 = v655 + v646
+    v655 = dummy + v655
+    [v655 + 0] = v645
+  goto lbl_IfEnd_643
+lbl_Else_642:
+lbl_IfEnd_643:
+  goto lbl_IfEnd_517
+lbl_Else_516:
+    v656 = 1
+    v657 = 0
+    v658 = 4
+    v659 = 5
+    v660 = v658 - v659
+    v661 = [dummy + 0]
+    v662 = v660 < v656
+    v663 = v656 < v661
+    v664 = v662 * v663
+  if0 v664 goto lbl_OutOfBounds_665
+  goto lbl_Inbound_666
+lbl_OutOfBounds_665:
+    error("array index out of bounds")
+lbl_Inbound_666:
+    v667 = v658 * v656
+    v667 = v667 + v658
+    v667 = dummy + v667
+    [v667 + 0] = v657
+lbl_IfEnd_517:
+    return value
+
+func Matrix_5xn_col_size(this)
+    v668 = [this + 12]
+    return v668
+
+func Matrix_5xn_row_size(this)
+    v669 = 5
+    return v669
+
+func Matrix_5xn_equalP(this a b)
+    v670 = a - b
+    print(v670)
+    v673 = a < b
+  if0 v673 goto lbl_Else_671
+    v674 = 0
+    res = v674
+  goto lbl_IfEnd_672
+lbl_Else_671:
+    v677 = b < a
+  if0 v677 goto lbl_Else_675
+    v678 = 0
+    res = v678
+  goto lbl_IfEnd_676
+lbl_Else_675:
+    v679 = 1
+    res = v679
+lbl_IfEnd_676:
+lbl_IfEnd_672:
+    return res
+
+func Matrix_5xn_equal(this a b)
+    v682 = a < b
+  if0 v682 goto lbl_Else_680
+    v683 = 0
+    res = v683
+  goto lbl_IfEnd_681
+lbl_Else_680:
+    v686 = b < a
+  if0 v686 goto lbl_Else_684
+    v687 = 0
+    res = v687
+  goto lbl_IfEnd_685
+lbl_Else_684:
+    v688 = 1
+    res = v688
+lbl_IfEnd_685:
+lbl_IfEnd_681:
+    return res
+

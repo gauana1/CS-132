@@ -1,0 +1,50 @@
+func main()
+    v0 = 8
+    v1 = 4
+    v2 = alloc(v0)
+    v3 = alloc(v1)
+    v4 = @A_BaseMethod
+    [v3 + 0] = v4
+    [v2 + 0] = v3
+  if0 v2 goto lbl_NullPtr_5
+  goto lbl_GoodPtr_6
+lbl_NullPtr_5:
+    error("null pointer")
+lbl_GoodPtr_6:
+    c = v2
+  if0 c goto lbl_NullPtr_9
+    v7 = [c + 0]
+    v7 = [v7 + 0]
+    v11 = 10
+    v8 = call v7(c v11)
+  goto lbl_GoodPtr_10
+lbl_NullPtr_9:
+    error("null pointer")
+lbl_GoodPtr_10:
+    print(v8)
+    v12 = 0
+    return v12
+
+func A_BaseMethod(this k)
+    v16 = 0
+    v15 = v16 < k
+  if0 v15 goto lbl_Else_13
+  if0 this goto lbl_NullPtr_20
+    v18 = [this + 0]
+    v18 = [v18 + 0]
+    v23 = 1
+    v22 = k - v23
+    v19 = call v18(this v22)
+  goto lbl_GoodPtr_21
+lbl_NullPtr_20:
+    error("null pointer")
+lbl_GoodPtr_21:
+    v24 = 20
+    v17 = v19 + v24
+    [this + 4] = v17
+  goto lbl_IfEnd_14
+lbl_Else_13:
+lbl_IfEnd_14:
+    v25 = [this + 4]
+    return v25
+

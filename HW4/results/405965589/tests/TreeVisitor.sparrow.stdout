@@ -1,0 +1,3392 @@
+func main()
+stack_s4 = s4
+stack_s5 = s5
+stack_s6 = s6
+stack_s7 = s7
+stack_s2 = s2
+stack_s1 = s1
+stack_s3 = s3
+t2 = 1
+t3 = 4
+t4 = t2 * t3
+t5 = alloc(t4)
+s1 = 4
+s2 = alloc(s1)
+[t5 + 0] =s2
+s3 = @TV_Start
+[s2 + 0] =s3
+if0 t5 goto v3Error
+goto v3End
+v3Error:
+error ("null pointer")
+v3End:
+if0 t5 goto v6Error
+goto v6Continue
+v6Error:
+error ("null pointer")
+v6Continue:
+s4 = [t5 + 0]
+s5 = [s4 + 0]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v3 = t5
+s6 = call s5(v3)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+print (s6)
+s7 = 0
+v10 = s7
+s4 = stack_s4
+s5 = stack_s5
+s6 = stack_s6
+s7 = stack_s7
+s2 = stack_s2
+s1 = stack_s1
+s3 = stack_s3
+return v10
+func TV_Start(this)
+t2 = this
+stack_s11 = s11
+stack_s3 = s3
+stack_s9 = s9
+stack_s10 = s10
+stack_s11 = s11
+stack_s7 = s7
+stack_s10 = s10
+stack_s7 = s7
+stack_s1 = s1
+stack_s4 = s4
+stack_s2 = s2
+stack_s6 = s6
+stack_s5 = s5
+stack_s7 = s7
+stack_s9 = s9
+stack_s6 = s6
+stack_s8 = s8
+stack_s1 = s1
+stack_s5 = s5
+stack_s4 = s4
+stack_s9 = s9
+stack_s3 = s3
+stack_s8 = s8
+stack_s11 = s11
+stack_s10 = s10
+stack_s2 = s2
+stack_s2 = s2
+stack_s5 = s5
+stack_s4 = s4
+stack_s6 = s6
+stack_s8 = s8
+stack_s9 = s9
+stack_s2 = s2
+stack_s10 = s10
+stack_s9 = s9
+stack_s11 = s11
+stack_s7 = s7
+stack_s4 = s4
+stack_s2 = s2
+stack_s4 = s4
+stack_s2 = s2
+stack_s3 = s3
+stack_s1 = s1
+stack_s5 = s5
+stack_s6 = s6
+stack_s9 = s9
+stack_s8 = s8
+stack_s7 = s7
+stack_s10 = s10
+stack_s11 = s11
+stack_s11 = s11
+stack_s7 = s7
+stack_s8 = s8
+stack_s10 = s10
+stack_s4 = s4
+stack_s2 = s2
+stack_s5 = s5
+stack_s6 = s6
+stack_s3 = s3
+stack_s1 = s1
+stack_s5 = s5
+stack_s1 = s1
+stack_s8 = s8
+stack_s3 = s3
+stack_s6 = s6
+t3 = 7
+t4 = 4
+t5 = t3 * t4
+s1 = alloc(t5)
+s2 = 84
+s3 = alloc(s2)
+[s1 + 0] =s3
+s4 = @Tree_Delete
+[s3 + 52] =s4
+s5 = @Tree_SetHas_Left
+[s3 + 36] =s5
+s6 = @Tree_RemoveLeft
+[s3 + 64] =s6
+s7 = @Tree_GetKey
+[s3 + 20] =s7
+s8 = @Tree_SetRight
+[s3 + 4] =s8
+s9 = @Tree_GetLeft
+[s3 + 16] =s9
+s10 = @Tree_GetRight
+[s3 + 12] =s10
+s11 = @Tree_Remove
+[s3 + 56] =s11
+a2 = @Tree_SetLeft
+[s3 + 8] =a2
+a3 = @Tree_Insert
+[s3 + 48] =a3
+a4 = @Tree_accept
+[s3 + 80] =a4
+a5 = @Tree_Print
+[s3 + 72] =a5
+a6 = @Tree_Init
+[s3 + 0] =a6
+a7 = @Tree_GetHas_Right
+[s3 + 28] =a7
+t2 = @Tree_GetHas_Left
+[s3 + 32] =t2
+t3 = @Tree_RemoveRight
+[s3 + 60] =t3
+t4 = @Tree_Search
+[s3 + 68] =t4
+t5 = @Tree_SetKey
+[s3 + 24] =t5
+s2 = @Tree_Compare
+[s3 + 44] =s2
+s4 = @Tree_SetHas_Right
+[s3 + 40] =s4
+s5 = @Tree_RecPrint
+[s3 + 76] =s5
+if0 s1 goto v14Error
+goto v14End
+v14Error:
+error ("null pointer")
+v14End:
+s6 = s1
+t1 = s6
+root= t1
+t0 = root
+if0 t0 goto v38Error
+goto v38Continue
+v38Error:
+error ("null pointer")
+v38Continue:
+t0 = root
+s8 = [t0 + 0]
+s9 = [s8 + 0]
+s10 = 16
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v41 = s10
+s7 = call s9(root v41)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s11 = s7
+t1 = s11
+ntb= t1
+t0 = root
+if0 t0 goto v44Error
+goto v44Continue
+v44Error:
+error ("null pointer")
+v44Continue:
+t0 = root
+a3 = [t0 + 0]
+a4 = [a3 + 72]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a5 = call a4(root)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a6 = stack_a6
+a7 = stack_a7
+a6 = a5
+t1 = a6
+ntb= t1
+a7 = 100000000
+print (a7)
+t0 = root
+if0 t0 goto v50Error
+goto v50Continue
+v50Error:
+error ("null pointer")
+v50Continue:
+t0 = root
+t2 = [t0 + 0]
+t3 = [t2 + 48]
+t4 = 8
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v53 = t4
+a2 = call t3(root v53)
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+t5 = a2
+t1 = t5
+ntb= t1
+t0 = root
+if0 t0 goto v56Error
+goto v56Continue
+v56Error:
+error ("null pointer")
+v56Continue:
+t0 = root
+s2 = [t0 + 0]
+s4 = [s2 + 48]
+s3 = 24
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v59 = s3
+s5 = call s4(root v59)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s1 = s5
+t1 = s1
+ntb= t1
+t0 = root
+if0 t0 goto v62Error
+goto v62Continue
+v62Error:
+error ("null pointer")
+v62Continue:
+t0 = root
+s6 = [t0 + 0]
+s8 = [s6 + 48]
+s9 = 4
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v65 = s9
+s10 = call s8(root v65)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s7 = s10
+t1 = s7
+ntb= t1
+t0 = root
+if0 t0 goto v68Error
+goto v68Continue
+v68Error:
+error ("null pointer")
+v68Continue:
+t0 = root
+s11 = [t0 + 0]
+a3 = [s11 + 48]
+a4 = 12
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v71 = a4
+a5 = call a3(root v71)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a6 = stack_a6
+a7 = stack_a7
+a6 = a5
+t1 = a6
+ntb= t1
+t0 = root
+if0 t0 goto v74Error
+goto v74Continue
+v74Error:
+error ("null pointer")
+v74Continue:
+t0 = root
+a7 = [t0 + 0]
+t2 = [a7 + 48]
+t3 = 20
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v77 = t3
+t4 = call t2(root v77)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+a2 = t4
+t1 = a2
+ntb= t1
+t0 = root
+if0 t0 goto v80Error
+goto v80Continue
+v80Error:
+error ("null pointer")
+v80Continue:
+t0 = root
+t5 = [t0 + 0]
+s2 = [t5 + 48]
+s4 = 28
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v83 = s4
+s3 = call s2(root v83)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s5 = s3
+t1 = s5
+ntb= t1
+t0 = root
+if0 t0 goto v86Error
+goto v86Continue
+v86Error:
+error ("null pointer")
+v86Continue:
+t0 = root
+s1 = [t0 + 0]
+s6 = [s1 + 48]
+s8 = 14
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v89 = s8
+s9 = call s6(root v89)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s10 = s9
+t1 = s10
+ntb= t1
+t0 = root
+if0 t0 goto v92Error
+goto v92Continue
+v92Error:
+error ("null pointer")
+v92Continue:
+t0 = root
+s7 = [t0 + 0]
+s11 = [s7 + 72]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a3 = call s11(root)
+a2 = stack_a2
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+a4 = a3
+t1 = a4
+ntb= t1
+a5 = 100000000
+print (a5)
+a6 = 3
+a7 = 4
+t2 = a6 * a7
+t3 = alloc(t2)
+t4 = 4
+a2 = alloc(t4)
+[t3 + 0] =a2
+t5 = @MyVisitor_visit
+[a2 + 0] =t5
+if0 t3 goto v101Error
+goto v101End
+v101Error:
+error ("null pointer")
+v101End:
+s2 = t3
+s4 = s2
+s3 = 50000000
+print (s3)
+t0 = root
+if0 t0 goto v106Error
+goto v106Continue
+v106Error:
+error ("null pointer")
+v106Continue:
+t0 = root
+s5 = [t0 + 0]
+s1 = [s5 + 80]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v = s4
+s6 = call s1(root v)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s8 = s6
+s9 = s8
+s10 = 100000000
+print (s10)
+t0 = root
+if0 t0 goto v112Error
+goto v112Continue
+v112Error:
+error ("null pointer")
+v112Continue:
+t0 = root
+s7 = [t0 + 0]
+s11 = [s7 + 68]
+a3 = 24
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v115 = a3
+a4 = call s11(root v115)
+a2 = stack_a2
+a3 = stack_a3
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+print (a4)
+t0 = root
+if0 t0 goto v117Error
+goto v117Continue
+v117Error:
+error ("null pointer")
+v117Continue:
+t0 = root
+a5 = [t0 + 0]
+a6 = [a5 + 68]
+a7 = 12
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v120 = a7
+t2 = call a6(root v120)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+print (t2)
+t0 = root
+if0 t0 goto v122Error
+goto v122Continue
+v122Error:
+error ("null pointer")
+v122Continue:
+t0 = root
+t4 = [t0 + 0]
+a2 = [t4 + 68]
+t5 = 16
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v125 = t5
+t3 = call a2(root v125)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+print (t3)
+t0 = root
+if0 t0 goto v127Error
+goto v127Continue
+v127Error:
+error ("null pointer")
+v127Continue:
+t0 = root
+s2 = [t0 + 0]
+s3 = [s2 + 68]
+s5 = 50
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v130 = s5
+s4 = call s3(root v130)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+print (s4)
+t0 = root
+if0 t0 goto v132Error
+goto v132Continue
+v132Error:
+error ("null pointer")
+v132Continue:
+t0 = root
+s1 = [t0 + 0]
+s6 = [s1 + 68]
+s8 = 12
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v135 = s8
+s9 = call s6(root v135)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+print (s9)
+t0 = root
+if0 t0 goto v137Error
+goto v137Continue
+v137Error:
+error ("null pointer")
+v137Continue:
+t0 = root
+s10 = [t0 + 0]
+s7 = [s10 + 52]
+s11 = 12
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v140 = s11
+a3 = call s7(root v140)
+a2 = stack_a2
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+a4 = a3
+t1 = a4
+ntb= t1
+t0 = root
+if0 t0 goto v143Error
+goto v143Continue
+v143Error:
+error ("null pointer")
+v143Continue:
+t0 = root
+a5 = [t0 + 0]
+a6 = [a5 + 72]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a7 = call a6(root)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+t2 = a7
+t1 = t2
+ntb= t1
+t0 = root
+if0 t0 goto v148Error
+goto v148Continue
+v148Error:
+error ("null pointer")
+v148Continue:
+t0 = root
+t4 = [t0 + 0]
+a2 = [t4 + 68]
+t5 = 12
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v151 = t5
+t3 = call a2(root v151)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+print (t3)
+s2 = 0
+v153 = s2
+s11 = stack_s11
+s3 = stack_s3
+s9 = stack_s9
+s10 = stack_s10
+s11 = stack_s11
+s7 = stack_s7
+s10 = stack_s10
+s7 = stack_s7
+s1 = stack_s1
+s4 = stack_s4
+s2 = stack_s2
+s6 = stack_s6
+s5 = stack_s5
+s7 = stack_s7
+s9 = stack_s9
+s6 = stack_s6
+s8 = stack_s8
+s1 = stack_s1
+s5 = stack_s5
+s4 = stack_s4
+s9 = stack_s9
+s3 = stack_s3
+s8 = stack_s8
+s11 = stack_s11
+s10 = stack_s10
+s2 = stack_s2
+s2 = stack_s2
+s5 = stack_s5
+s4 = stack_s4
+s6 = stack_s6
+s8 = stack_s8
+s9 = stack_s9
+s2 = stack_s2
+s10 = stack_s10
+s9 = stack_s9
+s11 = stack_s11
+s7 = stack_s7
+s4 = stack_s4
+s2 = stack_s2
+s4 = stack_s4
+s2 = stack_s2
+s3 = stack_s3
+s1 = stack_s1
+s5 = stack_s5
+s6 = stack_s6
+s9 = stack_s9
+s8 = stack_s8
+s7 = stack_s7
+s10 = stack_s10
+s11 = stack_s11
+s11 = stack_s11
+s7 = stack_s7
+s8 = stack_s8
+s10 = stack_s10
+s4 = stack_s4
+s2 = stack_s2
+s5 = stack_s5
+s6 = stack_s6
+s3 = stack_s3
+s1 = stack_s1
+s5 = stack_s5
+s1 = stack_s1
+s8 = stack_s8
+s3 = stack_s3
+s6 = stack_s6
+return v153
+func Tree_Init(this v_key)
+t2 = this
+t3 = v_key
+stack_s1 = s1
+[t2 + 24] =t3
+t4 = 0
+[t2 + 20] =t4
+t5 = 0
+[t2 + 8] =t5
+s1 = 1
+v159 = s1
+s1 = stack_s1
+return v159
+func Tree_SetRight(this rn)
+t2 = this
+t3 = rn
+[t2 + 16] =t3
+t4 = 1
+v161 = t4
+return v161
+func Tree_SetLeft(this ln)
+t3 = this
+t2 = ln
+[t3 + 4] =t2
+t4 = 1
+v163 = t4
+return v163
+func Tree_GetRight(this)
+t2 = this
+t3 = [t2 + 16]
+v164 = t3
+return v164
+func Tree_GetLeft(this)
+t2 = this
+t3 = [t2 + 4]
+v165 = t3
+return v165
+func Tree_GetKey(this)
+t2 = this
+t3 = [t2 + 24]
+v166 = t3
+return v166
+func Tree_SetKey(this v_key)
+t2 = this
+t3 = v_key
+[t2 + 24] =t3
+t4 = 1
+v168 = t4
+return v168
+func Tree_GetHas_Right(this)
+t2 = this
+t3 = [t2 + 8]
+v169 = t3
+return v169
+func Tree_GetHas_Left(this)
+t2 = this
+t3 = [t2 + 20]
+v170 = t3
+return v170
+func Tree_SetHas_Left(this val)
+t3 = this
+t2 = val
+[t3 + 20] =t2
+t4 = 1
+v172 = t4
+return v172
+func Tree_SetHas_Right(this val)
+t3 = this
+t2 = val
+[t3 + 8] =t2
+t4 = 1
+v174 = t4
+return v174
+func Tree_Compare(this num1 num2)
+t2 = this
+t4 = num2
+stack_s8 = s8
+stack_s10 = s10
+stack_s4 = s4
+stack_s6 = s6
+stack_s7 = s7
+stack_s5 = s5
+stack_s1 = s1
+stack_s3 = s3
+stack_s2 = s2
+stack_s9 = s9
+stack_s11 = s11
+t5 = 0
+t3 = t5
+t1 = t3
+ntb= t1
+s2 = 1
+s1 = t4 + s2
+s3 = s1
+s4 = s3
+t0 = num1
+s5 = t0 < t4
+if0 s5 goto v180Else
+s6 = 0
+s7 = s6
+t1 = s7
+ntb= t1
+goto v180End
+v180Else:
+t0 = num1
+s8 = t0 < s4
+s9 = 1
+s10 = s9 - s8
+if0 s10 goto v184Else
+s11 = 0
+a2 = s11
+t1 = a2
+ntb= t1
+goto v184End
+v184Else:
+a3 = 1
+a4 = a3
+t1 = a4
+ntb= t1
+v184End:
+v180End:
+s8 = stack_s8
+s10 = stack_s10
+s4 = stack_s4
+s6 = stack_s6
+s7 = stack_s7
+s5 = stack_s5
+s1 = stack_s1
+s3 = stack_s3
+s2 = stack_s2
+s9 = stack_s9
+s11 = stack_s11
+return ntb
+func Tree_Insert(this v_key)
+stack_s1 = s1
+stack_s3 = s3
+stack_s2 = s2
+stack_s11 = s11
+stack_s8 = s8
+stack_s9 = s9
+stack_s5 = s5
+stack_s7 = s7
+stack_s9 = s9
+stack_s10 = s10
+stack_s2 = s2
+stack_s4 = s4
+stack_s8 = s8
+stack_s7 = s7
+stack_s4 = s4
+stack_s5 = s5
+stack_s11 = s11
+stack_s1 = s1
+stack_s3 = s3
+stack_s10 = s10
+stack_s11 = s11
+stack_s6 = s6
+stack_s8 = s8
+stack_s9 = s9
+stack_s9 = s9
+stack_s10 = s10
+stack_s8 = s8
+stack_s5 = s5
+stack_s7 = s7
+stack_s2 = s2
+stack_s4 = s4
+stack_s1 = s1
+stack_s3 = s3
+stack_s10 = s10
+stack_s3 = s3
+stack_s1 = s1
+stack_s6 = s6
+stack_s11 = s11
+stack_s7 = s7
+stack_s4 = s4
+stack_s6 = s6
+stack_s5 = s5
+t4 = 7
+t3 = 4
+t2 = t4 * t3
+t5 = alloc(t2)
+s1 = 84
+s2 = alloc(s1)
+[t5 + 0] =s2
+s3 = @Tree_Delete
+[s2 + 52] =s3
+s4 = @Tree_SetHas_Left
+[s2 + 36] =s4
+s5 = @Tree_RemoveLeft
+[s2 + 64] =s5
+s6 = @Tree_GetKey
+[s2 + 20] =s6
+s7 = @Tree_SetRight
+[s2 + 4] =s7
+s8 = @Tree_GetLeft
+[s2 + 16] =s8
+s9 = @Tree_GetRight
+[s2 + 12] =s9
+s10 = @Tree_Remove
+[s2 + 56] =s10
+s11 = @Tree_SetLeft
+[s2 + 8] =s11
+a2 = @Tree_Insert
+[s2 + 48] =a2
+a3 = @Tree_accept
+[s2 + 80] =a3
+a4 = @Tree_Print
+[s2 + 72] =a4
+a5 = @Tree_Init
+[s2 + 0] =a5
+a6 = @Tree_GetHas_Right
+[s2 + 28] =a6
+a7 = @Tree_GetHas_Left
+[s2 + 32] =a7
+t4 = @Tree_RemoveRight
+[s2 + 60] =t4
+t3 = @Tree_Search
+[s2 + 68] =t3
+t2 = @Tree_SetKey
+[s2 + 24] =t2
+s1 = @Tree_Compare
+[s2 + 44] =s1
+s3 = @Tree_SetHas_Right
+[s2 + 40] =s3
+s4 = @Tree_RecPrint
+[s2 + 76] =s4
+if0 t5 goto v193Error
+goto v193End
+v193Error:
+error ("null pointer")
+v193End:
+s5 = t5
+t1 = s5
+new_node= t1
+t0 = new_node
+if0 t0 goto v217Error
+goto v217Continue
+v217Error:
+error ("null pointer")
+v217Continue:
+t0 = new_node
+s7 = [t0 + 0]
+s8 = [s7 + 0]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s9 = call s8(new_node v_key)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s10 = s9
+t1 = s10
+ntb= t1
+t0 = this
+a2 = t0
+t1 = a2
+current_node= t1
+a3 = 1
+s11 = a3
+t1 = s11
+cont= t1
+loopv225:
+t0 = cont
+if0 t0 goto loopv225End
+t0 = current_node
+if0 t0 goto v226Error
+goto v226Continue
+v226Error:
+error ("null pointer")
+v226Continue:
+t0 = current_node
+a5 = [t0 + 0]
+a4 = [a5 + 20]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a6 = call a4(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a7 = stack_a7
+a7 = a6
+t4 = a7
+t0 = v_key
+t3 = t0 < t4
+if0 t3 goto v231Else
+t0 = current_node
+if0 t0 goto v232Error
+goto v232Continue
+v232Error:
+error ("null pointer")
+v232Continue:
+t0 = current_node
+t2 = [t0 + 0]
+s1 = [t2 + 32]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s3 = call s1(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 s3 goto v235Else
+t0 = current_node
+if0 t0 goto v236Error
+goto v236Continue
+v236Error:
+error ("null pointer")
+v236Continue:
+t0 = current_node
+s2 = [t0 + 0]
+s4 = [s2 + 16]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t5 = call s4(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s5 = t5
+t1 = s5
+current_node= t1
+goto v235End
+v235Else:
+s7 = 0
+s8 = s7
+t1 = s8
+cont= t1
+t0 = current_node
+if0 t0 goto v243Error
+goto v243Continue
+v243Error:
+error ("null pointer")
+v243Continue:
+t0 = current_node
+s9 = [t0 + 0]
+s10 = [s9 + 36]
+a2 = 1
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v246 = a2
+s6 = call s10(current_node v246)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+a3 = s6
+t1 = a3
+ntb= t1
+t0 = current_node
+if0 t0 goto v249Error
+goto v249Continue
+v249Error:
+error ("null pointer")
+v249Continue:
+t0 = current_node
+s11 = [t0 + 0]
+a5 = [s11 + 8]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a4 = call a5(current_node new_node)
+a2 = stack_a2
+a3 = stack_a3
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+a6 = a4
+t1 = a6
+ntb= t1
+v235End:
+goto v231End
+v231Else:
+t0 = current_node
+if0 t0 goto v254Error
+goto v254Continue
+v254Error:
+error ("null pointer")
+v254Continue:
+t0 = current_node
+a7 = [t0 + 0]
+t4 = [a7 + 28]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t3 = call t4(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 t3 goto v257Else
+t0 = current_node
+if0 t0 goto v258Error
+goto v258Continue
+v258Error:
+error ("null pointer")
+v258Continue:
+t0 = current_node
+t2 = [t0 + 0]
+s1 = [t2 + 12]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s3 = call s1(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s2 = s3
+t1 = s2
+current_node= t1
+goto v257End
+v257Else:
+s4 = 0
+t5 = s4
+t1 = t5
+cont= t1
+t0 = current_node
+if0 t0 goto v265Error
+goto v265Continue
+v265Error:
+error ("null pointer")
+v265Continue:
+t0 = current_node
+s5 = [t0 + 0]
+s7 = [s5 + 40]
+s8 = 1
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v268 = s8
+s9 = call s7(current_node v268)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s10 = s9
+t1 = s10
+ntb= t1
+t0 = current_node
+if0 t0 goto v271Error
+goto v271Continue
+v271Error:
+error ("null pointer")
+v271Continue:
+t0 = current_node
+a2 = [t0 + 0]
+s6 = [a2 + 4]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a3 = call s6(current_node new_node)
+a2 = stack_a2
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s11 = a3
+t1 = s11
+ntb= t1
+v257End:
+v231End:
+goto loopv225
+loopv225End:
+a5 = 1
+v276 = a5
+s1 = stack_s1
+s3 = stack_s3
+s2 = stack_s2
+s11 = stack_s11
+s8 = stack_s8
+s9 = stack_s9
+s5 = stack_s5
+s7 = stack_s7
+s9 = stack_s9
+s10 = stack_s10
+s2 = stack_s2
+s4 = stack_s4
+s8 = stack_s8
+s7 = stack_s7
+s4 = stack_s4
+s5 = stack_s5
+s11 = stack_s11
+s1 = stack_s1
+s3 = stack_s3
+s10 = stack_s10
+s11 = stack_s11
+s6 = stack_s6
+s8 = stack_s8
+s9 = stack_s9
+s9 = stack_s9
+s10 = stack_s10
+s8 = stack_s8
+s5 = stack_s5
+s7 = stack_s7
+s2 = stack_s2
+s4 = stack_s4
+s1 = stack_s1
+s3 = stack_s3
+s10 = stack_s10
+s3 = stack_s3
+s1 = stack_s1
+s6 = stack_s6
+s11 = stack_s11
+s7 = stack_s7
+s4 = stack_s4
+s6 = stack_s6
+s5 = stack_s5
+return v276
+func Tree_Delete(this v_key)
+stack_s10 = s10
+stack_s11 = s11
+stack_s9 = s9
+stack_s11 = s11
+stack_s9 = s9
+stack_s6 = s6
+stack_s8 = s8
+stack_s4 = s4
+stack_s7 = s7
+stack_s2 = s2
+stack_s3 = s3
+stack_s10 = s10
+stack_s1 = s1
+stack_s2 = s2
+stack_s5 = s5
+stack_s3 = s3
+stack_s6 = s6
+stack_s8 = s8
+stack_s7 = s7
+stack_s4 = s4
+stack_s9 = s9
+stack_s11 = s11
+stack_s5 = s5
+stack_s1 = s1
+stack_s6 = s6
+stack_s8 = s8
+stack_s7 = s7
+stack_s4 = s4
+stack_s2 = s2
+stack_s5 = s5
+stack_s3 = s3
+stack_s1 = s1
+t0 = this
+t4 = t0
+t1 = t4
+current_node= t1
+t0 = this
+t5 = t0
+t1 = t5
+parent_node= t1
+s1 = 1
+t3 = s1
+t1 = t3
+cont= t1
+s3 = 0
+s2 = s3
+t1 = s2
+found= t1
+s5 = 1
+s4 = s5
+t1 = s4
+is_root= t1
+loopv285:
+t0 = cont
+if0 t0 goto loopv285End
+t0 = current_node
+if0 t0 goto v286Error
+goto v286Continue
+v286Error:
+error ("null pointer")
+v286Continue:
+t0 = current_node
+s7 = [t0 + 0]
+s6 = [s7 + 20]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s8 = call s6(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s9 = s8
+s10 = s9
+t0 = v_key
+s11 = t0 < s10
+if0 s11 goto v291Else
+t0 = current_node
+if0 t0 goto v292Error
+goto v292Continue
+v292Error:
+error ("null pointer")
+v292Continue:
+t0 = current_node
+a2 = [t0 + 0]
+t2 = [a2 + 32]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a3 = call t2(current_node)
+a2 = stack_a2
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 a3 goto v295Else
+t0 = current_node
+a4 = t0
+t1 = a4
+parent_node= t1
+t0 = current_node
+if0 t0 goto v297Error
+goto v297Continue
+v297Error:
+error ("null pointer")
+v297Continue:
+t0 = current_node
+a5 = [t0 + 0]
+a6 = [a5 + 16]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a7 = call a6(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+t4 = a7
+t1 = t4
+current_node= t1
+goto v295End
+v295Else:
+t5 = 0
+s1 = t5
+t1 = s1
+cont= t1
+v295End:
+goto v291End
+v291Else:
+t1 = v_key
+t3 = s10 < t1
+if0 t3 goto v304Else
+t0 = current_node
+if0 t0 goto v305Error
+goto v305Continue
+v305Error:
+error ("null pointer")
+v305Continue:
+t0 = current_node
+s3 = [t0 + 0]
+s2 = [s3 + 28]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s5 = call s2(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 s5 goto v308Else
+t0 = current_node
+s4 = t0
+t1 = s4
+parent_node= t1
+t0 = current_node
+if0 t0 goto v310Error
+goto v310Continue
+v310Error:
+error ("null pointer")
+v310Continue:
+t0 = current_node
+s7 = [t0 + 0]
+s6 = [s7 + 12]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s8 = call s6(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s9 = s8
+t1 = s9
+current_node= t1
+goto v308End
+v308Else:
+s11 = 0
+a2 = s11
+t1 = a2
+cont= t1
+v308End:
+goto v304End
+v304Else:
+t0 = is_root
+if0 t0 goto is_rootElse
+t0 = current_node
+if0 t0 goto v317Error
+goto v317Continue
+v317Error:
+error ("null pointer")
+v317Continue:
+t0 = current_node
+t2 = [t0 + 0]
+a3 = [t2 + 28]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a4 = call a3(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+a5 = 1
+a6 = a5 - a4
+if0 a6 goto AndExprFalse
+t0 = current_node
+if0 t0 goto v323Error
+goto v323Continue
+v323Error:
+error ("null pointer")
+v323Continue:
+t0 = current_node
+a7 = [t0 + 0]
+t4 = [a7 + 32]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t5 = call t4(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s1 = 1
+s10 = s1 - t5
+t3 = s10
+goto AndExprEnd
+AndExprFalse:
+t3 = 0
+AndExprEnd:
+if0 t3 goto andResultElse
+s3 = 1
+s2 = s3
+s5 = s2
+goto andResultEnd
+andResultElse:
+t0 = this
+if0 t0 goto v331Error
+goto v331Continue
+v331Error:
+error ("null pointer")
+v331Continue:
+t0 = this
+s4 = [t0 + 0]
+s7 = [s4 + 56]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s6 = call s7(this parent_node current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s8 = s6
+s5 = s8
+andResultEnd:
+goto is_rootEnd
+is_rootElse:
+t0 = this
+if0 t0 goto v336Error
+goto v336Continue
+v336Error:
+error ("null pointer")
+v336Continue:
+t0 = this
+s9 = [t0 + 0]
+s11 = [s9 + 56]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a2 = call s11(this parent_node current_node)
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+t2 = a2
+s5 = t2
+is_rootEnd:
+a3 = 1
+a4 = a3
+t1 = a4
+found= t1
+a5 = 0
+a6 = a5
+t1 = a6
+cont= t1
+v304End:
+v291End:
+a7 = 0
+t4 = a7
+t1 = t4
+is_root= t1
+goto loopv285
+loopv285End:
+s10 = stack_s10
+s11 = stack_s11
+s9 = stack_s9
+s11 = stack_s11
+s9 = stack_s9
+s6 = stack_s6
+s8 = stack_s8
+s4 = stack_s4
+s7 = stack_s7
+s2 = stack_s2
+s3 = stack_s3
+s10 = stack_s10
+s1 = stack_s1
+s2 = stack_s2
+s5 = stack_s5
+s3 = stack_s3
+s6 = stack_s6
+s8 = stack_s8
+s7 = stack_s7
+s4 = stack_s4
+s9 = stack_s9
+s11 = stack_s11
+s5 = stack_s5
+s1 = stack_s1
+s6 = stack_s6
+s8 = stack_s8
+s7 = stack_s7
+s4 = stack_s4
+s2 = stack_s2
+s5 = stack_s5
+s3 = stack_s3
+s1 = stack_s1
+return found
+func Tree_Remove(this p_node c_node)
+t2 = c_node
+stack_s6 = s6
+stack_s5 = s5
+stack_s4 = s4
+stack_s10 = s10
+stack_s11 = s11
+stack_s8 = s8
+stack_s9 = s9
+stack_s7 = s7
+stack_s2 = s2
+stack_s1 = s1
+stack_s6 = s6
+stack_s5 = s5
+stack_s4 = s4
+stack_s3 = s3
+stack_s1 = s1
+stack_s2 = s2
+stack_s3 = s3
+stack_s10 = s10
+stack_s11 = s11
+stack_s8 = s8
+stack_s9 = s9
+stack_s5 = s5
+stack_s7 = s7
+stack_s6 = s6
+stack_s3 = s3
+stack_s4 = s4
+stack_s1 = s1
+stack_s2 = s2
+if0 t2 goto v347Error
+goto v347Continue
+v347Error:
+error ("null pointer")
+v347Continue:
+t4 = [t2 + 0]
+t3 = [t4 + 32]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+stacks_t2 = t2
+c_node = t2
+t5 = call t3(c_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+t2 = stacks_t2
+if0 t5 goto v350Else
+t0 = this
+if0 t0 goto v351Error
+goto v351Continue
+v351Error:
+error ("null pointer")
+v351Continue:
+t0 = this
+s1 = [t0 + 0]
+s2 = [s1 + 64]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+stacks_t2 = t2
+c_node = t2
+s3 = call s2(this p_node c_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+t2 = stacks_t2
+s4 = s3
+t1 = s4
+ntb= t1
+goto v350End
+v350Else:
+if0 t2 goto v356Error
+goto v356Continue
+v356Error:
+error ("null pointer")
+v356Continue:
+s6 = [t2 + 0]
+s5 = [s6 + 28]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+stacks_t2 = t2
+c_node = t2
+s7 = call s5(c_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+t2 = stacks_t2
+if0 s7 goto v359Else
+t0 = this
+if0 t0 goto v360Error
+goto v360Continue
+v360Error:
+error ("null pointer")
+v360Continue:
+t0 = this
+s8 = [t0 + 0]
+s9 = [s8 + 60]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+stacks_t2 = t2
+c_node = t2
+s10 = call s9(this p_node c_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+t2 = stacks_t2
+s11 = s10
+t1 = s11
+ntb= t1
+goto v359End
+v359Else:
+if0 t2 goto v365Error
+goto v365Continue
+v365Error:
+error ("null pointer")
+v365Continue:
+a2 = [t2 + 0]
+a3 = [a2 + 20]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+c_node = t2
+a4 = call a3(c_node)
+a2 = stack_a2
+a3 = stack_a3
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+a5 = a4
+t1 = a5
+auxkey1= t1
+t0 = p_node
+if0 t0 goto v370Error
+goto v370Continue
+v370Error:
+error ("null pointer")
+v370Continue:
+t0 = p_node
+a7 = [t0 + 0]
+t4 = [a7 + 16]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t3 = call t4(p_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 t3 goto v374Error
+goto v374Continue
+v374Error:
+error ("null pointer")
+v374Continue:
+t5 = [t3 + 0]
+a6 = [t5 + 20]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v373 = t3
+s1 = call a6(v373)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s2 = s1
+s3 = s2
+t0 = this
+if0 t0 goto v379Error
+goto v379Continue
+v379Error:
+error ("null pointer")
+v379Continue:
+t0 = this
+s4 = [t0 + 0]
+s6 = [s4 + 44]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+auxkey2 = s3
+s5 = call s6(this auxkey1 auxkey2)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 s5 goto v382Else
+t0 = p_node
+if0 t0 goto v383Error
+goto v383Continue
+v383Error:
+error ("null pointer")
+v383Continue:
+t0 = p_node
+s7 = [t0 + 0]
+s8 = [s7 + 8]
+t0 = this
+s9 = [t0 + 12]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v386 = s9
+s10 = call s8(p_node v386)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s11 = s10
+t1 = s11
+ntb= t1
+t0 = p_node
+if0 t0 goto v389Error
+goto v389Continue
+v389Error:
+error ("null pointer")
+v389Continue:
+t0 = p_node
+a2 = [t0 + 0]
+t2 = [a2 + 36]
+a3 = 0
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v392 = a3
+a4 = call t2(p_node v392)
+a2 = stack_a2
+a3 = stack_a3
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+a5 = a4
+t1 = a5
+ntb= t1
+goto v382End
+v382Else:
+t0 = p_node
+if0 t0 goto v395Error
+goto v395Continue
+v395Error:
+error ("null pointer")
+v395Continue:
+t0 = p_node
+a7 = [t0 + 0]
+t4 = [a7 + 4]
+t0 = this
+t5 = [t0 + 12]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v398 = t5
+t3 = call t4(p_node v398)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+a6 = t3
+t1 = a6
+ntb= t1
+t0 = p_node
+if0 t0 goto v401Error
+goto v401Continue
+v401Error:
+error ("null pointer")
+v401Continue:
+t0 = p_node
+s1 = [t0 + 0]
+s2 = [s1 + 40]
+s4 = 0
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v404 = s4
+s3 = call s2(p_node v404)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s6 = s3
+t1 = s6
+ntb= t1
+v382End:
+v359End:
+v350End:
+s5 = 1
+v407 = s5
+s6 = stack_s6
+s5 = stack_s5
+s4 = stack_s4
+s10 = stack_s10
+s11 = stack_s11
+s8 = stack_s8
+s9 = stack_s9
+s7 = stack_s7
+s2 = stack_s2
+s1 = stack_s1
+s6 = stack_s6
+s5 = stack_s5
+s4 = stack_s4
+s3 = stack_s3
+s1 = stack_s1
+s2 = stack_s2
+s3 = stack_s3
+s10 = stack_s10
+s11 = stack_s11
+s8 = stack_s8
+s9 = stack_s9
+s5 = stack_s5
+s7 = stack_s7
+s6 = stack_s6
+s3 = stack_s3
+s4 = stack_s4
+s1 = stack_s1
+s2 = stack_s2
+return v407
+func Tree_RemoveRight(this p_node c_node)
+stack_s2 = s2
+stack_s5 = s5
+stack_s6 = s6
+stack_s3 = s3
+stack_s5 = s5
+stack_s1 = s1
+stack_s4 = s4
+stack_s3 = s3
+stack_s1 = s1
+stack_s9 = s9
+stack_s11 = s11
+stack_s10 = s10
+stack_s7 = s7
+stack_s8 = s8
+loopv408:
+t0 = c_node
+if0 t0 goto v409Error
+goto v409Continue
+v409Error:
+error ("null pointer")
+v409Continue:
+t0 = c_node
+t4 = [t0 + 0]
+t3 = [t4 + 28]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t5 = call t3(c_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 t5 goto loopv408End
+t0 = c_node
+if0 t0 goto v413Error
+goto v413Continue
+v413Error:
+error ("null pointer")
+v413Continue:
+t0 = c_node
+s1 = [t0 + 0]
+t0 =[s1 + 24]
+v415 = t0
+t0 = c_node
+if0 t0 goto v416Error
+goto v416Continue
+v416Error:
+error ("null pointer")
+v416Continue:
+t0 = c_node
+s3 = [t0 + 0]
+t2 = [s3 + 12]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s4 = call t2(c_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 s4 goto v420Error
+goto v420Continue
+v420Error:
+error ("null pointer")
+v420Continue:
+s5 = [s4 + 0]
+s2 = [s5 + 20]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v419 = s4
+s6 = call s2(v419)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t0 = v415
+v423 = s6
+s7 = call t0(c_node v423)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s8 = s7
+t1 = s8
+ntb= t1
+t0 = c_node
+s10 = t0
+t1 = s10
+p_node= t1
+t0 = c_node
+if0 t0 goto v427Error
+goto v427Continue
+v427Error:
+error ("null pointer")
+v427Continue:
+t0 = c_node
+s11 = [t0 + 0]
+a2 = [s11 + 12]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a3 = call a2(c_node)
+a2 = stack_a2
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+a4 = a3
+t1 = a4
+c_node= t1
+goto loopv408
+loopv408End:
+t0 = p_node
+if0 t0 goto v432Error
+goto v432Continue
+v432Error:
+error ("null pointer")
+v432Continue:
+t0 = p_node
+a5 = [t0 + 0]
+a6 = [a5 + 4]
+t0 = this
+a7 = [t0 + 12]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v435 = a7
+s9 = call a6(p_node v435)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+t4 = s9
+t1 = t4
+ntb= t1
+t0 = p_node
+if0 t0 goto v438Error
+goto v438Continue
+v438Error:
+error ("null pointer")
+v438Continue:
+t0 = p_node
+t3 = [t0 + 0]
+t5 = [t3 + 40]
+s1 = 0
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v441 = s1
+s3 = call t5(p_node v441)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+t2 = s3
+t1 = t2
+ntb= t1
+s5 = 1
+v444 = s5
+s2 = stack_s2
+s5 = stack_s5
+s6 = stack_s6
+s3 = stack_s3
+s5 = stack_s5
+s1 = stack_s1
+s4 = stack_s4
+s3 = stack_s3
+s1 = stack_s1
+s9 = stack_s9
+s11 = stack_s11
+s10 = stack_s10
+s7 = stack_s7
+s8 = stack_s8
+return v444
+func Tree_RemoveLeft(this p_node c_node)
+stack_s5 = s5
+stack_s11 = s11
+stack_s8 = s8
+stack_s10 = s10
+stack_s6 = s6
+stack_s7 = s7
+stack_s2 = s2
+stack_s3 = s3
+stack_s5 = s5
+stack_s4 = s4
+stack_s1 = s1
+stack_s3 = s3
+stack_s1 = s1
+stack_s9 = s9
+loopv445:
+t0 = c_node
+if0 t0 goto v446Error
+goto v446Continue
+v446Error:
+error ("null pointer")
+v446Continue:
+t0 = c_node
+t4 = [t0 + 0]
+t3 = [t4 + 32]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t5 = call t3(c_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 t5 goto loopv445End
+t0 = c_node
+if0 t0 goto v450Error
+goto v450Continue
+v450Error:
+error ("null pointer")
+v450Continue:
+t0 = c_node
+s1 = [t0 + 0]
+t0 =[s1 + 24]
+v452 = t0
+t0 = c_node
+if0 t0 goto v453Error
+goto v453Continue
+v453Error:
+error ("null pointer")
+v453Continue:
+t0 = c_node
+s3 = [t0 + 0]
+t2 = [s3 + 16]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s4 = call t2(c_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 s4 goto v457Error
+goto v457Continue
+v457Error:
+error ("null pointer")
+v457Continue:
+s5 = [s4 + 0]
+s2 = [s5 + 20]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v456 = s4
+s6 = call s2(v456)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t0 = v452
+v460 = s6
+s7 = call t0(c_node v460)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s8 = s7
+t1 = s8
+ntb= t1
+t0 = c_node
+s10 = t0
+t1 = s10
+p_node= t1
+t0 = c_node
+if0 t0 goto v464Error
+goto v464Continue
+v464Error:
+error ("null pointer")
+v464Continue:
+t0 = c_node
+s11 = [t0 + 0]
+a2 = [s11 + 16]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a3 = call a2(c_node)
+a2 = stack_a2
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+a4 = a3
+t1 = a4
+c_node= t1
+goto loopv445
+loopv445End:
+t0 = p_node
+if0 t0 goto v469Error
+goto v469Continue
+v469Error:
+error ("null pointer")
+v469Continue:
+t0 = p_node
+a5 = [t0 + 0]
+a6 = [a5 + 8]
+t0 = this
+a7 = [t0 + 12]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v472 = a7
+s9 = call a6(p_node v472)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+t4 = s9
+t1 = t4
+ntb= t1
+t0 = p_node
+if0 t0 goto v475Error
+goto v475Continue
+v475Error:
+error ("null pointer")
+v475Continue:
+t0 = p_node
+t3 = [t0 + 0]
+t5 = [t3 + 36]
+s1 = 0
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v478 = s1
+s3 = call t5(p_node v478)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+t2 = s3
+t1 = t2
+ntb= t1
+s5 = 1
+v481 = s5
+s5 = stack_s5
+s11 = stack_s11
+s8 = stack_s8
+s10 = stack_s10
+s6 = stack_s6
+s7 = stack_s7
+s2 = stack_s2
+s3 = stack_s3
+s5 = stack_s5
+s4 = stack_s4
+s1 = stack_s1
+s3 = stack_s3
+s1 = stack_s1
+s9 = stack_s9
+return v481
+func Tree_Search(this v_key)
+t2 = this
+stack_s5 = s5
+stack_s2 = s2
+stack_s11 = s11
+stack_s3 = s3
+stack_s8 = s8
+stack_s1 = s1
+stack_s10 = s10
+stack_s7 = s7
+stack_s9 = s9
+stack_s4 = s4
+stack_s6 = s6
+stack_s2 = s2
+stack_s5 = s5
+stack_s6 = s6
+stack_s7 = s7
+stack_s4 = s4
+stack_s3 = s3
+stack_s11 = s11
+stack_s10 = s10
+stack_s9 = s9
+stack_s1 = s1
+t4 = t2
+t1 = t4
+current_node= t1
+s1 = 1
+t5 = s1
+t1 = t5
+cont= t1
+s3 = 0
+s2 = s3
+t1 = s2
+ifound= t1
+loopv487:
+t0 = cont
+if0 t0 goto loopv487End
+t0 = current_node
+if0 t0 goto v488Error
+goto v488Continue
+v488Error:
+error ("null pointer")
+v488Continue:
+t0 = current_node
+s5 = [t0 + 0]
+s4 = [s5 + 20]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s6 = call s4(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s7 = s6
+s8 = s7
+t0 = v_key
+s9 = t0 < s8
+if0 s9 goto v493Else
+t0 = current_node
+if0 t0 goto v494Error
+goto v494Continue
+v494Error:
+error ("null pointer")
+v494Continue:
+t0 = current_node
+s10 = [t0 + 0]
+t3 = [s10 + 32]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s11 = call t3(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 s11 goto v497Else
+t0 = current_node
+if0 t0 goto v498Error
+goto v498Continue
+v498Error:
+error ("null pointer")
+v498Continue:
+t0 = current_node
+a2 = [t0 + 0]
+a3 = [a2 + 16]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a4 = call a3(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+a5 = a4
+t1 = a5
+current_node= t1
+goto v497End
+v497Else:
+a6 = 0
+a7 = a6
+t1 = a7
+cont= t1
+v497End:
+goto v493End
+v493Else:
+t1 = v_key
+t2 = s8 < t1
+if0 t2 goto v505Else
+t0 = current_node
+if0 t0 goto v506Error
+goto v506Continue
+v506Error:
+error ("null pointer")
+v506Continue:
+t0 = current_node
+t4 = [t0 + 0]
+s1 = [t4 + 28]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t5 = call s1(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 t5 goto v509Else
+t0 = current_node
+if0 t0 goto v510Error
+goto v510Continue
+v510Error:
+error ("null pointer")
+v510Continue:
+t0 = current_node
+s3 = [t0 + 0]
+s2 = [s3 + 12]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s5 = call s2(current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s4 = s5
+t1 = s4
+current_node= t1
+goto v509End
+v509Else:
+s6 = 0
+s7 = s6
+t1 = s7
+cont= t1
+v509End:
+goto v505End
+v505Else:
+s9 = 1
+s10 = s9
+t1 = s10
+ifound= t1
+t3 = 0
+s11 = t3
+t1 = s11
+cont= t1
+v505End:
+v493End:
+goto loopv487
+loopv487End:
+s5 = stack_s5
+s2 = stack_s2
+s11 = stack_s11
+s3 = stack_s3
+s8 = stack_s8
+s1 = stack_s1
+s10 = stack_s10
+s7 = stack_s7
+s9 = stack_s9
+s4 = stack_s4
+s6 = stack_s6
+s2 = stack_s2
+s5 = stack_s5
+s6 = stack_s6
+s7 = stack_s7
+s4 = stack_s4
+s3 = stack_s3
+s11 = stack_s11
+s10 = stack_s10
+s9 = stack_s9
+s1 = stack_s1
+return ifound
+func Tree_Print(this)
+t2 = this
+stack_s4 = s4
+stack_s1 = s1
+stack_s2 = s2
+stack_s3 = s3
+t3 = t2
+t4 = t3
+if0 t2 goto v522Error
+goto v522Continue
+v522Error:
+error ("null pointer")
+v522Continue:
+t5 = [t2 + 0]
+t0 =[t5 + 76]
+v524 = t0
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t0 = v524
+this = t2
+current_node = t4
+s1 = call t0(this current_node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s2 = s1
+s3 = s2
+s4 = 1
+v527 = s4
+s4 = stack_s4
+s1 = stack_s1
+s2 = stack_s2
+s3 = stack_s3
+return v527
+func Tree_RecPrint(this node)
+stack_s10 = s10
+stack_s8 = s8
+stack_s9 = s9
+stack_s6 = s6
+stack_s2 = s2
+stack_s3 = s3
+stack_s4 = s4
+stack_s5 = s5
+stack_s3 = s3
+stack_s1 = s1
+stack_s2 = s2
+stack_s7 = s7
+stack_s1 = s1
+stack_s11 = s11
+t0 = node
+if0 t0 goto v528Error
+goto v528Continue
+v528Error:
+error ("null pointer")
+v528Continue:
+t0 = node
+t4 = [t0 + 0]
+t2 = [t4 + 32]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t5 = call t2(node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 t5 goto v531Else
+t0 = this
+if0 t0 goto v532Error
+goto v532Continue
+v532Error:
+error ("null pointer")
+v532Continue:
+t0 = this
+s1 = [t0 + 0]
+s2 = [s1 + 76]
+t0 = node
+if0 t0 goto v535Error
+goto v535Continue
+v535Error:
+error ("null pointer")
+v535Continue:
+t0 = node
+s3 = [t0 + 0]
+t3 = [s3 + 16]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s4 = call t3(node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v538 = s4
+s5 = call s2(this v538)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s6 = s5
+t1 = s6
+ntb= t1
+goto v531End
+v531Else:
+s8 = 1
+s9 = s8
+t1 = s9
+ntb= t1
+v531End:
+t0 = node
+if0 t0 goto v543Error
+goto v543Continue
+v543Error:
+error ("null pointer")
+v543Continue:
+t0 = node
+s10 = [t0 + 0]
+s11 = [s10 + 20]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a2 = call s11(node)
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+print (a2)
+t0 = node
+if0 t0 goto v547Error
+goto v547Continue
+v547Error:
+error ("null pointer")
+v547Continue:
+t0 = node
+a3 = [t0 + 0]
+a4 = [a3 + 28]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a5 = call a4(node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a6 = stack_a6
+a7 = stack_a7
+if0 a5 goto v550Else
+t0 = this
+if0 t0 goto v551Error
+goto v551Continue
+v551Error:
+error ("null pointer")
+v551Continue:
+t0 = this
+a6 = [t0 + 0]
+a7 = [a6 + 76]
+t0 = node
+if0 t0 goto v554Error
+goto v554Continue
+v554Error:
+error ("null pointer")
+v554Continue:
+t0 = node
+t4 = [t0 + 0]
+s7 = [t4 + 12]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t2 = call s7(node)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v557 = t2
+t5 = call a7(this v557)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s1 = t5
+t1 = s1
+ntb= t1
+goto v550End
+v550Else:
+s3 = 1
+t3 = s3
+t1 = t3
+ntb= t1
+v550End:
+s2 = 1
+v562 = s2
+s10 = stack_s10
+s8 = stack_s8
+s9 = stack_s9
+s6 = stack_s6
+s2 = stack_s2
+s3 = stack_s3
+s4 = stack_s4
+s5 = stack_s5
+s3 = stack_s3
+s1 = stack_s1
+s2 = stack_s2
+s7 = stack_s7
+s1 = stack_s1
+s11 = stack_s11
+return v562
+func Tree_accept(this v)
+t3 = this
+t2 = v
+stack_s3 = s3
+stack_s4 = s4
+stack_s1 = s1
+stack_s2 = s2
+t4 = 333
+print (t4)
+if0 t2 goto v564Error
+goto v564Continue
+v564Error:
+error ("null pointer")
+v564Continue:
+t5 = [t2 + 0]
+t0 =[t5 + 0]
+v566 = t0
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t0 = v566
+v = t2
+this = t3
+s1 = call t0(v this)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s2 = s1
+s3 = s2
+s4 = 0
+v569 = s4
+s3 = stack_s3
+s4 = stack_s4
+s1 = stack_s1
+s2 = stack_s2
+return v569
+func Visitor_visit(this n)
+stack_s11 = s11
+stack_s9 = s9
+stack_s10 = s10
+stack_s6 = s6
+stack_s7 = s7
+stack_s5 = s5
+stack_s4 = s4
+stack_s2 = s2
+stack_s3 = s3
+stack_s8 = s8
+stack_s1 = s1
+stack_s3 = s3
+stack_s1 = s1
+stack_s2 = s2
+t0 = n
+if0 t0 goto v570Error
+goto v570Continue
+v570Error:
+error ("null pointer")
+v570Continue:
+t0 = n
+t4 = [t0 + 0]
+t2 = [t4 + 28]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t5 = call t2(n)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 t5 goto v573Else
+t0 = n
+if0 t0 goto v574Error
+goto v574Continue
+v574Error:
+error ("null pointer")
+v574Continue:
+t0 = n
+s1 = [t0 + 0]
+s2 = [s1 + 12]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s3 = call s2(n)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+t0 = this
+[t0 + 4] =s3
+t0 = this
+s4 = [t0 + 4]
+if0 s4 goto v580Error
+goto v580Continue
+v580Error:
+error ("null pointer")
+v580Continue:
+s5 = [s4 + 0]
+t3 = [s5 + 80]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v579 = s4
+s6 = call t3(v579 this)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s7 = s6
+t1 = s7
+nti= t1
+goto v573End
+v573Else:
+s9 = 0
+s10 = s9
+t1 = s10
+nti= t1
+v573End:
+t0 = n
+if0 t0 goto v587Error
+goto v587Continue
+v587Error:
+error ("null pointer")
+v587Continue:
+t0 = n
+s11 = [t0 + 0]
+a2 = [s11 + 32]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a3 = call a2(n)
+a2 = stack_a2
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 a3 goto v590Else
+t0 = n
+if0 t0 goto v591Error
+goto v591Continue
+v591Error:
+error ("null pointer")
+v591Continue:
+t0 = n
+a4 = [t0 + 0]
+a5 = [a4 + 16]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a6 = call a5(n)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a7 = stack_a7
+t0 = this
+[t0 + 8] =a6
+t0 = this
+a7 = [t0 + 8]
+if0 a7 goto v597Error
+goto v597Continue
+v597Error:
+error ("null pointer")
+v597Continue:
+t4 = [a7 + 0]
+s8 = [t4 + 80]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v596 = a7
+t2 = call s8(v596 this)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+t5 = t2
+t1 = t5
+nti= t1
+goto v590End
+v590Else:
+s1 = 0
+s2 = s1
+t1 = s2
+nti= t1
+v590End:
+s3 = 0
+v604 = s3
+s11 = stack_s11
+s9 = stack_s9
+s10 = stack_s10
+s6 = stack_s6
+s7 = stack_s7
+s5 = stack_s5
+s4 = stack_s4
+s2 = stack_s2
+s3 = stack_s3
+s8 = stack_s8
+s1 = stack_s1
+s3 = stack_s3
+s1 = stack_s1
+s2 = stack_s2
+return v604
+func MyVisitor_visit(this n)
+stack_s9 = s9
+stack_s4 = s4
+stack_s10 = s10
+stack_s3 = s3
+stack_s5 = s5
+stack_s2 = s2
+stack_s6 = s6
+stack_s1 = s1
+stack_s5 = s5
+stack_s8 = s8
+stack_s4 = s4
+stack_s2 = s2
+stack_s3 = s3
+stack_s7 = s7
+stack_s1 = s1
+stack_s11 = s11
+t0 = n
+if0 t0 goto v605Error
+goto v605Continue
+v605Error:
+error ("null pointer")
+v605Continue:
+t0 = n
+t4 = [t0 + 0]
+t2 = [t4 + 28]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t5 = call t2(n)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+if0 t5 goto v608Else
+t0 = n
+if0 t0 goto v609Error
+goto v609Continue
+v609Error:
+error ("null pointer")
+v609Continue:
+t0 = n
+s1 = [t0 + 0]
+s2 = [s1 + 12]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s3 = call s2(n)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+t0 = this
+[t0 + 4] =s3
+t0 = this
+s4 = [t0 + 4]
+if0 s4 goto v615Error
+goto v615Continue
+v615Error:
+error ("null pointer")
+v615Continue:
+s5 = [s4 + 0]
+t3 = [s5 + 80]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v614 = s4
+s6 = call t3(v614 this)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s7 = s6
+t1 = s7
+nti= t1
+goto v608End
+v608Else:
+s9 = 0
+s10 = s9
+t1 = s10
+nti= t1
+v608End:
+t0 = n
+if0 t0 goto v622Error
+goto v622Continue
+v622Error:
+error ("null pointer")
+v622Continue:
+t0 = n
+s11 = [t0 + 0]
+a2 = [s11 + 20]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a3 = call a2(n)
+a2 = stack_a2
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+print (a3)
+t0 = n
+if0 t0 goto v626Error
+goto v626Continue
+v626Error:
+error ("null pointer")
+v626Continue:
+t0 = n
+a4 = [t0 + 0]
+a5 = [a4 + 32]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a6 = call a5(n)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a7 = stack_a7
+if0 a6 goto v629Else
+t0 = n
+if0 t0 goto v630Error
+goto v630Continue
+v630Error:
+error ("null pointer")
+v630Continue:
+t0 = n
+a7 = [t0 + 0]
+t4 = [a7 + 16]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+t2 = call t4(n)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+t0 = this
+[t0 + 8] =t2
+t0 = this
+t5 = [t0 + 8]
+if0 t5 goto v636Error
+goto v636Continue
+v636Error:
+error ("null pointer")
+v636Continue:
+s1 = [t5 + 0]
+s8 = [s1 + 80]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v635 = t5
+s2 = call s8(v635 this)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+s3 = s2
+t1 = s3
+nti= t1
+goto v629End
+v629Else:
+s5 = 0
+s4 = s5
+t1 = s4
+nti= t1
+v629End:
+t3 = 0
+v643 = t3
+s9 = stack_s9
+s4 = stack_s4
+s10 = stack_s10
+s3 = stack_s3
+s5 = stack_s5
+s2 = stack_s2
+s6 = stack_s6
+s1 = stack_s1
+s5 = stack_s5
+s8 = stack_s8
+s4 = stack_s4
+s2 = stack_s2
+s3 = stack_s3
+s7 = stack_s7
+s1 = stack_s1
+s11 = stack_s11
+return v643

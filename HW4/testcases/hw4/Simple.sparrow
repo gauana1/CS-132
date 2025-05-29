@@ -1,0 +1,49 @@
+func Main()
+    x1 = 1
+    x2 = 2
+    x10 = 10
+    a = 0
+    L1:
+    b = a + x1
+    c = 2
+    c = c + b
+    a = b * x2
+    xleq = a < x10
+  if0 xleq goto L1
+    print(c)
+    return c
+
+func foobar()
+label1: 
+    a = 0
+    b = a * a
+    c = b
+    d = b + c
+  if0 d goto label1
+label2:
+    e = d * c
+    f = 1
+    a = e + f
+  if0 a goto label2
+    return e
+
+func bar()
+    a = 5
+    b = 3
+Outer:
+  if0 a goto Done
+    x = 1
+    c = b + x
+    d = 0
+Inner:
+  if0 c goto OuterExit
+    y = 2
+    e = c * y
+    c = c - x
+  goto Inner
+OuterExit:
+    a = a - x
+  goto Outer
+Done:
+    f = e + d
+    return f

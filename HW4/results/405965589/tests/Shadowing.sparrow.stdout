@@ -1,0 +1,381 @@
+func main()
+stack_s3 = s3
+stack_s4 = s4
+stack_s5 = s5
+stack_s6 = s6
+stack_s2 = s2
+stack_s4 = s4
+stack_s3 = s3
+stack_s8 = s8
+stack_s5 = s5
+stack_s9 = s9
+stack_s7 = s7
+stack_s11 = s11
+stack_s1 = s1
+stack_s10 = s10
+stack_s1 = s1
+stack_s2 = s2
+t2 = 52
+t3 = 24
+t4 = alloc(t2)
+t5 = alloc(t3)
+s1 = @C_printC
+[t5 + 16] =s1
+s2 = @C_initC
+[t5 + 20] =s2
+s3 = @B_initB
+[t5 + 12] =s3
+s4 = @A_printA
+[t5 + 0] =s4
+s5 = @A_initA
+[t5 + 4] =s5
+s6 = @B_printB
+[t5 + 8] =s6
+[t4 + 0] =t5
+if0 t4 goto lbl_NullPtr_10
+goto lbl_GoodPtr_11
+lbl_NullPtr_10:
+error ("null pointer")
+lbl_GoodPtr_11:
+t1 = t4
+c= t1
+t0 = c
+if0 t0 goto lbl_NullPtr_14
+t0 = c
+s8 = [t0 + 0]
+s8 = [s8 + 20]
+s9 = 1
+s7 = 2
+t0 = 3
+v18 = t0
+t0 = 4
+v19 = t0
+t0 = 5
+v20 = t0
+t0 = 6
+v21 = t0
+t0 = 7
+v22 = t0
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v16 = s9
+v17 = s7
+t1 = call s8(c v16 v17 v18 v19 v20 v21 v22)
+v13 = t1
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_15
+lbl_NullPtr_14:
+error ("null pointer")
+lbl_GoodPtr_15:
+t0 = v13
+t1 = t0
+_= t1
+t0 = c
+if0 t0 goto lbl_NullPtr_25
+t0 = c
+s11 = [t0 + 0]
+s11 = [s11 + 12]
+a2 = 8
+s10 = 9
+t0 = 10
+v29 = t0
+t0 = 11
+v30 = t0
+t0 = 12
+v31 = t0
+t0 = 13
+v32 = t0
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v27 = a2
+v28 = s10
+t1 = call s11(c v27 v28 v29 v30 v31 v32)
+v24 = t1
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_26
+lbl_NullPtr_25:
+error ("null pointer")
+lbl_GoodPtr_26:
+t0 = v24
+t1 = t0
+_= t1
+t0 = c
+if0 t0 goto lbl_NullPtr_35
+t0 = c
+a3 = [t0 + 0]
+a3 = [a3 + 4]
+a4 = 14
+a5 = 15
+t0 = 16
+v39 = t0
+t0 = 17
+v40 = t0
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v37 = a4
+v38 = a5
+t1 = call a3(c v37 v38 v39 v40)
+v34 = t1
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_36
+lbl_NullPtr_35:
+error ("null pointer")
+lbl_GoodPtr_36:
+t0 = v34
+t1 = t0
+_= t1
+t0 = c
+if0 t0 goto lbl_NullPtr_43
+t0 = c
+a6 = [t0 + 0]
+a6 = [a6 + 0]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+a7 = call a6(c)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+goto lbl_GoodPtr_44
+lbl_NullPtr_43:
+error ("null pointer")
+lbl_GoodPtr_44:
+t1 = a7
+_= t1
+t2 = 100
+print (t2)
+t0 = c
+if0 t0 goto lbl_NullPtr_48
+t0 = c
+t3 = [t0 + 0]
+t3 = [t3 + 8]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s1 = call t3(c)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_49
+lbl_NullPtr_48:
+error ("null pointer")
+lbl_GoodPtr_49:
+t1 = s1
+_= t1
+s2 = 100
+print (s2)
+t0 = c
+if0 t0 goto lbl_NullPtr_53
+t0 = c
+s3 = [t0 + 0]
+s3 = [s3 + 16]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s4 = call s3(c)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_54
+lbl_NullPtr_53:
+error ("null pointer")
+lbl_GoodPtr_54:
+t1 = s4
+_= t1
+s5 = 0
+v55 = s5
+s3 = stack_s3
+s4 = stack_s4
+s5 = stack_s5
+s6 = stack_s6
+s2 = stack_s2
+s4 = stack_s4
+s3 = stack_s3
+s8 = stack_s8
+s5 = stack_s5
+s9 = stack_s9
+s7 = stack_s7
+s11 = stack_s11
+s1 = stack_s1
+s10 = stack_s10
+s1 = stack_s1
+s2 = stack_s2
+return v55
+func A_initA(this n1 n2 n3 n4)
+t2 = n1
+t3 = n2
+t4 = n3
+t0 = this
+[t0 + 4] =t2
+t0 = this
+[t0 + 8] =t3
+t0 = this
+[t0 + 12] =t4
+t0 = this
+t1 = n4
+[t0 + 16] =t1
+t5 = 0
+v56 = t5
+return v56
+func A_printA(this)
+t2 = this
+stack_s2 = s2
+stack_s1 = s1
+t3 = [t2 + 4]
+print (t3)
+t4 = [t2 + 8]
+print (t4)
+t5 = [t2 + 12]
+print (t5)
+s1 = [t2 + 16]
+print (s1)
+s2 = 0
+v61 = s2
+s2 = stack_s2
+s1 = stack_s1
+return v61
+func B_initB(this n1 n2 n3 n4 n5 n6)
+t2 = n1
+t3 = n2
+t4 = n3
+t0 = this
+[t0 + 28] =t2
+t0 = this
+[t0 + 20] =t3
+t0 = this
+[t0 + 24] =t4
+t0 = this
+t1 = n4
+[t0 + 32] =t1
+t0 = this
+t1 = n5
+[t0 + 4] =t1
+t0 = this
+t1 = n6
+[t0 + 12] =t1
+t5 = 0
+v62 = t5
+return v62
+func B_printB(this)
+t2 = this
+stack_s2 = s2
+stack_s1 = s1
+stack_s4 = s4
+stack_s3 = s3
+t3 = [t2 + 4]
+print (t3)
+t4 = [t2 + 28]
+print (t4)
+t5 = [t2 + 20]
+print (t5)
+s1 = [t2 + 12]
+print (s1)
+s2 = [t2 + 24]
+print (s2)
+s3 = [t2 + 32]
+print (s3)
+s4 = 0
+v69 = s4
+s2 = stack_s2
+s1 = stack_s1
+s4 = stack_s4
+s3 = stack_s3
+return v69
+func C_initC(this n1 n2 n3 n4 n5 n6 n7)
+t2 = n1
+t3 = n2
+t4 = n3
+t0 = this
+[t0 + 44] =t2
+t0 = this
+[t0 + 40] =t3
+t0 = this
+[t0 + 36] =t4
+t0 = this
+t1 = n4
+[t0 + 48] =t1
+t0 = this
+t1 = n5
+[t0 + 4] =t1
+t0 = this
+t1 = n6
+[t0 + 20] =t1
+t0 = this
+t1 = n7
+[t0 + 28] =t1
+t5 = 0
+v70 = t5
+return v70
+func C_printC(this)
+t2 = this
+stack_s1 = s1
+stack_s3 = s3
+stack_s2 = s2
+stack_s5 = s5
+stack_s4 = s4
+t3 = [t2 + 4]
+print (t3)
+t4 = [t2 + 28]
+print (t4)
+t5 = [t2 + 44]
+print (t5)
+s1 = [t2 + 20]
+print (s1)
+s2 = [t2 + 40]
+print (s2)
+s3 = [t2 + 36]
+print (s3)
+s4 = [t2 + 48]
+print (s4)
+s5 = 0
+v78 = s5
+s1 = stack_s1
+s3 = stack_s3
+s2 = stack_s2
+s5 = stack_s5
+s4 = stack_s4
+return v78

@@ -1,0 +1,535 @@
+func main()
+stack_s3 = s3
+stack_s4 = s4
+stack_s5 = s5
+stack_s6 = s6
+stack_s7 = s7
+stack_s1 = s1
+stack_s2 = s2
+t2 = 12
+t3 = 16
+t4 = alloc(t2)
+t5 = alloc(t3)
+s1 = @LS_Print
+[t5 + 0] =s1
+s2 = @LS_Init
+[t5 + 4] =s2
+s3 = @LS_Start
+[t5 + 8] =s3
+s4 = @LS_Search
+[t5 + 12] =s4
+[t4 + 0] =t5
+if0 t4 goto lbl_NullPtr_8
+goto lbl_GoodPtr_9
+lbl_NullPtr_8:
+error ("null pointer")
+lbl_GoodPtr_9:
+if0 t4 goto lbl_NullPtr_12
+s5 = [t4 + 0]
+s5 = [s5 + 8]
+s6 = 10
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v2 = t4
+v14 = s6
+t1 = call s5(v2 v14)
+v11 = t1
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_13
+lbl_NullPtr_12:
+error ("null pointer")
+lbl_GoodPtr_13:
+t0 = v11
+print (t0)
+s7 = 0
+v15 = s7
+s3 = stack_s3
+s4 = stack_s4
+s5 = stack_s5
+s6 = stack_s6
+s7 = stack_s7
+s1 = stack_s1
+s2 = stack_s2
+return v15
+func LS_Start(this sz)
+t2 = sz
+stack_s3 = s3
+stack_s8 = s8
+stack_s2 = s2
+stack_s1 = s1
+stack_s10 = s10
+stack_s9 = s9
+stack_s5 = s5
+stack_s4 = s4
+stack_s11 = s11
+stack_s7 = s7
+stack_s6 = s6
+t0 = this
+if0 t0 goto lbl_NullPtr_18
+t0 = this
+t4 = [t0 + 0]
+t4 = [t4 + 4]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+sz = t2
+t3 = call t4(this sz)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_19
+lbl_NullPtr_18:
+error ("null pointer")
+lbl_GoodPtr_19:
+t5 = t3
+t0 = this
+if0 t0 goto lbl_NullPtr_22
+t0 = this
+s1 = [t0 + 0]
+s1 = [s1 + 0]
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+s2 = call s1(this)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_23
+lbl_NullPtr_22:
+error ("null pointer")
+lbl_GoodPtr_23:
+s3 = s2
+s4 = 9999
+print (s4)
+t0 = this
+if0 t0 goto lbl_NullPtr_27
+t0 = this
+s5 = [t0 + 0]
+s5 = [s5 + 12]
+s6 = 8
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v29 = s6
+s7 = call s5(this v29)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_28
+lbl_NullPtr_27:
+error ("null pointer")
+lbl_GoodPtr_28:
+print (s7)
+t0 = this
+if0 t0 goto lbl_NullPtr_32
+t0 = this
+s8 = [t0 + 0]
+s8 = [s8 + 12]
+s9 = 12
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v34 = s9
+s10 = call s8(this v34)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_33
+lbl_NullPtr_32:
+error ("null pointer")
+lbl_GoodPtr_33:
+print (s10)
+t0 = this
+if0 t0 goto lbl_NullPtr_37
+t0 = this
+s11 = [t0 + 0]
+s11 = [s11 + 12]
+a2 = 17
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v39 = a2
+a3 = call s11(this v39)
+a2 = stack_a2
+a4 = stack_a4
+a5 = stack_a5
+a6 = stack_a6
+a7 = stack_a7
+goto lbl_GoodPtr_38
+lbl_NullPtr_37:
+error ("null pointer")
+lbl_GoodPtr_38:
+print (a3)
+t0 = this
+if0 t0 goto lbl_NullPtr_42
+t0 = this
+a4 = [t0 + 0]
+a4 = [a4 + 12]
+a5 = 50
+stack_a2 = a2
+stack_a3 = a3
+stack_a4 = a4
+stack_a5 = a5
+stack_a6 = a6
+stack_a7 = a7
+v44 = a5
+a6 = call a4(this v44)
+a2 = stack_a2
+a3 = stack_a3
+a4 = stack_a4
+a5 = stack_a5
+a7 = stack_a7
+goto lbl_GoodPtr_43
+lbl_NullPtr_42:
+error ("null pointer")
+lbl_GoodPtr_43:
+print (a6)
+a7 = 55
+v45 = a7
+s3 = stack_s3
+s8 = stack_s8
+s2 = stack_s2
+s1 = stack_s1
+s10 = stack_s10
+s9 = stack_s9
+s5 = stack_s5
+s4 = stack_s4
+s11 = stack_s11
+s7 = stack_s7
+s6 = stack_s6
+return v45
+func LS_Print(this)
+stack_s6 = s6
+stack_s9 = s9
+stack_s7 = s7
+stack_s1 = s1
+stack_s10 = s10
+stack_s8 = s8
+stack_s2 = s2
+stack_s3 = s3
+stack_s5 = s5
+stack_s4 = s4
+t3 = 1
+t1 = t3
+j= t1
+lbl_While_47:
+t0 = this
+t5 = [t0 + 8]
+t0 = j
+t4 = t0 < t5
+if0 t4 goto lbl_WhileExit_48
+t0 = this
+t0 =[t0 + 4]
+v51 = t0
+t0 = 4
+v52 = t0
+t2 = 5
+t0 = v52
+s1 = t0 - t2
+t0 = v51
+s3 = [t0 + 0]
+t1 = j
+s2 = s1 < t1
+t0 = j
+s4 = t0 < s3
+s5 = s2 * s4
+if0 s5 goto lbl_OutOfBounds_59
+goto lbl_Inbound_60
+lbl_OutOfBounds_59:
+error ("array index out of bounds")
+lbl_Inbound_60:
+t0 = v52
+t1 = j
+s6 = t0 * t1
+t1 = v52
+s6 = s6 + t1
+t0 = v51
+s6 = t0 + s6
+s7 = [s6 + 0]
+print (s7)
+s8 = 1
+t0 = j
+s9 = t0 + s8
+t1 = s9
+j= t1
+goto lbl_While_47
+lbl_WhileExit_48:
+s10 = 0
+v65 = s10
+s6 = stack_s6
+s9 = stack_s9
+s7 = stack_s7
+s1 = stack_s1
+s10 = stack_s10
+s8 = stack_s8
+s2 = stack_s2
+s3 = stack_s3
+s5 = stack_s5
+s4 = stack_s4
+return v65
+func LS_Search(this num)
+stack_s10 = s10
+stack_s3 = s3
+stack_s2 = s2
+stack_s3 = s3
+stack_s2 = s2
+stack_s1 = s1
+stack_s4 = s4
+stack_s5 = s5
+stack_s6 = s6
+stack_s7 = s7
+stack_s8 = s8
+stack_s9 = s9
+stack_s11 = s11
+stack_s1 = s1
+t4 = 1
+t1 = t4
+j= t1
+t5 = 0
+t1 = t5
+ls01= t1
+s1 = 0
+t1 = s1
+ifound= t1
+lbl_While_69:
+t0 = this
+s2 = [t0 + 8]
+t0 = j
+t3 = t0 < s2
+if0 t3 goto lbl_WhileExit_70
+t0 = this
+t0 =[t0 + 4]
+v73 = t0
+t0 = 4
+v74 = t0
+t2 = 5
+t0 = v74
+s3 = t0 - t2
+t0 = v73
+s5 = [t0 + 0]
+t1 = j
+s4 = s3 < t1
+t0 = j
+s6 = t0 < s5
+s7 = s4 * s6
+if0 s7 goto lbl_OutOfBounds_81
+goto lbl_Inbound_82
+lbl_OutOfBounds_81:
+error ("array index out of bounds")
+lbl_Inbound_82:
+t0 = v74
+t1 = j
+s8 = t0 * t1
+t1 = v74
+s8 = s8 + t1
+t0 = v73
+s8 = t0 + s8
+s9 = [s8 + 0]
+s10 = s9
+s11 = 1
+t0 = num
+a2 = t0 + s11
+a3 = a2
+t1 = num
+a4 = s10 < t1
+if0 a4 goto lbl_Else_87
+a5 = 0
+t1 = a5
+nt= t1
+goto lbl_IfEnd_88
+lbl_Else_87:
+a6 = s10 < a3
+a7 = 1
+t4 = a6 < a7
+if0 t4 goto lbl_Else_91
+t5 = 0
+t1 = t5
+nt= t1
+goto lbl_IfEnd_92
+lbl_Else_91:
+s1 = 1
+t1 = s1
+ls01= t1
+s2 = 1
+t1 = s2
+ifound= t1
+t0 = this
+t3 = [t0 + 8]
+t1 = t3
+j= t1
+lbl_IfEnd_92:
+lbl_IfEnd_88:
+t2 = 1
+t0 = j
+s3 = t0 + t2
+t1 = s3
+j= t1
+goto lbl_While_69
+lbl_WhileExit_70:
+s10 = stack_s10
+s3 = stack_s3
+s2 = stack_s2
+s3 = stack_s3
+s2 = stack_s2
+s1 = stack_s1
+s4 = stack_s4
+s5 = stack_s5
+s6 = stack_s6
+s7 = stack_s7
+s8 = stack_s8
+s9 = stack_s9
+s11 = stack_s11
+s1 = stack_s1
+return ifound
+func LS_Init(this sz)
+stack_s10 = s10
+stack_s5 = s5
+stack_s11 = s11
+stack_s9 = s9
+stack_s8 = s8
+stack_s7 = s7
+stack_s4 = s4
+stack_s6 = s6
+stack_s3 = s3
+stack_s1 = s1
+stack_s3 = s3
+stack_s4 = s4
+stack_s2 = s2
+stack_s1 = s1
+t0 = this
+t1 = sz
+[t0 + 8] =t1
+t4 = 1
+t3 = 4
+t0 = sz
+t2 = t0 + t4
+t2 = t2 * t3
+t5 = alloc(t2)
+if0 t5 goto lbl_NullPtr_106
+goto lbl_GoodPtr_107
+lbl_NullPtr_106:
+error ("null pointer")
+lbl_GoodPtr_107:
+t1 = sz
+[t5 + 0] =t1
+t0 = this
+[t0 + 4] =t5
+s1 = 1
+t1 = s1
+j= t1
+t0 = this
+s3 = [t0 + 8]
+s4 = 1
+s2 = s3 + s4
+t1 = s2
+k= t1
+lbl_While_112:
+t0 = this
+s6 = [t0 + 8]
+t0 = j
+s7 = t0 < s6
+if0 s7 goto lbl_WhileExit_113
+s8 = 2
+t1 = j
+s9 = s8 * t1
+s10 = s9
+s11 = 3
+t0 = k
+s5 = t0 - s11
+a2 = s5
+t0 = this
+t0 =[t0 + 4]
+v120 = t0
+t0 =s10 + a2
+v121 = t0
+t0 = 4
+v122 = t0
+a5 = 5
+t0 = v122
+a3 = t0 - a5
+t0 = v120
+a6 = [t0 + 0]
+t1 = j
+a4 = a3 < t1
+t0 = j
+a7 = t0 < a6
+t4 = a4 * a7
+if0 t4 goto lbl_OutOfBounds_129
+goto lbl_Inbound_130
+lbl_OutOfBounds_129:
+error ("array index out of bounds")
+lbl_Inbound_130:
+t0 = v122
+t1 = j
+t3 = t0 * t1
+t1 = v122
+t3 = t3 + t1
+t0 = v120
+t3 = t0 + t3
+t1 = v121
+[t3 + 0] =t1
+t2 = 1
+t0 = j
+t5 = t0 + t2
+t1 = t5
+j= t1
+s1 = 1
+t0 = k
+s3 = t0 - s1
+t1 = s3
+k= t1
+goto lbl_While_112
+lbl_WhileExit_113:
+s4 = 0
+v136 = s4
+s10 = stack_s10
+s5 = stack_s5
+s11 = stack_s11
+s9 = stack_s9
+s8 = stack_s8
+s7 = stack_s7
+s4 = stack_s4
+s6 = stack_s6
+s3 = stack_s3
+s1 = stack_s1
+s3 = stack_s3
+s4 = stack_s4
+s2 = stack_s2
+s1 = stack_s1
+return v136
