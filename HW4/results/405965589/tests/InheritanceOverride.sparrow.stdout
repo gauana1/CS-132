@@ -39,19 +39,16 @@ s1 = stack_s1
 t0 = v11
 return v11
 func Base_value()
-t2 = a2
 t3 = 10
 v12 = t3
 t0 = v12
 return v12
 func Mid_value()
-t2 = a2
 t3 = 20
 v13 = t3
 t0 = v13
 return v13
 func Leaf_value()
-t2 = a2
 t3 = 30
 v14 = t3
 t0 = v14

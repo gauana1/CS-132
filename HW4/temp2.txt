@@ -1,643 +1,92 @@
-Main
-    t2 = @f
-    t3 = call t2()
-f
-    stack_s11 = s11
-    stack_s7 = s7
-    stack_s6 = s6
-    stack_s5 = s5
-    stack_s2 = s2
-    stack_s1 = s1
-    stack_s10 = s10
-    stack_s1 = s1
-    stack_s6 = s6
-    stack_s4 = s4
-    stack_s3 = s3
-    stack_s8 = s8
-    stack_s9 = s9
-    stack_s2 = s2
-    stack_s4 = s4
-    t2 = 10
-    t0 = 20
-    b = t0
-    print(t2)
-10
-    t1 = b
-    print(t1)
-20
-    t0 = t2 + t1
-    c = t0
-    print(t0)
-30
-    t0 = 30
-    x = t0
-    t1 = x
-    t3 = t2 < t1
-    if0 t3 goto L8
-    print(t2)
-10
-    t1 = c
-    print(t1)
-30
-    t0 = t2 + t1
-    d = t0
-    print(t0)
-40
-    print(t2)
-10
-    t1 = b
-    print(t1)
-20
-    t0 = t2 + t1
-    f = t0
-    print(t0)
-30
-    goto L10
-    L10:
-    t5 = 50
-    t0 = d
-    print(t0)
-40
-    print(t5)
-50
-    t0 = t0 + t5
-    b = t0
-    print(t0)
-90
-    t0 = c
-    print(t0)
-30
-    t1 = d
-    print(t1)
-40
-    t0 = t0 + t1
-    s = t0
-    print(t0)
-70
-    t0 = s
-    print(t0)
-70
-    t1 = f
-    print(t1)
-30
-    s1 = t0 + t1
-    print(s1)
-100
-    t0 = c
-    print(t0)
-30
-    t1 = f
-    print(t1)
-30
-    t0 = t0 + t1
-    e = t0
-    print(t0)
-60
-    s2 = 40
-    t0 = b
-    print(t0)
-90
-    print(s2)
-40
-    t0 = t0 + s2
-    b = t0
-    print(t0)
-130
-    goto L8
-    L8:
-    t0 = b
-    print(t0)
-130
-    t1 = c
-    print(t1)
-30
-    t0 = t0 + t1
-    e = t0
-    print(t0)
-160
-    goto L14
-    L14:
-    s3 = 10
-    print(t2)
-10
-    print(s3)
-10
-    t0 = t2 + s3
-    f = t0
-    print(t0)
-20
-    L22:
-    t0 = 55
-    b = t0
-    t0 = 20
-    twenty = t0
-    t1 = twenty
-    print(t1)
-20
-    t0 = t2 - t1
-    c = t0
-    t0 = b
-    t1 = c
-    t4 = t0 < t1
-    if0 t4 goto L20
-    L20:
-    s6 = 7
-    t0 = f
-    print(t0)
-20
-    print(s6)
-7
-    t0 = t0 + s6
-    b = t0
-    print(t0)
-27
-    t0 = c
-    print(t0)
--10
-    t1 = b
-    print(t1)
-27
-    t0 = t0 + t1
-    c = t0
-    print(t0)
-17
-    s5 = 2
-    t1 = c
-    print(t1)
-17
-    t0 = s5 * t1
-    e = t0
-    t0 = f
-    print(t0)
-20
-    print(s3)
-10
-    t0 = t0 + s3
-    g = t0
-    print(t0)
-30
-    s8 = 55
-    s7 = s8
-    s9 = @func_g
-    t0 = g
-    t0 = t0 < s7
-    x = t0
-    t0 = x
-    if0 t0 goto L27
-    t0 = g
-    print(t0)
-30
-    t1 = twenty
-    print(t1)
-20
-    t0 = t0 - t1
-    i = t0
-    stack_a2 = a2
-    a2 = b
-    stack_a3 = a3
-    a3 = c
-    stack_a4 = a4
-    a4 = d
-    stack_a5 = a5
-    a5 = e
-    stack_a6 = a6
-    a6 = f
-    stack_a7 = a7
-    a7 = g
-    h = s7
-    t0 = i
-    stack_a9 = t0
-    s7 = call s9(h i)
-func_g
-    x1 = a2
-    x2 = a3
-    t4 = a4
-    t3 = a5
-    x5 = a6
-    t2 = a7
+main
     stack_s3 = s3
     stack_s4 = s4
     stack_s5 = s5
-    stack_s6 = s6
-    stack_s2 = s2
     stack_s1 = s1
-    t0 = x1
-    print(t0)
-27
-    t1 = x2
-    print(t1)
-17
-    t0 = t0 + t1
-    a = t0
-    print(t0)
-44
-    print(t4)
-40
-    print(t3)
-34
-    t0 = t4 + t3
-    b = t0
-    print(t0)
-74
-    t0 = x5
-    print(t0)
-20
-    print(t2)
-30
-    t0 = t0 + t2
-    c = t0
-    print(t0)
-50
-    t0 = x7
-    print(t0)
-55
-    t1 = x8
-    print(t1)
-10
-    t0 = t0 + t1
-    d = t0
-    print(t0)
-65
-    s2 = 10
-    t1 = s2
-    e = t1
-    t0 = x8
-    t1 = x1
-    s1 = t0 < t1
-    if0 s1 goto L42
-    t5 = @func_g
-    stack_a2 = a2
-    a2 = s1
-    stack_a3 = a3
-    a3 = x7
-    stack_a4 = a4
-    a4 = s1
-    stack_a5 = a5
-    a5 = x5
-    stack_a6 = a6
-    a6 = s2
-    stack_a7 = a7
-    a7 = s1
-    t0 = x2
+    stack_s2 = s2
+    t2 = 4
+    t3 = 8
+    t4 = alloc(t2)
+    t5 = alloc(t3)
+    s1 = @MT4_Start
+    [t5 + 0] = s1
+    s2 = @MT4_Change
+    [t5 + 4] = s2
+    [t4 + 0] = t5
+    if0 t4 goto lbl_NullPtr_6
+    goto lbl_GoodPtr_7
+    lbl_GoodPtr_7:
+    if0 t4 goto lbl_NullPtr_10
+    s3 = [t4 + 0]
+    s3 = [s3 + 0]
+    s4 = 1
+    t0 = 2
+    v13 = t0
+    t0 = 3
+    v14 = t0
+    t0 = 4
+    v15 = t0
+    t0 = 5
+    v16 = t0
+    t0 = 6
+    v17 = t0
+    t0 = v17
     stack_a8 = t0
-    stack_a9 = s2
-    ten = s2
-    t1 = call t5(x2 ten)
-func_g
-    x1 = a2
-    x2 = a3
-    t4 = a4
-    t3 = a5
-    x5 = a6
-    t2 = a7
-    stack_s3 = s3
-    stack_s4 = s4
-    stack_s5 = s5
-    stack_s6 = s6
-    stack_s2 = s2
-    stack_s1 = s1
-    t0 = x1
-    print(t0)
+    stack_a6 = a6
+    a6 = v15
+    stack_a5 = a5
+    a5 = v14
+    stack_a7 = a7
+    a7 = v16
+    stack_a2 = a2
+    a2 = t4
+    stack_a4 = a4
+    a4 = v13
+    stack_a3 = a3
+    a3 = s4
+    t1 = call s3(v17)
+MT4_Start
+    print(a3)
 1
-    t1 = x2
-    print(t1)
-55
-    t0 = t0 + t1
-    a = t0
+    print(a4)
+2
+    print(a5)
+3
+    print(a6)
+4
+    print(a7)
+5
+    t0 = p6
     print(t0)
-56
-    print(t4)
-1
-    print(t3)
-20
-    t0 = t4 + t3
-    b = t0
+6
+    if0 a2 goto lbl_NullPtr_21
+    t0 = [a2 + 0]
+    v19 = t0
+    t0 = v19
+    t0 = [t0 + 4]
+    v19 = t0
+    t0 = p6
+    a3 = t0
+    t0 = a7
+    a7 = a7
+    a4 = t0
+    t0 = a6
+    a6 = a6
+    a5 = t0
+    t0 = v19
+    t1 = call t0(p1)
+MT4_Change
+    print(a3)
+6
+    print(a4)
+5
+    print(a5)
+4
+    print(a6)
+4
+    print(a7)
+5
+    t0 = p6
     print(t0)
-21
-    t0 = x5
-    print(t0)
-10
-    print(t2)
-1
-    t0 = t0 + t2
-    c = t0
-    print(t0)
-11
-    t0 = x7
-    print(t0)
-17
-    t1 = x8
-    print(t1)
-10
-    t0 = t0 + t1
-    d = t0
-    print(t0)
-27
-    s2 = 10
-    t1 = s2
-    e = t1
-    t0 = x8
-    t1 = x1
-    s1 = t0 < t1
-    if0 s1 goto L42
-    L42:
-    t0 = d
-    print(t0)
-27
-    t1 = a
-    print(t1)
-56
-    t0 = t0 - t1
-    e = t0
-    t0 = b
-    print(t0)
-21
-    t1 = e
-    print(t1)
--29
-    s3 = t0 * t1
-    t0 = c
-    print(t0)
-11
-    s4 = t0 - s3
-    t0 = d
-    print(t0)
-27
-    t1 = e
-    print(t1)
--29
-    t0 = t0 + t1
-    h = t0
-    print(t0)
--2
-    t0 = e
-    print(t0)
--29
-    print(s3)
--609
-    s5 = t0 + s3
-    print(s4)
-620
-    t1 = h
-    print(t1)
--2
-    s6 = s4 + t1
-    j = s6
-    s3 = stack_s3
-    s4 = stack_s4
-    s5 = stack_s5
-    s6 = stack_s6
-    s2 = stack_s2
-    s1 = stack_s1
-    t0 = j
-    return j
-    a = t1
-    a2 = stack_a2
-    a3 = stack_a3
-    a4 = stack_a4
-    a5 = stack_a5
-    a6 = stack_a6
-    a7 = stack_a7
-    t0 = stack_a8
-    x2 = t0
-    s2 = stack_a9
-    L42:
-    t0 = d
-    print(t0)
-65
-    t1 = a
-    print(t1)
-618
-    t0 = t0 - t1
-    e = t0
-    t0 = b
-    print(t0)
-74
-    t1 = e
-    print(t1)
--553
-    s3 = t0 * t1
-    t0 = c
-    print(t0)
-50
-    s4 = t0 - s3
-    t0 = d
-    print(t0)
-65
-    t1 = e
-    print(t1)
--553
-    t0 = t0 + t1
-    h = t0
-    print(t0)
--488
-    t0 = e
-    print(t0)
--553
-    print(s3)
--40922
-    s5 = t0 + s3
-    print(s4)
-40972
-    t1 = h
-    print(t1)
--488
-    s6 = s4 + t1
-    j = s6
-    s3 = stack_s3
-    s4 = stack_s4
-    s5 = stack_s5
-    s6 = stack_s6
-    s2 = stack_s2
-    s1 = stack_s1
-    t0 = j
-    return j
-    a2 = stack_a2
-    a3 = stack_a3
-    a4 = stack_a4
-    a5 = stack_a5
-    a6 = stack_a6
-    a7 = stack_a7
-    t0 = stack_a9
-    i = t0
-    t0 = i
-    print(t0)
-10
-    print(s7)
-40484
-    t0 = t0 + s7
-    j = t0
-    print(t0)
-40494
-    goto L29
-    L29:
-    t3 = 5
-    t0 = j
-    print(t0)
-40494
-    t5 = t0 - t3
-    t0 = g
-    print(t0)
-30
-    print(t5)
-40489
-    t0 = t0 + t5
-    k = t0
-    print(t0)
-40519
-    t0 = j
-    print(t0)
-40494
-    t1 = k
-    print(t1)
-40519
-    s1 = t0 - t1
-    print(s1)
--25
-    print(t5)
-40489
-    s10 = s1 + t5
-    print(s10)
-40464
-    t0 = j
-    print(t0)
-40494
-    t1 = k
-    print(t1)
-40519
-    t0 = t0 + t1
-    i = t0
-    print(t0)
-81013
-    t0 = c
-    print(t0)
-17
-    t1 = d
-    print(t1)
-40
-    t0 = t0 + t1
-    c = t0
-    print(t0)
-57
-    t0 = d
-    print(t0)
-40
-    t1 = twenty
-    print(t1)
-20
-    s2 = t0 + t1
-    t0 = i
-    print(t0)
-81013
-    print(s2)
-60
-    t0 = t0 + s2
-    n = t0
-    print(t0)
-81073
-    t0 = d
-    t1 = n
-    t0 = t0 < t1
-    s = t0
-    L3:
-    t0 = s
-    if0 t0 goto L12
-    t0 = d
-    print(t0)
-40
-    print(s2)
-60
-    t0 = t0 + s2
-    o = t0
-    print(t0)
-100
-    s4 = 30
-    t0 = o
-    print(t0)
-100
-    print(s4)
-30
-    t4 = t0 + s4
-    t0 = i
-    print(t0)
-81013
-    t4 = t0 - t4
-    t0 = o
-    print(t0)
-100
-    t0 = t0 - t4
-    n = t0
-    t2 = 0
-    t0 = n
-    print(t0)
--80783
-    t0 = t0 * t2
-    s = t0
-    t0 = c
-    print(t0)
-57
-    t1 = g
-    print(t1)
-30
-    s2 = t0 + t1
-    t0 = o
-    print(t0)
-100
-    t1 = n
-    print(t1)
--80783
-    t0 = t0 + t1
-    n = t0
-    print(t0)
--80683
-    t1 = n
-    print(t1)
--80683
-    s6 = s2 - t1
-    print(s6)
-80770
-    goto L3
-    L3:
-    t0 = s
-    if0 t0 goto L12
-    L12:
-    t0 = k
-    print(t0)
-40519
-    t1 = n
-    print(t1)
--80683
-    t0 = t0 - t1
-    g = t0
-    t0 = o
-    print(t0)
-100
-    t1 = g
-    print(t1)
-121202
-    t0 = t0 + t1
-    g = t0
-    print(t0)
-121302
-    s11 = stack_s11
-    s7 = stack_s7
-    s6 = stack_s6
-    s5 = stack_s5
-    s2 = stack_s2
-    s1 = stack_s1
-    s10 = stack_s10
-    s1 = stack_s1
-    s6 = stack_s6
-    s4 = stack_s4
-    s3 = stack_s3
-    s8 = stack_s8
-    s9 = stack_s9
-    s2 = stack_s2
-    s4 = stack_s4
-    t0 = g
-    return g
-    print(t3)
-121302
-    v1 = t3
-    t0 = v1
-    return v1
+--- Error (Explicit) ---
+null

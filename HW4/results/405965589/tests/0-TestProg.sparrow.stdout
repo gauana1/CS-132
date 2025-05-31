@@ -673,7 +673,6 @@ s11 = stack_s11
 t0 = v175
 return v175
 func Printer_print()
-t2 = a2
 t3 = 100000001
 print (t3)
 t4 = 0
@@ -681,16 +680,12 @@ v177 = t4
 t0 = v177
 return v177
 func Printer_logT()
-this = a2
 stack_s1 = s1
-t0 = this
-t3 = [t0 + 4]
+t3 = [a2 + 4]
 t4 = 1
 t2 = t3 + t4
-t0 = this
-[t0 + 4] =t2
-t0 = this
-t5 = [t0 + 4]
+[a2 + 4] =t2
+t5 = [a2 + 4]
 print (t5)
 s1 = 1
 v182 = s1
@@ -698,16 +693,12 @@ s1 = stack_s1
 t0 = v182
 return v182
 func Printer_logF()
-this = a2
 stack_s1 = s1
-t0 = this
-t3 = [t0 + 4]
+t3 = [a2 + 4]
 t4 = 1
 t2 = t3 + t4
-t0 = this
-[t0 + 4] =t2
-t0 = this
-t5 = [t0 + 4]
+[a2 + 4] =t2
+t5 = [a2 + 4]
 print (t5)
 s1 = 0
 v187 = s1
@@ -715,18 +706,15 @@ s1 = stack_s1
 t0 = v187
 return v187
 func Printer_internal()
-t3 = a2
-t = a3
 stack_s1 = s1
 stack_s2 = s2
-t0 = t
-if0 t0 goto lbl_Else_188
-if0 t3 goto lbl_NullPtr_192
-t4 = [t3 + 0]
+if0 a3 goto lbl_Else_188
+if0 a2 goto lbl_NullPtr_192
+t4 = [a2 + 0]
 t4 = [t4 + 12]
 t2 = 0
 stack_a2 = a2
-a2 = t3
+a2 = a2
 stack_a3 = a3
 a3 = t2
 t1 = call t4()
@@ -746,48 +734,39 @@ lbl_Else_188:
 s2 = 789
 print (s2)
 lbl_IfEnd_189:
+t = a3
 s1 = stack_s1
 s2 = stack_s2
 t0 = t
 return t
 func Aggregator_get()
-t2 = a2
-t3 = [t2 + 4]
+t3 = [a2 + 4]
 v197 = t3
 t0 = v197
 return v197
 func Aggregator_set()
-t3 = a2
-t2 = a3
-[t3 + 4] =t2
-t4 = [t3 + 4]
+[a2 + 4] =a3
+t4 = [a2 + 4]
 v198 = t4
 t0 = v198
 return v198
 func Aggregator_sum()
-this = a2
-t2 = a3
-t0 = this
-t4 = [t0 + 4]
-t3 = t4 + t2
-t0 = this
-[t0 + 4] =t3
-t0 = this
-t5 = [t0 + 4]
+t4 = [a2 + 4]
+t3 = t4 + a3
+[a2 + 4] =t3
+t5 = [a2 + 4]
 v201 = t5
 t0 = v201
 return v201
 func Manip_doit()
-t3 = a2
-t2 = a3
 stack_s1 = s1
 stack_s2 = s2
-if0 t2 goto lbl_NullPtr_204
-t4 = [t2 + 0]
+if0 a3 goto lbl_NullPtr_204
+t4 = [a3 + 0]
 t4 = [t4 + 8]
 t5 = 3
 stack_a2 = a2
-a2 = t2
+a2 = a3
 stack_a3 = a3
 a3 = t5
 t1 = call t4()
@@ -807,7 +786,6 @@ s2 = stack_s2
 t0 = v207
 return v207
 func Mammal_eat()
-t2 = a2
 t3 = 1
 v208 = t3
 t0 = v208

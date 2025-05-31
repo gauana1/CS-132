@@ -261,7 +261,6 @@ s1 = stack_s1
 t0 = v66
 return v66
 func U_calculate()
-this = a2
 stack_s4 = s4
 stack_s2 = s2
 stack_s1 = s1
@@ -302,20 +301,17 @@ error ("null pointer")
 lbl_GoodPtr_74:
 t1 = v68
 [s1 + 0] =t1
-t0 = this
-[t0 + 16] =s1
+[a2 + 16] =s1
 s2 = 0
 t1 = s2
 i= t1
 lbl_While_76:
-t0 = this
-s4 = [t0 + 16]
+s4 = [a2 + 16]
 s5 = [s4 + 0]
 t0 = i
 s6 = t0 < s5
 if0 s6 goto lbl_WhileExit_77
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v81 = t0
 s8 = 2
 t0 = i
@@ -358,14 +354,12 @@ s1 = 0
 t1 = s1
 i= t1
 lbl_While_97:
-t0 = this
-s2 = [t0 + 16]
+s2 = [a2 + 16]
 s4 = [s2 + 0]
 t0 = i
 s5 = t0 < s4
 if0 s5 goto lbl_WhileExit_98
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v103 = t0
 t0 = 4
 v104 = t0
@@ -428,7 +422,6 @@ s6 = stack_s6
 t0 = sum
 return sum
 func T_calculate()
-this = a2
 stack_s9 = s9
 stack_s2 = s2
 stack_s1 = s1
@@ -469,20 +462,17 @@ error ("null pointer")
 lbl_GoodPtr_124:
 t1 = v118
 [s1 + 0] =t1
-t0 = this
-[t0 + 16] =s1
+[a2 + 16] =s1
 s2 = 0
 t1 = s2
 i= t1
 lbl_While_126:
-t0 = this
-s4 = [t0 + 16]
+s4 = [a2 + 16]
 s5 = [s4 + 0]
 t0 = i
 s6 = t0 < s5
 if0 s6 goto lbl_WhileExit_127
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v131 = t0
 s8 = 3
 t0 = i
@@ -525,14 +515,12 @@ s1 = 0
 t1 = s1
 i= t1
 lbl_While_147:
-t0 = this
-s2 = [t0 + 16]
+s2 = [a2 + 16]
 s4 = [s2 + 0]
 t0 = i
 s5 = t0 < s4
 if0 s5 goto lbl_WhileExit_148
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v153 = t0
 t0 = 4
 v154 = t0
@@ -595,7 +583,6 @@ s6 = stack_s6
 t0 = product
 return product
 func S_calculate()
-this = a2
 stack_s8 = s8
 stack_s5 = s5
 stack_s1 = s1
@@ -647,20 +634,17 @@ error ("null pointer")
 lbl_GoodPtr_174:
 t1 = v168
 [s1 + 0] =t1
-t0 = this
-[t0 + 16] =s1
+[a2 + 16] =s1
 s2 = 0
 t1 = s2
 i= t1
 lbl_While_176:
-t0 = this
-s4 = [t0 + 16]
+s4 = [a2 + 16]
 s5 = [s4 + 0]
 t0 = i
 s6 = t0 < s5
 if0 s6 goto lbl_WhileExit_177
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v181 = t0
 s8 = 4
 t0 = i
@@ -703,8 +687,7 @@ s1 = 0
 t1 = s1
 i= t1
 lbl_While_197:
-t0 = this
-s2 = [t0 + 16]
+s2 = [a2 + 16]
 s4 = [s2 + 0]
 t0 = i
 s5 = t0 < s4
@@ -713,14 +696,12 @@ s6 = 0
 t1 = s6
 j= t1
 lbl_While_203:
-t0 = this
-s3 = [t0 + 16]
+s3 = [a2 + 16]
 s7 = [s3 + 0]
 t0 = j
 s10 = t0 < s7
 if0 s10 goto lbl_WhileExit_204
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v210 = t0
 t0 = 4
 v211 = t0
@@ -748,8 +729,7 @@ t0 = v210
 t5 = t0 + t5
 t0 =[t5 + 0]
 v221 = t0
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v222 = t0
 t0 = 4
 v223 = t0
@@ -832,7 +812,6 @@ s4 = stack_s4
 t0 = sum
 return sum
 func R_calculate()
-this = a2
 stack_s11 = s11
 stack_s1 = s1
 stack_s3 = s3
@@ -884,20 +863,17 @@ error ("null pointer")
 lbl_GoodPtr_245:
 t1 = v239
 [s1 + 0] =t1
-t0 = this
-[t0 + 16] =s1
+[a2 + 16] =s1
 s2 = 0
 t1 = s2
 i= t1
 lbl_While_247:
-t0 = this
-s4 = [t0 + 16]
+s4 = [a2 + 16]
 s5 = [s4 + 0]
 t0 = i
 s6 = t0 < s5
 if0 s6 goto lbl_WhileExit_248
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v252 = t0
 s8 = 5
 t0 = i
@@ -940,8 +916,7 @@ s1 = 0
 t1 = s1
 i= t1
 lbl_While_268:
-t0 = this
-s2 = [t0 + 16]
+s2 = [a2 + 16]
 s4 = [s2 + 0]
 t0 = i
 s5 = t0 < s4
@@ -950,14 +925,12 @@ s6 = 0
 t1 = s6
 j= t1
 lbl_While_274:
-t0 = this
-s3 = [t0 + 16]
+s3 = [a2 + 16]
 s7 = [s3 + 0]
 t0 = j
 s10 = t0 < s7
 if0 s10 goto lbl_WhileExit_275
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v281 = t0
 t0 = 4
 v282 = t0
@@ -985,8 +958,7 @@ t0 = v281
 t5 = t0 + t5
 t0 =[t5 + 0]
 v292 = t0
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v293 = t0
 t0 = 4
 v294 = t0
@@ -1069,7 +1041,6 @@ s10 = stack_s10
 t0 = product
 return product
 func Q_calculate()
-this = a2
 stack_s4 = s4
 stack_s6 = s6
 stack_s5 = s5
@@ -1121,20 +1092,17 @@ error ("null pointer")
 lbl_GoodPtr_316:
 t1 = v310
 [s1 + 0] =t1
-t0 = this
-[t0 + 16] =s1
+[a2 + 16] =s1
 s2 = 0
 t1 = s2
 i= t1
 lbl_While_318:
-t0 = this
-s4 = [t0 + 16]
+s4 = [a2 + 16]
 s5 = [s4 + 0]
 t0 = i
 s6 = t0 < s5
 if0 s6 goto lbl_WhileExit_319
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v323 = t0
 s8 = 6
 t0 = i
@@ -1177,8 +1145,7 @@ s1 = 0
 t1 = s1
 i= t1
 lbl_While_339:
-t0 = this
-s2 = [t0 + 16]
+s2 = [a2 + 16]
 s4 = [s2 + 0]
 t0 = i
 s5 = t0 < s4
@@ -1187,14 +1154,12 @@ s6 = 0
 t1 = s6
 j= t1
 lbl_While_345:
-t0 = this
-s3 = [t0 + 16]
+s3 = [a2 + 16]
 s7 = [s3 + 0]
 t0 = j
 s10 = t0 < s7
 if0 s10 goto lbl_WhileExit_346
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v352 = t0
 t0 = 4
 v353 = t0
@@ -1222,8 +1187,7 @@ t0 = v352
 t5 = t0 + t5
 t0 =[t5 + 0]
 v363 = t0
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v364 = t0
 t0 = 4
 v365 = t0
@@ -1306,7 +1270,6 @@ s3 = stack_s3
 t0 = sum
 return sum
 func P_calculate()
-this = a2
 stack_s8 = s8
 stack_s7 = s7
 stack_s2 = s2
@@ -1358,20 +1321,17 @@ error ("null pointer")
 lbl_GoodPtr_387:
 t1 = v381
 [s1 + 0] =t1
-t0 = this
-[t0 + 16] =s1
+[a2 + 16] =s1
 s2 = 0
 t1 = s2
 i= t1
 lbl_While_389:
-t0 = this
-s4 = [t0 + 16]
+s4 = [a2 + 16]
 s5 = [s4 + 0]
 t0 = i
 s6 = t0 < s5
 if0 s6 goto lbl_WhileExit_390
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v394 = t0
 s8 = 7
 t0 = i
@@ -1414,8 +1374,7 @@ s1 = 0
 t1 = s1
 i= t1
 lbl_While_410:
-t0 = this
-s2 = [t0 + 16]
+s2 = [a2 + 16]
 s4 = [s2 + 0]
 t0 = i
 s5 = t0 < s4
@@ -1424,14 +1383,12 @@ s6 = 0
 t1 = s6
 j= t1
 lbl_While_416:
-t0 = this
-s3 = [t0 + 16]
+s3 = [a2 + 16]
 s7 = [s3 + 0]
 t0 = j
 s10 = t0 < s7
 if0 s10 goto lbl_WhileExit_417
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v423 = t0
 t0 = 4
 v424 = t0
@@ -1459,8 +1416,7 @@ t0 = v423
 t5 = t0 + t5
 t0 =[t5 + 0]
 v434 = t0
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v435 = t0
 t0 = 4
 v436 = t0

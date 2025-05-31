@@ -79,13 +79,11 @@ s11 = stack_s11
 t0 = v22
 return v22
 func A_f()
-t2 = a2
 t3 = 1
 v23 = t3
 t0 = v23
 return v23
 func B_f()
-t2 = a2
 t3 = 2
 v24 = t3
 t0 = v24

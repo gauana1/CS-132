@@ -1,0 +1,8 @@
+2,4c2,4
+< --- Error (Explicit) ---
+< Error: t0 = t0 + t1
+< Wrong argument type in Add
+---
+> 40464
+> 80770
+> 121302

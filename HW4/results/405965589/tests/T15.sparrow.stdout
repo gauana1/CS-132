@@ -85,14 +85,14 @@ s8 = 10
 s6 = 100
 t0 = 1
 v17 = t0
-stack_a2 = a2
-a2 = e1
-stack_a3 = a3
-a3 = s8
-stack_a4 = a4
-a4 = s6
 stack_a5 = a5
 a5 = v17
+stack_a2 = a2
+a2 = e1
+stack_a4 = a4
+a4 = s6
+stack_a3 = a3
+a3 = s8
 t1 = call s7()
 v12 = t1
 a2 = stack_a2
@@ -137,14 +137,14 @@ t4 = 20
 s5 = 200
 t0 = 0
 v35 = t0
-stack_a2 = a2
-a2 = e2
-stack_a3 = a3
-a3 = t4
-stack_a4 = a4
-a4 = s5
 stack_a5 = a5
 a5 = v35
+stack_a2 = a2
+a2 = e2
+stack_a4 = a4
+a4 = s5
+stack_a3 = a3
+a3 = t4
 t1 = call t5()
 v30 = t1
 a2 = stack_a2
@@ -189,14 +189,14 @@ s9 = 30
 s4 = 300
 t0 = 1
 v53 = t0
-stack_a2 = a2
-a2 = e3
-stack_a3 = a3
-a3 = s9
-stack_a4 = a4
-a4 = s4
 stack_a5 = a5
 a5 = v53
+stack_a2 = a2
+a2 = e3
+stack_a4 = a4
+a4 = s4
+stack_a3 = a3
+a3 = s9
 t1 = call t2()
 v48 = t1
 a2 = stack_a2
@@ -241,14 +241,14 @@ s6 = 40
 s3 = 400
 t0 = 0
 v71 = t0
-stack_a2 = a2
-a2 = e4
-stack_a3 = a3
-a3 = s6
-stack_a4 = a4
-a4 = s3
 stack_a5 = a5
 a5 = v71
+stack_a2 = a2
+a2 = e4
+stack_a4 = a4
+a4 = s3
+stack_a3 = a3
+a3 = s6
 t1 = call s10()
 v66 = t1
 a2 = stack_a2
@@ -293,14 +293,14 @@ s5 = 50
 s2 = 500
 t0 = 1
 v89 = t0
-stack_a2 = a2
-a2 = e5
-stack_a3 = a3
-a3 = s5
-stack_a4 = a4
-a4 = s2
 stack_a5 = a5
 a5 = v89
+stack_a2 = a2
+a2 = e5
+stack_a4 = a4
+a4 = s2
+stack_a3 = a3
+a3 = s5
 t1 = call s7()
 v84 = t1
 a2 = stack_a2
@@ -347,18 +347,18 @@ t0 = x
 s4 = [t0 + 0]
 s4 = [s4 + 0]
 stack_t5 = t5
-stack_a2 = a2
-a2 = x
-stack_a3 = a3
-a3 = e1
-stack_a4 = a4
-a4 = e2
-stack_a5 = a5
-a5 = e3
 stack_a6 = a6
 a6 = e4
+stack_a5 = a5
+a5 = e3
 stack_a7 = a7
 a7 = e5
+stack_a2 = a2
+a2 = x
+stack_a4 = a4
+a4 = e2
+stack_a3 = a3
+a3 = e1
 s7 = call s4()
 a2 = stack_a2
 a3 = stack_a3
@@ -378,18 +378,18 @@ print (t0)
 if0 t5 goto lbl_NullPtr_110
 s2 = [t5 + 0]
 s2 = [s2 + 0]
-stack_a2 = a2
-a2 = t5
-stack_a3 = a3
-a3 = e1
-stack_a4 = a4
-a4 = e2
-stack_a5 = a5
-a5 = e3
 stack_a6 = a6
 a6 = e4
+stack_a5 = a5
+a5 = e3
 stack_a7 = a7
 a7 = e5
+stack_a2 = a2
+a2 = t5
+stack_a4 = a4
+a4 = e2
+stack_a3 = a3
+a3 = e1
 s5 = call s2()
 a2 = stack_a2
 a3 = stack_a3
@@ -465,60 +465,46 @@ s2 = stack_s2
 t0 = v112
 return v112
 func Element_Init()
-this = a2
-t2 = a3
-t4 = a4
-t3 = a5
-t0 = this
-[t0 + 12] =t2
-t0 = this
-[t0 + 8] =t4
-t0 = this
-[t0 + 4] =t3
+[a2 + 12] =a3
+[a2 + 8] =a4
+[a2 + 4] =a5
 t5 = 1
 v113 = t5
 t0 = v113
 return v113
 func Element_GetValue()
-t2 = a2
-t3 = [t2 + 12]
+t3 = [a2 + 12]
 v114 = t3
 t0 = v114
 return v114
 func Element_GetID()
-t2 = a2
-t3 = [t2 + 8]
+t3 = [a2 + 8]
 v115 = t3
 t0 = v115
 return v115
 func Element_GetFlag()
-t2 = a2
-t3 = [t2 + 4]
+t3 = [a2 + 4]
 v116 = t3
 t0 = v116
 return v116
 func Element_getMutualSum()
-t2 = a2
-t3 = a3
-y = a4
 stack_s2 = s2
 stack_s1 = s1
-if0 t3 goto lbl_NullPtr_120
-t4 = [t3 + 0]
+if0 a3 goto lbl_NullPtr_120
+t4 = [a3 + 0]
 t4 = [t4 + 0]
-stack_t2 = t2
-stack_a2 = a2
-a2 = t3
-stack_a3 = a3
-a3 = t2
-stack_a4 = a4
-a4 = t2
-stack_a5 = a5
-a5 = t2
 stack_a6 = a6
-a6 = t2
+a6 = a2
+stack_a5 = a5
+a5 = a2
 stack_a7 = a7
-a7 = t2
+a7 = a2
+stack_a2 = a2
+a2 = a3
+stack_a4 = a4
+a4 = a2
+stack_a3 = a3
+a3 = a2
 t1 = call t4()
 v119 = t1
 a2 = stack_a2
@@ -527,28 +513,25 @@ a4 = stack_a4
 a5 = stack_a5
 a6 = stack_a6
 a7 = stack_a7
-t2 = stack_t2
 goto lbl_GoodPtr_121
 lbl_NullPtr_120:
 error ("null pointer")
 lbl_GoodPtr_121:
-t0 = y
-if0 t0 goto lbl_NullPtr_124
-t0 = y
-t5 = [t0 + 0]
+if0 a4 goto lbl_NullPtr_124
+t5 = [a4 + 0]
 t5 = [t5 + 0]
-stack_a2 = a2
-a2 = y
-stack_a3 = a3
-a3 = t2
-stack_a4 = a4
-a4 = t2
-stack_a5 = a5
-a5 = t2
 stack_a6 = a6
-a6 = t2
+a6 = a2
+stack_a5 = a5
+a5 = a2
 stack_a7 = a7
-a7 = t2
+a7 = a2
+stack_a2 = a2
+a2 = a4
+stack_a4 = a4
+a4 = a2
+stack_a3 = a3
+a3 = a2
 s1 = call t5()
 a2 = stack_a2
 a3 = stack_a3
@@ -568,12 +551,6 @@ s1 = stack_s1
 t0 = v117
 return v117
 func X_compute()
-this = a2
-t3 = a3
-t4 = a4
-e3 = a5
-e4 = a6
-e5 = a7
 stack_s7 = s7
 stack_s5 = s5
 stack_s5 = s5
@@ -599,25 +576,23 @@ stack_s8 = s8
 t2 = 0
 t1 = t2
 result= t1
-if0 t3 goto lbl_NullPtr_132
-t5 = [t3 + 0]
+if0 a3 goto lbl_NullPtr_132
+t5 = [a3 + 0]
 t5 = [t5 + 16]
-stack_t4 = t4
 stack_a2 = a2
-a2 = t3
+a2 = a3
 t1 = call t5()
 v131 = t1
 a2 = stack_a2
-t4 = stack_t4
 goto lbl_GoodPtr_133
 lbl_NullPtr_132:
 error ("null pointer")
 lbl_GoodPtr_133:
-if0 t4 goto lbl_NullPtr_136
-s1 = [t4 + 0]
+if0 a4 goto lbl_NullPtr_136
+s1 = [a4 + 0]
 s1 = [s1 + 16]
 stack_a2 = a2
-a2 = t4
+a2 = a4
 s2 = call s1()
 a2 = stack_a2
 goto lbl_GoodPtr_137
@@ -627,26 +602,22 @@ lbl_GoodPtr_137:
 t0 = v131
 t0 =t0 + s2
 v129 = t0
-t0 = e3
-if0 t0 goto lbl_NullPtr_141
-t0 = e3
-s4 = [t0 + 0]
+if0 a5 goto lbl_NullPtr_141
+s4 = [a5 + 0]
 s4 = [s4 + 16]
 stack_a2 = a2
-a2 = e3
+a2 = a5
 s5 = call s4()
 a2 = stack_a2
 goto lbl_GoodPtr_142
 lbl_NullPtr_141:
 error ("null pointer")
 lbl_GoodPtr_142:
-t0 = e4
-if0 t0 goto lbl_NullPtr_145
-t0 = e4
-s6 = [t0 + 0]
+if0 a6 goto lbl_NullPtr_145
+s6 = [a6 + 0]
 s6 = [s6 + 16]
 stack_a2 = a2
-a2 = e4
+a2 = a6
 s3 = call s6()
 a2 = stack_a2
 goto lbl_GoodPtr_146
@@ -656,13 +627,11 @@ lbl_GoodPtr_146:
 s7 = s5 + s3
 t0 = v129
 s8 = t0 + s7
-t0 = e5
-if0 t0 goto lbl_NullPtr_149
-t0 = e5
-s9 = [t0 + 0]
+if0 a7 goto lbl_NullPtr_149
+s9 = [a7 + 0]
 s9 = [s9 + 16]
 stack_a2 = a2
-a2 = e5
+a2 = a7
 s10 = call s9()
 a2 = stack_a2
 goto lbl_GoodPtr_150
@@ -672,44 +641,34 @@ lbl_GoodPtr_150:
 s11 = s8 + s10
 t1 = s11
 result= t1
-t0 = this
 t1 = result
-[t0 + 4] =t1
+[a2 + 4] =t1
 t2 = 1
 t0 = result
 t3 = t0 + t2
-t0 = this
-[t0 + 8] =t3
+[a2 + 8] =t3
 t5 = 2
 t0 = result
 t4 = t0 + t5
-t0 = this
-[t0 + 12] =t4
+[a2 + 12] =t4
 s1 = 3
 t0 = result
 s2 = t0 + s1
-t0 = this
-[t0 + 16] =s2
+[a2 + 16] =s2
 s4 = 4
 t0 = result
 s6 = t0 + s4
-t0 = this
-[t0 + 20] =s6
-t0 = this
-s5 = [t0 + 4]
-t0 = this
-s3 = [t0 + 8]
+[a2 + 20] =s6
+s5 = [a2 + 4]
+s3 = [a2 + 8]
 s7 = s5 + s3
-t0 = this
-s9 = [t0 + 12]
-t0 = this
-s8 = [t0 + 16]
+s9 = [a2 + 12]
+s8 = [a2 + 16]
 t0 =s9 + s8
 v164 = t0
 t1 = v164
 s10 = s7 + t1
-t0 = this
-s11 = [t0 + 20]
+s11 = [a2 + 20]
 t2 = s10 + s11
 v159 = t2
 s7 = stack_s7
@@ -737,12 +696,6 @@ s8 = stack_s8
 t0 = v159
 return v159
 func Y_compute()
-this = a2
-t3 = a3
-t4 = a4
-e3 = a5
-e4 = a6
-e5 = a7
 stack_s4 = s4
 stack_s5 = s5
 stack_s7 = s7
@@ -768,25 +721,23 @@ stack_s3 = s3
 t2 = 1
 t1 = t2
 result= t1
-if0 t3 goto lbl_NullPtr_174
-t5 = [t3 + 0]
+if0 a3 goto lbl_NullPtr_174
+t5 = [a3 + 0]
 t5 = [t5 + 8]
-stack_t4 = t4
 stack_a2 = a2
-a2 = t3
+a2 = a3
 t1 = call t5()
 v173 = t1
 a2 = stack_a2
-t4 = stack_t4
 goto lbl_GoodPtr_175
 lbl_NullPtr_174:
 error ("null pointer")
 lbl_GoodPtr_175:
-if0 t4 goto lbl_NullPtr_178
-s1 = [t4 + 0]
+if0 a4 goto lbl_NullPtr_178
+s1 = [a4 + 0]
 s1 = [s1 + 8]
 stack_a2 = a2
-a2 = t4
+a2 = a4
 s2 = call s1()
 a2 = stack_a2
 goto lbl_GoodPtr_179
@@ -796,26 +747,22 @@ lbl_GoodPtr_179:
 t0 = v173
 t0 =t0 * s2
 v171 = t0
-t0 = e3
-if0 t0 goto lbl_NullPtr_183
-t0 = e3
-s4 = [t0 + 0]
+if0 a5 goto lbl_NullPtr_183
+s4 = [a5 + 0]
 s4 = [s4 + 8]
 stack_a2 = a2
-a2 = e3
+a2 = a5
 s5 = call s4()
 a2 = stack_a2
 goto lbl_GoodPtr_184
 lbl_NullPtr_183:
 error ("null pointer")
 lbl_GoodPtr_184:
-t0 = e4
-if0 t0 goto lbl_NullPtr_187
-t0 = e4
-s6 = [t0 + 0]
+if0 a6 goto lbl_NullPtr_187
+s6 = [a6 + 0]
 s6 = [s6 + 8]
 stack_a2 = a2
-a2 = e4
+a2 = a6
 s3 = call s6()
 a2 = stack_a2
 goto lbl_GoodPtr_188
@@ -825,13 +772,11 @@ lbl_GoodPtr_188:
 s7 = s5 * s3
 t0 = v171
 s8 = t0 * s7
-t0 = e5
-if0 t0 goto lbl_NullPtr_191
-t0 = e5
-s9 = [t0 + 0]
+if0 a7 goto lbl_NullPtr_191
+s9 = [a7 + 0]
 s9 = [s9 + 8]
 stack_a2 = a2
-a2 = e5
+a2 = a7
 s10 = call s9()
 a2 = stack_a2
 goto lbl_GoodPtr_192
@@ -841,44 +786,34 @@ lbl_GoodPtr_192:
 s11 = s8 * s10
 t1 = s11
 result= t1
-t0 = this
 t1 = result
-[t0 + 24] =t1
+[a2 + 24] =t1
 t2 = 1
 t0 = result
 t3 = t0 + t2
-t0 = this
-[t0 + 28] =t3
+[a2 + 28] =t3
 t5 = 2
 t0 = result
 t4 = t0 + t5
-t0 = this
-[t0 + 32] =t4
+[a2 + 32] =t4
 s1 = 3
 t0 = result
 s2 = t0 + s1
-t0 = this
-[t0 + 36] =s2
+[a2 + 36] =s2
 s4 = 4
 t0 = result
 s6 = t0 + s4
-t0 = this
-[t0 + 40] =s6
-t0 = this
-s5 = [t0 + 24]
-t0 = this
-s3 = [t0 + 28]
+[a2 + 40] =s6
+s5 = [a2 + 24]
+s3 = [a2 + 28]
 s7 = s5 + s3
-t0 = this
-s9 = [t0 + 32]
-t0 = this
-s8 = [t0 + 36]
+s9 = [a2 + 32]
+s8 = [a2 + 36]
 t0 =s9 + s8
 v206 = t0
 t1 = v206
 s10 = s7 + t1
-t0 = this
-s11 = [t0 + 40]
+s11 = [a2 + 40]
 t2 = s10 + s11
 v201 = t2
 s4 = stack_s4

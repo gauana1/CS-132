@@ -82,19 +82,16 @@ s10 = stack_s10
 t0 = v22
 return v22
 func Animal_speak()
-t2 = a2
 t3 = 0
 v23 = t3
 t0 = v23
 return v23
 func Dog_speak()
-t2 = a2
 t3 = 1
 v24 = t3
 t0 = v24
 return v24
 func Cat_speak()
-t2 = a2
 t3 = 2
 v25 = t3
 t0 = v25

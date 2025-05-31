@@ -54,8 +54,6 @@ s2 = stack_s2
 t0 = v15
 return v15
 func LS_Start()
-this = a2
-t2 = a3
 stack_s3 = s3
 stack_s8 = s8
 stack_s1 = s1
@@ -69,15 +67,13 @@ stack_s4 = s4
 stack_s11 = s11
 stack_s7 = s7
 stack_s6 = s6
-t0 = this
-if0 t0 goto lbl_NullPtr_18
-t0 = this
-t4 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_18
+t4 = [a2 + 0]
 t4 = [t4 + 4]
 stack_a2 = a2
-a2 = this
+a2 = a2
 stack_a3 = a3
-a3 = t2
+a3 = a3
 t3 = call t4()
 a2 = stack_a2
 a3 = stack_a3
@@ -86,13 +82,11 @@ lbl_NullPtr_18:
 error ("null pointer")
 lbl_GoodPtr_19:
 t5 = t3
-t0 = this
-if0 t0 goto lbl_NullPtr_22
-t0 = this
-s1 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_22
+s1 = [a2 + 0]
 s1 = [s1 + 0]
 stack_a2 = a2
-a2 = this
+a2 = a2
 s2 = call s1()
 a2 = stack_a2
 goto lbl_GoodPtr_23
@@ -102,14 +96,12 @@ lbl_GoodPtr_23:
 s3 = s2
 s4 = 9999
 print (s4)
-t0 = this
-if0 t0 goto lbl_NullPtr_27
-t0 = this
-s5 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_27
+s5 = [a2 + 0]
 s5 = [s5 + 12]
 s6 = 8
 stack_a2 = a2
-a2 = this
+a2 = a2
 stack_a3 = a3
 a3 = s6
 s7 = call s5()
@@ -120,14 +112,12 @@ lbl_NullPtr_27:
 error ("null pointer")
 lbl_GoodPtr_28:
 print (s7)
-t0 = this
-if0 t0 goto lbl_NullPtr_32
-t0 = this
-s8 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_32
+s8 = [a2 + 0]
 s8 = [s8 + 12]
 s9 = 12
 stack_a2 = a2
-a2 = this
+a2 = a2
 stack_a3 = a3
 a3 = s9
 s10 = call s8()
@@ -138,14 +128,12 @@ lbl_NullPtr_32:
 error ("null pointer")
 lbl_GoodPtr_33:
 print (s10)
-t0 = this
-if0 t0 goto lbl_NullPtr_37
-t0 = this
-s11 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_37
+s11 = [a2 + 0]
 s11 = [s11 + 12]
 t2 = 17
 stack_a2 = a2
-a2 = this
+a2 = a2
 stack_a3 = a3
 a3 = t2
 t4 = call s11()
@@ -156,14 +144,12 @@ lbl_NullPtr_37:
 error ("null pointer")
 lbl_GoodPtr_38:
 print (t4)
-t0 = this
-if0 t0 goto lbl_NullPtr_42
-t0 = this
-t3 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_42
+t3 = [a2 + 0]
 t3 = [t3 + 12]
 t5 = 50
 stack_a2 = a2
-a2 = this
+a2 = a2
 stack_a3 = a3
 a3 = t5
 s1 = call t3()
@@ -192,7 +178,6 @@ s6 = stack_s6
 t0 = v45
 return v45
 func LS_Print()
-this = a2
 stack_s6 = s6
 stack_s9 = s9
 stack_s7 = s7
@@ -207,13 +192,11 @@ t3 = 1
 t1 = t3
 j= t1
 lbl_While_47:
-t0 = this
-t5 = [t0 + 8]
+t5 = [a2 + 8]
 t0 = j
 t4 = t0 < t5
 if0 t4 goto lbl_WhileExit_48
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v51 = t0
 t0 = 4
 v52 = t0
@@ -263,8 +246,6 @@ s4 = stack_s4
 t0 = v65
 return v65
 func LS_Search()
-this = a2
-num = a3
 stack_s10 = s10
 stack_s8 = s8
 stack_s2 = s2
@@ -295,13 +276,11 @@ s1 = 0
 t1 = s1
 ifound= t1
 lbl_While_69:
-t0 = this
-s2 = [t0 + 8]
+s2 = [a2 + 8]
 t0 = j
 t3 = t0 < s2
 if0 t3 goto lbl_WhileExit_70
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v73 = t0
 t0 = 4
 v74 = t0
@@ -330,11 +309,9 @@ s8 = t0 + s8
 s9 = [s8 + 0]
 s10 = s9
 s11 = 1
-t0 = num
-t4 = t0 + s11
+t4 = a3 + s11
 t5 = t4
-t1 = num
-s1 = s10 < t1
+s1 = s10 < a3
 if0 s1 goto lbl_Else_87
 s2 = 0
 t1 = s2
@@ -356,8 +333,7 @@ ls01= t1
 s6 = 1
 t1 = s6
 ifound= t1
-t0 = this
-s7 = [t0 + 8]
+s7 = [a2 + 8]
 t1 = s7
 j= t1
 lbl_IfEnd_92:
@@ -392,8 +368,6 @@ s1 = stack_s1
 t0 = ifound
 return ifound
 func LS_Init()
-this = a2
-sz = a3
 stack_s10 = s10
 stack_s1 = s1
 stack_s5 = s5
@@ -414,13 +388,10 @@ stack_s2 = s2
 stack_s1 = s1
 stack_s3 = s3
 stack_s4 = s4
-t0 = this
-t1 = sz
-[t0 + 8] =t1
+[a2 + 8] =a3
 t4 = 1
 t3 = 4
-t0 = sz
-t2 = t0 + t4
+t2 = a3 + t4
 t2 = t2 * t3
 t5 = alloc(t2)
 if0 t5 goto lbl_NullPtr_106
@@ -428,22 +399,18 @@ goto lbl_GoodPtr_107
 lbl_NullPtr_106:
 error ("null pointer")
 lbl_GoodPtr_107:
-t1 = sz
-[t5 + 0] =t1
-t0 = this
-[t0 + 4] =t5
+[t5 + 0] =a3
+[a2 + 4] =t5
 s1 = 1
 t1 = s1
 j= t1
-t0 = this
-s3 = [t0 + 8]
+s3 = [a2 + 8]
 s4 = 1
 s2 = s3 + s4
 t1 = s2
 k= t1
 lbl_While_112:
-t0 = this
-s6 = [t0 + 8]
+s6 = [a2 + 8]
 t0 = j
 s7 = t0 < s6
 if0 s7 goto lbl_WhileExit_113
@@ -455,8 +422,7 @@ s11 = 3
 t0 = k
 s5 = t0 - s11
 t4 = s5
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v120 = t0
 t0 =s10 + t4
 v121 = t0

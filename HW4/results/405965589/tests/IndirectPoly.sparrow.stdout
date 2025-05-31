@@ -67,23 +67,19 @@ s1 = stack_s1
 t0 = v18
 return v18
 func Animal_sound()
-t2 = a2
 t3 = 0
 v19 = t3
 t0 = v19
 return v19
 func Cow_sound()
-t2 = a2
 t3 = 3
 v20 = t3
 t0 = v20
 return v20
 func Keeper_storeAndSpeak()
-t2 = a2
-t3 = a3
 stack_s1 = s1
-[t2 + 4] =t3
-t4 = [t2 + 4]
+[a2 + 4] =a3
+t4 = [a2 + 4]
 if0 t4 goto lbl_NullPtr_24
 t5 = [t4 + 0]
 t5 = [t5 + 0]

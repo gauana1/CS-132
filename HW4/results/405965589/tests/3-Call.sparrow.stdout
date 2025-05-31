@@ -36,7 +36,6 @@ s1 = stack_s1
 t0 = v11
 return v11
 func A_run()
-t2 = a2
 t3 = 42
 print (t3)
 t4 = 99

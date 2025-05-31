@@ -303,21 +303,17 @@ s2 = stack_s2
 t0 = v78
 return v78
 func F_getArray()
-t2 = a2
-t3 = [t2 + 16]
+t3 = [a2 + 16]
 v79 = t3
 t0 = v79
 return v79
 func F_setArray()
-t3 = a2
-t2 = a3
-[t3 + 16] =t2
+[a2 + 16] =a3
 t4 = 1
 v80 = t4
 t0 = v80
 return v80
 func F_processData()
-this = a2
 stack_s11 = s11
 stack_s10 = s10
 stack_s10 = s10
@@ -358,20 +354,17 @@ error ("null pointer")
 lbl_GoodPtr_88:
 t1 = v82
 [s1 + 0] =t1
-t0 = this
-[t0 + 16] =s1
+[a2 + 16] =s1
 s2 = 0
 t1 = s2
 i= t1
 lbl_While_90:
-t0 = this
-s4 = [t0 + 16]
+s4 = [a2 + 16]
 s5 = [s4 + 0]
 t0 = i
 s6 = t0 < s5
 if0 s6 goto lbl_WhileExit_91
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v95 = t0
 s8 = 2
 t0 = i
@@ -414,14 +407,12 @@ s1 = 0
 t1 = s1
 i= t1
 lbl_While_111:
-t0 = this
-s2 = [t0 + 16]
+s2 = [a2 + 16]
 s4 = [s2 + 0]
 t0 = i
 s5 = t0 < s4
 if0 s5 goto lbl_WhileExit_112
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v117 = t0
 t0 = 4
 v118 = t0
@@ -484,7 +475,6 @@ s11 = stack_s11
 t0 = result
 return result
 func E_processData()
-this = a2
 stack_s1 = s1
 stack_s8 = s8
 stack_s3 = s3
@@ -525,20 +515,17 @@ error ("null pointer")
 lbl_GoodPtr_138:
 t1 = v132
 [s1 + 0] =t1
-t0 = this
-[t0 + 16] =s1
+[a2 + 16] =s1
 s2 = 0
 t1 = s2
 i= t1
 lbl_While_140:
-t0 = this
-s4 = [t0 + 16]
+s4 = [a2 + 16]
 s5 = [s4 + 0]
 t0 = i
 s6 = t0 < s5
 if0 s6 goto lbl_WhileExit_141
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v145 = t0
 s8 = 3
 t0 = i
@@ -581,14 +568,12 @@ s1 = 0
 t1 = s1
 i= t1
 lbl_While_161:
-t0 = this
-s2 = [t0 + 16]
+s2 = [a2 + 16]
 s4 = [s2 + 0]
 t0 = i
 s5 = t0 < s4
 if0 s5 goto lbl_WhileExit_162
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v167 = t0
 t0 = 4
 v168 = t0
@@ -651,7 +636,6 @@ s3 = stack_s3
 t0 = result
 return result
 func D_processData()
-this = a2
 stack_s2 = s2
 stack_s9 = s9
 stack_s8 = s8
@@ -703,20 +687,17 @@ error ("null pointer")
 lbl_GoodPtr_188:
 t1 = v182
 [s1 + 0] =t1
-t0 = this
-[t0 + 16] =s1
+[a2 + 16] =s1
 s2 = 0
 t1 = s2
 i= t1
 lbl_While_190:
-t0 = this
-s4 = [t0 + 16]
+s4 = [a2 + 16]
 s5 = [s4 + 0]
 t0 = i
 s6 = t0 < s5
 if0 s6 goto lbl_WhileExit_191
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v195 = t0
 s8 = 4
 t0 = i
@@ -759,8 +740,7 @@ s1 = 0
 t1 = s1
 i= t1
 lbl_While_211:
-t0 = this
-s2 = [t0 + 16]
+s2 = [a2 + 16]
 s4 = [s2 + 0]
 t0 = i
 s5 = t0 < s4
@@ -769,14 +749,12 @@ s6 = 0
 t1 = s6
 j= t1
 lbl_While_217:
-t0 = this
-s3 = [t0 + 16]
+s3 = [a2 + 16]
 s7 = [s3 + 0]
 t0 = j
 s10 = t0 < s7
 if0 s10 goto lbl_WhileExit_218
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v224 = t0
 t0 = 4
 v225 = t0
@@ -804,8 +782,7 @@ t0 = v224
 t5 = t0 + t5
 t0 =[t5 + 0]
 v235 = t0
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v236 = t0
 t0 = 4
 v237 = t0
@@ -888,7 +865,6 @@ s9 = stack_s9
 t0 = result
 return result
 func C_processData()
-this = a2
 stack_s2 = s2
 stack_s8 = s8
 stack_s11 = s11
@@ -940,20 +916,17 @@ error ("null pointer")
 lbl_GoodPtr_259:
 t1 = v253
 [s1 + 0] =t1
-t0 = this
-[t0 + 16] =s1
+[a2 + 16] =s1
 s2 = 0
 t1 = s2
 i= t1
 lbl_While_261:
-t0 = this
-s4 = [t0 + 16]
+s4 = [a2 + 16]
 s5 = [s4 + 0]
 t0 = i
 s6 = t0 < s5
 if0 s6 goto lbl_WhileExit_262
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v266 = t0
 s8 = 5
 t0 = i
@@ -996,8 +969,7 @@ s1 = 0
 t1 = s1
 i= t1
 lbl_While_282:
-t0 = this
-s2 = [t0 + 16]
+s2 = [a2 + 16]
 s4 = [s2 + 0]
 t0 = i
 s5 = t0 < s4
@@ -1006,14 +978,12 @@ s6 = 0
 t1 = s6
 j= t1
 lbl_While_288:
-t0 = this
-s3 = [t0 + 16]
+s3 = [a2 + 16]
 s7 = [s3 + 0]
 t0 = j
 s10 = t0 < s7
 if0 s10 goto lbl_WhileExit_289
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v295 = t0
 t0 = 4
 v296 = t0
@@ -1041,8 +1011,7 @@ t0 = v295
 t5 = t0 + t5
 t0 =[t5 + 0]
 v306 = t0
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v307 = t0
 t0 = 4
 v308 = t0
@@ -1125,7 +1094,6 @@ s1 = stack_s1
 t0 = result
 return result
 func B_processData()
-this = a2
 stack_s2 = s2
 stack_s5 = s5
 stack_s1 = s1
@@ -1177,20 +1145,17 @@ error ("null pointer")
 lbl_GoodPtr_330:
 t1 = v324
 [s1 + 0] =t1
-t0 = this
-[t0 + 16] =s1
+[a2 + 16] =s1
 s2 = 0
 t1 = s2
 i= t1
 lbl_While_332:
-t0 = this
-s4 = [t0 + 16]
+s4 = [a2 + 16]
 s5 = [s4 + 0]
 t0 = i
 s6 = t0 < s5
 if0 s6 goto lbl_WhileExit_333
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v337 = t0
 s8 = 6
 t0 = i
@@ -1233,8 +1198,7 @@ s1 = 0
 t1 = s1
 i= t1
 lbl_While_353:
-t0 = this
-s2 = [t0 + 16]
+s2 = [a2 + 16]
 s4 = [s2 + 0]
 t0 = i
 s5 = t0 < s4
@@ -1243,14 +1207,12 @@ s6 = 0
 t1 = s6
 j= t1
 lbl_While_359:
-t0 = this
-s3 = [t0 + 16]
+s3 = [a2 + 16]
 s7 = [s3 + 0]
 t0 = j
 s10 = t0 < s7
 if0 s10 goto lbl_WhileExit_360
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v366 = t0
 t0 = 4
 v367 = t0
@@ -1278,8 +1240,7 @@ t0 = v366
 t5 = t0 + t5
 t0 =[t5 + 0]
 v377 = t0
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v378 = t0
 t0 = 4
 v379 = t0
@@ -1362,7 +1323,6 @@ s1 = stack_s1
 t0 = result
 return result
 func A_processData()
-this = a2
 stack_s1 = s1
 stack_s10 = s10
 stack_s11 = s11
@@ -1414,20 +1374,17 @@ error ("null pointer")
 lbl_GoodPtr_401:
 t1 = v395
 [s1 + 0] =t1
-t0 = this
-[t0 + 16] =s1
+[a2 + 16] =s1
 s2 = 0
 t1 = s2
 i= t1
 lbl_While_403:
-t0 = this
-s4 = [t0 + 16]
+s4 = [a2 + 16]
 s5 = [s4 + 0]
 t0 = i
 s6 = t0 < s5
 if0 s6 goto lbl_WhileExit_404
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v408 = t0
 s8 = 7
 t0 = i
@@ -1470,8 +1427,7 @@ s1 = 0
 t1 = s1
 i= t1
 lbl_While_424:
-t0 = this
-s2 = [t0 + 16]
+s2 = [a2 + 16]
 s4 = [s2 + 0]
 t0 = i
 s5 = t0 < s4
@@ -1480,14 +1436,12 @@ s6 = 0
 t1 = s6
 j= t1
 lbl_While_430:
-t0 = this
-s3 = [t0 + 16]
+s3 = [a2 + 16]
 s7 = [s3 + 0]
 t0 = j
 s10 = t0 < s7
 if0 s10 goto lbl_WhileExit_431
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v437 = t0
 t0 = 4
 v438 = t0
@@ -1515,8 +1469,7 @@ t0 = v437
 t5 = t0 + t5
 t0 =[t5 + 0]
 v448 = t0
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v449 = t0
 t0 = 4
 v450 = t0

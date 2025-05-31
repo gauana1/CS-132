@@ -258,21 +258,17 @@ s2 = stack_s2
 t0 = v69
 return v69
 func E_getArray()
-t2 = a2
-t3 = [t2 + 12]
+t3 = [a2 + 12]
 v70 = t3
 t0 = v70
 return v70
 func E_setArray()
-t3 = a2
-t2 = a3
-[t3 + 12] =t2
+[a2 + 12] =a3
 t4 = 1
 v71 = t4
 t0 = v71
 return v71
 func E_calculate()
-this = a2
 stack_s5 = s5
 stack_s1 = s1
 stack_s3 = s3
@@ -313,20 +309,17 @@ error ("null pointer")
 lbl_GoodPtr_79:
 t1 = v73
 [s1 + 0] =t1
-t0 = this
-[t0 + 12] =s1
+[a2 + 12] =s1
 s2 = 0
 t1 = s2
 i= t1
 lbl_While_81:
-t0 = this
-s4 = [t0 + 12]
+s4 = [a2 + 12]
 s5 = [s4 + 0]
 t0 = i
 s6 = t0 < s5
 if0 s6 goto lbl_WhileExit_82
-t0 = this
-t0 =[t0 + 12]
+t0 =[a2 + 12]
 v86 = t0
 s8 = 2
 t0 = i
@@ -369,14 +362,12 @@ s1 = 0
 t1 = s1
 i= t1
 lbl_While_102:
-t0 = this
-s2 = [t0 + 12]
+s2 = [a2 + 12]
 s4 = [s2 + 0]
 t0 = i
 s5 = t0 < s4
 if0 s5 goto lbl_WhileExit_103
-t0 = this
-t0 =[t0 + 12]
+t0 =[a2 + 12]
 v108 = t0
 t0 = 4
 v109 = t0
@@ -439,15 +430,12 @@ s4 = stack_s4
 t0 = result
 return result
 func D_setDepArray()
-t3 = a2
-t2 = a3
-[t3 + 28] =t2
+[a2 + 28] =a3
 t4 = 1
 v122 = t4
 t0 = v122
 return v122
 func D_calculate()
-this = a2
 stack_s3 = s3
 stack_s2 = s2
 stack_s4 = s4
@@ -502,8 +490,7 @@ error ("null pointer")
 lbl_GoodPtr_130:
 t1 = v124
 [s1 + 0] =t1
-t0 = this
-[t0 + 12] =s1
+[a2 + 12] =s1
 t0 = 10
 v131 = t0
 s3 = 1
@@ -519,20 +506,17 @@ error ("null pointer")
 lbl_GoodPtr_137:
 t1 = v131
 [s5 + 0] =t1
-t0 = this
-[t0 + 28] =s5
+[a2 + 28] =s5
 s6 = 0
 t1 = s6
 i= t1
 lbl_While_139:
-t0 = this
-s8 = [t0 + 12]
+s8 = [a2 + 12]
 s9 = [s8 + 0]
 t0 = i
 s10 = t0 < s9
 if0 s10 goto lbl_WhileExit_140
-t0 = this
-t0 =[t0 + 12]
+t0 =[a2 + 12]
 v144 = t0
 t3 = 3
 t0 = i
@@ -564,11 +548,9 @@ t0 = v144
 s3 = t0 + s3
 t1 = v145
 [s3 + 0] =t1
-t0 = this
-t0 =[t0 + 28]
+t0 =[a2 + 28]
 v157 = t0
-t0 = this
-t0 =[t0 + 12]
+t0 =[a2 + 12]
 v158 = t0
 t0 = 4
 v159 = t0
@@ -633,14 +615,12 @@ s2 = 0
 t1 = s2
 i= t1
 lbl_While_183:
-t0 = this
-s6 = [t0 + 12]
+s6 = [a2 + 12]
 s5 = [s6 + 0]
 t0 = i
 s8 = t0 < s5
 if0 s8 goto lbl_WhileExit_184
-t0 = this
-t0 =[t0 + 28]
+t0 =[a2 + 28]
 v189 = t0
 t0 = 4
 v190 = t0
@@ -717,15 +697,12 @@ s11 = stack_s11
 t0 = result
 return result
 func C_setDepArray()
-t3 = a2
-t2 = a3
-[t3 + 32] =t2
+[a2 + 32] =a3
 t4 = 1
 v203 = t4
 t0 = v203
 return v203
 func C_calculate()
-this = a2
 stack_s1 = s1
 stack_s4 = s4
 stack_s9 = s9
@@ -790,8 +767,7 @@ error ("null pointer")
 lbl_GoodPtr_211:
 t1 = v205
 [s1 + 0] =t1
-t0 = this
-[t0 + 12] =s1
+[a2 + 12] =s1
 t0 = 10
 v212 = t0
 s3 = 1
@@ -807,20 +783,17 @@ error ("null pointer")
 lbl_GoodPtr_218:
 t1 = v212
 [s5 + 0] =t1
-t0 = this
-[t0 + 32] =s5
+[a2 + 32] =s5
 s6 = 0
 t1 = s6
 i= t1
 lbl_While_220:
-t0 = this
-s8 = [t0 + 12]
+s8 = [a2 + 12]
 s9 = [s8 + 0]
 t0 = i
 s10 = t0 < s9
 if0 s10 goto lbl_WhileExit_221
-t0 = this
-t0 =[t0 + 12]
+t0 =[a2 + 12]
 v225 = t0
 t3 = 4
 t0 = i
@@ -852,11 +825,9 @@ t0 = v225
 s3 = t0 + s3
 t1 = v226
 [s3 + 0] =t1
-t0 = this
-t0 =[t0 + 32]
+t0 =[a2 + 32]
 v238 = t0
-t0 = this
-t0 =[t0 + 12]
+t0 =[a2 + 12]
 v239 = t0
 t0 = 4
 v240 = t0
@@ -921,8 +892,7 @@ s2 = 0
 t1 = s2
 i= t1
 lbl_While_264:
-t0 = this
-s6 = [t0 + 12]
+s6 = [a2 + 12]
 s5 = [s6 + 0]
 t0 = i
 s8 = t0 < s5
@@ -931,14 +901,12 @@ s9 = 0
 t1 = s9
 j= t1
 lbl_While_270:
-t0 = this
-s11 = [t0 + 32]
+s11 = [a2 + 32]
 t3 = [s11 + 0]
 t0 = j
 t2 = t0 < t3
 if0 t2 goto lbl_WhileExit_271
-t0 = this
-t0 =[t0 + 12]
+t0 =[a2 + 12]
 v277 = t0
 t0 = 4
 v278 = t0
@@ -966,8 +934,7 @@ t0 = v277
 s4 = t0 + s4
 t0 =[s4 + 0]
 v288 = t0
-t0 = this
-t0 =[t0 + 32]
+t0 =[a2 + 32]
 v289 = t0
 t0 = 4
 v290 = t0
@@ -1063,15 +1030,12 @@ s1 = stack_s1
 t0 = result
 return result
 func B_setDepArray()
-t3 = a2
-t2 = a3
-[t3 + 36] =t2
+[a2 + 36] =a3
 t4 = 1
 v305 = t4
 t0 = v305
 return v305
 func B_calculate()
-this = a2
 stack_s10 = s10
 stack_s7 = s7
 stack_s6 = s6
@@ -1136,8 +1100,7 @@ error ("null pointer")
 lbl_GoodPtr_313:
 t1 = v307
 [s1 + 0] =t1
-t0 = this
-[t0 + 12] =s1
+[a2 + 12] =s1
 t0 = 10
 v314 = t0
 s3 = 1
@@ -1153,20 +1116,17 @@ error ("null pointer")
 lbl_GoodPtr_320:
 t1 = v314
 [s5 + 0] =t1
-t0 = this
-[t0 + 36] =s5
+[a2 + 36] =s5
 s6 = 0
 t1 = s6
 i= t1
 lbl_While_322:
-t0 = this
-s8 = [t0 + 12]
+s8 = [a2 + 12]
 s9 = [s8 + 0]
 t0 = i
 s10 = t0 < s9
 if0 s10 goto lbl_WhileExit_323
-t0 = this
-t0 =[t0 + 12]
+t0 =[a2 + 12]
 v327 = t0
 t3 = 5
 t0 = i
@@ -1198,11 +1158,9 @@ t0 = v327
 s3 = t0 + s3
 t1 = v328
 [s3 + 0] =t1
-t0 = this
-t0 =[t0 + 36]
+t0 =[a2 + 36]
 v340 = t0
-t0 = this
-t0 =[t0 + 12]
+t0 =[a2 + 12]
 v341 = t0
 t0 = 4
 v342 = t0
@@ -1267,8 +1225,7 @@ s2 = 0
 t1 = s2
 i= t1
 lbl_While_366:
-t0 = this
-s6 = [t0 + 12]
+s6 = [a2 + 12]
 s5 = [s6 + 0]
 t0 = i
 s8 = t0 < s5
@@ -1277,14 +1234,12 @@ s9 = 0
 t1 = s9
 j= t1
 lbl_While_372:
-t0 = this
-s11 = [t0 + 36]
+s11 = [a2 + 36]
 t3 = [s11 + 0]
 t0 = j
 t2 = t0 < t3
 if0 t2 goto lbl_WhileExit_373
-t0 = this
-t0 =[t0 + 12]
+t0 =[a2 + 12]
 v379 = t0
 t0 = 4
 v380 = t0
@@ -1312,8 +1267,7 @@ t0 = v379
 s4 = t0 + s4
 t0 =[s4 + 0]
 v390 = t0
-t0 = this
-t0 =[t0 + 36]
+t0 =[a2 + 36]
 v391 = t0
 t0 = 4
 v392 = t0
@@ -1409,15 +1363,12 @@ s9 = stack_s9
 t0 = result
 return result
 func A_setDepArray()
-t3 = a2
-t2 = a3
-[t3 + 40] =t2
+[a2 + 40] =a3
 t4 = 1
 v407 = t4
 t0 = v407
 return v407
 func A_calculate()
-this = a2
 stack_s3 = s3
 stack_s6 = s6
 stack_s2 = s2
@@ -1482,8 +1433,7 @@ error ("null pointer")
 lbl_GoodPtr_415:
 t1 = v409
 [s1 + 0] =t1
-t0 = this
-[t0 + 12] =s1
+[a2 + 12] =s1
 t0 = 10
 v416 = t0
 s3 = 1
@@ -1499,20 +1449,17 @@ error ("null pointer")
 lbl_GoodPtr_422:
 t1 = v416
 [s5 + 0] =t1
-t0 = this
-[t0 + 40] =s5
+[a2 + 40] =s5
 s6 = 0
 t1 = s6
 i= t1
 lbl_While_424:
-t0 = this
-s8 = [t0 + 12]
+s8 = [a2 + 12]
 s9 = [s8 + 0]
 t0 = i
 s10 = t0 < s9
 if0 s10 goto lbl_WhileExit_425
-t0 = this
-t0 =[t0 + 12]
+t0 =[a2 + 12]
 v429 = t0
 t3 = 6
 t0 = i
@@ -1544,11 +1491,9 @@ t0 = v429
 s3 = t0 + s3
 t1 = v430
 [s3 + 0] =t1
-t0 = this
-t0 =[t0 + 40]
+t0 =[a2 + 40]
 v442 = t0
-t0 = this
-t0 =[t0 + 12]
+t0 =[a2 + 12]
 v443 = t0
 t0 = 4
 v444 = t0
@@ -1613,8 +1558,7 @@ s2 = 0
 t1 = s2
 i= t1
 lbl_While_468:
-t0 = this
-s6 = [t0 + 12]
+s6 = [a2 + 12]
 s5 = [s6 + 0]
 t0 = i
 s8 = t0 < s5
@@ -1623,14 +1567,12 @@ s9 = 0
 t1 = s9
 j= t1
 lbl_While_474:
-t0 = this
-s11 = [t0 + 40]
+s11 = [a2 + 40]
 t3 = [s11 + 0]
 t0 = j
 t2 = t0 < t3
 if0 t2 goto lbl_WhileExit_475
-t0 = this
-t0 =[t0 + 12]
+t0 =[a2 + 12]
 v481 = t0
 t0 = 4
 v482 = t0
@@ -1658,8 +1600,7 @@ t0 = v481
 s4 = t0 + s4
 t0 =[s4 + 0]
 v492 = t0
-t0 = this
-t0 =[t0 + 40]
+t0 =[a2 + 40]
 v493 = t0
 t0 = 4
 v494 = t0

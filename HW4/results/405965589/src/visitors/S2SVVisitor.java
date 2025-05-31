@@ -4,7 +4,12 @@ import utils.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
 
 import other.LinearScan;
 import sparrow.*;
@@ -52,13 +57,13 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             String aReg;
             if(i < 6){
                 aReg = "a" + Integer.toString(i + 2);
-                if(r.registerMap.containsKey(arg)){
-                    String reg = r.registerMap.get(arg);
-                    tempStruct.instructions.add(reg + " = " + aReg);
-                } else{
-                    tempStruct.instructions.add(arg + " = " + aReg);
-                }
-                // r.registerMap.put(arg, aReg);
+                // if(r.registerMap.containsKey(arg)){
+                //     String reg = r.registerMap.get(arg);
+                //     tempStruct.instructions.add(reg + " = " + aReg);
+                // } else{
+                //     tempStruct.instructions.add(arg + " = " + aReg);
+                // }
+                r.registerMap.put(arg, aReg);
                 // tempStruct.instructions.add("print(" + aReg + ")");
             } else{
                 if(!flag){
@@ -70,7 +75,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
                 if(r.registerMap.containsKey(arg)){
                     String reg = r.registerMap.get(arg);
                     tempStruct.instructions.add(reg + " = " + arg);
-                } 
+                }
             }
         }
         funcHeader += ")";
@@ -124,6 +129,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
         } 
 
         result.instructions.add("t0 = " + n.return_id.toString());
+        // result.instructions.add("print(t0)");
         String retString = "return " + n.return_id.toString();
         result.instructions.add(retString);
         return result;
@@ -181,6 +187,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
         if(!r.registerMap.containsKey(arg1)){
             String reassignArg1 = "t0 = " + arg1;
             result.instructions.add(reassignArg1);
+            // result.instructions.add("print(t0)");
             arg1Reg = "t0";
         } else{
             arg1Reg = r.registerMap.get(arg1); 
@@ -189,6 +196,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
         if(!r.registerMap.containsKey(arg2)){
             String reassignArg2 = "t1 = " + arg2;
             result.instructions.add(reassignArg2);
+            // result.instructions.add("print(t1)");
             arg2Reg = "t1";
         } else{
             arg2Reg = r.registerMap.get(arg2);
@@ -200,6 +208,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             result.instructions.add(temp);
             String reassignLhs = lhs + " = t0";
             result.instructions.add(reassignLhs);
+            // result.instructions.add("print(t0)");
         } else{
             String lhsReg = r.registerMap.get(lhs);
             String temp = lhsReg + " = " + arg1Reg + " + " + arg2Reg; 
@@ -219,12 +228,15 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             String reassignArg1 = "t0 = " + arg1;
             result.instructions.add(reassignArg1);
             arg1Reg = "t0";
+            // result.instructions.add("print(t0)");
         } else{
             arg1Reg = r.registerMap.get(arg1);
+            // result.instructions.add("print(" +arg1Reg + ")");
         }
         if(!r.registerMap.containsKey(arg2)){
             String reassignArg2 = "t1 = " + arg2;
             result.instructions.add(reassignArg2);
+            // result.instructions.add("print(t1)");
             arg2Reg = "t1";
         } else{
             arg2Reg = r.registerMap.get(arg2);
@@ -253,6 +265,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             String reassignArg1 = "t0 = " + arg1;
             result.instructions.add(reassignArg1);
             arg1Reg = "t0";
+            // result.instructions.add("print(t0)");
         } else{
             arg1Reg = r.registerMap.get(arg1);
             // result.instructions.add("print(" + arg1Reg + ")");
@@ -261,6 +274,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             String reassignArg2 = "t1 = " + arg2;
             result.instructions.add(reassignArg2);
             arg2Reg = "t1";
+            // result.instructions.add("print(t1)");
         } else{
             arg2Reg = r.registerMap.get(arg2);
             // result.instructions.add("print(" + arg2Reg + ")");
@@ -489,35 +503,13 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
         } 
 
         //now assign arg regs(a2 - a7)
+        SparrowVStruct argAssigns = topoSortAssignArgs(n.args, regStruct, resReg);
+        result.instructions.addAll(argAssigns.instructions);
         String args = "(";
         for (int i = 0; i < n.args.size(); i++) {
-            IR.token.Identifier a = n.args.get(i);
-            String arg = a.toString();
-            String aReg = "a" + Integer.toString(i + 2);
-            if(i < 6){
-                result.instructions.add("stack_" + aReg + " = " + aReg);
-                if(r.registerMap.containsKey(arg)){
-                    String argReg = r.registerMap.get(arg);
-                    String assignAReg = aReg + " = " + argReg;
-                    result.instructions.add(assignAReg);
-                } else{
-                    String assignAReg = aReg + " = " + arg;
-                    result.instructions.add(assignAReg);
-                }
-            } else{
-                if(r.registerMap.containsKey(arg)){
-                    String argReg = r.registerMap.get(arg);
-                    if(!argReg.equals(resReg)){
-                        result.instructions.add("stack_" + aReg + " = " + argReg); //id = reg
-                    } //look into like passing the extra args and see if like the names apppear out of nowhere, need to track themn properly
-                    String assignAReg = arg + " = " + argReg;
-                    result.instructions.add(assignAReg);
-                    
-                } else{
-                    //have to save like caller saved
-                    result.instructions.add("t0 = " + arg);
-                    result.instructions.add("stack_" + aReg + " = t0"); // id = reg
-                }
+            if(i >= 6){
+                IR.token.Identifier a = n.args.get(i);
+                String arg = a.toString();
                 args += " " + arg;
             }
             
@@ -579,4 +571,122 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
         } 
         return result;
    } 
+
+    public SparrowVStruct topoSortAssignArgs(List<IR.token.Identifier> args, RegisterStruct rStruct, String resReg) {
+        SparrowVStruct result = new SparrowVStruct();
+
+        Map<String, List<String>> graph = new HashMap<String, List<String>>();
+        Set<String> nodes = new HashSet<String>();
+        Map<String, Integer> indegree = new HashMap<String, Integer>();
+
+        int numArgs = args.size();
+
+        // Step 1: Create nodes for each arg assignment
+        for (int i = 0; i < numArgs; i++) {
+            String nodeName;
+            if (i < 6) {
+                nodeName = "assign_a" + (i + 2);
+            } else {
+                nodeName = "assign_stack_a" + (i + 2);
+            }
+            nodes.add(nodeName);
+            indegree.put(nodeName, 0);
+        }
+
+        // Step 2: Build edges to represent dependencies (if arg i clobbers a register assigned to arg j)
+        for (int i = 6; i < numArgs; i++) { // only for args after 6
+            String argI = args.get(i).toString();
+            String regI = rStruct.registerMap.get(argI);
+            if (regI == null) continue;
+
+            // Check if regI matches any a2..a7 register used by first 6 args
+            for (int j = 0; j < Math.min(6, numArgs); j++) {
+                String earlyArg = args.get(j).toString();
+                String earlyReg = "a" + (j + 2);
+                if (regI.equals(earlyReg)) {
+                    // early assignment must happen before later
+                    String earlyNode = "assign_a" + (j + 2);
+                    String laterNode = "assign_stack_a" + (i + 2);
+
+                    List<String> neighbors = graph.get(earlyNode);
+                    if (neighbors == null) {
+                        neighbors = new ArrayList<String>();
+                        graph.put(earlyNode, neighbors);
+                    }
+                    neighbors.add(laterNode);
+
+                    indegree.put(laterNode, indegree.get(laterNode) + 1);
+                }
+            }
+        }
+
+        // Step 3: Topological sort (Kahn's algorithm)
+        Queue<String> queue = new LinkedList<String>();
+        for (String node : nodes) {
+            if (indegree.get(node) == 0) {
+                queue.add(node);
+            }
+        }
+
+        List<String> sorted = new ArrayList<String>();
+        while (!queue.isEmpty()) {
+            String current = queue.poll();
+            sorted.add(current);
+
+            List<String> neighbors = graph.get(current);
+            if (neighbors != null) {
+                for (String neighbor : neighbors) {
+                    indegree.put(neighbor, indegree.get(neighbor) - 1);
+                    if (indegree.get(neighbor) == 0) {
+                        queue.add(neighbor);
+                    }
+                }
+            }
+        }
+
+        if (sorted.size() != nodes.size()) {
+            throw new RuntimeException("Cycle detected in argument assignment dependencies.");
+        }
+
+        // Step 4: Generate instructions for assignments in topo order
+        for (String node : sorted) {
+            if (node.startsWith("assign_a")) {
+                // assign arg i to a-reg
+                int idx = Integer.parseInt(node.substring("assign_a".length())) - 2;
+                IR.token.Identifier arg = args.get(idx);
+                String argName = arg.toString();
+                String aReg = "a" + (idx + 2);
+                // Save the original register value to stack in case it’s clobbered later
+                result.instructions.add("stack_" + aReg + " = " + aReg);
+                // Always assign arg value or register to aReg
+                if (rStruct.registerMap.containsKey(argName)) {
+                    String fromReg = rStruct.registerMap.get(argName);
+                    result.instructions.add(aReg + " = " + fromReg);
+                } else {
+                    result.instructions.add(aReg + " = " + argName);
+                }
+
+            } else if (node.startsWith("assign_stack_a")) {
+                // assign arg i to stack_a-reg (for args > 6)
+                int idx = Integer.parseInt(node.substring("assign_stack_a".length())) - 2;
+                IR.token.Identifier arg = args.get(idx);
+                String argName = arg.toString();
+                String stackReg = "stack_a" + (idx + 2);
+                if (rStruct.registerMap.containsKey(argName)) {
+                    String fromReg = rStruct.registerMap.get(argName);
+                    if (!fromReg.equals(resReg)) {
+                        result.instructions.add(stackReg + " = " + fromReg);
+                    }
+                } else {
+                    // Use t0 as temp register
+                    result.instructions.add("t0 = " + argName);
+                    result.instructions.add(stackReg + " = t0");
+                }
+            }
+        }
+
+        return result;
+    }
+
+
 }

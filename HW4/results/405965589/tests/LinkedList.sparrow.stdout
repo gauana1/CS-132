@@ -36,41 +36,29 @@ s1 = stack_s1
 t0 = v11
 return v11
 func Element_Init()
-this = a2
-t4 = a3
-t2 = a4
-t3 = a5
-t0 = this
-[t0 + 12] =t4
-t0 = this
-[t0 + 4] =t2
-t0 = this
-[t0 + 8] =t3
+[a2 + 12] =a3
+[a2 + 4] =a4
+[a2 + 8] =a5
 t5 = 1
 v12 = t5
 t0 = v12
 return v12
 func Element_GetAge()
-t2 = a2
-t3 = [t2 + 12]
+t3 = [a2 + 12]
 v13 = t3
 t0 = v13
 return v13
 func Element_GetSalary()
-t2 = a2
-t3 = [t2 + 4]
+t3 = [a2 + 4]
 v14 = t3
 t0 = v14
 return v14
 func Element_GetMarried()
-t2 = a2
-t3 = [t2 + 8]
+t3 = [a2 + 8]
 v15 = t3
 t0 = v15
 return v15
 func Element_Equal()
-this = a2
-other = a3
 stack_s6 = s6
 stack_s1 = s1
 stack_s8 = s8
@@ -95,13 +83,11 @@ stack_s3 = s3
 t4 = 1
 t1 = t4
 ret_val= t1
-t0 = other
-if0 t0 goto lbl_NullPtr_19
-t0 = other
-t5 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_19
+t5 = [a3 + 0]
 t5 = [t5 + 8]
 stack_a2 = a2
-a2 = other
+a2 = a3
 t2 = call t5()
 a2 = stack_a2
 goto lbl_GoodPtr_20
@@ -109,19 +95,16 @@ lbl_NullPtr_19:
 error ("null pointer")
 lbl_GoodPtr_20:
 s1 = t2
-t0 = this
-if0 t0 goto lbl_NullPtr_25
-t0 = this
-s2 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_25
+s2 = [a2 + 0]
 s2 = [s2 + 20]
-t0 = this
-t3 = [t0 + 12]
+t3 = [a2 + 12]
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = s1
+a2 = a2
 stack_a4 = a4
 a4 = t3
+stack_a3 = a3
+a3 = s1
 t1 = call s2()
 v24 = t1
 a2 = stack_a2
@@ -140,13 +123,11 @@ t1 = s5
 ret_val= t1
 goto lbl_IfEnd_22
 lbl_Else_21:
-t0 = other
-if0 t0 goto lbl_NullPtr_33
-t0 = other
-s6 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_33
+s6 = [a3 + 0]
 s6 = [s6 + 0]
 stack_a2 = a2
-a2 = other
+a2 = a3
 s7 = call s6()
 a2 = stack_a2
 goto lbl_GoodPtr_34
@@ -154,19 +135,16 @@ lbl_NullPtr_33:
 error ("null pointer")
 lbl_GoodPtr_34:
 s8 = s7
-t0 = this
-if0 t0 goto lbl_NullPtr_39
-t0 = this
-s9 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_39
+s9 = [a2 + 0]
 s9 = [s9 + 20]
-t0 = this
-s10 = [t0 + 4]
+s10 = [a2 + 4]
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = s8
+a2 = a2
 stack_a4 = a4
 a4 = s10
+stack_a3 = a3
+a3 = s8
 t1 = call s9()
 v38 = t1
 a2 = stack_a2
@@ -185,16 +163,13 @@ t1 = t5
 ret_val= t1
 goto lbl_IfEnd_36
 lbl_Else_35:
-t0 = this
-t2 = [t0 + 8]
+t2 = [a2 + 8]
 if0 t2 goto lbl_Else_45
-t0 = other
-if0 t0 goto lbl_NullPtr_52
-t0 = other
-s1 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_52
+s1 = [a3 + 0]
 s1 = [s1 + 16]
 stack_a2 = a2
-a2 = other
+a2 = a3
 s2 = call s1()
 a2 = stack_a2
 goto lbl_GoodPtr_53
@@ -214,13 +189,11 @@ s6 = s5
 lbl_IfEnd_49:
 goto lbl_IfEnd_46
 lbl_Else_45:
-t0 = other
-if0 t0 goto lbl_NullPtr_62
-t0 = other
-s7 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_62
+s7 = [a3 + 0]
 s7 = [s7 + 16]
 stack_a2 = a2
-a2 = other
+a2 = a3
 s8 = call s7()
 a2 = stack_a2
 goto lbl_GoodPtr_63
@@ -263,9 +236,6 @@ s3 = stack_s3
 t0 = ret_val
 return ret_val
 func Element_Compare()
-t2 = a2
-num1 = a3
-t4 = a4
 stack_s2 = s2
 stack_s4 = s4
 stack_s3 = s3
@@ -279,18 +249,16 @@ t5 = 0
 t1 = t5
 retval= t1
 s1 = 1
-t3 = t4 + s1
+t3 = a4 + s1
 s2 = t3
-t0 = num1
-s3 = t0 < t4
+s3 = a3 < a4
 if0 s3 goto lbl_Else_69
 s4 = 0
 t1 = s4
 retval= t1
 goto lbl_IfEnd_70
 lbl_Else_69:
-t0 = num1
-s5 = t0 < s2
+s5 = a3 < s2
 s6 = 1
 s7 = s5 < s6
 if0 s7 goto lbl_Else_73
@@ -316,31 +284,21 @@ s9 = stack_s9
 t0 = retval
 return retval
 func List_Init()
-t2 = a2
 t3 = 1
-[t2 + 12] =t3
+[a2 + 12] =t3
 t4 = 1
 v81 = t4
 t0 = v81
 return v81
 func List_InitNew()
-this = a2
-t3 = a3
-t2 = a4
-t4 = a5
-t0 = this
-[t0 + 12] =t4
-t0 = this
-[t0 + 4] =t3
-t0 = this
-[t0 + 8] =t2
+[a2 + 12] =a5
+[a2 + 4] =a3
+[a2 + 8] =a4
 t5 = 1
 v82 = t5
 t0 = v82
 return v82
 func List_Insert()
-t2 = a2
-new_elem = a3
 stack_s5 = s5
 stack_s2 = s2
 stack_s7 = s7
@@ -353,7 +311,7 @@ stack_s2 = s2
 stack_s1 = s1
 stack_s4 = s4
 stack_s3 = s3
-t1 = t2
+t1 = a2
 aux03= t1
 t5 = 16
 t4 = 40
@@ -393,14 +351,14 @@ t0 = aux02
 t5 = [t0 + 0]
 t5 = [t5 + 32]
 t4 = 0
-stack_a2 = a2
-a2 = aux02
-stack_a3 = a3
-a3 = new_elem
-stack_a4 = a4
-a4 = aux03
 stack_a5 = a5
 a5 = t4
+stack_a2 = a2
+a2 = aux02
+stack_a4 = a4
+a4 = aux03
+stack_a3 = a3
+a3 = a3
 t2 = call t5()
 a2 = stack_a2
 a3 = stack_a3
@@ -426,16 +384,12 @@ s3 = stack_s3
 t0 = aux02
 return aux02
 func List_SetNext()
-t3 = a2
-t2 = a3
-[t3 + 8] =t2
+[a2 + 8] =a3
 t4 = 1
 v104 = t4
 t0 = v104
 return v104
 func List_Delete()
-this = a2
-e = a3
 stack_s5 = s5
 stack_s8 = s8
 stack_s9 = s9
@@ -465,8 +419,7 @@ stack_s4 = s4
 stack_s3 = s3
 stack_s4 = s4
 stack_s3 = s3
-t0 = this
-t1 = t0
+t1 = a2
 my_head= t1
 t4 = 0
 t1 = t4
@@ -476,18 +429,14 @@ t3 = 1
 t2 = t5 - t3
 t1 = t2
 aux04= t1
-t0 = this
-t1 = t0
+t1 = a2
 aux01= t1
-t0 = this
-t1 = t0
+t1 = a2
 prev= t1
-t0 = this
-s3 = [t0 + 12]
+s3 = [a2 + 12]
 t1 = s3
 var_end= t1
-t0 = this
-s4 = [t0 + 4]
+s4 = [a2 + 4]
 t1 = s4
 var_elem= t1
 lbl_While_111:
@@ -504,13 +453,11 @@ lbl_FullAnd_114:
 s8 = 0
 lbl_ShortAnd_115:
 if0 s8 goto lbl_WhileExit_112
-t0 = e
-if0 t0 goto lbl_NullPtr_124
-t0 = e
-s9 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_124
+s9 = [a3 + 0]
 s9 = [s9 + 12]
 stack_a2 = a2
-a2 = e
+a2 = a3
 stack_a3 = a3
 a3 = var_elem
 s10 = call s9()
@@ -689,8 +636,6 @@ s3 = stack_s3
 t0 = my_head
 return my_head
 func List_Search()
-t3 = a2
-t2 = a3
 stack_s9 = s9
 stack_s3 = s3
 stack_s10 = s10
@@ -705,12 +650,12 @@ stack_s2 = s2
 t4 = 0
 t1 = t4
 int_ret_val= t1
-t1 = t3
+t1 = a2
 aux01= t1
-t5 = [t3 + 12]
+t5 = [a2 + 12]
 t1 = t5
 var_end= t1
-s1 = [t3 + 4]
+s1 = [a2 + 4]
 t1 = s1
 var_elem= t1
 lbl_While_171:
@@ -718,18 +663,16 @@ s3 = 1
 t0 = var_end
 s2 = t0 < s3
 if0 s2 goto lbl_WhileExit_172
-if0 t2 goto lbl_NullPtr_179
-s4 = [t2 + 0]
+if0 a3 goto lbl_NullPtr_179
+s4 = [a3 + 0]
 s4 = [s4 + 12]
-stack_t2 = t2
 stack_a2 = a2
-a2 = t2
+a2 = a3
 stack_a3 = a3
 a3 = var_elem
 s5 = call s4()
 a2 = stack_a2
 a3 = stack_a3
-t2 = stack_t2
 goto lbl_GoodPtr_180
 lbl_NullPtr_179:
 error ("null pointer")
@@ -748,12 +691,10 @@ if0 t0 goto lbl_NullPtr_185
 t0 = aux01
 s9 = [t0 + 0]
 s9 = [s9 + 16]
-stack_t2 = t2
 stack_a2 = a2
 a2 = aux01
 s10 = call s9()
 a2 = stack_a2
-t2 = stack_t2
 goto lbl_GoodPtr_186
 lbl_NullPtr_185:
 error ("null pointer")
@@ -765,12 +706,10 @@ if0 t0 goto lbl_NullPtr_189
 t0 = aux01
 s11 = [t0 + 0]
 s11 = [s11 + 28]
-stack_t2 = t2
 stack_a2 = a2
 a2 = aux01
 t4 = call s11()
 a2 = stack_a2
-t2 = stack_t2
 goto lbl_GoodPtr_190
 lbl_NullPtr_189:
 error ("null pointer")
@@ -782,12 +721,10 @@ if0 t0 goto lbl_NullPtr_193
 t0 = aux01
 t5 = [t0 + 0]
 t5 = [t5 + 12]
-stack_t2 = t2
 stack_a2 = a2
 a2 = aux01
 t3 = call t5()
 a2 = stack_a2
-t2 = stack_t2
 goto lbl_GoodPtr_194
 lbl_NullPtr_193:
 error ("null pointer")
@@ -810,25 +747,21 @@ s2 = stack_s2
 t0 = int_ret_val
 return int_ret_val
 func List_GetEnd()
-t2 = a2
-t3 = [t2 + 12]
+t3 = [a2 + 12]
 v195 = t3
 t0 = v195
 return v195
 func List_GetElem()
-t2 = a2
-t3 = [t2 + 4]
+t3 = [a2 + 4]
 v196 = t3
 t0 = v196
 return v196
 func List_GetNext()
-t2 = a2
-t3 = [t2 + 8]
+t3 = [a2 + 8]
 v197 = t3
 t0 = v197
 return v197
 func List_Print()
-t2 = a2
 stack_s2 = s2
 stack_s8 = s8
 stack_s1 = s1
@@ -840,11 +773,11 @@ stack_s10 = s10
 stack_s3 = s3
 stack_s4 = s4
 stack_s9 = s9
-t3 = t2
-t4 = [t2 + 12]
+t3 = a2
+t4 = [a2 + 12]
 t1 = t4
 var_end= t1
-t5 = [t2 + 4]
+t5 = [a2 + 4]
 t1 = t5
 var_elem= t1
 lbl_While_200:
@@ -930,7 +863,6 @@ s9 = stack_s9
 t0 = v220
 return v220
 func LL_Start()
-t2 = a2
 stack_s4 = s4
 stack_s6 = s6
 stack_s5 = s5
@@ -1130,14 +1062,14 @@ s2 = 25
 t2 = 37000
 t0 = 0
 v267 = t0
-stack_a2 = a2
-a2 = el01
-stack_a3 = a3
-a3 = s2
-stack_a4 = a4
-a4 = t2
 stack_a5 = a5
 a5 = v267
+stack_a2 = a2
+a2 = el01
+stack_a4 = a4
+a4 = t2
+stack_a3 = a3
+a3 = s2
 t1 = call s4()
 v262 = t1
 a2 = stack_a2
@@ -1219,14 +1151,14 @@ s6 = 39
 s7 = 42000
 t0 = 1
 v295 = t0
-stack_a2 = a2
-a2 = el01
-stack_a3 = a3
-a3 = s6
-stack_a4 = a4
-a4 = s7
 stack_a5 = a5
 a5 = v295
+stack_a2 = a2
+a2 = el01
+stack_a4 = a4
+a4 = s7
+stack_a3 = a3
+a3 = s6
 t1 = call s5()
 v290 = t1
 a2 = stack_a2
@@ -1311,14 +1243,14 @@ s11 = 22
 s1 = 34000
 t0 = 0
 v323 = t0
-stack_a2 = a2
-a2 = el01
-stack_a3 = a3
-a3 = s11
-stack_a4 = a4
-a4 = s1
 stack_a5 = a5
 a5 = v323
+stack_a2 = a2
+a2 = el01
+stack_a4 = a4
+a4 = s1
+stack_a3 = a3
+a3 = s11
 t1 = call s10()
 v318 = t1
 a2 = stack_a2
@@ -1398,14 +1330,14 @@ s9 = 27
 s1 = 34000
 t0 = 0
 v350 = t0
-stack_a2 = a2
-a2 = el03
-stack_a3 = a3
-a3 = s9
-stack_a4 = a4
-a4 = s1
 stack_a5 = a5
 a5 = v350
+stack_a2 = a2
+a2 = el03
+stack_a4 = a4
+a4 = s1
+stack_a3 = a3
+a3 = s9
 t1 = call t4()
 v345 = t1
 a2 = stack_a2
@@ -1488,14 +1420,14 @@ s4 = 28
 t2 = 35000
 t0 = 0
 v378 = t0
-stack_a2 = a2
-a2 = el01
-stack_a3 = a3
-a3 = s4
-stack_a4 = a4
-a4 = t2
 stack_a5 = a5
 a5 = v378
+stack_a2 = a2
+a2 = el01
+stack_a4 = a4
+a4 = t2
+stack_a3 = a3
+a3 = s4
 t1 = call s3()
 v373 = t1
 a2 = stack_a2

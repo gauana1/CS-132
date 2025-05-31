@@ -44,7 +44,6 @@ s3 = stack_s3
 t0 = v10
 return v10
 func TV_Start()
-t2 = a2
 stack_s3 = s3
 stack_s4 = s4
 stack_s2 = s2
@@ -671,93 +670,73 @@ s11 = stack_s11
 t0 = v153
 return v153
 func Tree_Init()
-t2 = a2
-t3 = a3
 stack_s1 = s1
-[t2 + 24] =t3
+[a2 + 24] =a3
 t4 = 0
-[t2 + 20] =t4
+[a2 + 20] =t4
 t5 = 0
-[t2 + 8] =t5
+[a2 + 8] =t5
 s1 = 1
 v159 = s1
 s1 = stack_s1
 t0 = v159
 return v159
 func Tree_SetRight()
-t2 = a2
-t3 = a3
-[t2 + 16] =t3
+[a2 + 16] =a3
 t4 = 1
 v161 = t4
 t0 = v161
 return v161
 func Tree_SetLeft()
-t3 = a2
-t2 = a3
-[t3 + 4] =t2
+[a2 + 4] =a3
 t4 = 1
 v163 = t4
 t0 = v163
 return v163
 func Tree_GetRight()
-t2 = a2
-t3 = [t2 + 16]
+t3 = [a2 + 16]
 v164 = t3
 t0 = v164
 return v164
 func Tree_GetLeft()
-t2 = a2
-t3 = [t2 + 4]
+t3 = [a2 + 4]
 v165 = t3
 t0 = v165
 return v165
 func Tree_GetKey()
-t2 = a2
-t3 = [t2 + 24]
+t3 = [a2 + 24]
 v166 = t3
 t0 = v166
 return v166
 func Tree_SetKey()
-t2 = a2
-t3 = a3
-[t2 + 24] =t3
+[a2 + 24] =a3
 t4 = 1
 v168 = t4
 t0 = v168
 return v168
 func Tree_GetHas_Right()
-t2 = a2
-t3 = [t2 + 8]
+t3 = [a2 + 8]
 v169 = t3
 t0 = v169
 return v169
 func Tree_GetHas_Left()
-t2 = a2
-t3 = [t2 + 20]
+t3 = [a2 + 20]
 v170 = t3
 t0 = v170
 return v170
 func Tree_SetHas_Left()
-t3 = a2
-t2 = a3
-[t3 + 20] =t2
+[a2 + 20] =a3
 t4 = 1
 v172 = t4
 t0 = v172
 return v172
 func Tree_SetHas_Right()
-t3 = a2
-t2 = a3
-[t3 + 8] =t2
+[a2 + 8] =a3
 t4 = 1
 v174 = t4
 t0 = v174
 return v174
 func Tree_Compare()
-t2 = a2
-num1 = a3
-t4 = a4
 stack_s8 = s8
 stack_s10 = s10
 stack_s4 = s4
@@ -774,11 +753,10 @@ t3 = t5
 t1 = t3
 ntb= t1
 s2 = 1
-s1 = t4 + s2
+s1 = a4 + s2
 s3 = s1
 s4 = s3
-t0 = num1
-s5 = t0 < t4
+s5 = a3 < a4
 if0 s5 goto v180Else
 s6 = 0
 s7 = s6
@@ -786,8 +764,7 @@ t1 = s7
 ntb= t1
 goto v180End
 v180Else:
-t0 = num1
-s8 = t0 < s4
+s8 = a3 < s4
 s9 = 1
 s10 = s9 - s8
 if0 s10 goto v184Else
@@ -817,8 +794,6 @@ s11 = stack_s11
 t0 = ntb
 return ntb
 func Tree_Insert()
-this = a2
-v_key = a3
 stack_s4 = s4
 stack_s8 = s8
 stack_s2 = s2
@@ -946,15 +921,14 @@ t2 = [t3 + 0]
 stack_a2 = a2
 a2 = new_node
 stack_a3 = a3
-a3 = v_key
+a3 = a3
 s1 = call t2()
 a2 = stack_a2
 a3 = stack_a3
 s3 = s1
 t1 = s3
 ntb= t1
-t0 = this
-s5 = t0
+s5 = a2
 t1 = s5
 current_node= t1
 s6 = 1
@@ -979,8 +953,7 @@ s9 = call s7()
 a2 = stack_a2
 s2 = s9
 s10 = s2
-t0 = v_key
-t5 = t0 < s10
+t5 = a3 < s10
 if0 t5 goto v231Else
 t0 = current_node
 if0 t0 goto v232Error
@@ -1202,8 +1175,6 @@ s8 = stack_s8
 t0 = v276
 return v276
 func Tree_Delete()
-this = a2
-v_key = a3
 stack_s5 = s5
 stack_s1 = s1
 stack_s4 = s4
@@ -1248,12 +1219,10 @@ stack_s11 = s11
 stack_s8 = s8
 stack_s7 = s7
 stack_s6 = s6
-t0 = this
-t4 = t0
+t4 = a2
 t1 = t4
 current_node= t1
-t0 = this
-t5 = t0
+t5 = a2
 t1 = t5
 parent_node= t1
 s1 = 1
@@ -1286,8 +1255,7 @@ s8 = call s6()
 a2 = stack_a2
 s9 = s8
 s10 = s9
-t0 = v_key
-s11 = t0 < s10
+s11 = a3 < s10
 if0 s11 goto v291Else
 t0 = current_node
 if0 t0 goto v292Error
@@ -1332,8 +1300,7 @@ cont= t1
 v295End:
 goto v291End
 v291Else:
-t1 = v_key
-s6 = s10 < t1
+s6 = s10 < a3
 if0 s6 goto v304Else
 t0 = current_node
 if0 t0 goto v305Error
@@ -1422,21 +1389,19 @@ t3 = s1
 s3 = t3
 goto andResultEnd
 andResultElse:
-t0 = this
-if0 t0 goto v331Error
+if0 a2 goto v331Error
 goto v331Continue
 v331Error:
 error ("null pointer")
 v331Continue:
-t0 = this
-s2 = [t0 + 0]
+s2 = [a2 + 0]
 s5 = [s2 + 56]
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = parent_node
+a2 = a2
 stack_a4 = a4
 a4 = current_node
+stack_a3 = a3
+a3 = parent_node
 s4 = call s5()
 a2 = stack_a2
 a3 = stack_a3
@@ -1446,21 +1411,19 @@ s3 = s7
 andResultEnd:
 goto is_rootEnd
 is_rootElse:
-t0 = this
-if0 t0 goto v336Error
+if0 a2 goto v336Error
 goto v336Continue
 v336Error:
 error ("null pointer")
 v336Continue:
-t0 = this
-s10 = [t0 + 0]
+s10 = [a2 + 0]
 s6 = [s10 + 56]
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = parent_node
+a2 = a2
 stack_a4 = a4
 a4 = current_node
+stack_a3 = a3
+a3 = parent_node
 s8 = call s6()
 a2 = stack_a2
 a3 = stack_a3
@@ -1531,9 +1494,6 @@ s6 = stack_s6
 t0 = found
 return found
 func Tree_Remove()
-this = a2
-p_node = a3
-t2 = a4
 stack_s11 = s11
 stack_s10 = s10
 stack_s1 = s1
@@ -1570,111 +1530,97 @@ stack_s8 = s8
 stack_s2 = s2
 stack_s10 = s10
 stack_s7 = s7
-if0 t2 goto v347Error
+if0 a4 goto v347Error
 goto v347Continue
 v347Error:
 error ("null pointer")
 v347Continue:
-t4 = [t2 + 0]
+t4 = [a4 + 0]
 t3 = [t4 + 32]
-stack_t2 = t2
 stack_a2 = a2
-a2 = t2
+a2 = a4
 t5 = call t3()
 a2 = stack_a2
-t2 = stack_t2
 if0 t5 goto v350Else
-t0 = this
-if0 t0 goto v351Error
+if0 a2 goto v351Error
 goto v351Continue
 v351Error:
 error ("null pointer")
 v351Continue:
-t0 = this
-s1 = [t0 + 0]
+s1 = [a2 + 0]
 s2 = [s1 + 64]
-stack_t2 = t2
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = p_node
+a2 = a2
 stack_a4 = a4
-a4 = t2
+a4 = a4
+stack_a3 = a3
+a3 = a3
 s3 = call s2()
 a2 = stack_a2
 a3 = stack_a3
 a4 = stack_a4
-t2 = stack_t2
 s4 = s3
 t1 = s4
 ntb= t1
 goto v350End
 v350Else:
-if0 t2 goto v356Error
+if0 a4 goto v356Error
 goto v356Continue
 v356Error:
 error ("null pointer")
 v356Continue:
-s6 = [t2 + 0]
+s6 = [a4 + 0]
 s5 = [s6 + 28]
-stack_t2 = t2
 stack_a2 = a2
-a2 = t2
+a2 = a4
 s7 = call s5()
 a2 = stack_a2
-t2 = stack_t2
 if0 s7 goto v359Else
-t0 = this
-if0 t0 goto v360Error
+if0 a2 goto v360Error
 goto v360Continue
 v360Error:
 error ("null pointer")
 v360Continue:
-t0 = this
-s8 = [t0 + 0]
+s8 = [a2 + 0]
 s9 = [s8 + 60]
-stack_t2 = t2
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = p_node
+a2 = a2
 stack_a4 = a4
-a4 = t2
+a4 = a4
+stack_a3 = a3
+a3 = a3
 s10 = call s9()
 a2 = stack_a2
 a3 = stack_a3
 a4 = stack_a4
-t2 = stack_t2
 s11 = s10
 t1 = s11
 ntb= t1
 goto v359End
 v359Else:
-if0 t2 goto v365Error
+if0 a4 goto v365Error
 goto v365Continue
 v365Error:
 error ("null pointer")
 v365Continue:
-t4 = [t2 + 0]
+t4 = [a4 + 0]
 t3 = [t4 + 20]
 stack_a2 = a2
-a2 = t2
+a2 = a4
 t5 = call t3()
 a2 = stack_a2
 s1 = t5
 t1 = s1
 auxkey1= t1
-t0 = p_node
-if0 t0 goto v370Error
+if0 a3 goto v370Error
 goto v370Continue
 v370Error:
 error ("null pointer")
 v370Continue:
-t0 = p_node
-s3 = [t0 + 0]
+s3 = [a3 + 0]
 s4 = [s3 + 16]
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 s6 = call s4()
 a2 = stack_a2
 if0 s6 goto v374Error
@@ -1690,39 +1636,34 @@ s7 = call s2()
 a2 = stack_a2
 s8 = s7
 s9 = s8
-t0 = this
-if0 t0 goto v379Error
+if0 a2 goto v379Error
 goto v379Continue
 v379Error:
 error ("null pointer")
 v379Continue:
-t0 = this
-s10 = [t0 + 0]
+s10 = [a2 + 0]
 s11 = [s10 + 44]
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = auxkey1
+a2 = a2
 stack_a4 = a4
 a4 = s9
+stack_a3 = a3
+a3 = auxkey1
 t4 = call s11()
 a2 = stack_a2
 a3 = stack_a3
 a4 = stack_a4
 if0 t4 goto v382Else
-t0 = p_node
-if0 t0 goto v383Error
+if0 a3 goto v383Error
 goto v383Continue
 v383Error:
 error ("null pointer")
 v383Continue:
-t0 = p_node
-t2 = [t0 + 0]
+t2 = [a3 + 0]
 t3 = [t2 + 8]
-t0 = this
-t5 = [t0 + 12]
+t5 = [a2 + 12]
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = t5
 s1 = call t3()
@@ -1731,18 +1672,16 @@ a3 = stack_a3
 s3 = s1
 t1 = s3
 ntb= t1
-t0 = p_node
-if0 t0 goto v389Error
+if0 a3 goto v389Error
 goto v389Continue
 v389Error:
 error ("null pointer")
 v389Continue:
-t0 = p_node
-s4 = [t0 + 0]
+s4 = [a3 + 0]
 s5 = [s4 + 36]
 s6 = 0
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = s6
 s2 = call s5()
@@ -1753,19 +1692,16 @@ t1 = s7
 ntb= t1
 goto v382End
 v382Else:
-t0 = p_node
-if0 t0 goto v395Error
+if0 a3 goto v395Error
 goto v395Continue
 v395Error:
 error ("null pointer")
 v395Continue:
-t0 = p_node
-s8 = [t0 + 0]
+s8 = [a3 + 0]
 s10 = [s8 + 4]
-t0 = this
-s9 = [t0 + 12]
+s9 = [a2 + 12]
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = s9
 s11 = call s10()
@@ -1774,18 +1710,16 @@ a3 = stack_a3
 t4 = s11
 t1 = t4
 ntb= t1
-t0 = p_node
-if0 t0 goto v401Error
+if0 a3 goto v401Error
 goto v401Continue
 v401Error:
 error ("null pointer")
 v401Continue:
-t0 = p_node
-t2 = [t0 + 0]
+t2 = [a3 + 0]
 t3 = [t2 + 40]
 t5 = 0
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = t5
 s1 = call t3()
@@ -1838,9 +1772,6 @@ s7 = stack_s7
 t0 = v407
 return v407
 func Tree_RemoveRight()
-this = a2
-p_node = a3
-c_node = a4
 stack_s2 = s2
 stack_s10 = s10
 stack_s6 = s6
@@ -1862,41 +1793,35 @@ stack_s10 = s10
 stack_s7 = s7
 stack_s8 = s8
 loopv408:
-t0 = c_node
-if0 t0 goto v409Error
+if0 a4 goto v409Error
 goto v409Continue
 v409Error:
 error ("null pointer")
 v409Continue:
-t0 = c_node
-t4 = [t0 + 0]
+t4 = [a4 + 0]
 t3 = [t4 + 28]
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 t5 = call t3()
 a2 = stack_a2
 if0 t5 goto loopv408End
-t0 = c_node
-if0 t0 goto v413Error
+if0 a4 goto v413Error
 goto v413Continue
 v413Error:
 error ("null pointer")
 v413Continue:
-t0 = c_node
-s1 = [t0 + 0]
+s1 = [a4 + 0]
 t0 =[s1 + 24]
 v415 = t0
-t0 = c_node
-if0 t0 goto v416Error
+if0 a4 goto v416Error
 goto v416Continue
 v416Error:
 error ("null pointer")
 v416Continue:
-t0 = c_node
-s3 = [t0 + 0]
+s3 = [a4 + 0]
 t2 = [s3 + 12]
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 s4 = call t2()
 a2 = stack_a2
 if0 s4 goto v420Error
@@ -1911,7 +1836,7 @@ a2 = s4
 s6 = call s2()
 a2 = stack_a2
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 stack_a3 = a3
 a3 = s6
 t0 = v415
@@ -1921,41 +1846,33 @@ a3 = stack_a3
 s8 = s7
 t1 = s8
 ntb= t1
-t0 = c_node
-s10 = t0
-t1 = s10
-p_node= t1
-t0 = c_node
-if0 t0 goto v427Error
+s10 = a4
+a3 = s10
+if0 a4 goto v427Error
 goto v427Continue
 v427Error:
 error ("null pointer")
 v427Continue:
-t0 = c_node
-s11 = [t0 + 0]
+s11 = [a4 + 0]
 t4 = [s11 + 12]
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 t3 = call t4()
 a2 = stack_a2
 t5 = t3
-t1 = t5
-c_node= t1
+a4 = t5
 goto loopv408
 loopv408End:
-t0 = p_node
-if0 t0 goto v432Error
+if0 a3 goto v432Error
 goto v432Continue
 v432Error:
 error ("null pointer")
 v432Continue:
-t0 = p_node
-s1 = [t0 + 0]
+s1 = [a3 + 0]
 s3 = [s1 + 4]
-t0 = this
-t2 = [t0 + 12]
+t2 = [a2 + 12]
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = t2
 s9 = call s3()
@@ -1964,18 +1881,16 @@ a3 = stack_a3
 s5 = s9
 t1 = s5
 ntb= t1
-t0 = p_node
-if0 t0 goto v438Error
+if0 a3 goto v438Error
 goto v438Continue
 v438Error:
 error ("null pointer")
 v438Continue:
-t0 = p_node
-s4 = [t0 + 0]
+s4 = [a3 + 0]
 s2 = [s4 + 40]
 s6 = 0
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = s6
 s7 = call s2()
@@ -2009,9 +1924,6 @@ s8 = stack_s8
 t0 = v444
 return v444
 func Tree_RemoveLeft()
-this = a2
-p_node = a3
-c_node = a4
 stack_s8 = s8
 stack_s10 = s10
 stack_s11 = s11
@@ -2033,41 +1945,35 @@ stack_s9 = s9
 stack_s5 = s5
 stack_s3 = s3
 loopv445:
-t0 = c_node
-if0 t0 goto v446Error
+if0 a4 goto v446Error
 goto v446Continue
 v446Error:
 error ("null pointer")
 v446Continue:
-t0 = c_node
-t4 = [t0 + 0]
+t4 = [a4 + 0]
 t3 = [t4 + 32]
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 t5 = call t3()
 a2 = stack_a2
 if0 t5 goto loopv445End
-t0 = c_node
-if0 t0 goto v450Error
+if0 a4 goto v450Error
 goto v450Continue
 v450Error:
 error ("null pointer")
 v450Continue:
-t0 = c_node
-s1 = [t0 + 0]
+s1 = [a4 + 0]
 t0 =[s1 + 24]
 v452 = t0
-t0 = c_node
-if0 t0 goto v453Error
+if0 a4 goto v453Error
 goto v453Continue
 v453Error:
 error ("null pointer")
 v453Continue:
-t0 = c_node
-s3 = [t0 + 0]
+s3 = [a4 + 0]
 t2 = [s3 + 16]
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 s4 = call t2()
 a2 = stack_a2
 if0 s4 goto v457Error
@@ -2082,7 +1988,7 @@ a2 = s4
 s6 = call s2()
 a2 = stack_a2
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 stack_a3 = a3
 a3 = s6
 t0 = v452
@@ -2092,41 +1998,33 @@ a3 = stack_a3
 s8 = s7
 t1 = s8
 ntb= t1
-t0 = c_node
-s10 = t0
-t1 = s10
-p_node= t1
-t0 = c_node
-if0 t0 goto v464Error
+s10 = a4
+a3 = s10
+if0 a4 goto v464Error
 goto v464Continue
 v464Error:
 error ("null pointer")
 v464Continue:
-t0 = c_node
-s11 = [t0 + 0]
+s11 = [a4 + 0]
 t4 = [s11 + 16]
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 t3 = call t4()
 a2 = stack_a2
 t5 = t3
-t1 = t5
-c_node= t1
+a4 = t5
 goto loopv445
 loopv445End:
-t0 = p_node
-if0 t0 goto v469Error
+if0 a3 goto v469Error
 goto v469Continue
 v469Error:
 error ("null pointer")
 v469Continue:
-t0 = p_node
-s1 = [t0 + 0]
+s1 = [a3 + 0]
 s3 = [s1 + 8]
-t0 = this
-t2 = [t0 + 12]
+t2 = [a2 + 12]
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = t2
 s9 = call s3()
@@ -2135,18 +2033,16 @@ a3 = stack_a3
 s5 = s9
 t1 = s5
 ntb= t1
-t0 = p_node
-if0 t0 goto v475Error
+if0 a3 goto v475Error
 goto v475Continue
 v475Error:
 error ("null pointer")
 v475Continue:
-t0 = p_node
-s4 = [t0 + 0]
+s4 = [a3 + 0]
 s2 = [s4 + 36]
 s6 = 0
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = s6
 s7 = call s2()
@@ -2180,8 +2076,6 @@ s3 = stack_s3
 t0 = v481
 return v481
 func Tree_Search()
-t2 = a2
-v_key = a3
 stack_s5 = s5
 stack_s2 = s2
 stack_s2 = s2
@@ -2206,7 +2100,7 @@ stack_s3 = s3
 stack_s2 = s2
 stack_s1 = s1
 stack_s7 = s7
-t4 = t2
+t4 = a2
 t1 = t4
 current_node= t1
 s1 = 1
@@ -2235,8 +2129,7 @@ s6 = call s4()
 a2 = stack_a2
 s7 = s6
 s8 = s7
-t0 = v_key
-s9 = t0 < s8
+s9 = a3 < s8
 if0 s9 goto v493Else
 t0 = current_node
 if0 t0 goto v494Error
@@ -2277,8 +2170,7 @@ cont= t1
 v497End:
 goto v493End
 v493Else:
-t1 = v_key
-s5 = s8 < t1
+s5 = s8 < a3
 if0 s5 goto v505Else
 t0 = current_node
 if0 t0 goto v506Error
@@ -2358,23 +2250,22 @@ s7 = stack_s7
 t0 = ifound
 return ifound
 func Tree_Print()
-t2 = a2
 stack_s4 = s4
 stack_s1 = s1
 stack_s2 = s2
 stack_s3 = s3
-t3 = t2
+t3 = a2
 t4 = t3
-if0 t2 goto v522Error
+if0 a2 goto v522Error
 goto v522Continue
 v522Error:
 error ("null pointer")
 v522Continue:
-t5 = [t2 + 0]
+t5 = [a2 + 0]
 t0 =[t5 + 76]
 v524 = t0
 stack_a2 = a2
-a2 = t2
+a2 = a2
 stack_a3 = a3
 a3 = t4
 t0 = v524
@@ -2392,8 +2283,6 @@ s3 = stack_s3
 t0 = v527
 return v527
 func Tree_RecPrint()
-this = a2
-node = a3
 stack_s10 = s10
 stack_s8 = s8
 stack_s9 = s9
@@ -2414,44 +2303,38 @@ stack_s2 = s2
 stack_s3 = s3
 stack_s1 = s1
 stack_s11 = s11
-t0 = node
-if0 t0 goto v528Error
+if0 a3 goto v528Error
 goto v528Continue
 v528Error:
 error ("null pointer")
 v528Continue:
-t0 = node
-t4 = [t0 + 0]
+t4 = [a3 + 0]
 t2 = [t4 + 32]
 stack_a2 = a2
-a2 = node
+a2 = a3
 t5 = call t2()
 a2 = stack_a2
 if0 t5 goto v531Else
-t0 = this
-if0 t0 goto v532Error
+if0 a2 goto v532Error
 goto v532Continue
 v532Error:
 error ("null pointer")
 v532Continue:
-t0 = this
-s1 = [t0 + 0]
+s1 = [a2 + 0]
 s2 = [s1 + 76]
-t0 = node
-if0 t0 goto v535Error
+if0 a3 goto v535Error
 goto v535Continue
 v535Error:
 error ("null pointer")
 v535Continue:
-t0 = node
-s3 = [t0 + 0]
+s3 = [a3 + 0]
 t3 = [s3 + 16]
 stack_a2 = a2
-a2 = node
+a2 = a3
 s4 = call t3()
 a2 = stack_a2
 stack_a2 = a2
-a2 = this
+a2 = a2
 stack_a3 = a3
 a3 = s4
 s5 = call s2()
@@ -2467,60 +2350,52 @@ s9 = s8
 t1 = s9
 ntb= t1
 v531End:
-t0 = node
-if0 t0 goto v543Error
+if0 a3 goto v543Error
 goto v543Continue
 v543Error:
 error ("null pointer")
 v543Continue:
-t0 = node
-s10 = [t0 + 0]
+s10 = [a3 + 0]
 s11 = [s10 + 20]
 stack_a2 = a2
-a2 = node
+a2 = a3
 t4 = call s11()
 a2 = stack_a2
 print (t4)
-t0 = node
-if0 t0 goto v547Error
+if0 a3 goto v547Error
 goto v547Continue
 v547Error:
 error ("null pointer")
 v547Continue:
-t0 = node
-t2 = [t0 + 0]
+t2 = [a3 + 0]
 t5 = [t2 + 28]
 stack_a2 = a2
-a2 = node
+a2 = a3
 s1 = call t5()
 a2 = stack_a2
 if0 s1 goto v550Else
-t0 = this
-if0 t0 goto v551Error
+if0 a2 goto v551Error
 goto v551Continue
 v551Error:
 error ("null pointer")
 v551Continue:
-t0 = this
-s3 = [t0 + 0]
+s3 = [a2 + 0]
 t3 = [s3 + 76]
-t0 = node
-if0 t0 goto v554Error
+if0 a3 goto v554Error
 goto v554Continue
 v554Error:
 error ("null pointer")
 v554Continue:
-t0 = node
-s2 = [t0 + 0]
+s2 = [a3 + 0]
 s7 = [s2 + 12]
 stack_t3 = t3
 stack_a2 = a2
-a2 = node
+a2 = a3
 s4 = call s7()
 a2 = stack_a2
 t3 = stack_t3
 stack_a2 = a2
-a2 = this
+a2 = a2
 stack_a3 = a3
 a3 = s4
 s5 = call t3()
@@ -2561,26 +2436,24 @@ s11 = stack_s11
 t0 = v562
 return v562
 func Tree_accept()
-t3 = a2
-t2 = a3
 stack_s3 = s3
 stack_s4 = s4
 stack_s1 = s1
 stack_s2 = s2
 t4 = 333
 print (t4)
-if0 t2 goto v564Error
+if0 a3 goto v564Error
 goto v564Continue
 v564Error:
 error ("null pointer")
 v564Continue:
-t5 = [t2 + 0]
+t5 = [a3 + 0]
 t0 =[t5 + 0]
 v566 = t0
 stack_a2 = a2
-a2 = t2
+a2 = a3
 stack_a3 = a3
-a3 = t3
+a3 = a2
 t0 = v566
 s1 = call t0()
 a2 = stack_a2
@@ -2596,8 +2469,6 @@ s2 = stack_s2
 t0 = v569
 return v569
 func Visitor_visit()
-this = a2
-n = a3
 stack_s11 = s11
 stack_s9 = s9
 stack_s10 = s10
@@ -2617,37 +2488,31 @@ stack_s9 = s9
 stack_s6 = s6
 stack_s7 = s7
 stack_s4 = s4
-t0 = n
-if0 t0 goto v570Error
+if0 a3 goto v570Error
 goto v570Continue
 v570Error:
 error ("null pointer")
 v570Continue:
-t0 = n
-t4 = [t0 + 0]
+t4 = [a3 + 0]
 t2 = [t4 + 28]
 stack_a2 = a2
-a2 = n
+a2 = a3
 t5 = call t2()
 a2 = stack_a2
 if0 t5 goto v573Else
-t0 = n
-if0 t0 goto v574Error
+if0 a3 goto v574Error
 goto v574Continue
 v574Error:
 error ("null pointer")
 v574Continue:
-t0 = n
-s1 = [t0 + 0]
+s1 = [a3 + 0]
 s2 = [s1 + 12]
 stack_a2 = a2
-a2 = n
+a2 = a3
 s3 = call s2()
 a2 = stack_a2
-t0 = this
-[t0 + 4] =s3
-t0 = this
-s4 = [t0 + 4]
+[a2 + 4] =s3
+s4 = [a2 + 4]
 if0 s4 goto v580Error
 goto v580Continue
 v580Error:
@@ -2658,7 +2523,7 @@ t3 = [s5 + 80]
 stack_a2 = a2
 a2 = s4
 stack_a3 = a3
-a3 = this
+a3 = a2
 s6 = call t3()
 a2 = stack_a2
 a3 = stack_a3
@@ -2672,37 +2537,31 @@ s10 = s9
 t1 = s10
 nti= t1
 v573End:
-t0 = n
-if0 t0 goto v587Error
+if0 a3 goto v587Error
 goto v587Continue
 v587Error:
 error ("null pointer")
 v587Continue:
-t0 = n
-s11 = [t0 + 0]
+s11 = [a3 + 0]
 t4 = [s11 + 32]
 stack_a2 = a2
-a2 = n
+a2 = a3
 t2 = call t4()
 a2 = stack_a2
 if0 t2 goto v590Else
-t0 = n
-if0 t0 goto v591Error
+if0 a3 goto v591Error
 goto v591Continue
 v591Error:
 error ("null pointer")
 v591Continue:
-t0 = n
-t5 = [t0 + 0]
+t5 = [a3 + 0]
 s1 = [t5 + 16]
 stack_a2 = a2
-a2 = n
+a2 = a3
 s2 = call s1()
 a2 = stack_a2
-t0 = this
-[t0 + 8] =s2
-t0 = this
-s3 = [t0 + 8]
+[a2 + 8] =s2
+s3 = [a2 + 8]
 if0 s3 goto v597Error
 goto v597Continue
 v597Error:
@@ -2713,7 +2572,7 @@ s8 = [s5 + 80]
 stack_a2 = a2
 a2 = s3
 stack_a3 = a3
-a3 = this
+a3 = a2
 s4 = call s8()
 a2 = stack_a2
 a3 = stack_a3
@@ -2751,8 +2610,6 @@ s4 = stack_s4
 t0 = v604
 return v604
 func MyVisitor_visit()
-this = a2
-n = a3
 stack_s9 = s9
 stack_s11 = s11
 stack_s10 = s10
@@ -2774,37 +2631,31 @@ stack_s5 = s5
 stack_s1 = s1
 stack_s2 = s2
 stack_s11 = s11
-t0 = n
-if0 t0 goto v605Error
+if0 a3 goto v605Error
 goto v605Continue
 v605Error:
 error ("null pointer")
 v605Continue:
-t0 = n
-t4 = [t0 + 0]
+t4 = [a3 + 0]
 t2 = [t4 + 28]
 stack_a2 = a2
-a2 = n
+a2 = a3
 t5 = call t2()
 a2 = stack_a2
 if0 t5 goto v608Else
-t0 = n
-if0 t0 goto v609Error
+if0 a3 goto v609Error
 goto v609Continue
 v609Error:
 error ("null pointer")
 v609Continue:
-t0 = n
-s1 = [t0 + 0]
+s1 = [a3 + 0]
 s2 = [s1 + 12]
 stack_a2 = a2
-a2 = n
+a2 = a3
 s3 = call s2()
 a2 = stack_a2
-t0 = this
-[t0 + 4] =s3
-t0 = this
-s4 = [t0 + 4]
+[a2 + 4] =s3
+s4 = [a2 + 4]
 if0 s4 goto v615Error
 goto v615Continue
 v615Error:
@@ -2815,7 +2666,7 @@ t3 = [s5 + 80]
 stack_a2 = a2
 a2 = s4
 stack_a3 = a3
-a3 = this
+a3 = a2
 s6 = call t3()
 a2 = stack_a2
 a3 = stack_a3
@@ -2829,51 +2680,43 @@ s10 = s9
 t1 = s10
 nti= t1
 v608End:
-t0 = n
-if0 t0 goto v622Error
+if0 a3 goto v622Error
 goto v622Continue
 v622Error:
 error ("null pointer")
 v622Continue:
-t0 = n
-s11 = [t0 + 0]
+s11 = [a3 + 0]
 t4 = [s11 + 20]
 stack_a2 = a2
-a2 = n
+a2 = a3
 t2 = call t4()
 a2 = stack_a2
 print (t2)
-t0 = n
-if0 t0 goto v626Error
+if0 a3 goto v626Error
 goto v626Continue
 v626Error:
 error ("null pointer")
 v626Continue:
-t0 = n
-t5 = [t0 + 0]
+t5 = [a3 + 0]
 s1 = [t5 + 32]
 stack_a2 = a2
-a2 = n
+a2 = a3
 s2 = call s1()
 a2 = stack_a2
 if0 s2 goto v629Else
-t0 = n
-if0 t0 goto v630Error
+if0 a3 goto v630Error
 goto v630Continue
 v630Error:
 error ("null pointer")
 v630Continue:
-t0 = n
-s3 = [t0 + 0]
+s3 = [a3 + 0]
 s5 = [s3 + 16]
 stack_a2 = a2
-a2 = n
+a2 = a3
 s4 = call s5()
 a2 = stack_a2
-t0 = this
-[t0 + 8] =s4
-t0 = this
-t3 = [t0 + 8]
+[a2 + 8] =s4
+t3 = [a2 + 8]
 if0 t3 goto v636Error
 goto v636Continue
 v636Error:
@@ -2884,7 +2727,7 @@ s8 = [s6 + 80]
 stack_a2 = a2
 a2 = t3
 stack_a3 = a3
-a3 = this
+a3 = a2
 s7 = call s8()
 a2 = stack_a2
 a3 = stack_a3

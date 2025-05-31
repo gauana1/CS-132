@@ -54,8 +54,6 @@ s2 = stack_s2
 t0 = v15
 return v15
 func BBS_Start()
-this = a2
-t2 = a3
 stack_s7 = s7
 stack_s2 = s2
 stack_s1 = s1
@@ -64,15 +62,13 @@ stack_s4 = s4
 stack_s3 = s3
 stack_s5 = s5
 stack_s6 = s6
-t0 = this
-if0 t0 goto lbl_NullPtr_18
-t0 = this
-t4 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_18
+t4 = [a2 + 0]
 t4 = [t4 + 4]
 stack_a2 = a2
-a2 = this
+a2 = a2
 stack_a3 = a3
-a3 = t2
+a3 = a3
 t3 = call t4()
 a2 = stack_a2
 a3 = stack_a3
@@ -81,14 +77,12 @@ lbl_NullPtr_18:
 error ("null pointer")
 lbl_GoodPtr_19:
 t5 = t3
-t0 = this
-if0 t0 goto lbl_NullPtr_22
-t0 = this
-s1 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_22
+s1 = [a2 + 0]
 s1 = [s1 + 0]
 stack_t5 = t5
 stack_a2 = a2
-a2 = this
+a2 = a2
 s2 = call s1()
 a2 = stack_a2
 t5 = stack_t5
@@ -99,14 +93,12 @@ lbl_GoodPtr_23:
 t5 = s2
 s3 = 99999
 print (s3)
-t0 = this
-if0 t0 goto lbl_NullPtr_27
-t0 = this
-s4 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_27
+s4 = [a2 + 0]
 s4 = [s4 + 12]
 stack_t5 = t5
 stack_a2 = a2
-a2 = this
+a2 = a2
 s5 = call s4()
 a2 = stack_a2
 t5 = stack_t5
@@ -115,14 +107,12 @@ lbl_NullPtr_27:
 error ("null pointer")
 lbl_GoodPtr_28:
 t5 = s5
-t0 = this
-if0 t0 goto lbl_NullPtr_31
-t0 = this
-s6 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_31
+s6 = [a2 + 0]
 s6 = [s6 + 0]
 stack_t5 = t5
 stack_a2 = a2
-a2 = this
+a2 = a2
 s7 = call s6()
 a2 = stack_a2
 t5 = stack_t5
@@ -144,7 +134,6 @@ s6 = stack_s6
 t0 = v33
 return v33
 func BBS_Sort()
-this = a2
 stack_s7 = s7
 stack_s11 = s11
 stack_s8 = s8
@@ -194,8 +183,7 @@ stack_s3 = s3
 stack_s8 = s8
 stack_s10 = s10
 stack_s7 = s7
-t0 = this
-t3 = [t0 + 8]
+t3 = [a2 + 8]
 t4 = 1
 t2 = t3 - t4
 t1 = t2
@@ -225,8 +213,7 @@ t0 = j
 s10 = t0 - s9
 t1 = s10
 aux07= t1
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v51 = t0
 t0 = 4
 v52 = t0
@@ -255,8 +242,7 @@ s2 = t0 + s2
 t5 = [s2 + 0]
 t1 = t5
 aux04= t1
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v63 = t0
 t0 = 4
 v64 = t0
@@ -292,8 +278,7 @@ t0 = j
 t2 = t0 - s11
 t1 = t2
 aux06= t1
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v80 = t0
 t0 = 4
 v81 = t0
@@ -322,11 +307,9 @@ s7 = t0 + s7
 s8 = [s7 + 0]
 t1 = s8
 t= t1
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v92 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v93 = t0
 t0 = 4
 v94 = t0
@@ -380,8 +363,7 @@ t0 = v92
 s7 = t0 + s7
 t1 = v104
 [s7 + 0] =t1
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v115 = t0
 t0 = 4
 v116 = t0
@@ -482,7 +464,6 @@ s7 = stack_s7
 t0 = v131
 return v131
 func BBS_Print()
-this = a2
 stack_s8 = s8
 stack_s1 = s1
 stack_s10 = s10
@@ -497,13 +478,11 @@ t3 = 0
 t1 = t3
 j= t1
 lbl_While_133:
-t0 = this
-t5 = [t0 + 8]
+t5 = [a2 + 8]
 t0 = j
 t4 = t0 < t5
 if0 t4 goto lbl_WhileExit_134
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v137 = t0
 t0 = 4
 v138 = t0
@@ -553,8 +532,6 @@ s9 = stack_s9
 t0 = v151
 return v151
 func BBS_Init()
-this = a2
-sz = a3
 stack_s8 = s8
 stack_s4 = s4
 stack_s3 = s3
@@ -610,13 +587,10 @@ stack_s6 = s6
 stack_s10 = s10
 stack_s11 = s11
 stack_s9 = s9
-t0 = this
-t1 = sz
-[t0 + 8] =t1
+[a2 + 8] =a3
 t4 = 1
 t3 = 4
-t0 = sz
-t2 = t0 + t4
+t2 = a3 + t4
 t2 = t2 * t3
 t5 = alloc(t2)
 if0 t5 goto lbl_NullPtr_156
@@ -624,14 +598,11 @@ goto lbl_GoodPtr_157
 lbl_NullPtr_156:
 error ("null pointer")
 lbl_GoodPtr_157:
-t1 = sz
-[t5 + 0] =t1
-t0 = this
-[t0 + 4] =t5
+[t5 + 0] =a3
+[a2 + 4] =t5
 t0 = 0
 v158 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v159 = t0
 t0 = 20
 v160 = t0
@@ -663,8 +634,7 @@ t1 = v160
 [s7 + 0] =t1
 t0 = 1
 v171 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v172 = t0
 t0 = 7
 v173 = t0
@@ -696,8 +666,7 @@ t1 = v173
 [t2 + 0] =t1
 t0 = 2
 v184 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v185 = t0
 t0 = 12
 v186 = t0
@@ -729,8 +698,7 @@ t1 = v186
 [s6 + 0] =t1
 t0 = 3
 v197 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v198 = t0
 t0 = 18
 v199 = t0
@@ -762,8 +730,7 @@ t1 = v199
 [t3 + 0] =t1
 t0 = 4
 v210 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v211 = t0
 t0 = 2
 v212 = t0
@@ -795,8 +762,7 @@ t1 = v212
 [s5 + 0] =t1
 t0 = 5
 v223 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v224 = t0
 t0 = 11
 v225 = t0
@@ -828,8 +794,7 @@ t1 = v225
 [t4 + 0] =t1
 t0 = 6
 v236 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v237 = t0
 t0 = 6
 v238 = t0
@@ -861,8 +826,7 @@ t1 = v238
 [s1 + 0] =t1
 t0 = 7
 v249 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v250 = t0
 t0 = 9
 v251 = t0
@@ -894,8 +858,7 @@ t1 = v251
 [s8 + 0] =t1
 t0 = 8
 v262 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v263 = t0
 t0 = 19
 v264 = t0
@@ -927,8 +890,7 @@ t1 = v264
 [t5 + 0] =t1
 t0 = 9
 v275 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v276 = t0
 t0 = 5
 v277 = t0

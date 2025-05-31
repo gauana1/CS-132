@@ -36,7 +36,6 @@ s1 = stack_s1
 t0 = v11
 return v11
 func BT_Start()
-t2 = a2
 stack_s4 = s4
 stack_s5 = s5
 stack_s2 = s2
@@ -551,93 +550,73 @@ s3 = stack_s3
 t0 = v130
 return v130
 func Tree_Init()
-t2 = a2
-t3 = a3
 stack_s1 = s1
-[t2 + 24] =t3
+[a2 + 24] =a3
 t4 = 0
-[t2 + 20] =t4
+[a2 + 20] =t4
 t5 = 0
-[t2 + 8] =t5
+[a2 + 8] =t5
 s1 = 1
 v133 = s1
 s1 = stack_s1
 t0 = v133
 return v133
 func Tree_SetRight()
-t2 = a2
-t3 = a3
-[t2 + 16] =t3
+[a2 + 16] =a3
 t4 = 1
 v134 = t4
 t0 = v134
 return v134
 func Tree_SetLeft()
-t3 = a2
-t2 = a3
-[t3 + 4] =t2
+[a2 + 4] =a3
 t4 = 1
 v135 = t4
 t0 = v135
 return v135
 func Tree_GetRight()
-t2 = a2
-t3 = [t2 + 16]
+t3 = [a2 + 16]
 v136 = t3
 t0 = v136
 return v136
 func Tree_GetLeft()
-t2 = a2
-t3 = [t2 + 4]
+t3 = [a2 + 4]
 v137 = t3
 t0 = v137
 return v137
 func Tree_GetKey()
-t2 = a2
-t3 = [t2 + 24]
+t3 = [a2 + 24]
 v138 = t3
 t0 = v138
 return v138
 func Tree_SetKey()
-t2 = a2
-t3 = a3
-[t2 + 24] =t3
+[a2 + 24] =a3
 t4 = 1
 v139 = t4
 t0 = v139
 return v139
 func Tree_GetHas_Right()
-t2 = a2
-t3 = [t2 + 8]
+t3 = [a2 + 8]
 v140 = t3
 t0 = v140
 return v140
 func Tree_GetHas_Left()
-t2 = a2
-t3 = [t2 + 20]
+t3 = [a2 + 20]
 v141 = t3
 t0 = v141
 return v141
 func Tree_SetHas_Left()
-t3 = a2
-t2 = a3
-[t3 + 20] =t2
+[a2 + 20] =a3
 t4 = 1
 v142 = t4
 t0 = v142
 return v142
 func Tree_SetHas_Right()
-t3 = a2
-t2 = a3
-[t3 + 8] =t2
+[a2 + 8] =a3
 t4 = 1
 v143 = t4
 t0 = v143
 return v143
 func Tree_Compare()
-t2 = a2
-num1 = a3
-t4 = a4
 stack_s4 = s4
 stack_s2 = s2
 stack_s8 = s8
@@ -651,18 +630,16 @@ t5 = 0
 t1 = t5
 ntb= t1
 s1 = 1
-t3 = t4 + s1
+t3 = a4 + s1
 s2 = t3
-t0 = num1
-s3 = t0 < t4
+s3 = a3 < a4
 if0 s3 goto lbl_Else_147
 s4 = 0
 t1 = s4
 ntb= t1
 goto lbl_IfEnd_148
 lbl_Else_147:
-t0 = num1
-s5 = t0 < s2
+s5 = a3 < s2
 s6 = 1
 s7 = s5 < s6
 if0 s7 goto lbl_Else_151
@@ -688,8 +665,6 @@ s3 = stack_s3
 t0 = ntb
 return ntb
 func Tree_Insert()
-this = a2
-v_key = a3
 stack_s9 = s9
 stack_s7 = s7
 stack_s6 = s6
@@ -789,7 +764,7 @@ s9 = [s9 + 44]
 stack_a2 = a2
 a2 = new_node
 stack_a3 = a3
-a3 = v_key
+a3 = a3
 s10 = call s9()
 a2 = stack_a2
 a3 = stack_a3
@@ -799,8 +774,7 @@ error ("null pointer")
 lbl_GoodPtr_187:
 t1 = s10
 ntb= t1
-t0 = this
-t1 = t0
+t1 = a2
 current_node= t1
 t4 = 1
 t1 = t4
@@ -822,8 +796,7 @@ lbl_NullPtr_193:
 error ("null pointer")
 lbl_GoodPtr_194:
 s1 = s11
-t0 = v_key
-s2 = t0 < s1
+s2 = a3 < s1
 if0 s2 goto lbl_Else_195
 t0 = current_node
 if0 t0 goto lbl_NullPtr_202
@@ -1018,8 +991,6 @@ s3 = stack_s3
 t0 = v238
 return v238
 func Tree_Delete()
-this = a2
-v_key = a3
 stack_s8 = s8
 stack_s2 = s2
 stack_s3 = s3
@@ -1045,11 +1016,9 @@ stack_s9 = s9
 stack_s11 = s11
 stack_s4 = s4
 stack_s2 = s2
-t0 = this
-t1 = t0
+t1 = a2
 current_node= t1
-t0 = this
-t1 = t0
+t1 = a2
 parent_node= t1
 t4 = 1
 t1 = t4
@@ -1077,8 +1046,7 @@ lbl_NullPtr_246:
 error ("null pointer")
 lbl_GoodPtr_247:
 s3 = t3
-t0 = v_key
-s4 = t0 < s3
+s4 = a3 < s3
 if0 s4 goto lbl_Else_248
 t0 = current_node
 if0 t0 goto lbl_NullPtr_255
@@ -1120,8 +1088,7 @@ cont= t1
 lbl_IfEnd_252:
 goto lbl_IfEnd_249
 lbl_Else_248:
-t1 = v_key
-s9 = s3 < t1
+s9 = s3 < a3
 if0 s9 goto lbl_Else_262
 t0 = current_node
 if0 t0 goto lbl_NullPtr_269
@@ -1206,17 +1173,15 @@ s9 = 1
 s10 = s9
 goto lbl_IfEnd_279
 lbl_Else_278:
-t0 = this
-if0 t0 goto lbl_NullPtr_298
-t0 = this
-s11 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_298
+s11 = [a2 + 0]
 s11 = [s11 + 28]
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = parent_node
+a2 = a2
 stack_a4 = a4
 a4 = current_node
+stack_a3 = a3
+a3 = parent_node
 t4 = call s11()
 a2 = stack_a2
 a3 = stack_a3
@@ -1229,17 +1194,15 @@ s10 = t4
 lbl_IfEnd_279:
 goto lbl_IfEnd_277
 lbl_Else_276:
-t0 = this
-if0 t0 goto lbl_NullPtr_302
-t0 = this
-t5 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_302
+t5 = [a2 + 0]
 t5 = [t5 + 28]
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = parent_node
+a2 = a2
 stack_a4 = a4
 a4 = current_node
+stack_a3 = a3
+a3 = parent_node
 s1 = call t5()
 a2 = stack_a2
 a3 = stack_a3
@@ -1291,9 +1254,6 @@ s2 = stack_s2
 t0 = found
 return found
 func Tree_Remove()
-this = a2
-p_node = a3
-t2 = a4
 stack_s10 = s10
 stack_s4 = s4
 stack_s1 = s1
@@ -1316,37 +1276,31 @@ stack_s4 = s4
 stack_s6 = s6
 stack_s3 = s3
 stack_s7 = s7
-if0 t2 goto lbl_NullPtr_311
-t4 = [t2 + 0]
+if0 a4 goto lbl_NullPtr_311
+t4 = [a4 + 0]
 t4 = [t4 + 52]
-stack_t2 = t2
 stack_a2 = a2
-a2 = t2
+a2 = a4
 t3 = call t4()
 a2 = stack_a2
-t2 = stack_t2
 goto lbl_GoodPtr_312
 lbl_NullPtr_311:
 error ("null pointer")
 lbl_GoodPtr_312:
 if0 t3 goto lbl_Else_307
-t0 = this
-if0 t0 goto lbl_NullPtr_315
-t0 = this
-t5 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_315
+t5 = [a2 + 0]
 t5 = [t5 + 8]
-stack_t2 = t2
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = p_node
+a2 = a2
 stack_a4 = a4
-a4 = t2
+a4 = a4
+stack_a3 = a3
+a3 = a3
 s1 = call t5()
 a2 = stack_a2
 a3 = stack_a3
 a4 = stack_a4
-t2 = stack_t2
 goto lbl_GoodPtr_316
 lbl_NullPtr_315:
 error ("null pointer")
@@ -1355,37 +1309,31 @@ t1 = s1
 ntb= t1
 goto lbl_IfEnd_308
 lbl_Else_307:
-if0 t2 goto lbl_NullPtr_321
-s3 = [t2 + 0]
+if0 a4 goto lbl_NullPtr_321
+s3 = [a4 + 0]
 s3 = [s3 + 48]
-stack_t2 = t2
 stack_a2 = a2
-a2 = t2
+a2 = a4
 s2 = call s3()
 a2 = stack_a2
-t2 = stack_t2
 goto lbl_GoodPtr_322
 lbl_NullPtr_321:
 error ("null pointer")
 lbl_GoodPtr_322:
 if0 s2 goto lbl_Else_317
-t0 = this
-if0 t0 goto lbl_NullPtr_325
-t0 = this
-s4 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_325
+s4 = [a2 + 0]
 s4 = [s4 + 56]
-stack_t2 = t2
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = p_node
+a2 = a2
 stack_a4 = a4
-a4 = t2
+a4 = a4
+stack_a3 = a3
+a3 = a3
 s5 = call s4()
 a2 = stack_a2
 a3 = stack_a3
 a4 = stack_a4
-t2 = stack_t2
 goto lbl_GoodPtr_326
 lbl_NullPtr_325:
 error ("null pointer")
@@ -1394,11 +1342,11 @@ t1 = s5
 ntb= t1
 goto lbl_IfEnd_318
 lbl_Else_317:
-if0 t2 goto lbl_NullPtr_329
-s6 = [t2 + 0]
+if0 a4 goto lbl_NullPtr_329
+s6 = [a4 + 0]
 s6 = [s6 + 12]
 stack_a2 = a2
-a2 = t2
+a2 = a4
 s7 = call s6()
 a2 = stack_a2
 goto lbl_GoodPtr_330
@@ -1407,13 +1355,11 @@ error ("null pointer")
 lbl_GoodPtr_330:
 t1 = s7
 auxkey1= t1
-t0 = p_node
-if0 t0 goto lbl_NullPtr_333
-t0 = p_node
-s9 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_333
+s9 = [a3 + 0]
 s9 = [s9 + 20]
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 s10 = call s9()
 a2 = stack_a2
 goto lbl_GoodPtr_334
@@ -1432,17 +1378,15 @@ lbl_NullPtr_337:
 error ("null pointer")
 lbl_GoodPtr_338:
 t4 = s8
-t0 = this
-if0 t0 goto lbl_NullPtr_343
-t0 = this
-t3 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_343
+t3 = [a2 + 0]
 t3 = [t3 + 68]
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = auxkey1
+a2 = a2
 stack_a4 = a4
 a4 = t4
+stack_a3 = a3
+a3 = auxkey1
 t5 = call t3()
 a2 = stack_a2
 a3 = stack_a3
@@ -1452,15 +1396,12 @@ lbl_NullPtr_343:
 error ("null pointer")
 lbl_GoodPtr_344:
 if0 t5 goto lbl_Else_339
-t0 = p_node
-if0 t0 goto lbl_NullPtr_347
-t0 = p_node
-s1 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_347
+s1 = [a3 + 0]
 s1 = [s1 + 32]
-t0 = this
-s3 = [t0 + 12]
+s3 = [a2 + 12]
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = s3
 s2 = call s1()
@@ -1472,14 +1413,12 @@ error ("null pointer")
 lbl_GoodPtr_348:
 t1 = s2
 ntb= t1
-t0 = p_node
-if0 t0 goto lbl_NullPtr_352
-t0 = p_node
-s4 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_352
+s4 = [a3 + 0]
 s4 = [s4 + 4]
 s5 = 0
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = s5
 t2 = call s4()
@@ -1493,15 +1432,12 @@ t1 = t2
 ntb= t1
 goto lbl_IfEnd_340
 lbl_Else_339:
-t0 = p_node
-if0 t0 goto lbl_NullPtr_357
-t0 = p_node
-s6 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_357
+s6 = [a3 + 0]
 s6 = [s6 + 16]
-t0 = this
-s7 = [t0 + 12]
+s7 = [a2 + 12]
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = s7
 s9 = call s6()
@@ -1513,14 +1449,12 @@ error ("null pointer")
 lbl_GoodPtr_358:
 t1 = s9
 ntb= t1
-t0 = p_node
-if0 t0 goto lbl_NullPtr_362
-t0 = p_node
-s10 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_362
+s10 = [a3 + 0]
 s10 = [s10 + 72]
 s11 = 0
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = s11
 s8 = call s10()
@@ -1562,9 +1496,6 @@ s7 = stack_s7
 t0 = v365
 return v365
 func Tree_RemoveRight()
-this = a2
-p_node = a3
-c_node = a4
 stack_s8 = s8
 stack_s9 = s9
 stack_s2 = s2
@@ -1577,13 +1508,11 @@ stack_s11 = s11
 stack_s3 = s3
 stack_s5 = s5
 lbl_While_366:
-t0 = c_node
-if0 t0 goto lbl_NullPtr_370
-t0 = c_node
-t4 = [t0 + 0]
+if0 a4 goto lbl_NullPtr_370
+t4 = [a4 + 0]
 t4 = [t4 + 48]
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 t3 = call t4()
 a2 = stack_a2
 goto lbl_GoodPtr_371
@@ -1591,19 +1520,15 @@ lbl_NullPtr_370:
 error ("null pointer")
 lbl_GoodPtr_371:
 if0 t3 goto lbl_WhileExit_367
-t0 = c_node
-if0 t0 goto lbl_NullPtr_374
-t0 = c_node
-t5 = [t0 + 0]
+if0 a4 goto lbl_NullPtr_374
+t5 = [a4 + 0]
 t5 = [t5 + 64]
-t0 = c_node
-if0 t0 goto lbl_NullPtr_378
-t0 = c_node
-s1 = [t0 + 0]
+if0 a4 goto lbl_NullPtr_378
+s1 = [a4 + 0]
 s1 = [s1 + 24]
 stack_t5 = t5
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 t2 = call s1()
 a2 = stack_a2
 t5 = stack_t5
@@ -1626,7 +1551,7 @@ lbl_NullPtr_382:
 error ("null pointer")
 lbl_GoodPtr_383:
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 stack_a3 = a3
 a3 = v381
 s3 = call t5()
@@ -1638,35 +1563,27 @@ error ("null pointer")
 lbl_GoodPtr_375:
 t1 = s3
 ntb= t1
-t0 = c_node
-t1 = t0
-p_node= t1
-t0 = c_node
-if0 t0 goto lbl_NullPtr_386
-t0 = c_node
-s5 = [t0 + 0]
+a3 = a4
+if0 a4 goto lbl_NullPtr_386
+s5 = [a4 + 0]
 s5 = [s5 + 24]
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 s6 = call s5()
 a2 = stack_a2
 goto lbl_GoodPtr_387
 lbl_NullPtr_386:
 error ("null pointer")
 lbl_GoodPtr_387:
-t1 = s6
-c_node= t1
+a4 = s6
 goto lbl_While_366
 lbl_WhileExit_367:
-t0 = p_node
-if0 t0 goto lbl_NullPtr_390
-t0 = p_node
-s7 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_390
+s7 = [a3 + 0]
 s7 = [s7 + 16]
-t0 = this
-s8 = [t0 + 12]
+s8 = [a2 + 12]
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = s8
 s4 = call s7()
@@ -1678,14 +1595,12 @@ error ("null pointer")
 lbl_GoodPtr_391:
 t1 = s4
 ntb= t1
-t0 = p_node
-if0 t0 goto lbl_NullPtr_395
-t0 = p_node
-s9 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_395
+s9 = [a3 + 0]
 s9 = [s9 + 72]
 s10 = 0
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = s10
 s11 = call s9()
@@ -1713,9 +1628,6 @@ s5 = stack_s5
 t0 = v398
 return v398
 func Tree_RemoveLeft()
-this = a2
-p_node = a3
-c_node = a4
 stack_s4 = s4
 stack_s7 = s7
 stack_s10 = s10
@@ -1728,13 +1640,11 @@ stack_s11 = s11
 stack_s2 = s2
 stack_s8 = s8
 lbl_While_399:
-t0 = c_node
-if0 t0 goto lbl_NullPtr_403
-t0 = c_node
-t4 = [t0 + 0]
+if0 a4 goto lbl_NullPtr_403
+t4 = [a4 + 0]
 t4 = [t4 + 52]
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 t3 = call t4()
 a2 = stack_a2
 goto lbl_GoodPtr_404
@@ -1742,19 +1652,15 @@ lbl_NullPtr_403:
 error ("null pointer")
 lbl_GoodPtr_404:
 if0 t3 goto lbl_WhileExit_400
-t0 = c_node
-if0 t0 goto lbl_NullPtr_407
-t0 = c_node
-t5 = [t0 + 0]
+if0 a4 goto lbl_NullPtr_407
+t5 = [a4 + 0]
 t5 = [t5 + 64]
-t0 = c_node
-if0 t0 goto lbl_NullPtr_411
-t0 = c_node
-s1 = [t0 + 0]
+if0 a4 goto lbl_NullPtr_411
+s1 = [a4 + 0]
 s1 = [s1 + 20]
 stack_t5 = t5
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 t2 = call s1()
 a2 = stack_a2
 t5 = stack_t5
@@ -1777,7 +1683,7 @@ lbl_NullPtr_415:
 error ("null pointer")
 lbl_GoodPtr_416:
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 stack_a3 = a3
 a3 = v414
 s3 = call t5()
@@ -1789,35 +1695,27 @@ error ("null pointer")
 lbl_GoodPtr_408:
 t1 = s3
 ntb= t1
-t0 = c_node
-t1 = t0
-p_node= t1
-t0 = c_node
-if0 t0 goto lbl_NullPtr_419
-t0 = c_node
-s5 = [t0 + 0]
+a3 = a4
+if0 a4 goto lbl_NullPtr_419
+s5 = [a4 + 0]
 s5 = [s5 + 20]
 stack_a2 = a2
-a2 = c_node
+a2 = a4
 s6 = call s5()
 a2 = stack_a2
 goto lbl_GoodPtr_420
 lbl_NullPtr_419:
 error ("null pointer")
 lbl_GoodPtr_420:
-t1 = s6
-c_node= t1
+a4 = s6
 goto lbl_While_399
 lbl_WhileExit_400:
-t0 = p_node
-if0 t0 goto lbl_NullPtr_423
-t0 = p_node
-s7 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_423
+s7 = [a3 + 0]
 s7 = [s7 + 32]
-t0 = this
-s8 = [t0 + 12]
+s8 = [a2 + 12]
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = s8
 s4 = call s7()
@@ -1829,14 +1727,12 @@ error ("null pointer")
 lbl_GoodPtr_424:
 t1 = s4
 ntb= t1
-t0 = p_node
-if0 t0 goto lbl_NullPtr_428
-t0 = p_node
-s9 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_428
+s9 = [a3 + 0]
 s9 = [s9 + 4]
 s10 = 0
 stack_a2 = a2
-a2 = p_node
+a2 = a3
 stack_a3 = a3
 a3 = s10
 s11 = call s9()
@@ -1864,8 +1760,6 @@ s8 = stack_s8
 t0 = v431
 return v431
 func Tree_Search()
-t2 = a2
-v_key = a3
 stack_s1 = s1
 stack_s5 = s5
 stack_s9 = s9
@@ -1879,7 +1773,7 @@ stack_s10 = s10
 stack_s6 = s6
 stack_s2 = s2
 stack_s2 = s2
-t1 = t2
+t1 = a2
 current_node= t1
 t5 = 1
 t1 = t5
@@ -1904,8 +1798,7 @@ lbl_NullPtr_438:
 error ("null pointer")
 lbl_GoodPtr_439:
 s3 = t4
-t0 = v_key
-s4 = t0 < s3
+s4 = a3 < s3
 if0 s4 goto lbl_Else_440
 t0 = current_node
 if0 t0 goto lbl_NullPtr_447
@@ -1944,8 +1837,7 @@ cont= t1
 lbl_IfEnd_444:
 goto lbl_IfEnd_441
 lbl_Else_440:
-t1 = v_key
-s9 = s3 < t1
+s9 = s3 < a3
 if0 s9 goto lbl_Else_454
 t0 = current_node
 if0 t0 goto lbl_NullPtr_461
@@ -2010,14 +1902,13 @@ s2 = stack_s2
 t0 = ifound
 return ifound
 func Tree_Print()
-t2 = a2
 stack_s1 = s1
-t3 = t2
-if0 t2 goto lbl_NullPtr_472
-t4 = [t2 + 0]
+t3 = a2
+if0 a2 goto lbl_NullPtr_472
+t4 = [a2 + 0]
 t4 = [t4 + 76]
 stack_a2 = a2
-a2 = t2
+a2 = a2
 stack_a3 = a3
 a3 = t3
 t1 = call t4()
@@ -2036,8 +1927,6 @@ s1 = stack_s1
 t0 = v474
 return v474
 func Tree_RecPrint()
-this = a2
-node = a3
 stack_s6 = s6
 stack_s5 = s5
 stack_s4 = s4
@@ -2049,13 +1938,11 @@ stack_s2 = s2
 stack_s3 = s3
 stack_s10 = s10
 stack_s11 = s11
-t0 = node
-if0 t0 goto lbl_NullPtr_479
-t0 = node
-t4 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_479
+t4 = [a3 + 0]
 t4 = [t4 + 52]
 stack_a2 = a2
-a2 = node
+a2 = a3
 t2 = call t4()
 a2 = stack_a2
 goto lbl_GoodPtr_480
@@ -2063,19 +1950,15 @@ lbl_NullPtr_479:
 error ("null pointer")
 lbl_GoodPtr_480:
 if0 t2 goto lbl_Else_475
-t0 = this
-if0 t0 goto lbl_NullPtr_483
-t0 = this
-t5 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_483
+t5 = [a2 + 0]
 t5 = [t5 + 76]
-t0 = node
-if0 t0 goto lbl_NullPtr_487
-t0 = node
-s1 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_487
+s1 = [a3 + 0]
 s1 = [s1 + 20]
 stack_t5 = t5
 stack_a2 = a2
-a2 = node
+a2 = a3
 t3 = call s1()
 a2 = stack_a2
 t5 = stack_t5
@@ -2084,7 +1967,7 @@ lbl_NullPtr_487:
 error ("null pointer")
 lbl_GoodPtr_488:
 stack_a2 = a2
-a2 = this
+a2 = a2
 stack_a3 = a3
 a3 = t3
 s2 = call t5()
@@ -2102,13 +1985,11 @@ s4 = 1
 t1 = s4
 ntb= t1
 lbl_IfEnd_476:
-t0 = node
-if0 t0 goto lbl_NullPtr_492
-t0 = node
-s5 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_492
+s5 = [a3 + 0]
 s5 = [s5 + 12]
 stack_a2 = a2
-a2 = node
+a2 = a3
 s6 = call s5()
 a2 = stack_a2
 goto lbl_GoodPtr_493
@@ -2116,13 +1997,11 @@ lbl_NullPtr_492:
 error ("null pointer")
 lbl_GoodPtr_493:
 print (s6)
-t0 = node
-if0 t0 goto lbl_NullPtr_498
-t0 = node
-s7 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_498
+s7 = [a3 + 0]
 s7 = [s7 + 48]
 stack_a2 = a2
-a2 = node
+a2 = a3
 s8 = call s7()
 a2 = stack_a2
 goto lbl_GoodPtr_499
@@ -2130,18 +2009,14 @@ lbl_NullPtr_498:
 error ("null pointer")
 lbl_GoodPtr_499:
 if0 s8 goto lbl_Else_494
-t0 = this
-if0 t0 goto lbl_NullPtr_502
-t0 = this
-s9 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_502
+s9 = [a2 + 0]
 s9 = [s9 + 76]
-t0 = node
-if0 t0 goto lbl_NullPtr_506
-t0 = node
-s10 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_506
+s10 = [a3 + 0]
 s10 = [s10 + 24]
 stack_a2 = a2
-a2 = node
+a2 = a3
 s3 = call s10()
 a2 = stack_a2
 goto lbl_GoodPtr_507
@@ -2149,7 +2024,7 @@ lbl_NullPtr_506:
 error ("null pointer")
 lbl_GoodPtr_507:
 stack_a2 = a2
-a2 = this
+a2 = a2
 stack_a3 = a3
 a3 = s3
 s11 = call s9()

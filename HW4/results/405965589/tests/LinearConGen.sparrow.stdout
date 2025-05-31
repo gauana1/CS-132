@@ -103,16 +103,16 @@ t0 = 15586
 v29 = t0
 t0 = 7981
 v30 = t0
-stack_a2 = a2
-a2 = gen
-stack_a3 = a3
-a3 = t5
-stack_a4 = a4
-a4 = s3
-stack_a5 = a5
-a5 = v29
 stack_a6 = a6
 a6 = v30
+stack_a5 = a5
+a5 = v29
+stack_a2 = a2
+a2 = gen
+stack_a4 = a4
+a4 = s3
+stack_a3 = a3
+a3 = t5
 t1 = call s4()
 v24 = t1
 a2 = stack_a2
@@ -197,14 +197,14 @@ goto lbl_GoodPtr_55
 lbl_NullPtr_54:
 error ("null pointer")
 lbl_GoodPtr_55:
-stack_a2 = a2
-a2 = mtx
-stack_a3 = a3
-a3 = r
-stack_a4 = a4
-a4 = c
 stack_a5 = a5
 a5 = t2
+stack_a2 = a2
+a2 = mtx
+stack_a4 = a4
+a4 = c
+stack_a3 = a3
+a3 = r
 s4 = call s5()
 a2 = stack_a2
 a3 = stack_a3
@@ -378,15 +378,11 @@ s2 = stack_s2
 t0 = v96
 return v96
 func BinHistogram_initialize()
-t3 = a2
-t2 = a3
-[t3 + 4] =t2
-size = t2
+[a2 + 4] =a3
+size = a3
 t0 = size
 return size
 func BinHistogram_get_bins()
-this = a2
-matrix = a3
 stack_s6 = s6
 stack_s5 = s5
 stack_s9 = s9
@@ -448,8 +444,7 @@ stack_s8 = s8
 stack_s5 = s5
 stack_s4 = s4
 stack_s2 = s2
-t0 = this
-t4 = [t0 + 4]
+t4 = [a2 + 4]
 t1 = t4
 b_max= t1
 t5 = 1
@@ -482,13 +477,11 @@ t1 = b_max
 [s5 + 0] =t1
 t1 = s5
 histogram= t1
-t0 = matrix
-if0 t0 goto lbl_NullPtr_112
-t0 = matrix
-s7 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_112
+s7 = [a3 + 0]
 s7 = [s7 + 8]
 stack_a2 = a2
-a2 = matrix
+a2 = a3
 s8 = call s7()
 a2 = stack_a2
 goto lbl_GoodPtr_113
@@ -497,13 +490,11 @@ error ("null pointer")
 lbl_GoodPtr_113:
 t1 = s8
 cols= t1
-t0 = matrix
-if0 t0 goto lbl_NullPtr_116
-t0 = matrix
-s10 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_116
+s10 = [a3 + 0]
 s10 = [s10 + 24]
 stack_a2 = a2
-a2 = matrix
+a2 = a3
 s6 = call s10()
 a2 = stack_a2
 goto lbl_GoodPtr_117
@@ -512,15 +503,13 @@ error ("null pointer")
 lbl_GoodPtr_117:
 t1 = s6
 rows= t1
-t0 = this
-if0 t0 goto lbl_NullPtr_120
-t0 = this
-t4 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_120
+t4 = [a2 + 0]
 t4 = [t4 + 4]
 stack_a2 = a2
-a2 = this
+a2 = a2
 stack_a3 = a3
-a3 = matrix
+a3 = a3
 s11 = call t4()
 a2 = stack_a2
 a3 = stack_a3
@@ -588,20 +577,18 @@ s11 = t0 + s11
 t5 = [s11 + 0]
 t1 = t5
 max= t1
-t0 = this
-if0 t0 goto lbl_NullPtr_148
-t0 = this
-t3 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_148
+t3 = [a2 + 0]
 t3 = [t3 + 0]
 t0 = max
 t1 = min
 t2 = t0 - t1
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = t2
+a2 = a2
 stack_a4 = a4
 a4 = b_max
+stack_a3 = a3
+a3 = t2
 s9 = call t3()
 a2 = stack_a2
 a3 = stack_a3
@@ -689,17 +676,15 @@ t0 = i
 t1 = b_max
 s8 = t0 < t1
 if0 s8 goto lbl_WhileExit_178
-t0 = matrix
-if0 t0 goto lbl_NullPtr_182
-t0 = matrix
-s5 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_182
+s5 = [a3 + 0]
 s5 = [s5 + 16]
 stack_a2 = a2
-a2 = matrix
-stack_a3 = a3
-a3 = r
+a2 = a3
 stack_a4 = a4
 a4 = c
+stack_a3 = a3
+a3 = r
 t2 = call s5()
 a2 = stack_a2
 a3 = stack_a3
@@ -880,8 +865,6 @@ s2 = stack_s2
 t0 = histogram
 return histogram
 func BinHistogram_find_range()
-t2 = a2
-matrix = a3
 stack_s1 = s1
 stack_s10 = s10
 stack_s7 = s7
@@ -927,13 +910,11 @@ t1 = v227
 [s1 + 0] =t1
 t1 = s1
 min_max= t1
-t0 = matrix
-if0 t0 goto lbl_NullPtr_236
-t0 = matrix
-s3 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_236
+s3 = [a3 + 0]
 s3 = [s3 + 8]
 stack_a2 = a2
-a2 = matrix
+a2 = a3
 s4 = call s3()
 a2 = stack_a2
 goto lbl_GoodPtr_237
@@ -942,13 +923,11 @@ error ("null pointer")
 lbl_GoodPtr_237:
 t1 = s4
 cols= t1
-t0 = matrix
-if0 t0 goto lbl_NullPtr_240
-t0 = matrix
-s6 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_240
+s6 = [a3 + 0]
 s6 = [s6 + 24]
 stack_a2 = a2
-a2 = matrix
+a2 = a3
 s2 = call s6()
 a2 = stack_a2
 goto lbl_GoodPtr_241
@@ -957,19 +936,17 @@ error ("null pointer")
 lbl_GoodPtr_241:
 t1 = s2
 rows= t1
-t0 = matrix
-if0 t0 goto lbl_NullPtr_244
-t0 = matrix
-s8 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_244
+s8 = [a3 + 0]
 s8 = [s8 + 16]
 s7 = 0
 s5 = 0
 stack_a2 = a2
-a2 = matrix
-stack_a3 = a3
-a3 = s7
+a2 = a3
 stack_a4 = a4
 a4 = s5
+stack_a3 = a3
+a3 = s7
 t1 = call s8()
 v243 = t1
 a2 = stack_a2
@@ -999,17 +976,15 @@ lbl_While_253:
 t1 = cols
 t3 = s9 < t1
 if0 t3 goto lbl_WhileExit_254
-t0 = matrix
-if0 t0 goto lbl_NullPtr_258
-t0 = matrix
-t4 = [t0 + 0]
+if0 a3 goto lbl_NullPtr_258
+t4 = [a3 + 0]
 t4 = [t4 + 16]
 stack_a2 = a2
-a2 = matrix
-stack_a3 = a3
-a3 = r
+a2 = a3
 stack_a4 = a4
 a4 = s9
+stack_a3 = a3
+a3 = r
 s10 = call t4()
 a2 = stack_a2
 a3 = stack_a3
@@ -1134,9 +1109,6 @@ s11 = stack_s11
 t0 = min_max
 return min_max
 func BinHistogram_div()
-t4 = a2
-a = a3
-b = a4
 stack_s4 = s4
 stack_s3 = s3
 stack_s2 = s2
@@ -1145,17 +1117,12 @@ t5 = 0
 t1 = t5
 quotient= t1
 lbl_While_293:
-t0 = a
-t1 = b
-s1 = t0 < t1
+s1 = a3 < a4
 t3 = 1
 t2 = s1 < t3
 if0 t2 goto lbl_WhileExit_294
-t0 = a
-t1 = b
-s2 = t0 - t1
-t1 = s2
-a= t1
+s2 = a3 - a4
+a3 = s2
 s3 = 1
 t0 = quotient
 s4 = t0 + s3
@@ -1170,64 +1137,44 @@ s1 = stack_s1
 t0 = quotient
 return quotient
 func Generator_initialize()
-this = a2
-t4 = a3
-t3 = a4
-t2 = a5
-c = a6
-t0 = this
-[t0 + 12] =t4
-t0 = this
-[t0 + 16] =t3
-t0 = this
-[t0 + 4] =t2
-t0 = this
-t1 = c
-[t0 + 8] =t1
-t0 = this
-t5 = [t0 + 12]
+[a2 + 12] =a3
+[a2 + 16] =a4
+[a2 + 4] =a5
+[a2 + 8] =a6
+t5 = [a2 + 12]
 v301 = t5
 t0 = v301
 return v301
 func Generator_set_seed()
-t3 = a2
-t2 = a3
-t4 = [t3 + 12]
+t4 = [a2 + 12]
 t1 = t4
 prev= t1
-[t3 + 12] =t2
+[a2 + 12] =a3
 t0 = prev
 return prev
 func Generator_advance()
-this = a2
 stack_s1 = s1
 stack_s3 = s3
 stack_s2 = s2
 stack_s4 = s4
-t0 = this
-if0 t0 goto lbl_NullPtr_305
-t0 = this
-t0 =[t0 + 0]
+if0 a2 goto lbl_NullPtr_305
+t0 =[a2 + 0]
 v303 = t0
 t0 = v303
 t0 =[t0 + 4]
 v303 = t0
-t0 = this
-t4 = [t0 + 12]
-t0 = this
-t2 = [t0 + 4]
+t4 = [a2 + 12]
+t2 = [a2 + 4]
 t3 = t4 * t2
-t0 = this
-t5 = [t0 + 8]
+t5 = [a2 + 8]
 s1 = t3 + t5
-t0 = this
-s2 = [t0 + 16]
+s2 = [a2 + 16]
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = s1
+a2 = a2
 stack_a4 = a4
 a4 = s2
+stack_a3 = a3
+a3 = s1
 t0 = v303
 s3 = call t0()
 a2 = stack_a2
@@ -1237,10 +1184,8 @@ goto lbl_GoodPtr_306
 lbl_NullPtr_305:
 error ("null pointer")
 lbl_GoodPtr_306:
-t0 = this
-[t0 + 12] =s3
-t0 = this
-s4 = [t0 + 12]
+[a2 + 12] =s3
+s4 = [a2 + 12]
 v313 = s4
 s1 = stack_s1
 s3 = stack_s3
@@ -1249,30 +1194,21 @@ s4 = stack_s4
 t0 = v313
 return v313
 func Generator_mod()
-t4 = a2
-a = a3
-b = a4
 stack_s1 = s1
 lbl_While_314:
-t0 = a
-t1 = b
-t5 = t0 < t1
+t5 = a3 < a4
 t2 = 1
 t3 = t5 < t2
 if0 t3 goto lbl_WhileExit_315
-t0 = a
-t1 = b
-s1 = t0 - t1
-t1 = s1
-a= t1
+s1 = a3 - a4
+a3 = s1
 goto lbl_While_314
 lbl_WhileExit_315:
+a = a3
 s1 = stack_s1
 t0 = a
 return a
 func Matrix_5xn_initialize()
-this = a2
-cols = a3
 stack_s7 = s7
 stack_s8 = s8
 stack_s5 = s5
@@ -1285,13 +1221,10 @@ stack_s3 = s3
 stack_s10 = s10
 stack_s1 = s1
 stack_s1 = s1
-t0 = this
-t1 = cols
-[t0 + 12] =t1
+[a2 + 12] =a3
 t4 = 1
 t3 = 4
-t0 = cols
-t2 = t0 + t4
+t2 = a3 + t4
 t2 = t2 * t3
 t5 = alloc(t2)
 if0 t5 goto lbl_NullPtr_324
@@ -1299,14 +1232,11 @@ goto lbl_GoodPtr_325
 lbl_NullPtr_324:
 error ("null pointer")
 lbl_GoodPtr_325:
-t1 = cols
-[t5 + 0] =t1
-t0 = this
-[t0 + 8] =t5
+[t5 + 0] =a3
+[a2 + 8] =t5
 s1 = 1
 s2 = 4
-t0 = cols
-s3 = t0 + s1
+s3 = a3 + s1
 s3 = s3 * s2
 s4 = alloc(s3)
 if0 s4 goto lbl_NullPtr_330
@@ -1314,14 +1244,11 @@ goto lbl_GoodPtr_331
 lbl_NullPtr_330:
 error ("null pointer")
 lbl_GoodPtr_331:
-t1 = cols
-[s4 + 0] =t1
-t0 = this
-[t0 + 4] =s4
+[s4 + 0] =a3
+[a2 + 4] =s4
 s5 = 1
 s6 = 4
-t0 = cols
-s7 = t0 + s5
+s7 = a3 + s5
 s7 = s7 * s6
 s8 = alloc(s7)
 if0 s8 goto lbl_NullPtr_336
@@ -1329,14 +1256,11 @@ goto lbl_GoodPtr_337
 lbl_NullPtr_336:
 error ("null pointer")
 lbl_GoodPtr_337:
-t1 = cols
-[s8 + 0] =t1
-t0 = this
-[t0 + 20] =s8
+[s8 + 0] =a3
+[a2 + 20] =s8
 s9 = 1
 s10 = 4
-t0 = cols
-s11 = t0 + s9
+s11 = a3 + s9
 s11 = s11 * s10
 t4 = alloc(s11)
 if0 t4 goto lbl_NullPtr_342
@@ -1344,14 +1268,11 @@ goto lbl_GoodPtr_343
 lbl_NullPtr_342:
 error ("null pointer")
 lbl_GoodPtr_343:
-t1 = cols
-[t4 + 0] =t1
-t0 = this
-[t0 + 16] =t4
+[t4 + 0] =a3
+[a2 + 16] =t4
 t3 = 1
 t2 = 4
-t0 = cols
-t5 = t0 + t3
+t5 = a3 + t3
 t5 = t5 * t2
 s1 = alloc(t5)
 if0 s1 goto lbl_NullPtr_348
@@ -1359,10 +1280,9 @@ goto lbl_GoodPtr_349
 lbl_NullPtr_348:
 error ("null pointer")
 lbl_GoodPtr_349:
-t1 = cols
-[s1 + 0] =t1
-t0 = this
-[t0 + 24] =s1
+[s1 + 0] =a3
+[a2 + 24] =s1
+cols = a3
 s7 = stack_s7
 s8 = stack_s8
 s5 = stack_s5
@@ -1378,10 +1298,6 @@ s1 = stack_s1
 t0 = cols
 return cols
 func Matrix_5xn_set()
-this = a2
-r = a3
-c = a4
-value = a5
 stack_s2 = s2
 stack_s5 = s5
 stack_s2 = s2
@@ -1464,14 +1380,11 @@ dummy= t1
 s2 = 1
 t1 = s2
 searching_row= t1
-t0 = this
-s4 = [t0 + 12]
-t0 = c
-s1 = t0 < s4
+s4 = [a2 + 12]
+s1 = a4 < s4
 if0 s1 goto lbl_FullAnd_361
 s5 = 0
-t0 = c
-s6 = t0 < s5
+s6 = a4 < s5
 s7 = 1
 s3 = s6 < s7
 s8 = s3
@@ -1482,18 +1395,16 @@ lbl_ShortAnd_362:
 if0 s8 goto lbl_Else_358
 t0 = searching_row
 if0 t0 goto lbl_FullAnd_372
-t0 = this
-if0 t0 goto lbl_NullPtr_376
-t0 = this
-s9 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_376
+s9 = [a2 + 0]
 s9 = [s9 + 12]
 s10 = 0
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = r
+a2 = a2
 stack_a4 = a4
 a4 = s10
+stack_a3 = a3
+a3 = a3
 s11 = call s9()
 a2 = stack_a2
 a3 = stack_a3
@@ -1511,8 +1422,7 @@ if0 t4 goto lbl_Else_369
 t3 = 0
 t1 = t3
 searching_row= t1
-t0 = this
-t0 =[t0 + 8]
+t0 =[a2 + 8]
 v380 = t0
 t0 = 4
 v381 = t0
@@ -1521,10 +1431,8 @@ t0 = v381
 t2 = t0 - s2
 t0 = v380
 s4 = [t0 + 0]
-t1 = c
-t5 = t2 < t1
-t0 = c
-s1 = t0 < s4
+t5 = t2 < a4
+s1 = a4 < s4
 s5 = t5 * s1
 if0 s5 goto lbl_OutOfBounds_388
 goto lbl_Inbound_389
@@ -1532,31 +1440,27 @@ lbl_OutOfBounds_388:
 error ("array index out of bounds")
 lbl_Inbound_389:
 t0 = v381
-t1 = c
-s6 = t0 * t1
+s6 = t0 * a4
 t1 = v381
 s6 = s6 + t1
 t0 = v380
 s6 = t0 + s6
-t1 = value
-[s6 + 0] =t1
+[s6 + 0] =a5
 goto lbl_IfEnd_370
 lbl_Else_369:
 lbl_IfEnd_370:
 t0 = searching_row
 if0 t0 goto lbl_FullAnd_394
-t0 = this
-if0 t0 goto lbl_NullPtr_398
-t0 = this
-s7 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_398
+s7 = [a2 + 0]
 s7 = [s7 + 12]
 s3 = 1
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = r
+a2 = a2
 stack_a4 = a4
 a4 = s3
+stack_a3 = a3
+a3 = a3
 s8 = call s7()
 a2 = stack_a2
 a3 = stack_a3
@@ -1574,8 +1478,7 @@ if0 s9 goto lbl_Else_391
 s10 = 0
 t1 = s10
 searching_row= t1
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v402 = t0
 t0 = 4
 v403 = t0
@@ -1584,10 +1487,8 @@ t0 = v403
 s11 = t0 - t3
 t0 = v402
 s2 = [t0 + 0]
-t1 = c
-t4 = s11 < t1
-t0 = c
-t2 = t0 < s2
+t4 = s11 < a4
+t2 = a4 < s2
 s4 = t4 * t2
 if0 s4 goto lbl_OutOfBounds_410
 goto lbl_Inbound_411
@@ -1595,31 +1496,27 @@ lbl_OutOfBounds_410:
 error ("array index out of bounds")
 lbl_Inbound_411:
 t0 = v403
-t1 = c
-t5 = t0 * t1
+t5 = t0 * a4
 t1 = v403
 t5 = t5 + t1
 t0 = v402
 t5 = t0 + t5
-t1 = value
-[t5 + 0] =t1
+[t5 + 0] =a5
 goto lbl_IfEnd_392
 lbl_Else_391:
 lbl_IfEnd_392:
 t0 = searching_row
 if0 t0 goto lbl_FullAnd_416
-t0 = this
-if0 t0 goto lbl_NullPtr_420
-t0 = this
-s1 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_420
+s1 = [a2 + 0]
 s1 = [s1 + 12]
 s5 = 2
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = r
+a2 = a2
 stack_a4 = a4
 a4 = s5
+stack_a3 = a3
+a3 = a3
 s6 = call s1()
 a2 = stack_a2
 a3 = stack_a3
@@ -1637,8 +1534,7 @@ if0 s7 goto lbl_Else_413
 s3 = 0
 t1 = s3
 searching_row= t1
-t0 = this
-t0 =[t0 + 20]
+t0 =[a2 + 20]
 v424 = t0
 t0 = 4
 v425 = t0
@@ -1647,10 +1543,8 @@ t0 = v425
 s8 = t0 - s10
 t0 = v424
 t3 = [t0 + 0]
-t1 = c
-s9 = s8 < t1
-t0 = c
-s11 = t0 < t3
+s9 = s8 < a4
+s11 = a4 < t3
 s2 = s9 * s11
 if0 s2 goto lbl_OutOfBounds_432
 goto lbl_Inbound_433
@@ -1658,31 +1552,27 @@ lbl_OutOfBounds_432:
 error ("array index out of bounds")
 lbl_Inbound_433:
 t0 = v425
-t1 = c
-t4 = t0 * t1
+t4 = t0 * a4
 t1 = v425
 t4 = t4 + t1
 t0 = v424
 t4 = t0 + t4
-t1 = value
-[t4 + 0] =t1
+[t4 + 0] =a5
 goto lbl_IfEnd_414
 lbl_Else_413:
 lbl_IfEnd_414:
 t0 = searching_row
 if0 t0 goto lbl_FullAnd_438
-t0 = this
-if0 t0 goto lbl_NullPtr_442
-t0 = this
-t2 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_442
+t2 = [a2 + 0]
 t2 = [t2 + 12]
 s4 = 3
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = r
+a2 = a2
 stack_a4 = a4
 a4 = s4
+stack_a3 = a3
+a3 = a3
 t5 = call t2()
 a2 = stack_a2
 a3 = stack_a3
@@ -1700,8 +1590,7 @@ if0 s1 goto lbl_Else_435
 s5 = 0
 t1 = s5
 searching_row= t1
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v446 = t0
 t0 = 4
 v447 = t0
@@ -1710,10 +1599,8 @@ t0 = v447
 s6 = t0 - s3
 t0 = v446
 s10 = [t0 + 0]
-t1 = c
-s7 = s6 < t1
-t0 = c
-s8 = t0 < s10
+s7 = s6 < a4
+s8 = a4 < s10
 t3 = s7 * s8
 if0 t3 goto lbl_OutOfBounds_454
 goto lbl_Inbound_455
@@ -1721,31 +1608,27 @@ lbl_OutOfBounds_454:
 error ("array index out of bounds")
 lbl_Inbound_455:
 t0 = v447
-t1 = c
-s9 = t0 * t1
+s9 = t0 * a4
 t1 = v447
 s9 = s9 + t1
 t0 = v446
 s9 = t0 + s9
-t1 = value
-[s9 + 0] =t1
+[s9 + 0] =a5
 goto lbl_IfEnd_436
 lbl_Else_435:
 lbl_IfEnd_436:
 t0 = searching_row
 if0 t0 goto lbl_FullAnd_460
-t0 = this
-if0 t0 goto lbl_NullPtr_464
-t0 = this
-s11 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_464
+s11 = [a2 + 0]
 s11 = [s11 + 12]
 s2 = 4
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = r
+a2 = a2
 stack_a4 = a4
 a4 = s2
+stack_a3 = a3
+a3 = a3
 t4 = call s11()
 a2 = stack_a2
 a3 = stack_a3
@@ -1763,8 +1646,7 @@ if0 t2 goto lbl_Else_457
 s4 = 0
 t1 = s4
 searching_row= t1
-t0 = this
-t0 =[t0 + 24]
+t0 =[a2 + 24]
 v468 = t0
 t0 = 4
 v469 = t0
@@ -1773,10 +1655,8 @@ t0 = v469
 t5 = t0 - s5
 t0 = v468
 s3 = [t0 + 0]
-t1 = c
-s1 = t5 < t1
-t0 = c
-s6 = t0 < s3
+s1 = t5 < a4
+s6 = a4 < s3
 s10 = s1 * s6
 if0 s10 goto lbl_OutOfBounds_476
 goto lbl_Inbound_477
@@ -1784,14 +1664,12 @@ lbl_OutOfBounds_476:
 error ("array index out of bounds")
 lbl_Inbound_477:
 t0 = v469
-t1 = c
-s7 = t0 * t1
+s7 = t0 * a4
 t1 = v469
 s7 = s7 + t1
 t0 = v468
 s7 = t0 + s7
-t1 = value
-[s7 + 0] =t1
+[s7 + 0] =a5
 goto lbl_IfEnd_458
 lbl_Else_457:
 lbl_IfEnd_458:
@@ -1863,6 +1741,7 @@ s10 = t0 + s10
 t1 = v494
 [s10 + 0] =t1
 lbl_IfEnd_359:
+value = a5
 s2 = stack_s2
 s5 = stack_s5
 s2 = stack_s2
@@ -1928,58 +1807,59 @@ s6 = stack_s6
 t0 = value
 return value
 func Matrix_5xn_get()
-this = a2
-r = a3
-c = a4
 stack_s1 = s1
 stack_s7 = s7
-stack_s8 = s8
 stack_s4 = s4
 stack_s3 = s3
 stack_s6 = s6
-stack_s3 = s3
 stack_s11 = s11
 stack_s3 = s3
 stack_s5 = s5
 stack_s10 = s10
-stack_s4 = s4
-stack_s2 = s2
-stack_s10 = s10
 stack_s2 = s2
 stack_s9 = s9
-stack_s9 = s9
-stack_s5 = s5
-stack_s11 = s11
 stack_s7 = s7
-stack_s11 = s11
-stack_s8 = s8
 stack_s8 = s8
 stack_s4 = s4
-stack_s7 = s7
-stack_s5 = s5
 stack_s6 = s6
-stack_s8 = s8
 stack_s1 = s1
 stack_s10 = s10
-stack_s9 = s9
 stack_s5 = s5
 stack_s2 = s2
 stack_s9 = s9
-stack_s6 = s6
 stack_s8 = s8
+stack_s4 = s4
+stack_s2 = s2
+stack_s3 = s3
+stack_s11 = s11
+stack_s5 = s5
+stack_s10 = s10
+stack_s9 = s9
+stack_s8 = s8
+stack_s8 = s8
+stack_s3 = s3
+stack_s10 = s10
+stack_s4 = s4
+stack_s2 = s2
+stack_s9 = s9
+stack_s5 = s5
+stack_s11 = s11
+stack_s11 = s11
+stack_s8 = s8
+stack_s7 = s7
+stack_s5 = s5
+stack_s8 = s8
+stack_s9 = s9
+stack_s6 = s6
 stack_s1 = s1
 stack_s7 = s7
 stack_s3 = s3
 stack_s7 = s7
-stack_s4 = s4
 stack_s6 = s6
-stack_s2 = s2
-stack_s3 = s3
 stack_s11 = s11
 stack_s4 = s4
 stack_s5 = s5
 stack_s1 = s1
-stack_s11 = s11
 stack_s2 = s2
 stack_s10 = s10
 stack_s3 = s3
@@ -1987,17 +1867,13 @@ stack_s11 = s11
 stack_s4 = s4
 stack_s2 = s2
 stack_s10 = s10
-stack_s5 = s5
 stack_s3 = s3
 stack_s6 = s6
 stack_s1 = s1
 stack_s1 = s1
 stack_s9 = s9
-stack_s10 = s10
 stack_s6 = s6
-stack_s9 = s9
 stack_s7 = s7
-stack_s8 = s8
 t0 = 1
 v505 = t0
 t4 = 1
@@ -2023,14 +1899,11 @@ s1 = 1
 s3 = s4 - s1
 t1 = s3
 value= t1
-t0 = this
-s6 = [t0 + 12]
-t0 = c
-s7 = t0 < s6
+s6 = [a2 + 12]
+s7 = a4 < s6
 if0 s7 goto lbl_FullAnd_519
 s8 = 0
-t0 = c
-s9 = t0 < s8
+s9 = a4 < s8
 s10 = 1
 s5 = s9 < s10
 s11 = s5
@@ -2041,18 +1914,16 @@ lbl_ShortAnd_520:
 if0 s11 goto lbl_Else_516
 t0 = searching_row
 if0 t0 goto lbl_FullAnd_530
-t0 = this
-if0 t0 goto lbl_NullPtr_534
-t0 = this
-t4 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_534
+t4 = [a2 + 0]
 t4 = [t4 + 0]
 t3 = 0
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = r
+a2 = a2
 stack_a4 = a4
 a4 = t3
+stack_a3 = a3
+a3 = a3
 t2 = call t4()
 a2 = stack_a2
 a3 = stack_a3
@@ -2070,8 +1941,7 @@ if0 t5 goto lbl_Else_527
 s2 = 0
 t1 = s2
 searching_row= t1
-t0 = this
-t0 =[t0 + 8]
+t0 =[a2 + 8]
 v538 = t0
 t0 = 4
 v539 = t0
@@ -2080,10 +1950,8 @@ t0 = v539
 s4 = t0 - s3
 t0 = v538
 s6 = [t0 + 0]
-t1 = c
-s1 = s4 < t1
-t0 = c
-s7 = t0 < s6
+s1 = s4 < a4
+s7 = a4 < s6
 s8 = s1 * s7
 if0 s8 goto lbl_OutOfBounds_546
 goto lbl_Inbound_547
@@ -2091,8 +1959,7 @@ lbl_OutOfBounds_546:
 error ("array index out of bounds")
 lbl_Inbound_547:
 t0 = v539
-t1 = c
-s9 = t0 * t1
+s9 = t0 * a4
 t1 = v539
 s9 = s9 + t1
 t0 = v538
@@ -2105,18 +1972,16 @@ lbl_Else_527:
 lbl_IfEnd_528:
 t0 = searching_row
 if0 t0 goto lbl_FullAnd_553
-t0 = this
-if0 t0 goto lbl_NullPtr_557
-t0 = this
-s5 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_557
+s5 = [a2 + 0]
 s5 = [s5 + 0]
 s11 = 1
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = r
+a2 = a2
 stack_a4 = a4
 a4 = s11
+stack_a3 = a3
+a3 = a3
 t4 = call s5()
 a2 = stack_a2
 a3 = stack_a3
@@ -2134,8 +1999,7 @@ if0 t3 goto lbl_Else_550
 t2 = 0
 t1 = t2
 searching_row= t1
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v561 = t0
 t0 = 4
 v562 = t0
@@ -2144,10 +2008,8 @@ t0 = v562
 t5 = t0 - s3
 t0 = v561
 s4 = [t0 + 0]
-t1 = c
-s2 = t5 < t1
-t0 = c
-s6 = t0 < s4
+s2 = t5 < a4
+s6 = a4 < s4
 s1 = s2 * s6
 if0 s1 goto lbl_OutOfBounds_569
 goto lbl_Inbound_570
@@ -2155,8 +2017,7 @@ lbl_OutOfBounds_569:
 error ("array index out of bounds")
 lbl_Inbound_570:
 t0 = v562
-t1 = c
-s7 = t0 * t1
+s7 = t0 * a4
 t1 = v562
 s7 = s7 + t1
 t0 = v561
@@ -2169,18 +2030,16 @@ lbl_Else_550:
 lbl_IfEnd_551:
 t0 = searching_row
 if0 t0 goto lbl_FullAnd_576
-t0 = this
-if0 t0 goto lbl_NullPtr_580
-t0 = this
-s9 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_580
+s9 = [a2 + 0]
 s9 = [s9 + 0]
 s10 = 2
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = r
+a2 = a2
 stack_a4 = a4
 a4 = s10
+stack_a3 = a3
+a3 = a3
 s5 = call s9()
 a2 = stack_a2
 a3 = stack_a3
@@ -2198,8 +2057,7 @@ if0 s11 goto lbl_Else_573
 t4 = 0
 t1 = t4
 searching_row= t1
-t0 = this
-t0 =[t0 + 20]
+t0 =[a2 + 20]
 v584 = t0
 t0 = 4
 v585 = t0
@@ -2208,10 +2066,8 @@ t0 = v585
 t3 = t0 - s3
 t0 = v584
 t5 = [t0 + 0]
-t1 = c
-t2 = t3 < t1
-t0 = c
-s4 = t0 < t5
+t2 = t3 < a4
+s4 = a4 < t5
 s2 = t2 * s4
 if0 s2 goto lbl_OutOfBounds_592
 goto lbl_Inbound_593
@@ -2219,8 +2075,7 @@ lbl_OutOfBounds_592:
 error ("array index out of bounds")
 lbl_Inbound_593:
 t0 = v585
-t1 = c
-s6 = t0 * t1
+s6 = t0 * a4
 t1 = v585
 s6 = s6 + t1
 t0 = v584
@@ -2233,18 +2088,16 @@ lbl_Else_573:
 lbl_IfEnd_574:
 t0 = searching_row
 if0 t0 goto lbl_FullAnd_599
-t0 = this
-if0 t0 goto lbl_NullPtr_603
-t0 = this
-s7 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_603
+s7 = [a2 + 0]
 s7 = [s7 + 0]
 s8 = 3
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = r
+a2 = a2
 stack_a4 = a4
 a4 = s8
+stack_a3 = a3
+a3 = a3
 s9 = call s7()
 a2 = stack_a2
 a3 = stack_a3
@@ -2262,8 +2115,7 @@ if0 s10 goto lbl_Else_596
 s5 = 0
 t1 = s5
 searching_row= t1
-t0 = this
-t0 =[t0 + 16]
+t0 =[a2 + 16]
 v607 = t0
 t0 = 4
 v608 = t0
@@ -2272,10 +2124,8 @@ t0 = v608
 s11 = t0 - s3
 t0 = v607
 t3 = [t0 + 0]
-t1 = c
-t4 = s11 < t1
-t0 = c
-t5 = t0 < t3
+t4 = s11 < a4
+t5 = a4 < t3
 t2 = t4 * t5
 if0 t2 goto lbl_OutOfBounds_615
 goto lbl_Inbound_616
@@ -2283,8 +2133,7 @@ lbl_OutOfBounds_615:
 error ("array index out of bounds")
 lbl_Inbound_616:
 t0 = v608
-t1 = c
-s4 = t0 * t1
+s4 = t0 * a4
 t1 = v608
 s4 = s4 + t1
 t0 = v607
@@ -2297,18 +2146,16 @@ lbl_Else_596:
 lbl_IfEnd_597:
 t0 = searching_row
 if0 t0 goto lbl_FullAnd_622
-t0 = this
-if0 t0 goto lbl_NullPtr_626
-t0 = this
-s6 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_626
+s6 = [a2 + 0]
 s6 = [s6 + 0]
 s1 = 4
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = r
+a2 = a2
 stack_a4 = a4
 a4 = s1
+stack_a3 = a3
+a3 = a3
 s7 = call s6()
 a2 = stack_a2
 a3 = stack_a3
@@ -2326,8 +2173,7 @@ if0 s8 goto lbl_Else_619
 s9 = 0
 t1 = s9
 searching_row= t1
-t0 = this
-t0 =[t0 + 24]
+t0 =[a2 + 24]
 v630 = t0
 t0 = 4
 v631 = t0
@@ -2336,10 +2182,8 @@ t0 = v631
 s10 = t0 - s3
 t0 = v630
 s11 = [t0 + 0]
-t1 = c
-s5 = s10 < t1
-t0 = c
-t3 = t0 < s11
+s5 = s10 < a4
+t3 = a4 < s11
 t4 = s5 * t3
 if0 t4 goto lbl_OutOfBounds_638
 goto lbl_Inbound_639
@@ -2347,8 +2191,7 @@ lbl_OutOfBounds_638:
 error ("array index out of bounds")
 lbl_Inbound_639:
 t0 = v631
-t1 = c
-t5 = t0 * t1
+t5 = t0 * a4
 t1 = v631
 t5 = t5 + t1
 t0 = v630
@@ -2429,104 +2272,99 @@ t1 = v657
 lbl_IfEnd_517:
 s1 = stack_s1
 s7 = stack_s7
-s8 = stack_s8
 s4 = stack_s4
 s3 = stack_s3
 s6 = stack_s6
-s3 = stack_s3
 s11 = stack_s11
 s3 = stack_s3
 s5 = stack_s5
 s10 = stack_s10
-s4 = stack_s4
 s2 = stack_s2
-s10 = stack_s10
-s2 = stack_s2
-s9 = stack_s9
-s9 = stack_s9
-s5 = stack_s5
-s11 = stack_s11
-s7 = stack_s7
-s11 = stack_s11
-s8 = stack_s8
-s8 = stack_s8
-s4 = stack_s4
-s7 = stack_s7
-s5 = stack_s5
-s6 = stack_s6
-s8 = stack_s8
-s1 = stack_s1
-s10 = stack_s10
-s9 = stack_s9
-s5 = stack_s5
-s2 = stack_s2
-s9 = stack_s9
-s6 = stack_s6
-s8 = stack_s8
-s1 = stack_s1
-s7 = stack_s7
-s3 = stack_s3
-s7 = stack_s7
-s4 = stack_s4
-s6 = stack_s6
-s2 = stack_s2
-s3 = stack_s3
-s11 = stack_s11
-s4 = stack_s4
-s5 = stack_s5
-s1 = stack_s1
-s11 = stack_s11
-s2 = stack_s2
-s10 = stack_s10
-s3 = stack_s3
-s11 = stack_s11
-s4 = stack_s4
-s2 = stack_s2
-s10 = stack_s10
-s5 = stack_s5
-s3 = stack_s3
-s6 = stack_s6
-s1 = stack_s1
-s1 = stack_s1
-s9 = stack_s9
-s10 = stack_s10
-s6 = stack_s6
 s9 = stack_s9
 s7 = stack_s7
 s8 = stack_s8
+s4 = stack_s4
+s6 = stack_s6
+s1 = stack_s1
+s10 = stack_s10
+s5 = stack_s5
+s2 = stack_s2
+s9 = stack_s9
+s8 = stack_s8
+s4 = stack_s4
+s2 = stack_s2
+s3 = stack_s3
+s11 = stack_s11
+s5 = stack_s5
+s10 = stack_s10
+s9 = stack_s9
+s8 = stack_s8
+s8 = stack_s8
+s3 = stack_s3
+s10 = stack_s10
+s4 = stack_s4
+s2 = stack_s2
+s9 = stack_s9
+s5 = stack_s5
+s11 = stack_s11
+s11 = stack_s11
+s8 = stack_s8
+s7 = stack_s7
+s5 = stack_s5
+s8 = stack_s8
+s9 = stack_s9
+s6 = stack_s6
+s1 = stack_s1
+s7 = stack_s7
+s3 = stack_s3
+s7 = stack_s7
+s6 = stack_s6
+s11 = stack_s11
+s4 = stack_s4
+s5 = stack_s5
+s1 = stack_s1
+s2 = stack_s2
+s10 = stack_s10
+s3 = stack_s3
+s11 = stack_s11
+s4 = stack_s4
+s2 = stack_s2
+s10 = stack_s10
+s3 = stack_s3
+s6 = stack_s6
+s1 = stack_s1
+s1 = stack_s1
+s9 = stack_s9
+s6 = stack_s6
+s7 = stack_s7
 t0 = value
 return value
 func Matrix_5xn_col_size()
-t2 = a2
-t3 = [t2 + 12]
+t3 = [a2 + 12]
 v668 = t3
 t0 = v668
 return v668
 func Matrix_5xn_row_size()
-t2 = a2
 t3 = 5
 v669 = t3
 t0 = v669
 return v669
 func Matrix_5xn_equalP()
-t4 = a2
-t2 = a3
-t3 = a4
 stack_s5 = s5
 stack_s3 = s3
 stack_s4 = s4
 stack_s1 = s1
 stack_s2 = s2
-t5 = t2 - t3
+t5 = a3 - a4
 print (t5)
-s1 = t2 < t3
+s1 = a3 < a4
 if0 s1 goto lbl_Else_671
 s2 = 0
 t1 = s2
 res= t1
 goto lbl_IfEnd_672
 lbl_Else_671:
-s3 = t3 < t2
+s3 = a4 < a3
 if0 s3 goto lbl_Else_675
 s4 = 0
 t1 = s4
@@ -2546,21 +2384,18 @@ s2 = stack_s2
 t0 = res
 return res
 func Matrix_5xn_equal()
-t4 = a2
-t2 = a3
-t3 = a4
 stack_s4 = s4
 stack_s2 = s2
 stack_s3 = s3
 stack_s1 = s1
-t5 = t2 < t3
+t5 = a3 < a4
 if0 t5 goto lbl_Else_680
 s1 = 0
 t1 = s1
 res= t1
 goto lbl_IfEnd_681
 lbl_Else_680:
-s2 = t3 < t2
+s2 = a4 < a3
 if0 s2 goto lbl_Else_684
 s3 = 0
 t1 = s3

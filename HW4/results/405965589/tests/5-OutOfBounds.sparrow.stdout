@@ -36,7 +36,6 @@ s1 = stack_s1
 t0 = v11
 return v11
 func A_run()
-t2 = a2
 stack_s9 = s9
 stack_s1 = s1
 stack_s2 = s2

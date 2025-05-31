@@ -54,8 +54,6 @@ s2 = stack_s2
 t0 = v15
 return v15
 func QS_Start()
-this = a2
-t2 = a3
 stack_s2 = s2
 stack_s7 = s7
 stack_s1 = s1
@@ -67,15 +65,13 @@ stack_s4 = s4
 stack_s11 = s11
 stack_s8 = s8
 stack_s6 = s6
-t0 = this
-if0 t0 goto lbl_NullPtr_18
-t0 = this
-t4 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_18
+t4 = [a2 + 0]
 t4 = [t4 + 4]
 stack_a2 = a2
-a2 = this
+a2 = a2
 stack_a3 = a3
-a3 = t2
+a3 = a3
 t3 = call t4()
 a2 = stack_a2
 a3 = stack_a3
@@ -85,13 +81,11 @@ error ("null pointer")
 lbl_GoodPtr_19:
 t1 = t3
 aux01= t1
-t0 = this
-if0 t0 goto lbl_NullPtr_22
-t0 = this
-s1 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_22
+s1 = [a2 + 0]
 s1 = [s1 + 0]
 stack_a2 = a2
-a2 = this
+a2 = a2
 s2 = call s1()
 a2 = stack_a2
 goto lbl_GoodPtr_23
@@ -102,24 +96,21 @@ t1 = s2
 aux01= t1
 s3 = 9999
 print (s3)
-t0 = this
-s4 = [t0 + 8]
+s4 = [a2 + 8]
 s5 = 1
 t5 = s4 - s5
 t1 = t5
 aux01= t1
-t0 = this
-if0 t0 goto lbl_NullPtr_30
-t0 = this
-s6 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_30
+s6 = [a2 + 0]
 s6 = [s6 + 12]
 s7 = 0
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = s7
+a2 = a2
 stack_a4 = a4
 a4 = aux01
+stack_a3 = a3
+a3 = s7
 s8 = call s6()
 a2 = stack_a2
 a3 = stack_a3
@@ -130,13 +121,11 @@ error ("null pointer")
 lbl_GoodPtr_31:
 t1 = s8
 aux01= t1
-t0 = this
-if0 t0 goto lbl_NullPtr_35
-t0 = this
-s9 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_35
+s9 = [a2 + 0]
 s9 = [s9 + 0]
 stack_a2 = a2
-a2 = this
+a2 = a2
 s10 = call s9()
 a2 = stack_a2
 goto lbl_GoodPtr_36
@@ -161,9 +150,6 @@ s6 = stack_s6
 t0 = v37
 return v37
 func QS_Sort()
-this = a2
-left = a3
-right = a4
 stack_s5 = s5
 stack_s9 = s9
 stack_s4 = s4
@@ -255,12 +241,9 @@ stack_s11 = s11
 t4 = 0
 t1 = t4
 t= t1
-t0 = left
-t1 = right
-t5 = t0 < t1
+t5 = a3 < a4
 if0 t5 goto lbl_Else_39
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v42 = t0
 t0 = 4
 v43 = t0
@@ -269,10 +252,8 @@ t0 = v43
 s1 = t0 - t3
 t0 = v42
 s2 = [t0 + 0]
-t1 = right
-t2 = s1 < t1
-t0 = right
-s3 = t0 < s2
+t2 = s1 < a4
+s3 = a4 < s2
 s4 = t2 * s3
 if0 s4 goto lbl_OutOfBounds_50
 goto lbl_Inbound_51
@@ -280,8 +261,7 @@ lbl_OutOfBounds_50:
 error ("array index out of bounds")
 lbl_Inbound_51:
 t0 = v43
-t1 = right
-s5 = t0 * t1
+s5 = t0 * a4
 t1 = v43
 s5 = s5 + t1
 t0 = v42
@@ -290,12 +270,10 @@ s6 = [s5 + 0]
 t1 = s6
 v= t1
 s8 = 1
-t0 = left
-s9 = t0 - s8
+s9 = a3 - s8
 t1 = s9
 i= t1
-t0 = right
-t1 = t0
+t1 = a4
 j= t1
 s10 = 1
 t1 = s10
@@ -314,8 +292,7 @@ t0 = i
 s7 = t0 + t5
 t1 = s7
 i= t1
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v64 = t0
 t0 = 4
 v65 = t0
@@ -372,8 +349,7 @@ t0 = j
 s11 = t0 - s7
 t1 = s11
 j= t1
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v88 = t0
 t0 = 4
 v89 = t0
@@ -419,8 +395,7 @@ cont02= t1
 lbl_IfEnd_101:
 goto lbl_While_84
 lbl_WhileExit_85:
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v107 = t0
 t0 = 4
 v108 = t0
@@ -449,11 +424,9 @@ s3 = t0 + s3
 s4 = [s3 + 0]
 t1 = s4
 t= t1
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v119 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v120 = t0
 t0 = 4
 v121 = t0
@@ -507,8 +480,7 @@ t0 = v119
 s3 = t0 + s3
 t1 = v131
 [s3 + 0] =t1
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v142 = t0
 t0 = 4
 v143 = t0
@@ -553,11 +525,9 @@ cont01= t1
 lbl_IfEnd_154:
 goto lbl_While_57
 lbl_WhileExit_58:
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v160 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v161 = t0
 t0 = 4
 v162 = t0
@@ -611,11 +581,9 @@ t0 = v160
 s11 = t0 + s11
 t1 = v172
 [s11 + 0] =t1
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v183 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v184 = t0
 t0 = 4
 v185 = t0
@@ -624,10 +592,8 @@ t0 = v185
 t2 = t0 - s7
 t0 = v184
 s8 = [t0 + 0]
-t1 = right
-s2 = t2 < t1
-t0 = right
-s3 = t0 < s8
+s2 = t2 < a4
+s3 = a4 < s8
 s4 = s2 * s3
 if0 s4 goto lbl_OutOfBounds_192
 goto lbl_Inbound_193
@@ -635,8 +601,7 @@ lbl_OutOfBounds_192:
 error ("array index out of bounds")
 lbl_Inbound_193:
 t0 = v185
-t1 = right
-s6 = t0 * t1
+s6 = t0 * a4
 t1 = v185
 s6 = s6 + t1
 t0 = v184
@@ -669,8 +634,7 @@ t0 = v183
 s1 = t0 + s1
 t1 = v195
 [s1 + 0] =t1
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v206 = t0
 t0 = 4
 v207 = t0
@@ -679,10 +643,8 @@ t0 = v207
 s11 = t0 - t2
 t0 = v206
 s8 = [t0 + 0]
-t1 = right
-s7 = s11 < t1
-t0 = right
-s2 = t0 < s8
+s7 = s11 < a4
+s2 = a4 < s8
 s3 = s7 * s2
 if0 s3 goto lbl_OutOfBounds_214
 goto lbl_Inbound_215
@@ -690,28 +652,25 @@ lbl_OutOfBounds_214:
 error ("array index out of bounds")
 lbl_Inbound_215:
 t0 = v207
-t1 = right
-s4 = t0 * t1
+s4 = t0 * a4
 t1 = v207
 s4 = s4 + t1
 t0 = v206
 s4 = t0 + s4
 t1 = t
 [s4 + 0] =t1
-t0 = this
-if0 t0 goto lbl_NullPtr_219
-t0 = this
-s6 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_219
+s6 = [a2 + 0]
 s6 = [s6 + 12]
 s9 = 1
 t0 = i
 s5 = t0 - s9
 stack_a2 = a2
-a2 = this
-stack_a3 = a3
-a3 = left
+a2 = a2
 stack_a4 = a4
 a4 = s5
+stack_a3 = a3
+a3 = a3
 t5 = call s6()
 a2 = stack_a2
 a3 = stack_a3
@@ -722,20 +681,18 @@ error ("null pointer")
 lbl_GoodPtr_220:
 t1 = t5
 nt= t1
-t0 = this
-if0 t0 goto lbl_NullPtr_225
-t0 = this
-s10 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_225
+s10 = [a2 + 0]
 s10 = [s10 + 12]
 t3 = 1
 t0 = i
 t4 = t0 + t3
 stack_a2 = a2
-a2 = this
+a2 = a2
+stack_a4 = a4
+a4 = a4
 stack_a3 = a3
 a3 = t4
-stack_a4 = a4
-a4 = right
 s1 = call s10()
 a2 = stack_a2
 a3 = stack_a3
@@ -845,7 +802,6 @@ s11 = stack_s11
 t0 = v230
 return v230
 func QS_Print()
-this = a2
 stack_s10 = s10
 stack_s6 = s6
 stack_s7 = s7
@@ -860,13 +816,11 @@ t3 = 0
 t1 = t3
 j= t1
 lbl_While_232:
-t0 = this
-t5 = [t0 + 8]
+t5 = [a2 + 8]
 t0 = j
 t4 = t0 < t5
 if0 t4 goto lbl_WhileExit_233
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v236 = t0
 t0 = 4
 v237 = t0
@@ -916,8 +870,6 @@ s8 = stack_s8
 t0 = v250
 return v250
 func QS_Init()
-this = a2
-sz = a3
 stack_s1 = s1
 stack_s2 = s2
 stack_s5 = s5
@@ -973,13 +925,10 @@ stack_s9 = s9
 stack_s7 = s7
 stack_s1 = s1
 stack_s8 = s8
-t0 = this
-t1 = sz
-[t0 + 8] =t1
+[a2 + 8] =a3
 t4 = 1
 t3 = 4
-t0 = sz
-t2 = t0 + t4
+t2 = a3 + t4
 t2 = t2 * t3
 t5 = alloc(t2)
 if0 t5 goto lbl_NullPtr_255
@@ -987,14 +936,11 @@ goto lbl_GoodPtr_256
 lbl_NullPtr_255:
 error ("null pointer")
 lbl_GoodPtr_256:
-t1 = sz
-[t5 + 0] =t1
-t0 = this
-[t0 + 4] =t5
+[t5 + 0] =a3
+[a2 + 4] =t5
 t0 = 0
 v257 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v258 = t0
 t0 = 20
 v259 = t0
@@ -1026,8 +972,7 @@ t1 = v259
 [s7 + 0] =t1
 t0 = 1
 v270 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v271 = t0
 t0 = 7
 v272 = t0
@@ -1059,8 +1004,7 @@ t1 = v272
 [t2 + 0] =t1
 t0 = 2
 v283 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v284 = t0
 t0 = 12
 v285 = t0
@@ -1092,8 +1036,7 @@ t1 = v285
 [s6 + 0] =t1
 t0 = 3
 v296 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v297 = t0
 t0 = 18
 v298 = t0
@@ -1125,8 +1068,7 @@ t1 = v298
 [t3 + 0] =t1
 t0 = 4
 v309 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v310 = t0
 t0 = 2
 v311 = t0
@@ -1158,8 +1100,7 @@ t1 = v311
 [s5 + 0] =t1
 t0 = 5
 v322 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v323 = t0
 t0 = 11
 v324 = t0
@@ -1191,8 +1132,7 @@ t1 = v324
 [t4 + 0] =t1
 t0 = 6
 v335 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v336 = t0
 t0 = 6
 v337 = t0
@@ -1224,8 +1164,7 @@ t1 = v337
 [s1 + 0] =t1
 t0 = 7
 v348 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v349 = t0
 t0 = 9
 v350 = t0
@@ -1257,8 +1196,7 @@ t1 = v350
 [s8 + 0] =t1
 t0 = 8
 v361 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v362 = t0
 t0 = 19
 v363 = t0
@@ -1290,8 +1228,7 @@ t1 = v363
 [t5 + 0] =t1
 t0 = 9
 v374 = t0
-t0 = this
-t0 =[t0 + 4]
+t0 =[a2 + 4]
 v375 = t0
 t0 = 5
 v376 = t0
