@@ -42,49 +42,51 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
         SparrowVStruct result = new SparrowVStruct();
         //save calleeregs in temp values on the stack
         String funcName = n.functionName.toString();
+        SparrowVStruct tempStruct = new SparrowVStruct();
         RegisterStruct r = rMap.get(funcName);
-        SparrowVStruct temp = new SparrowVStruct();
         String funcHeader = "func " + n.functionName.toString() + "(";
-        boolean first = true;
-        for (IR.token.Identifier p : n.formalParameters) {
-            if (!first) {
-                funcHeader += " ";
-            } else {
-                first = false;
+        boolean flag = false;
+        for (int i = 0; i < n.formalParameters.size(); i++) {
+            IR.token.Identifier a = n.formalParameters.get(i);
+            String arg = a.toString();
+            String aReg;
+            if(i < 6){
+                aReg = "a" + Integer.toString(i + 2);
+                if(r.registerMap.containsKey(arg)){
+                    String reg = r.registerMap.get(arg);
+                    tempStruct.instructions.add(reg + " = " + aReg);
+                } else{
+                    tempStruct.instructions.add(arg + " = " + aReg);
+                }
+                // r.registerMap.put(arg, aReg);
+                // tempStruct.instructions.add("print(" + aReg + ")");
+            } else{
+                if(!flag){
+                    funcHeader += arg;
+                    flag = true;
+                } else{
+                    funcHeader += " " + arg;
+                }
+                if(r.registerMap.containsKey(arg)){
+                    String reg = r.registerMap.get(arg);
+                    tempStruct.instructions.add(reg + " = " + arg);
+                } 
             }
-            String arg = p.toString();
-            if(r.registerMap.containsKey(arg)){
-                String reg = r.registerMap.get(arg);
-                temp.instructions.add(reg + " = " + arg);
-            }
-            funcHeader +=  arg;
-            
         }
         funcHeader += ")";
         result.instructions.add(funcHeader);
-        result.instructions.addAll(temp.instructions);
+        result.instructions.addAll(tempStruct.instructions);
+
         SparrowVStruct body = n.block.accept(this, new Triple(n.functionName.toString(), null, 0));
         result.instructions.addAll(body.instructions);
 
-        
         return result;
     }
     public SparrowVStruct visit(Block n, Triple t){
         SparrowVStruct result = new SparrowVStruct();
         RegisterStruct r = rMap.get(t.methodName);
-        // for (int i = 1; i <= 11; i++) {
-        //     String reg = "s" + i;
-        //     result.instructions.add("stack_" + reg + " = " + reg);
-        //     // result.instructions.add("print(" + reg + ")");
-        // }
-        // String[] calleeSaved = {"s1","s2","s3","s4","s5","s6","s7","s8","s9","s10","s11"};
-        
-        // for (String reg : calleeSaved) {
-        //     result.instructions.add("stack_" + reg + " = " + reg);
-        // }
 
         for(Map.Entry<String, String> entry : r.registerMap.entrySet()){
-            String id = entry.getKey(); 
             String reg = entry.getValue();
             char first = reg.charAt(0);
             if(first == 's'){
@@ -104,18 +106,15 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
 
         //return
         String retID = n.return_id.toString();
-        String retReg = "";
         if(r.registerMap.containsKey(retID)){
             //have to reassign
             String reg = r.registerMap.get(retID);
-            retReg = reg;
             String reassignRet = retID + " = " + reg;
             result.instructions.add(reassignRet);
         }
 
         // Restore callee-saved s
         for(Map.Entry<String, String> entry : r.registerMap.entrySet()){
-            String id = entry.getKey(); 
             String reg = entry.getValue();
             char first = reg.charAt(0);
             if(first == 's'){
@@ -124,7 +123,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             } 
         } 
 
-
+        result.instructions.add("t0 = " + n.return_id.toString());
         String retString = "return " + n.return_id.toString();
         result.instructions.add(retString);
         return result;
@@ -256,6 +255,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             arg1Reg = "t0";
         } else{
             arg1Reg = r.registerMap.get(arg1);
+            // result.instructions.add("print(" + arg1Reg + ")");
         }
         if(!r.registerMap.containsKey(arg2)){
             String reassignArg2 = "t1 = " + arg2;
@@ -263,6 +263,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             arg2Reg = "t1";
         } else{
             arg2Reg = r.registerMap.get(arg2);
+            // result.instructions.add("print(" + arg2Reg + ")");
         }
         if(!r.registerMap.containsKey(lhs)){
             String temp = "t0 =" + arg1Reg + " * " + arg2Reg; 
@@ -466,33 +467,62 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
         String lhs = n.lhs.toString();
         String func = n.callee.toString();
         String funcReg;
-        //save caller register(t0 - t5)
+        String resReg = "";
+        if(r.registerMap.containsKey(lhs)){
+            resReg = r.registerMap.get(lhs);
+        }
         RegisterStruct regStruct = rMap.get(t.methodName);
 
-        String [] aRegs =  {"a2","a3","a4","a5","a6","a7"};
-
-        for (String reg : aRegs) {
-            result.instructions.add("stack_" + reg + " = " + reg);
-        }
-
+        //save caller regs(t2-t5)
         int curLine = t.line;
         for(Map.Entry<String, String> entry : regStruct.registerMap.entrySet()){
             String id = entry.getKey(); 
             String reg = entry.getValue();
             char first = reg.charAt(0);
-            String temp = "";
-            if(r.registerMap.containsKey(lhs)){
-                temp = r.registerMap.get(lhs);
-            }
-            if(first == 't' && !reg.equals(temp)){
+            if(first == 't' && !reg.equals(resReg)){
                 Pair p = regStruct.intervalMap.get(id);
                 if(p.start < curLine && curLine < p.end){
-                    String saveReg = "stacks_" + reg + " = " + reg;
+                    String saveReg = "stack_" + reg + " = " + reg;
                     result.instructions.add(saveReg);
                 }
             } 
         } 
-        //load from reg if exists alr
+
+        //now assign arg regs(a2 - a7)
+        String args = "(";
+        for (int i = 0; i < n.args.size(); i++) {
+            IR.token.Identifier a = n.args.get(i);
+            String arg = a.toString();
+            String aReg = "a" + Integer.toString(i + 2);
+            if(i < 6){
+                result.instructions.add("stack_" + aReg + " = " + aReg);
+                if(r.registerMap.containsKey(arg)){
+                    String argReg = r.registerMap.get(arg);
+                    String assignAReg = aReg + " = " + argReg;
+                    result.instructions.add(assignAReg);
+                } else{
+                    String assignAReg = aReg + " = " + arg;
+                    result.instructions.add(assignAReg);
+                }
+            } else{
+                if(r.registerMap.containsKey(arg)){
+                    String argReg = r.registerMap.get(arg);
+                    if(!argReg.equals(resReg)){
+                        result.instructions.add("stack_" + aReg + " = " + argReg); //id = reg
+                    } //look into like passing the extra args and see if like the names apppear out of nowhere, need to track themn properly
+                    String assignAReg = arg + " = " + argReg;
+                    result.instructions.add(assignAReg);
+                    
+                } else{
+                    //have to save like caller saved
+                    result.instructions.add("t0 = " + arg);
+                    result.instructions.add("stack_" + aReg + " = t0"); // id = reg
+                }
+                args += " " + arg;
+            }
+            
+        } 
+        args += ")";
 
         if(!r.registerMap.containsKey(func)){
             String reassignFunc = "t0 = " + func;
@@ -502,46 +532,38 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             funcReg = r.registerMap.get(func);
         }
         String instr;
-        String resReg = "";
         if(!r.registerMap.containsKey(lhs)){
-            instr = "t1 = call " + funcReg + "(";
+            instr = "t1 = call " + funcReg + args;
         } else{
             String reg = r.registerMap.get(lhs);
-            resReg = reg;
-            instr = reg + " = call " + funcReg + "(";
+            instr = reg + " = call " + funcReg + args;
         }
-        boolean flag = false;
-        for(IR.token.Identifier a : n.args){
-            String arg = a.toString();
-            if(!flag){
-                instr +=  arg;
-                flag = true;
-            } else{
-                instr += " " + arg;
-            }
-            if(r.registerMap.containsKey(arg)){
-                String reg= r.registerMap.get(arg);
-                result.instructions.add(arg + " = " + reg);
-            }
-        }
-        instr += ")";
         result.instructions.add(instr);
         if(!r.registerMap.containsKey(lhs)){
             String reassignLhs = lhs + " = t1";
             result.instructions.add(reassignLhs);
         } 
 
-        for (String reg : aRegs) {
-            if(!reg.equals(resReg)){
-                result.instructions.add(reg + " = stack_" + reg);
-            } 
+        //reassign a regs like caller regs
+        for (int i = 0; i < n.args.size(); i++) {
+            IR.token.Identifier a = n.args.get(i);
+            String arg = a.toString();
+            String aReg = "a" + Integer.toString(i + 2);
+            if(i < 6){
+                result.instructions.add(aReg + " = stack_" + aReg);
+            // }
+            } else{
+                if(r.registerMap.containsKey(arg)){
+                    String argReg = r.registerMap.get(arg);
+                    if(argReg.equals(resReg)){continue;}
+                    result.instructions.add(argReg + " = stack_" + aReg); //id = reg
+                } else{
+                    result.instructions.add("t0 = stack_" + aReg); // id = reg
+                    result.instructions.add(arg + " = t0");
+                }
+            }
+            
         }
-        // for (String reg : tRegs) {
-        //     if(!reg.equals(resReg)){
-        //         result.instructions.add(reg + " = stack_" + reg);
-        //     } 
-        // }
-        
 
         //reassign caller regs
         for(Map.Entry<String, String> entry : regStruct.registerMap.entrySet()){
@@ -551,7 +573,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             if(first != 't'){continue;}
             Pair p = regStruct.intervalMap.get(id);
             if(p.start < curLine && curLine < p.end &&!reg.equals(resReg)){
-                String reassignReg = reg + " = stacks_" + reg;
+                String reassignReg = reg + " = stack_" + reg;
                 result.instructions.add(reassignReg);
             }
         } 

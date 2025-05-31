@@ -21,6 +21,7 @@ t5 = t0 < t1
 if0 t5 goto L1
 t0 = c
 print (t0)
+t0 = c
 return c
 func foobar()
 label1:
@@ -39,6 +40,7 @@ t5 = 1
 t0 = e
 t2 = t0 + t5
 if0 t2 goto label2
+t0 = e
 return e
 func bar()
 t0 = 5
@@ -70,4 +72,5 @@ t0 = e
 t1 = d
 t5 = t0 + t1
 f = t5
+t0 = f
 return f

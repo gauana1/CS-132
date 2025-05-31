@@ -1,24 +1,28 @@
 func main()
 stack_s3 = s3
 stack_s5 = s5
+stack_s2 = s2
+stack_s1 = s1
+stack_s1 = s1
+stack_s6 = s6
+stack_s5 = s5
+stack_s6 = s6
+stack_s5 = s5
+stack_s6 = s6
+stack_s8 = s8
+stack_s8 = s8
+stack_s3 = s3
+stack_s9 = s9
+stack_s9 = s9
+stack_s4 = s4
+stack_s4 = s4
+stack_s11 = s11
+stack_s7 = s7
 stack_s10 = s10
 stack_s11 = s11
-stack_s6 = s6
+stack_s10 = s10
 stack_s7 = s7
 stack_s2 = s2
-stack_s8 = s8
-stack_s9 = s9
-stack_s1 = s1
-stack_s4 = s4
-stack_s11 = s11
-stack_s6 = s6
-stack_s10 = s10
-stack_s5 = s5
-stack_s3 = s3
-stack_s7 = s7
-stack_s8 = s8
-stack_s4 = s4
-stack_s9 = s9
 stack_s2 = s2
 stack_s1 = s1
 t2 = 7
@@ -73,112 +77,117 @@ s11 = [t0 + 0]
 t1 = i
 s7 = s10 < t1
 t0 = i
-a2 = t0 < s11
-a3 = s7 * a2
-if0 a3 goto lbl_OutOfBounds_25
+t2 = t0 < s11
+t4 = s7 * t2
+if0 t4 goto lbl_OutOfBounds_25
 goto lbl_Inbound_26
 lbl_OutOfBounds_25:
 error ("array index out of bounds")
 lbl_Inbound_26:
 t0 = v18
 t1 = i
-a4 = t0 * t1
+t5 = t0 * t1
 t1 = v18
-a4 = a4 + t1
+t5 = t5 + t1
 t0 = arr
-a4 = t0 + a4
+t5 = t0 + t5
 t1 = v17
-[a4 + 0] =t1
+[t5 + 0] =t1
 goto lbl_IfEnd_15
 lbl_Else_14:
-a5 = 0
+s2 = 0
 t0 = i
 t1 = i
-a6 = t0 * t1
-t0 =a5 - a6
+s1 = t0 * t1
+t0 =s2 - s1
 v28 = t0
 t0 = 4
 v31 = t0
-t4 = 5
+s5 = 5
 t0 = v31
-a7 = t0 - t4
+t3 = t0 - s5
 t0 = arr
-t5 = [t0 + 0]
+s6 = [t0 + 0]
 t1 = i
-t2 = a7 < t1
+s3 = t3 < t1
 t0 = i
-s2 = t0 < t5
-s1 = t2 * s2
-if0 s1 goto lbl_OutOfBounds_38
+s8 = t0 < s6
+s9 = s3 * s8
+if0 s9 goto lbl_OutOfBounds_38
 goto lbl_Inbound_39
 lbl_OutOfBounds_38:
 error ("array index out of bounds")
 lbl_Inbound_39:
 t0 = v31
 t1 = i
-t3 = t0 * t1
+s4 = t0 * t1
 t1 = v31
-t3 = t3 + t1
+s4 = s4 + t1
 t0 = arr
-t3 = t0 + t3
+s4 = t0 + s4
 t1 = v28
-[t3 + 0] =t1
+[s4 + 0] =t1
 lbl_IfEnd_15:
 t0 = 4
 v41 = t0
-s5 = 5
+s11 = 5
 t0 = v41
-s6 = t0 - s5
+s7 = t0 - s11
 t0 = arr
-s8 = [t0 + 0]
+t2 = [t0 + 0]
 t1 = i
-s3 = s6 < t1
+s10 = s7 < t1
 t0 = i
-s9 = t0 < s8
-s4 = s3 * s9
-if0 s4 goto lbl_OutOfBounds_48
+t4 = t0 < t2
+t5 = s10 * t4
+if0 t5 goto lbl_OutOfBounds_48
 goto lbl_Inbound_49
 lbl_OutOfBounds_48:
 error ("array index out of bounds")
 lbl_Inbound_49:
 t0 = v41
 t1 = i
-s10 = t0 * t1
+s2 = t0 * t1
 t1 = v41
-s10 = s10 + t1
+s2 = s2 + t1
 t0 = arr
-s10 = t0 + s10
-s11 = [s10 + 0]
-print (s11)
-s7 = 1
+s2 = t0 + s2
+s1 = [s2 + 0]
+print (s1)
+s5 = 1
 t0 = i
-a2 = t0 + s7
-t1 = a2
+t3 = t0 + s5
+t1 = t3
 i= t1
 goto lbl_While_11
 lbl_WhileExit_12:
-a3 = 0
-v54 = a3
+s6 = 0
+v54 = s6
 s3 = stack_s3
 s5 = stack_s5
-s10 = stack_s10
-s11 = stack_s11
-s6 = stack_s6
-s7 = stack_s7
 s2 = stack_s2
-s8 = stack_s8
-s9 = stack_s9
 s1 = stack_s1
-s4 = stack_s4
-s11 = stack_s11
+s1 = stack_s1
 s6 = stack_s6
-s10 = stack_s10
 s5 = stack_s5
-s3 = stack_s3
-s7 = stack_s7
+s6 = stack_s6
+s5 = stack_s5
+s6 = stack_s6
 s8 = stack_s8
-s4 = stack_s4
+s8 = stack_s8
+s3 = stack_s3
 s9 = stack_s9
+s9 = stack_s9
+s4 = stack_s4
+s4 = stack_s4
+s11 = stack_s11
+s7 = stack_s7
+s10 = stack_s10
+s11 = stack_s11
+s10 = stack_s10
+s7 = stack_s7
+s2 = stack_s2
 s2 = stack_s2
 s1 = stack_s1
+t0 = v54
 return v54

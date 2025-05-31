@@ -30,18 +30,9 @@ t0 = a
 s3 = [t0 + 0]
 s3 = [s3 + 0]
 stack_a2 = a2
-stack_a3 = a3
-stack_a4 = a4
-stack_a5 = a5
-stack_a6 = a6
-stack_a7 = a7
-s4 = call s3(a)
+a2 = a
+s4 = call s3()
 a2 = stack_a2
-a3 = stack_a3
-a4 = stack_a4
-a5 = stack_a5
-a6 = stack_a6
-a7 = stack_a7
 goto lbl_GoodPtr_10
 lbl_NullPtr_9:
 error ("null pointer")
@@ -67,18 +58,9 @@ t0 = a
 s9 = [t0 + 0]
 s9 = [s9 + 0]
 stack_a2 = a2
-stack_a3 = a3
-stack_a4 = a4
-stack_a5 = a5
-stack_a6 = a6
-stack_a7 = a7
-s10 = call s9(a)
+a2 = a
+s10 = call s9()
 a2 = stack_a2
-a3 = stack_a3
-a4 = stack_a4
-a5 = stack_a5
-a6 = stack_a6
-a7 = stack_a7
 goto lbl_GoodPtr_21
 lbl_NullPtr_20:
 error ("null pointer")
@@ -97,19 +79,23 @@ s8 = stack_s8
 s9 = stack_s9
 s1 = stack_s1
 s10 = stack_s10
+t0 = v22
 return v22
-func Animal_speak(this)
-t2 = this
+func Animal_speak()
+t2 = a2
 t3 = 0
 v23 = t3
+t0 = v23
 return v23
-func Dog_speak(this)
-t2 = this
+func Dog_speak()
+t2 = a2
 t3 = 1
 v24 = t3
+t0 = v24
 return v24
-func Cat_speak(this)
-t2 = this
+func Cat_speak()
+t2 = a2
 t3 = 2
 v25 = t3
+t0 = v25
 return v25

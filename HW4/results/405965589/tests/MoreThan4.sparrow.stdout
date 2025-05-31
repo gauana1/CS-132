@@ -33,14 +33,20 @@ v16 = t0
 t0 = 6
 v17 = t0
 stack_a2 = a2
+a2 = t4
 stack_a3 = a3
+a3 = s4
 stack_a4 = a4
+a4 = v13
 stack_a5 = a5
+a5 = v14
 stack_a6 = a6
+a6 = v15
 stack_a7 = a7
-v2 = t4
-v12 = s4
-t1 = call s3(v2 v12 v13 v14 v15 v16 v17)
+a7 = v16
+t0 = v17
+stack_a8 = t0
+t1 = call s3( v17)
 v9 = t1
 a2 = stack_a2
 a3 = stack_a3
@@ -48,6 +54,8 @@ a4 = stack_a4
 a5 = stack_a5
 a6 = stack_a6
 a7 = stack_a7
+t0 = stack_a8
+v17 = t0
 goto lbl_GoodPtr_11
 lbl_NullPtr_10:
 error ("null pointer")
@@ -61,11 +69,15 @@ s4 = stack_s4
 s5 = stack_s5
 s1 = stack_s1
 s2 = stack_s2
+t0 = v18
 return v18
-func MT4_Start(this p1 p2 p3 p4 p5 p6)
-t2 = p1
-t3 = p2
-t4 = p3
+func MT4_Start(p6)
+this = a2
+t2 = a3
+t3 = a4
+t4 = a5
+p4 = a6
+p5 = a7
 print (t2)
 print (t3)
 print (t4)
@@ -84,16 +96,21 @@ t0 = v19
 t0 =[t0 + 4]
 v19 = t0
 stack_a2 = a2
+a2 = this
 stack_a3 = a3
+a3 = p6
 stack_a4 = a4
+a4 = p5
 stack_a5 = a5
+a5 = p4
 stack_a6 = a6
+a6 = t4
 stack_a7 = a7
-t0 = v19
-p3 = t4
-p2 = t3
+a7 = t3
+stack_a8 = t2
 p1 = t2
-t1 = call t0(this p6 p5 p4 p3 p2 p1)
+t0 = v19
+t1 = call t0( p1)
 v20 = t1
 a2 = stack_a2
 a3 = stack_a3
@@ -101,6 +118,7 @@ a4 = stack_a4
 a5 = stack_a5
 a6 = stack_a6
 a7 = stack_a7
+t2 = stack_a8
 goto lbl_GoodPtr_22
 lbl_NullPtr_21:
 error ("null pointer")
@@ -108,11 +126,15 @@ lbl_GoodPtr_22:
 t0 = v20
 t5 = t0
 aux = t5
+t0 = aux
 return aux
-func MT4_Change(this p1 p2 p3 p4 p5 p6)
-t4 = this
-t2 = p1
-t3 = p2
+func MT4_Change(p6)
+t4 = a2
+t2 = a3
+t3 = a4
+p3 = a5
+p4 = a6
+p5 = a7
 print (t2)
 print (t3)
 t0 = p3
@@ -125,4 +147,5 @@ t0 = p6
 print (t0)
 t5 = 0
 v23 = t5
+t0 = v23
 return v23

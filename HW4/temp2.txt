@@ -209,33 +209,42 @@ f
     stack_a9 = t0
     s7 = call s9(h i)
 func_g
+    x1 = a2
+    x2 = a3
+    t4 = a4
+    t3 = a5
+    x5 = a6
+    t2 = a7
     stack_s3 = s3
     stack_s4 = s4
     stack_s5 = s5
     stack_s6 = s6
     stack_s2 = s2
     stack_s1 = s1
-    print(a2)
+    t0 = x1
+    print(t0)
 27
-    print(a3)
+    t1 = x2
+    print(t1)
 17
-    t0 = a2 + a3
+    t0 = t0 + t1
     a = t0
     print(t0)
 44
-    print(a4)
+    print(t4)
 40
-    print(a5)
+    print(t3)
 34
-    t0 = a4 + a5
+    t0 = t4 + t3
     b = t0
     print(t0)
 74
-    print(a6)
+    t0 = x5
+    print(t0)
 20
-    print(a7)
+    print(t2)
 30
-    t0 = a6 + a7
+    t0 = t0 + t2
     c = t0
     print(t0)
 50
@@ -253,7 +262,8 @@ func_g
     t1 = s2
     e = t1
     t0 = x8
-    s1 = t0 < a2
+    t1 = x1
+    s1 = t0 < t1
     if0 s1 goto L42
     t5 = @func_g
     stack_a2 = a2
@@ -263,67 +273,77 @@ func_g
     stack_a4 = a4
     a4 = s1
     stack_a5 = a5
-    a5 = a6
+    a5 = x5
     stack_a6 = a6
     a6 = s2
     stack_a7 = a7
     a7 = s1
-    stack_a8 = a3
-    x2 = 
+    t0 = x2
+    stack_a8 = t0
     stack_a9 = s2
     ten = s2
     t1 = call t5(x2 ten)
 func_g
+    x1 = a2
+    x2 = a3
+    t4 = a4
+    t3 = a5
+    x5 = a6
+    t2 = a7
     stack_s3 = s3
     stack_s4 = s4
     stack_s5 = s5
     stack_s6 = s6
     stack_s2 = s2
     stack_s1 = s1
-    print(a2)
+    t0 = x1
+    print(t0)
 1
-    print(a3)
+    t1 = x2
+    print(t1)
 55
-    t0 = a2 + a3
+    t0 = t0 + t1
     a = t0
     print(t0)
 56
-    print(a4)
+    print(t4)
 1
-    print(a5)
+    print(t3)
 20
-    t0 = a4 + a5
+    t0 = t4 + t3
     b = t0
     print(t0)
 21
-    print(a6)
+    t0 = x5
+    print(t0)
 10
-    print(a7)
+    print(t2)
 1
-    t0 = a6 + a7
+    t0 = t0 + t2
     c = t0
     print(t0)
 11
     t0 = x7
     print(t0)
-55
+17
     t1 = x8
     print(t1)
 10
     t0 = t0 + t1
     d = t0
     print(t0)
-65
+27
     s2 = 10
     t1 = s2
     e = t1
     t0 = x8
-    s1 = t0 < a2
+    t1 = x1
+    s1 = t0 < t1
     if0 s1 goto L42
     L42:
     t0 = d
     print(t0)
-65
+27
     t1 = a
     print(t1)
 56
@@ -334,7 +354,7 @@ func_g
 21
     t1 = e
     print(t1)
-9
+-29
     s3 = t0 * t1
     t0 = c
     print(t0)
@@ -342,25 +362,25 @@ func_g
     s4 = t0 - s3
     t0 = d
     print(t0)
-65
+27
     t1 = e
     print(t1)
-9
+-29
     t0 = t0 + t1
     h = t0
     print(t0)
-74
+-2
     t0 = e
     print(t0)
-9
+-29
     print(s3)
-189
+-609
     s5 = t0 + s3
     print(s4)
--178
+620
     t1 = h
     print(t1)
-74
+-2
     s6 = s4 + t1
     j = s6
     s3 = stack_s3
@@ -378,7 +398,8 @@ func_g
     a5 = stack_a5
     a6 = stack_a6
     a7 = stack_a7
-    a3 = stack_a8
+    t0 = stack_a8
+    x2 = t0
     s2 = stack_a9
     L42:
     t0 = d
@@ -386,7 +407,7 @@ func_g
 65
     t1 = a
     print(t1)
--104
+618
     t0 = t0 - t1
     e = t0
     t0 = b
@@ -394,7 +415,7 @@ func_g
 74
     t1 = e
     print(t1)
-169
+-553
     s3 = t0 * t1
     t0 = c
     print(t0)
@@ -405,22 +426,22 @@ func_g
 65
     t1 = e
     print(t1)
-169
+-553
     t0 = t0 + t1
     h = t0
     print(t0)
-234
+-488
     t0 = e
     print(t0)
-169
+-553
     print(s3)
-12506
+-40922
     s5 = t0 + s3
     print(s4)
--12456
+40972
     t1 = h
     print(t1)
-234
+-488
     s6 = s4 + t1
     j = s6
     s3 = stack_s3
@@ -443,51 +464,51 @@ func_g
     print(t0)
 10
     print(s7)
--12222
+40484
     t0 = t0 + s7
     j = t0
     print(t0)
--12212
+40494
     goto L29
     L29:
     t3 = 5
     t0 = j
     print(t0)
--12212
+40494
     t5 = t0 - t3
     t0 = g
     print(t0)
 30
     print(t5)
--12217
+40489
     t0 = t0 + t5
     k = t0
     print(t0)
--12187
+40519
     t0 = j
     print(t0)
--12212
+40494
     t1 = k
     print(t1)
--12187
+40519
     s1 = t0 - t1
     print(s1)
 -25
     print(t5)
--12217
+40489
     s10 = s1 + t5
     print(s10)
--12242
+40464
     t0 = j
     print(t0)
--12212
+40494
     t1 = k
     print(t1)
--12187
+40519
     t0 = t0 + t1
     i = t0
     print(t0)
--24399
+81013
     t0 = c
     print(t0)
 17
@@ -507,13 +528,13 @@ func_g
     s2 = t0 + t1
     t0 = i
     print(t0)
--24399
+81013
     print(s2)
 60
     t0 = t0 + s2
     n = t0
     print(t0)
--24339
+81073
     t0 = d
     t1 = n
     t0 = t0 < t1
@@ -521,16 +542,102 @@ func_g
     L3:
     t0 = s
     if0 t0 goto L12
+    t0 = d
+    print(t0)
+40
+    print(s2)
+60
+    t0 = t0 + s2
+    o = t0
+    print(t0)
+100
+    s4 = 30
+    t0 = o
+    print(t0)
+100
+    print(s4)
+30
+    t4 = t0 + s4
+    t0 = i
+    print(t0)
+81013
+    t4 = t0 - t4
+    t0 = o
+    print(t0)
+100
+    t0 = t0 - t4
+    n = t0
+    t2 = 0
+    t0 = n
+    print(t0)
+-80783
+    t0 = t0 * t2
+    s = t0
+    t0 = c
+    print(t0)
+57
+    t1 = g
+    print(t1)
+30
+    s2 = t0 + t1
+    t0 = o
+    print(t0)
+100
+    t1 = n
+    print(t1)
+-80783
+    t0 = t0 + t1
+    n = t0
+    print(t0)
+-80683
+    t1 = n
+    print(t1)
+-80683
+    s6 = s2 - t1
+    print(s6)
+80770
+    goto L3
+    L3:
+    t0 = s
+    if0 t0 goto L12
     L12:
     t0 = k
     print(t0)
--12187
+40519
     t1 = n
     print(t1)
--24339
+-80683
     t0 = t0 - t1
     g = t0
     t0 = o
     print(t0)
---- Error (Explicit) ---
-null
+100
+    t1 = g
+    print(t1)
+121202
+    t0 = t0 + t1
+    g = t0
+    print(t0)
+121302
+    s11 = stack_s11
+    s7 = stack_s7
+    s6 = stack_s6
+    s5 = stack_s5
+    s2 = stack_s2
+    s1 = stack_s1
+    s10 = stack_s10
+    s1 = stack_s1
+    s6 = stack_s6
+    s4 = stack_s4
+    s3 = stack_s3
+    s8 = stack_s8
+    s9 = stack_s9
+    s2 = stack_s2
+    s4 = stack_s4
+    t0 = g
+    return g
+    print(t3)
+121302
+    v1 = t3
+    t0 = v1
+    return v1

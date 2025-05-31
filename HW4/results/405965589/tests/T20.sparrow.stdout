@@ -29,19 +29,9 @@ if0 s4 goto lbl_NullPtr_11
 s5 = [s4 + 0]
 s5 = [s5 + 4]
 stack_a2 = a2
-stack_a3 = a3
-stack_a4 = a4
-stack_a5 = a5
-stack_a6 = a6
-stack_a7 = a7
-b = s4
-s6 = call s5(b)
+a2 = s4
+s6 = call s5()
 a2 = stack_a2
-a3 = stack_a3
-a4 = stack_a4
-a5 = stack_a5
-a6 = stack_a6
-a7 = stack_a7
 goto lbl_GoodPtr_12
 lbl_NullPtr_11:
 error ("null pointer")
@@ -51,19 +41,9 @@ if0 s4 goto lbl_NullPtr_15
 s7 = [s4 + 0]
 s7 = [s7 + 0]
 stack_a2 = a2
-stack_a3 = a3
-stack_a4 = a4
-stack_a5 = a5
-stack_a6 = a6
-stack_a7 = a7
-b = s4
-s8 = call s7(b)
+a2 = s4
+s8 = call s7()
 a2 = stack_a2
-a3 = stack_a3
-a4 = stack_a4
-a5 = stack_a5
-a6 = stack_a6
-a7 = stack_a7
 goto lbl_GoodPtr_16
 lbl_NullPtr_15:
 error ("null pointer")
@@ -80,9 +60,10 @@ s7 = stack_s7
 s9 = stack_s9
 s1 = stack_s1
 s2 = stack_s2
+t0 = v17
 return v17
-func B_init(this)
-t2 = this
+func B_init()
+t2 = a2
 stack_s1 = s1
 t3 = 1
 t1 = t3
@@ -91,38 +72,34 @@ if0 t2 goto lbl_NullPtr_21
 t5 = [t2 + 0]
 t5 = [t5 + 8]
 stack_a2 = a2
+a2 = t2
 stack_a3 = a3
-stack_a4 = a4
-stack_a5 = a5
-stack_a6 = a6
-stack_a7 = a7
-this = t2
-t4 = call t5(this x)
+a3 = x
+t4 = call t5()
 a2 = stack_a2
 a3 = stack_a3
-a4 = stack_a4
-a5 = stack_a5
-a6 = stack_a6
-a7 = stack_a7
 goto lbl_GoodPtr_22
 lbl_NullPtr_21:
 error ("null pointer")
 lbl_GoodPtr_22:
 s1 = t4
 s1 = stack_s1
+t0 = x
 return x
-func B_changex(this b)
-t3 = this
-t2 = b
+func B_changex()
+t3 = a2
+t2 = a3
 t4 = 10000000
 [t3 + 8] =t4
 t5 = 0
 v24 = t5
+t0 = v24
 return v24
-func A_run(this)
-t2 = this
+func A_run()
+t2 = a2
 t3 = [t2 + 4]
 print (t3)
 t4 = 9
 v26 = t4
+t0 = v26
 return v26

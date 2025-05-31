@@ -42,20 +42,13 @@ lbl_NullPtr_16:
 error ("null pointer")
 lbl_GoodPtr_17:
 stack_a2 = a2
+a2 = s2
 stack_a3 = a3
-stack_a4 = a4
-stack_a5 = a5
-stack_a6 = a6
-stack_a7 = a7
+a3 = v13
 t0 = v7
-k = s2
-s7 = call t0(k v13)
+s7 = call t0()
 a2 = stack_a2
 a3 = stack_a3
-a4 = stack_a4
-a5 = stack_a5
-a6 = stack_a6
-a7 = stack_a7
 goto lbl_GoodPtr_10
 lbl_NullPtr_9:
 error ("null pointer")
@@ -71,20 +64,23 @@ s5 = stack_s5
 s6 = stack_s6
 s8 = stack_s8
 s1 = stack_s1
+t0 = v18
 return v18
-func Animal_sound(this)
-t2 = this
+func Animal_sound()
+t2 = a2
 t3 = 0
 v19 = t3
+t0 = v19
 return v19
-func Cow_sound(this)
-t2 = this
+func Cow_sound()
+t2 = a2
 t3 = 3
 v20 = t3
+t0 = v20
 return v20
-func Keeper_storeAndSpeak(this x)
-t2 = this
-t3 = x
+func Keeper_storeAndSpeak()
+t2 = a2
+t3 = a3
 stack_s1 = s1
 [t2 + 4] =t3
 t4 = [t2 + 4]
@@ -92,23 +88,14 @@ if0 t4 goto lbl_NullPtr_24
 t5 = [t4 + 0]
 t5 = [t5 + 0]
 stack_a2 = a2
-stack_a3 = a3
-stack_a4 = a4
-stack_a5 = a5
-stack_a6 = a6
-stack_a7 = a7
-v21 = t4
-s1 = call t5(v21)
+a2 = t4
+s1 = call t5()
 a2 = stack_a2
-a3 = stack_a3
-a4 = stack_a4
-a5 = stack_a5
-a6 = stack_a6
-a7 = stack_a7
 goto lbl_GoodPtr_25
 lbl_NullPtr_24:
 error ("null pointer")
 lbl_GoodPtr_25:
 v23 = s1
 s1 = stack_s1
+t0 = v23
 return v23
