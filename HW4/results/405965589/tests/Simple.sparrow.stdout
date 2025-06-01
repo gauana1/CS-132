@@ -1,76 +1,64 @@
 func Main()
+stack_s1 = s1
+stack_s2 = s2
+stack_s3 = s3
 t2 = 1
 t3 = 2
-t0 = 10
-x10 = t0
-t0 = 0
-a = t0
+t4 = 10
+t5 = 0
 L1:
-t0 = a
-t4 = t0 + t2
-t0 = 2
-c = t0
-t0 = c
-t0 =t0 + t4
-c = t0
-t0 =t4 * t3
-a = t0
-t0 = a
-t1 = x10
-t5 = t0 < t1
-if0 t5 goto L1
-t0 = c
-print (t0)
-t0 = c
+s1 = t5 + t2
+s2 = 2
+s2 = s2 + s1
+t5 = s1 * t3
+s3 = t5 < t4
+if0 s3 goto L1
+print (s2)
+c = s2
+s1 = stack_s1
+s2 = stack_s2
+s3 = stack_s3
 return c
 func foobar()
+stack_s1 = s1
 label1:
 t2 = 0
 t3 = t2 * t2
 t4 = t3
-t0 =t3 + t4
-d = t0
-t0 = d
-if0 t0 goto label1
+t5 = t3 + t4
+if0 t5 goto label1
 label2:
-t0 = d
-t0 =t0 * t4
-e = t0
-t5 = 1
-t0 = e
-t2 = t0 + t5
+t3 = t5 * t4
+s1 = 1
+t2 = t3 + s1
 if0 t2 goto label2
-t0 = e
+e = t3
+s1 = stack_s1
 return e
 func bar()
-t0 = 5
-a = t0
-t0 = 3
-b = t0
+stack_s1 = s1
+stack_s3 = s3
+stack_s2 = s2
+t2 = 5
+t3 = 3
 Outer:
-t0 = a
-if0 t0 goto Done
+if0 t2 goto Done
 t4 = 1
-t0 = b
-t3 = t0 + t4
-t0 = 0
-d = t0
+t5 = t3 + t4
+s1 = 0
 Inner:
-if0 t3 goto OuterExit
-t2 = 2
-t0 =t3 * t2
-e = t0
-t3 = t3 - t4
+if0 t5 goto OuterExit
+s2 = 2
+s3 = t5 * s2
+t5 = t5 - t4
 goto Inner
 OuterExit:
-t0 = a
-t0 =t0 - t4
-a = t0
+t2 = t2 - t4
 goto Outer
 Done:
-t0 = e
-t1 = d
-t5 = t0 + t1
+t5 = s3 + s1
 f = t5
-t0 = f
+s1 = stack_s1
+s3 = stack_s3
+s2 = stack_s2
 return f

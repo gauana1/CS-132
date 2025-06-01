@@ -1,66 +1,51 @@
 func Main()
-t0 = 4
-v0 = t0
-t0 = v0
-t3 = alloc(t0)
-t0 = v0
-t4 = alloc(t0)
-t0 = @FacComputeFac
-v0 = t0
-t1 = v0
-[t4 + 0] =t1
-t1 = t4
-v0= t1
-t1 = v0
-[t3 + 0] =t1
+t2 = 4
+t3 = alloc(t2)
+t4 = alloc(t2)
+t2 = @FacComputeFac
+[t4 + 0] =t2
+t2 = t4
+[t3 + 0] =t2
 if0 t3 goto null1
 t5 = [t3 + 0]
 t5 = [t5 + 0]
-t0 = 6
-v0 = t0
-stack_a2 = a2
+t2 = 6
+stack_t2 = t2
 a2 = t3
-stack_a3 = a3
-a3 = v0
-t2 = call t5()
-a2 = stack_a2
-a3 = stack_a3
-print (t2)
+a3 = t2
+t4 = call t5()
+t2 = stack_t2
+print (t4)
 goto main_end
 null1:
 error ("null pointer")
 main_end:
-t0 = v0
+v0 = t2
 return v0
 func FacComputeFac()
-t3 = a2
-num = a3
 stack_s1 = s1
+stack_s2 = s2
 t4 = 1
-t0 = num
-t2 = t0 < t4
-if0 t2 goto if1_else
-t0 = 1
-num_aux = t0
+t5 = a3 < t4
+if0 t5 goto if1_else
+t5 = 1
 goto if1_end
 if1_else:
-t5 = [t3 + 0]
-t5 = [t5 + 0]
+s1 = [a2 + 0]
+s1 = [s1 + 0]
 t4 = 1
-t0 = num
-t0 =t0 - t4
-w2 = t0
+s2 = a3 - t4
+stack_t5 = t5
 stack_a2 = a2
-a2 = t3
 stack_a3 = a3
-a3 = w2
-s1 = call t5()
+a3 = s2
+t4 = call s1()
 a2 = stack_a2
 a3 = stack_a3
-t0 = num
-t0 =t0 * s1
-num_aux = t0
+t5 = stack_t5
+t5 = a3 * t4
 if1_end:
+num_aux = t5
 s1 = stack_s1
-t0 = num_aux
+s2 = stack_s2
 return num_aux

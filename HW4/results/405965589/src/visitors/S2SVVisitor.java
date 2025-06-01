@@ -3,8 +3,15 @@ package visitors;
 import utils.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
 
 import other.LinearScan;
 import sparrow.*;
@@ -52,13 +59,13 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             String aReg;
             if(i < 6){
                 aReg = "a" + Integer.toString(i + 2);
-                if(r.registerMap.containsKey(arg)){
-                    String reg = r.registerMap.get(arg);
-                    tempStruct.instructions.add(reg + " = " + aReg);
-                } else{
-                    tempStruct.instructions.add(arg + " = " + aReg);
-                }
-                // r.registerMap.put(arg, aReg);
+                // if(r.registerMap.containsKey(arg)){
+                //     String reg = r.registerMap.get(arg);
+                //     tempStruct.instructions.add(reg + " = " + aReg);
+                // } else{
+                //     tempStruct.instructions.add(arg + " = " + aReg);
+                // }
+                r.registerMap.put(arg, aReg);
                 // tempStruct.instructions.add("print(" + aReg + ")");
             } else{
                 if(!flag){
@@ -70,7 +77,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
                 if(r.registerMap.containsKey(arg)){
                     String reg = r.registerMap.get(arg);
                     tempStruct.instructions.add(reg + " = " + arg);
-                } 
+                }
             }
         }
         funcHeader += ")";
@@ -85,15 +92,17 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
     public SparrowVStruct visit(Block n, Triple t){
         SparrowVStruct result = new SparrowVStruct();
         RegisterStruct r = rMap.get(t.methodName);
-
-        for(Map.Entry<String, String> entry : r.registerMap.entrySet()){
-            String reg = entry.getValue();
-            char first = reg.charAt(0);
-            if(first == 's'){
-                String saveReg = "stack_" + reg + " = " + reg;
-                result.instructions.add(saveReg);
+        if(!t.methodName.equals("main") || !t.methodName.equals("main")){
+            for(Map.Entry<String, String> entry : r.registerMap.entrySet()){
+                String reg = entry.getValue();
+                char first = reg.charAt(0);
+                if(first == 's'){
+                    String saveReg = "stack_" + reg + " = " + reg;
+                    result.instructions.add(saveReg);
+                } 
             } 
-        } 
+
+        }
 
 
         int counter = 1;
@@ -114,16 +123,18 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
         }
 
         // Restore callee-saved s
-        for(Map.Entry<String, String> entry : r.registerMap.entrySet()){
-            String reg = entry.getValue();
-            char first = reg.charAt(0);
-            if(first == 's'){
-                String restoreReg = reg + " = stack_" + reg;
-                result.instructions.add(restoreReg);
+        if(!t.methodName.equals("Main") || !t.methodName.equals("main")){
+            for(Map.Entry<String, String> entry : r.registerMap.entrySet()){
+                String reg = entry.getValue();
+                char first = reg.charAt(0);
+                if(first == 's'){
+                    String restoreReg = reg + " = stack_" + reg;
+                    result.instructions.add(restoreReg);
+                } 
             } 
-        } 
+        }
 
-        result.instructions.add("t0 = " + n.return_id.toString());
+        // result.instructions.add("t0 = " + n.return_id.toString());
         String retString = "return " + n.return_id.toString();
         result.instructions.add(retString);
         return result;
@@ -181,6 +192,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
         if(!r.registerMap.containsKey(arg1)){
             String reassignArg1 = "t0 = " + arg1;
             result.instructions.add(reassignArg1);
+            // result.instructions.add("print(t0)");
             arg1Reg = "t0";
         } else{
             arg1Reg = r.registerMap.get(arg1); 
@@ -189,6 +201,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
         if(!r.registerMap.containsKey(arg2)){
             String reassignArg2 = "t1 = " + arg2;
             result.instructions.add(reassignArg2);
+            // result.instructions.add("print(t1)");
             arg2Reg = "t1";
         } else{
             arg2Reg = r.registerMap.get(arg2);
@@ -200,6 +213,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             result.instructions.add(temp);
             String reassignLhs = lhs + " = t0";
             result.instructions.add(reassignLhs);
+            // result.instructions.add("print(t0)");
         } else{
             String lhsReg = r.registerMap.get(lhs);
             String temp = lhsReg + " = " + arg1Reg + " + " + arg2Reg; 
@@ -219,12 +233,14 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             String reassignArg1 = "t0 = " + arg1;
             result.instructions.add(reassignArg1);
             arg1Reg = "t0";
+            // result.instructions.add("print(t0)");
         } else{
             arg1Reg = r.registerMap.get(arg1);
         }
         if(!r.registerMap.containsKey(arg2)){
             String reassignArg2 = "t1 = " + arg2;
             result.instructions.add(reassignArg2);
+            // result.instructions.add("print(t1)");
             arg2Reg = "t1";
         } else{
             arg2Reg = r.registerMap.get(arg2);
@@ -253,6 +269,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             String reassignArg1 = "t0 = " + arg1;
             result.instructions.add(reassignArg1);
             arg1Reg = "t0";
+            // result.instructions.add("print(t0)");
         } else{
             arg1Reg = r.registerMap.get(arg1);
             // result.instructions.add("print(" + arg1Reg + ")");
@@ -261,6 +278,7 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             String reassignArg2 = "t1 = " + arg2;
             result.instructions.add(reassignArg2);
             arg2Reg = "t1";
+            // result.instructions.add("print(t1)");
         } else{
             arg2Reg = r.registerMap.get(arg2);
             // result.instructions.add("print(" + arg2Reg + ")");
@@ -489,41 +507,69 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
         } 
 
         //now assign arg regs(a2 - a7)
+        // String args = "(";
+        // for (int i = 0; i < n.args.size(); i++) {
+        //    IR.token.Identifier a = n.args.get(i);
+        //     String arg = a.toString();
+        //     String aReg = "a" + Integer.toString(i + 2);
+        //     if(i < 6){
+        //         result.instructions.add("stack_" + aReg + " = " + aReg);
+        //         if(r.registerMap.containsKey(arg)){
+        //             String argReg = r.registerMap.get(arg);
+        //             String assignAReg = aReg + " = " + argReg;
+        //             result.instructions.add(assignAReg);
+        //         } else{
+        //             String assignAReg = aReg + " = " + arg;
+        //             result.instructions.add(assignAReg);
+        //         }
+        //     } else{
+        //         if(r.registerMap.containsKey(arg)){
+        //             String argReg = r.registerMap.get(arg);
+        //             if(!argReg.equals(resReg)){
+        //                 result.instructions.add("stack_" + aReg + " = " + argReg); //id = reg
+        //             } //look into like passing the extra args and see if like the names apppear out of nowhere, need to track themn properly
+        //             String assignAReg = arg + " = " + argReg;
+        //             result.instructions.add(assignAReg);
+                    
+        //         } else{
+        //             //have to save like caller saved
+        //             result.instructions.add("t0 = " + arg);
+        //             result.instructions.add("stack_" + aReg + " = t0"); // id = reg
+        //         }
+        //         args += " " + arg;
+        //     }
+            
+        // } 
+        // args += ")";
+
+         //now assign arg regs(a2 - a7)
+        SparrowVStruct argAssigns = topoSortAssignArgs(n.args, regStruct, resReg,t.methodName);
+        result.instructions.addAll(argAssigns.instructions);
+        SparrowVStruct temp = new SparrowVStruct();
         String args = "(";
         for (int i = 0; i < n.args.size(); i++) {
-            IR.token.Identifier a = n.args.get(i);
-            String arg = a.toString();
-            String aReg = "a" + Integer.toString(i + 2);
-            if(i < 6){
-                result.instructions.add("stack_" + aReg + " = " + aReg);
+            if(i >= 6){
+                IR.token.Identifier a = n.args.get(i);
+                String arg = a.toString();
                 if(r.registerMap.containsKey(arg)){
-                    String argReg = r.registerMap.get(arg);
-                    String assignAReg = aReg + " = " + argReg;
-                    result.instructions.add(assignAReg);
-                } else{
-                    String assignAReg = aReg + " = " + arg;
-                    result.instructions.add(assignAReg);
+                    String reg = r.registerMap.get(arg);
+                    //then it has a register associated with it
+                    if(reg.charAt(0) == 'a'){
+                        String stackReg = "stack_a" + Integer.toString(i + 2);
+                        args += " " + stackReg;
+                    } else{
+                        temp.instructions.add(arg + " = " + reg);
+                        args += " " + arg;
+                    }
+                }else{
+                    args += " " + arg;
                 }
-            } else{
-                if(r.registerMap.containsKey(arg)){
-                    String argReg = r.registerMap.get(arg);
-                    if(!argReg.equals(resReg)){
-                        result.instructions.add("stack_" + aReg + " = " + argReg); //id = reg
-                    } //look into like passing the extra args and see if like the names apppear out of nowhere, need to track themn properly
-                    String assignAReg = arg + " = " + argReg;
-                    result.instructions.add(assignAReg);
-                    
-                } else{
-                    //have to save like caller saved
-                    result.instructions.add("t0 = " + arg);
-                    result.instructions.add("stack_" + aReg + " = t0"); // id = reg
-                }
-                args += " " + arg;
+                
             }
             
         } 
         args += ")";
-
+        result.instructions.addAll(temp.instructions);
         if(!r.registerMap.containsKey(func)){
             String reassignFunc = "t0 = " + func;
             result.instructions.add(reassignFunc);
@@ -545,25 +591,28 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
         } 
 
         //reassign a regs like caller regs
-        for (int i = 0; i < n.args.size(); i++) {
-            IR.token.Identifier a = n.args.get(i);
-            String arg = a.toString();
-            String aReg = "a" + Integer.toString(i + 2);
-            if(i < 6){
-                result.instructions.add(aReg + " = stack_" + aReg);
-            // }
-            } else{
-                if(r.registerMap.containsKey(arg)){
-                    String argReg = r.registerMap.get(arg);
-                    if(argReg.equals(resReg)){continue;}
-                    result.instructions.add(argReg + " = stack_" + aReg); //id = reg
+        if(!t.methodName.equals("Main") && !t.methodName.equals("main")){
+            for (int i = 0; i < n.args.size(); i++) {
+                IR.token.Identifier a = n.args.get(i);
+                String arg = a.toString();
+                String aReg = "a" + Integer.toString(i + 2);
+                if(i < 6){
+                    result.instructions.add(aReg + " = stack_" + aReg);
+                // }
                 } else{
-                    result.instructions.add("t0 = stack_" + aReg); // id = reg
-                    result.instructions.add(arg + " = t0");
+                    if(r.registerMap.containsKey(arg)){
+                        String argReg = r.registerMap.get(arg);
+                        if(argReg.equals(resReg)){continue;}
+                        result.instructions.add(argReg + " = stack_" + aReg); //id = reg
+                    } else{
+                        result.instructions.add("t0 = stack_" + aReg); // id = reg
+                        result.instructions.add(arg + " = t0");
+                    }
                 }
+                
             }
-            
         }
+        
 
         //reassign caller regs
         for(Map.Entry<String, String> entry : regStruct.registerMap.entrySet()){
@@ -578,5 +627,156 @@ public class S2SVVisitor implements ArgRetVisitor<Triple, SparrowVStruct> {
             }
         } 
         return result;
-   } 
+    }     
+    public SparrowVStruct topoSortAssignArgs(List<IR.token.Identifier> args, RegisterStruct rStruct, String resReg, String funcName) {
+        SparrowVStruct result = new SparrowVStruct();
+        Map<String, List<String>> graph = new HashMap<>();
+        Set<String> nodes = new HashSet<>();
+        Map<String, Integer> indegree = new HashMap<>();
+
+        // Build graph
+        for (int i = 0; i < args.size(); i++) {
+            String node = i < 6 ? "assign_a" + (i + 2) : "assign_stack_a" + (i + 2);
+            nodes.add(node);
+            indegree.put(node, 0);
+        }
+
+        for (int i = 0; i < args.size(); i++) {
+            String regI = rStruct.registerMap.get(args.get(i).toString());
+            if (regI == null) continue;
+            
+            for (int j = 0; j < args.size(); j++) {
+                if (i == j) continue;
+                String targetJ = j < 6 ? "a" + (j + 2) : rStruct.registerMap.get(args.get(j).toString());
+                if (regI.equals(targetJ)) {
+                    String from = i < 6 ? "assign_a" + (i + 2) : "assign_stack_a" + (i + 2);
+                    String to = j < 6 ? "assign_a" + (j + 2) : "assign_stack_a" + (j + 2);
+                    graph.computeIfAbsent(from, k -> new ArrayList<>()).add(to);
+                    indegree.put(to, indegree.get(to) + 1);
+                }
+            }
+        }
+
+        // Process acyclic nodes first
+        Queue<String> q = new LinkedList<>();
+        for (String node : nodes) {
+            if (indegree.get(node) == 0) q.add(node);
+        }
+
+        while (!q.isEmpty()) {
+            String node = q.poll();
+            generateInstruction(node, args, rStruct, resReg, result, funcName);
+            
+            for (String neighbor : graph.getOrDefault(node, Collections.emptyList())) {
+                indegree.put(neighbor, indegree.get(neighbor) - 1);
+                if (indegree.get(neighbor) == 0) q.add(neighbor);
+            }
+        }
+
+        // Handle cycles
+        Set<String> remaining = new HashSet<>();
+        for (String node : nodes) {
+            if (indegree.get(node) > 0) remaining.add(node);
+        }
+
+        while (!remaining.isEmpty()) {
+            String start = remaining.iterator().next();
+            List<String> cycle = findCycle(start, graph, remaining);
+            
+            if (cycle.size() > 1) {
+                // Break cycle: save first, do chain, restore last
+                String temp = "t0";
+                String lastNode = cycle.get(cycle.size() - 1);
+                int lastIdx = Integer.parseInt(lastNode.replaceAll("[^0-9]", "")) - 2;
+                String argReg = "a" + Integer.toString(lastIdx + 2);
+                // String firstArg = args.get(firstIdx).toString();
+                // String argReg = rStruct.registerMap.get(firstArg);
+                result.instructions.add(temp + " = " + argReg);
+                
+                // Process cycle chain
+                for (int i = 0; i < cycle.size(); i++) {
+                    String node = cycle.get(i);
+                    int idx = Integer.parseInt(node.replaceAll("[^0-9]", "")) - 2;
+                    String sourceArg = args.get(idx).toString();
+                    String sourceReg = node.startsWith("assign_a") ? "a" + (idx + 2) : "stack_a" + (idx + 2);
+                    if (i == cycle.size() - 1) {
+                        // Last node gets temp value
+                        //need to assign first = last, last is already in temp
+                        node = cycle.get(0);
+                        idx = Integer.parseInt(node.replaceAll("[^0-9]", "")) - 2;
+                        sourceReg = node.startsWith("assign_a") ? "a" + (idx + 2) : "stack_a" + (idx + 2); 
+                        if (node.startsWith("assign_a") && !funcName.equals("main") && !funcName.equals("Main")) {
+                            result.instructions.add("stack_" + sourceReg + " = " + sourceReg);
+                        } 
+                        result.instructions.add(sourceReg + " = " + temp);
+                    } else {
+                        // Get value from next node in cycle
+                        int nextIdx = Integer.parseInt(cycle.get(i + 1).replaceAll("[^0-9]", "")) - 2;
+                        // String nextArg = args.get(nextIdx).toString();
+                        String targetReg= node.startsWith("assign_a") ? "a" + (nextIdx + 2) : "stack_a" + (nextIdx + 2);
+                        if (node.startsWith("assign_a") && !funcName.equals("main") && !funcName.equals("Main")) {
+                            result.instructions.add("stack_" + targetReg + " = " + targetReg);
+                        }
+                        result.instructions.add(targetReg + " = " + (sourceReg != null ? sourceReg : sourceArg));
+                    }
+                }
+            }
+            
+            remaining.removeAll(cycle);
+        }
+        return result;
+    }
+    private void generateInstruction(String node, List<IR.token.Identifier> args, RegisterStruct rStruct, String resReg, SparrowVStruct result, String funcName) {
+        int idx = Integer.parseInt(node.replaceAll("[^0-9]", "")) - 2;
+        String arg = args.get(idx).toString();
+        String sourceReg = rStruct.registerMap.get(arg);
+        
+        if (node.startsWith("assign_a")) {
+            String aReg = "a" + (idx + 2);
+            if(!funcName.equals("main") && !funcName.equals("Main")){
+                result.instructions.add("stack_" + aReg + " = " + aReg);
+            }
+            String temp = sourceReg != null ? sourceReg : arg;
+            if(!temp.equals(aReg)){
+                result.instructions.add(aReg + " = " + temp);
+            }
+        } else {
+            if(!funcName.equals("main") && !funcName.equals("Main")) {
+                String stackReg = "stack_a" + (idx + 2);
+                if (sourceReg != null && !sourceReg.equals(resReg)) {
+                    result.instructions.add(stackReg + " = " + sourceReg);
+                } else if (sourceReg == null) {
+                    result.instructions.add("t0 = " + arg);
+                    result.instructions.add(stackReg + " = t0");
+                }
+            }
+        }
+    }
+    private List<String> findCycle(String start, Map<String, List<String>> graph, Set<String> remaining) {
+        List<String> path = new ArrayList<>();
+        Set<String> visited = new HashSet<>();
+        if (dfs(start, start, graph, remaining, visited, path, false)) {
+            return path;
+        }
+        return Arrays.asList(start); // Single node
+    }
+    private boolean dfs(String current, String target, Map<String, List<String>> graph, Set<String> remaining, Set<String> visited, List<String> path, boolean started) {
+        if (!remaining.contains(current)) return false;
+        if (current.equals(target) && started) {
+            return true;
+        }
+        if (visited.contains(current)) return false;
+        
+        visited.add(current);
+        path.add(current);
+        
+        for (String neighbor : graph.getOrDefault(current, Collections.emptyList())) {
+            if (dfs(neighbor, target, graph, remaining, visited, path, true)) {
+                return true;
+            }
+        }
+        
+        path.remove(path.size() - 1);
+        return false;
+    }
 }

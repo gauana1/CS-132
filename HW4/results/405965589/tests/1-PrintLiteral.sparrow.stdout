@@ -3,5 +3,4 @@ t2 = 12
 print (t2)
 t3 = 0
 v1 = t3
-t0 = v1
 return v1

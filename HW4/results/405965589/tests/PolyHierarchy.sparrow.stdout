@@ -1,101 +1,64 @@
 func main()
-stack_s3 = s3
-stack_s4 = s4
-stack_s6 = s6
-stack_s5 = s5
-stack_s11 = s11
-stack_s7 = s7
-stack_s2 = s2
-stack_s8 = s8
-stack_s9 = s9
-stack_s1 = s1
-stack_s10 = s10
 t2 = 4
 t3 = 4
 t4 = alloc(t2)
 t5 = alloc(t3)
-s1 = @Dog_speak
-[t5 + 0] =s1
+t2 = @Dog_speak
+[t5 + 0] =t2
 [t4 + 0] =t5
 if0 t4 goto lbl_NullPtr_5
 goto lbl_GoodPtr_6
 lbl_NullPtr_5:
 error ("null pointer")
 lbl_GoodPtr_6:
-t1 = t4
-a= t1
-t0 = a
-if0 t0 goto lbl_NullPtr_9
-t0 = a
-s3 = [t0 + 0]
-s3 = [s3 + 0]
-stack_a2 = a2
-a2 = a
-s4 = call s3()
-a2 = stack_a2
+t3 = t4
+if0 t3 goto lbl_NullPtr_9
+t2 = [t3 + 0]
+t2 = [t2 + 0]
+stack_t3 = t3
+a2 = t3
+t5 = call t2()
+t3 = stack_t3
 goto lbl_GoodPtr_10
 lbl_NullPtr_9:
 error ("null pointer")
 lbl_GoodPtr_10:
-print (s4)
-s5 = 4
-s6 = 4
-s2 = alloc(s5)
-s7 = alloc(s6)
-s8 = @Cat_speak
-[s7 + 0] =s8
-[s2 + 0] =s7
-if0 s2 goto lbl_NullPtr_16
+print (t5)
+t4 = 4
+t2 = 4
+t5 = alloc(t4)
+t4 = alloc(t2)
+t2 = @Cat_speak
+[t4 + 0] =t2
+[t5 + 0] =t4
+if0 t5 goto lbl_NullPtr_16
 goto lbl_GoodPtr_17
 lbl_NullPtr_16:
 error ("null pointer")
 lbl_GoodPtr_17:
-t1 = s2
-a= t1
-t0 = a
-if0 t0 goto lbl_NullPtr_20
-t0 = a
-s9 = [t0 + 0]
-s9 = [s9 + 0]
-stack_a2 = a2
-a2 = a
-s10 = call s9()
-a2 = stack_a2
+t3 = t5
+if0 t3 goto lbl_NullPtr_20
+t2 = [t3 + 0]
+t2 = [t2 + 0]
+a2 = t3
+t4 = call t2()
 goto lbl_GoodPtr_21
 lbl_NullPtr_20:
 error ("null pointer")
 lbl_GoodPtr_21:
-print (s10)
-s11 = 0
-v22 = s11
-s3 = stack_s3
-s4 = stack_s4
-s6 = stack_s6
-s5 = stack_s5
-s11 = stack_s11
-s7 = stack_s7
-s2 = stack_s2
-s8 = stack_s8
-s9 = stack_s9
-s1 = stack_s1
-s10 = stack_s10
-t0 = v22
+print (t4)
+t5 = 0
+v22 = t5
 return v22
 func Animal_speak()
-t2 = a2
 t3 = 0
 v23 = t3
-t0 = v23
 return v23
 func Dog_speak()
-t2 = a2
 t3 = 1
 v24 = t3
-t0 = v24
 return v24
 func Cat_speak()
-t2 = a2
 t3 = 2
 v25 = t3
-t0 = v25
 return v25

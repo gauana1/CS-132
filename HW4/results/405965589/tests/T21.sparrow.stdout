@@ -1,162 +1,115 @@
 func main()
-stack_s3 = s3
-stack_s4 = s4
-stack_s5 = s5
-stack_s6 = s6
-stack_s7 = s7
-stack_s8 = s8
-stack_s9 = s9
-stack_s10 = s10
-stack_s1 = s1
-stack_s2 = s2
-stack_s11 = s11
 t2 = 28
 t3 = 16
 t4 = alloc(t2)
 t5 = alloc(t3)
-s1 = @B_init
-[t5 + 8] =s1
-s2 = @A_run
-[t5 + 0] =s2
-s3 = @A_printb
-[t5 + 4] =s3
-s4 = @B_changex
-[t5 + 12] =s4
+t2 = @B_init
+[t5 + 8] =t2
+t3 = @A_run
+[t5 + 0] =t3
+t2 = @A_printb
+[t5 + 4] =t2
+t3 = @B_changex
+[t5 + 12] =t3
 [t4 + 0] =t5
 if0 t4 goto lbl_NullPtr_8
 goto lbl_GoodPtr_9
 lbl_NullPtr_8:
 error ("null pointer")
 lbl_GoodPtr_9:
-s5 = t4
-if0 s5 goto lbl_NullPtr_12
-s6 = [s5 + 0]
-s6 = [s6 + 8]
-stack_a2 = a2
-a2 = s5
-s7 = call s6()
-a2 = stack_a2
+t2 = t4
+if0 t2 goto lbl_NullPtr_12
+t3 = [t2 + 0]
+t3 = [t3 + 8]
+stack_t2 = t2
+a2 = t2
+t5 = call t3()
+t2 = stack_t2
 goto lbl_GoodPtr_13
 lbl_NullPtr_12:
 error ("null pointer")
 lbl_GoodPtr_13:
-print (s7)
-if0 s5 goto lbl_NullPtr_16
-s8 = [s5 + 0]
-s8 = [s8 + 0]
-stack_a2 = a2
-a2 = s5
-s9 = call s8()
-a2 = stack_a2
+print (t5)
+if0 t2 goto lbl_NullPtr_16
+t4 = [t2 + 0]
+t4 = [t4 + 0]
+stack_t2 = t2
+a2 = t2
+t3 = call t4()
+t2 = stack_t2
 goto lbl_GoodPtr_17
 lbl_NullPtr_16:
 error ("null pointer")
 lbl_GoodPtr_17:
-print (s9)
-if0 s5 goto lbl_NullPtr_20
-s10 = [s5 + 0]
-s10 = [s10 + 4]
-stack_a2 = a2
-a2 = s5
-s11 = call s10()
-a2 = stack_a2
+print (t3)
+if0 t2 goto lbl_NullPtr_20
+t5 = [t2 + 0]
+t5 = [t5 + 4]
+a2 = t2
+t4 = call t5()
 goto lbl_GoodPtr_21
 lbl_NullPtr_20:
 error ("null pointer")
 lbl_GoodPtr_21:
-print (s11)
-t2 = 0
-v22 = t2
-s3 = stack_s3
-s4 = stack_s4
-s5 = stack_s5
-s6 = stack_s6
-s7 = stack_s7
-s8 = stack_s8
-s9 = stack_s9
-s10 = stack_s10
-s1 = stack_s1
-s2 = stack_s2
-s11 = stack_s11
-t0 = v22
+print (t4)
+t3 = 0
+v22 = t3
 return v22
 func B_init()
-t2 = a2
-stack_s1 = s1
-stack_s2 = s2
 t3 = 0
-[t2 + 16] =t3
+[a2 + 16] =t3
 t4 = 1
-t1 = t4
-x= t1
-if0 t2 goto lbl_NullPtr_27
-s1 = [t2 + 0]
-s1 = [s1 + 12]
+t5 = t4
+if0 a2 goto lbl_NullPtr_27
+t3 = [a2 + 0]
+t3 = [t3 + 12]
+stack_t5 = t5
 stack_a2 = a2
-a2 = t2
 stack_a3 = a3
-a3 = x
-t5 = call s1()
+a3 = t5
+t4 = call t3()
 a2 = stack_a2
 a3 = stack_a3
+t5 = stack_t5
 goto lbl_GoodPtr_28
 lbl_NullPtr_27:
 error ("null pointer")
 lbl_GoodPtr_28:
-s2 = t5
-s1 = stack_s1
-s2 = stack_s2
-t0 = x
+t2 = t4
+x = t5
 return x
 func B_changex()
-t3 = a2
-t2 = a3
-stack_s2 = s2
-stack_s1 = s1
-stack_s4 = s4
-stack_s3 = s3
-t4 = [t3 + 16]
+t4 = [a2 + 16]
 if0 t4 goto lbl_Else_29
 t5 = 5000
-t2 = t5
-s1 = 10000000
-[t3 + 24] =s1
+a3 = t5
+t4 = 10000000
+[a2 + 24] =t4
 goto lbl_IfEnd_30
 lbl_Else_29:
-s2 = 2500
-t2 = s2
-s3 = 8000
-[t3 + 24] =s3
+t5 = 2500
+a3 = t5
+t4 = 8000
+[a2 + 24] =t4
 lbl_IfEnd_30:
-s4 = 0
-v36 = s4
-s2 = stack_s2
-s1 = stack_s1
-s4 = stack_s4
-s3 = stack_s3
-t0 = v36
+t2 = 0
+v36 = t2
 return v36
 func A_run()
-t2 = a2
-t3 = [t2 + 8]
+t3 = [a2 + 8]
 print (t3)
-t4 = [t2 + 8]
+t4 = [a2 + 8]
 v38 = t4
-t0 = v38
 return v38
 func A_printb()
-t2 = a2
-t3 = [t2 + 12]
+t3 = [a2 + 12]
 print (t3)
-t4 = [t2 + 12]
+t4 = [a2 + 12]
 v40 = t4
-t0 = v40
 return v40
 func C_run()
-t2 = a2
-t3 = [t2 + 8]
+t3 = [a2 + 8]
 print (t3)
 t4 = 9
 v42 = t4
-t0 = v42
 return v42

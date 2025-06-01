@@ -1,93 +1,59 @@
 func main()
-stack_s3 = s3
-stack_s2 = s2
-stack_s5 = s5
-stack_s4 = s4
-stack_s1 = s1
 t2 = 8
 t3 = 4
 t4 = alloc(t2)
 t5 = alloc(t3)
-s1 = @A_BaseMethod
-[t5 + 0] =s1
+t2 = @A_BaseMethod
+[t5 + 0] =t2
 [t4 + 0] =t5
 if0 t4 goto lbl_NullPtr_5
 goto lbl_GoodPtr_6
 lbl_NullPtr_5:
 error ("null pointer")
 lbl_GoodPtr_6:
-s2 = t4
-if0 s2 goto lbl_NullPtr_9
-s3 = [s2 + 0]
-s3 = [s3 + 0]
-s4 = 10
-stack_a2 = a2
-a2 = s2
-stack_a3 = a3
-a3 = s4
-t1 = call s3()
-v8 = t1
-a2 = stack_a2
-a3 = stack_a3
+t3 = t4
+if0 t3 goto lbl_NullPtr_9
+t2 = [t3 + 0]
+t2 = [t2 + 0]
+t5 = 10
+a2 = t3
+a3 = t5
+t4 = call t2()
 goto lbl_GoodPtr_10
 lbl_NullPtr_9:
 error ("null pointer")
 lbl_GoodPtr_10:
-t0 = v8
-print (t0)
-s5 = 0
-v12 = s5
-s3 = stack_s3
-s2 = stack_s2
-s5 = stack_s5
-s4 = stack_s4
-s1 = stack_s1
-t0 = v12
+print (t4)
+t3 = 0
+v12 = t3
 return v12
 func A_BaseMethod()
-this = a2
-t3 = a3
 stack_s1 = s1
-stack_s5 = s5
-stack_s3 = s3
-stack_s4 = s4
-stack_s2 = s2
 t4 = 0
-t2 = t4 < t3
-if0 t2 goto lbl_Else_13
-t0 = this
-if0 t0 goto lbl_NullPtr_20
-t0 = this
-t5 = [t0 + 0]
-t5 = [t5 + 0]
-s1 = 1
-t0 =t3 - s1
-v22 = t0
+t5 = t4 < a3
+if0 t5 goto lbl_Else_13
+if0 a2 goto lbl_NullPtr_20
+t4 = [a2 + 0]
+t4 = [t4 + 0]
+t5 = 1
+s1 = a3 - t5
 stack_a2 = a2
-a2 = this
 stack_a3 = a3
-a3 = v22
-s2 = call t5()
+a3 = s1
+t3 = call t4()
 a2 = stack_a2
 a3 = stack_a3
 goto lbl_GoodPtr_21
 lbl_NullPtr_20:
 error ("null pointer")
 lbl_GoodPtr_21:
-s3 = 20
-s4 = s2 + s3
-t0 = this
-[t0 + 4] =s4
+t5 = 20
+t4 = t3 + t5
+[a2 + 4] =t4
 goto lbl_IfEnd_14
 lbl_Else_13:
 lbl_IfEnd_14:
-t0 = this
-s5 = [t0 + 4]
-v25 = s5
+t3 = [a2 + 4]
+v25 = t3
 s1 = stack_s1
-s5 = stack_s5
-s3 = stack_s3
-s4 = stack_s4
-s2 = stack_s2
-t0 = v25
 return v25

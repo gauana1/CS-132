@@ -1,23 +1,16 @@
 func main()
-stack_s3 = s3
-stack_s4 = s4
-stack_s5 = s5
-stack_s6 = s6
-stack_s7 = s7
-stack_s1 = s1
-stack_s2 = s2
 t2 = 12
 t3 = 16
 t4 = alloc(t2)
 t5 = alloc(t3)
-s1 = @BBS_Print
-[t5 + 0] =s1
-s2 = @BBS_Init
-[t5 + 4] =s2
-s3 = @BBS_Start
-[t5 + 8] =s3
-s4 = @BBS_Sort
-[t5 + 12] =s4
+t2 = @BBS_Print
+[t5 + 0] =t2
+t3 = @BBS_Init
+[t5 + 4] =t3
+t2 = @BBS_Start
+[t5 + 8] =t2
+t3 = @BBS_Sort
+[t5 + 12] =t3
 [t4 + 0] =t5
 if0 t4 goto lbl_NullPtr_8
 goto lbl_GoodPtr_9
@@ -25,995 +18,769 @@ lbl_NullPtr_8:
 error ("null pointer")
 lbl_GoodPtr_9:
 if0 t4 goto lbl_NullPtr_12
-s5 = [t4 + 0]
-s5 = [s5 + 8]
-s6 = 10
-stack_a2 = a2
+t2 = [t4 + 0]
+t2 = [t2 + 8]
+t3 = 10
 a2 = t4
-stack_a3 = a3
-a3 = s6
-t1 = call s5()
-v11 = t1
-a2 = stack_a2
-a3 = stack_a3
+a3 = t3
+t5 = call t2()
 goto lbl_GoodPtr_13
 lbl_NullPtr_12:
 error ("null pointer")
 lbl_GoodPtr_13:
-t0 = v11
-print (t0)
-s7 = 0
-v15 = s7
-s3 = stack_s3
-s4 = stack_s4
-s5 = stack_s5
-s6 = stack_s6
-s7 = stack_s7
-s1 = stack_s1
-s2 = stack_s2
-t0 = v15
+print (t5)
+t4 = 0
+v15 = t4
 return v15
 func BBS_Start()
-this = a2
-t2 = a3
-stack_s7 = s7
-stack_s2 = s2
-stack_s1 = s1
-stack_s8 = s8
-stack_s4 = s4
-stack_s3 = s3
-stack_s5 = s5
-stack_s6 = s6
-t0 = this
-if0 t0 goto lbl_NullPtr_18
-t0 = this
-t4 = [t0 + 0]
+if0 a2 goto lbl_NullPtr_18
+t4 = [a2 + 0]
 t4 = [t4 + 4]
 stack_a2 = a2
-a2 = this
 stack_a3 = a3
-a3 = t2
-t3 = call t4()
+t5 = call t4()
 a2 = stack_a2
 a3 = stack_a3
 goto lbl_GoodPtr_19
 lbl_NullPtr_18:
 error ("null pointer")
 lbl_GoodPtr_19:
-t5 = t3
-t0 = this
-if0 t0 goto lbl_NullPtr_22
-t0 = this
-s1 = [t0 + 0]
-s1 = [s1 + 0]
-stack_t5 = t5
+t2 = t5
+if0 a2 goto lbl_NullPtr_22
+t4 = [a2 + 0]
+t4 = [t4 + 0]
+stack_t2 = t2
 stack_a2 = a2
-a2 = this
-s2 = call s1()
+t5 = call t4()
 a2 = stack_a2
-t5 = stack_t5
+t2 = stack_t2
 goto lbl_GoodPtr_23
 lbl_NullPtr_22:
 error ("null pointer")
 lbl_GoodPtr_23:
-t5 = s2
-s3 = 99999
-print (s3)
-t0 = this
-if0 t0 goto lbl_NullPtr_27
-t0 = this
-s4 = [t0 + 0]
-s4 = [s4 + 12]
-stack_t5 = t5
+t2 = t5
+t4 = 99999
+print (t4)
+if0 a2 goto lbl_NullPtr_27
+t5 = [a2 + 0]
+t5 = [t5 + 12]
+stack_t2 = t2
 stack_a2 = a2
-a2 = this
-s5 = call s4()
+t4 = call t5()
 a2 = stack_a2
-t5 = stack_t5
+t2 = stack_t2
 goto lbl_GoodPtr_28
 lbl_NullPtr_27:
 error ("null pointer")
 lbl_GoodPtr_28:
-t5 = s5
-t0 = this
-if0 t0 goto lbl_NullPtr_31
-t0 = this
-s6 = [t0 + 0]
-s6 = [s6 + 0]
-stack_t5 = t5
+t2 = t4
+if0 a2 goto lbl_NullPtr_31
+t5 = [a2 + 0]
+t5 = [t5 + 0]
+stack_t2 = t2
 stack_a2 = a2
-a2 = this
-s7 = call s6()
+t4 = call t5()
 a2 = stack_a2
-t5 = stack_t5
+t2 = stack_t2
 goto lbl_GoodPtr_32
 lbl_NullPtr_31:
 error ("null pointer")
 lbl_GoodPtr_32:
-t5 = s7
-s8 = 0
-v33 = s8
-s7 = stack_s7
-s2 = stack_s2
-s1 = stack_s1
-s8 = stack_s8
-s4 = stack_s4
-s3 = stack_s3
-s5 = stack_s5
-s6 = stack_s6
-t0 = v33
+t2 = t4
+t3 = 0
+v33 = t3
 return v33
 func BBS_Sort()
-this = a2
-stack_s7 = s7
-stack_s11 = s11
-stack_s8 = s8
-stack_s9 = s9
-stack_s10 = s10
-stack_s6 = s6
-stack_s9 = s9
-stack_s6 = s6
-stack_s11 = s11
-stack_s1 = s1
-stack_s2 = s2
-stack_s3 = s3
-stack_s2 = s2
-stack_s4 = s4
-stack_s5 = s5
-stack_s3 = s3
-stack_s5 = s5
-stack_s1 = s1
-stack_s8 = s8
-stack_s7 = s7
-stack_s6 = s6
-stack_s4 = s4
-stack_s11 = s11
-stack_s9 = s9
-stack_s9 = s9
-stack_s10 = s10
-stack_s10 = s10
-stack_s8 = s8
-stack_s6 = s6
-stack_s11 = s11
-stack_s1 = s1
-stack_s2 = s2
-stack_s7 = s7
-stack_s5 = s5
-stack_s3 = s3
-stack_s2 = s2
-stack_s1 = s1
-stack_s2 = s2
-stack_s4 = s4
-stack_s5 = s5
-stack_s3 = s3
-stack_s1 = s1
-stack_s4 = s4
 stack_s5 = s5
 stack_s4 = s4
 stack_s3 = s3
 stack_s8 = s8
-stack_s10 = s10
+stack_s1 = s1
+stack_s8 = s8
 stack_s7 = s7
-t0 = this
-t3 = [t0 + 8]
+stack_s6 = s6
+stack_s6 = s6
+stack_s4 = s4
+stack_s5 = s5
+stack_s5 = s5
+stack_s8 = s8
+stack_s9 = s9
+stack_s7 = s7
+stack_s10 = s10
+stack_s10 = s10
+stack_s9 = s9
+stack_s3 = s3
+stack_s1 = s1
+stack_s11 = s11
+stack_s3 = s3
+stack_s8 = s8
+stack_s7 = s7
+stack_s7 = s7
+stack_s10 = s10
+stack_s8 = s8
+stack_s9 = s9
+stack_s1 = s1
+stack_s11 = s11
+stack_s3 = s3
+stack_s4 = s4
+stack_s9 = s9
+stack_s4 = s4
+stack_s10 = s10
+stack_s1 = s1
+stack_s6 = s6
+stack_s5 = s5
+stack_s5 = s5
+stack_s7 = s7
+stack_s6 = s6
+stack_s8 = s8
+stack_s3 = s3
+stack_s8 = s8
+stack_s1 = s1
+stack_s9 = s9
+stack_s2 = s2
+stack_s6 = s6
+stack_s5 = s5
+stack_s10 = s10
+stack_s9 = s9
+stack_s1 = s1
+stack_s11 = s11
+stack_s7 = s7
+stack_s7 = s7
+stack_s6 = s6
+stack_s4 = s4
+stack_s11 = s11
+stack_s3 = s3
+stack_s5 = s5
+stack_s8 = s8
+stack_s10 = s10
+stack_s9 = s9
+stack_s3 = s3
+stack_s4 = s4
+t3 = [a2 + 8]
 t4 = 1
-t2 = t3 - t4
-t1 = t2
-i= t1
-s1 = 0
-s2 = 1
-t5 = s1 - s2
-t1 = t5
-aux02= t1
+t5 = t3 - t4
+t3 = t5
+t4 = 0
+t5 = 1
+s1 = t4 - t5
+t4 = s1
 lbl_While_40:
-t0 = aux02
-t1 = i
-s4 = t0 < t1
-if0 s4 goto lbl_WhileExit_41
-s5 = 1
-t1 = s5
-j= t1
+t5 = t4 < t3
+if0 t5 goto lbl_WhileExit_41
+t5 = 1
+s2 = t5
 lbl_While_44:
-s7 = 1
-t0 = i
-s3 = t0 + s7
-t0 = j
-s8 = t0 < s3
-if0 s8 goto lbl_WhileExit_45
-s9 = 1
-t0 = j
-s10 = t0 - s9
-t1 = s10
-aux07= t1
-t0 = this
-t0 =[t0 + 4]
-v51 = t0
-t0 = 4
-v52 = t0
-t3 = 5
-t0 = v52
-s6 = t0 - t3
-t0 = v51
-t4 = [t0 + 0]
-t1 = aux07
-s11 = s6 < t1
-t0 = aux07
-t2 = t0 < t4
-s1 = s11 * t2
+t5 = 1
+s3 = t3 + t5
+t5 = s2 < s3
+if0 t5 goto lbl_WhileExit_45
+t5 = 1
+s4 = s2 - t5
+t5 = s4
+s5 = [a2 + 4]
+s6 = 4
+s7 = 5
+s8 = s6 - s7
+s9 = [s5 + 0]
+s10 = s8 < t5
+s11 = t5 < s9
+s1 = s10 * s11
 if0 s1 goto lbl_OutOfBounds_59
 goto lbl_Inbound_60
 lbl_OutOfBounds_59:
 error ("array index out of bounds")
 lbl_Inbound_60:
-t0 = v52
-t1 = aux07
-s2 = t0 * t1
-t1 = v52
-s2 = s2 + t1
-t0 = v51
-s2 = t0 + s2
-t5 = [s2 + 0]
-t1 = t5
-aux04= t1
-t0 = this
-t0 =[t0 + 4]
-v63 = t0
-t0 = 4
-v64 = t0
-s4 = 5
-t0 = v64
-s5 = t0 - s4
-t0 = v63
-s3 = [t0 + 0]
-t1 = j
-s7 = s5 < t1
-t0 = j
-s8 = t0 < s3
-s9 = s7 * s8
-if0 s9 goto lbl_OutOfBounds_71
+s3 = s6 * t5
+s3 = s3 + s6
+s3 = s5 + s3
+t5 = [s3 + 0]
+s4 = t5
+t5 = [a2 + 4]
+s7 = 4
+s8 = 5
+s9 = s7 - s8
+s10 = [t5 + 0]
+s11 = s9 < s2
+s1 = s2 < s10
+s6 = s11 * s1
+if0 s6 goto lbl_OutOfBounds_71
 goto lbl_Inbound_72
 lbl_OutOfBounds_71:
 error ("array index out of bounds")
 lbl_Inbound_72:
-t0 = v64
-t1 = j
-s10 = t0 * t1
-t1 = v64
-s10 = s10 + t1
-t0 = v63
-s10 = t0 + s10
-t3 = [s10 + 0]
-s6 = t3
-t1 = aux04
-t4 = s6 < t1
-if0 t4 goto lbl_Else_75
-s11 = 1
-t0 = j
-t2 = t0 - s11
-t1 = t2
-aux06= t1
-t0 = this
-t0 =[t0 + 4]
-v80 = t0
-t0 = 4
-v81 = t0
-s1 = 5
-t0 = v81
-s2 = t0 - s1
-t0 = v80
-s4 = [t0 + 0]
-t1 = aux06
-t5 = s2 < t1
-t0 = aux06
-s5 = t0 < s4
-s3 = t5 * s5
-if0 s3 goto lbl_OutOfBounds_88
+s5 = s7 * s2
+s5 = s5 + s7
+s5 = t5 + s5
+t5 = [s5 + 0]
+s3 = t5
+t5 = s3 < s4
+if0 t5 goto lbl_Else_75
+t5 = 1
+s8 = s2 - t5
+t5 = s8
+s9 = [a2 + 4]
+s10 = 4
+s11 = 5
+s1 = s10 - s11
+s6 = [s9 + 0]
+s7 = s1 < t5
+s5 = t5 < s6
+s4 = s7 * s5
+if0 s4 goto lbl_OutOfBounds_88
 goto lbl_Inbound_89
 lbl_OutOfBounds_88:
 error ("array index out of bounds")
 lbl_Inbound_89:
-t0 = v81
-t1 = aux06
-s7 = t0 * t1
-t1 = v81
-s7 = s7 + t1
-t0 = v80
-s7 = t0 + s7
-s8 = [s7 + 0]
-t1 = s8
-t= t1
-t0 = this
-t0 =[t0 + 4]
-v92 = t0
-t0 = this
-t0 =[t0 + 4]
-v93 = t0
-t0 = 4
-v94 = t0
-s10 = 5
-t0 = v94
-t3 = t0 - s10
-t0 = v93
-s6 = [t0 + 0]
-t1 = j
-s9 = t3 < t1
-t0 = j
-t4 = t0 < s6
-s11 = s9 * t4
-if0 s11 goto lbl_OutOfBounds_101
+s3 = s10 * t5
+s3 = s3 + s10
+s3 = s9 + s3
+s8 = [s3 + 0]
+s11 = s8
+s1 = [a2 + 4]
+s6 = [a2 + 4]
+s7 = 4
+s5 = 5
+s4 = s7 - s5
+s10 = [s6 + 0]
+s9 = s4 < s2
+s3 = s2 < s10
+s8 = s9 * s3
+if0 s8 goto lbl_OutOfBounds_101
 goto lbl_Inbound_102
 lbl_OutOfBounds_101:
 error ("array index out of bounds")
 lbl_Inbound_102:
-t0 = v94
-t1 = j
-t2 = t0 * t1
-t1 = v94
-t2 = t2 + t1
-t0 = v93
-t2 = t0 + t2
-t0 =[t2 + 0]
-v104 = t0
-t0 = 4
-v105 = t0
-s4 = 5
-t0 = v105
-s1 = t0 - s4
-t0 = v92
-t5 = [t0 + 0]
-t1 = aux06
-s2 = s1 < t1
-t0 = aux06
-s5 = t0 < t5
-s3 = s2 * s5
-if0 s3 goto lbl_OutOfBounds_112
+s5 = s7 * s2
+s5 = s5 + s7
+s5 = s6 + s5
+s4 = [s5 + 0]
+s10 = 4
+s9 = 5
+s3 = s10 - s9
+s8 = [s1 + 0]
+s7 = s3 < t5
+s6 = t5 < s8
+s5 = s7 * s6
+if0 s5 goto lbl_OutOfBounds_112
 goto lbl_Inbound_113
 lbl_OutOfBounds_112:
 error ("array index out of bounds")
 lbl_Inbound_113:
-t0 = v105
-t1 = aux06
-s7 = t0 * t1
-t1 = v105
-s7 = s7 + t1
-t0 = v92
-s7 = t0 + s7
-t1 = v104
-[s7 + 0] =t1
-t0 = this
-t0 =[t0 + 4]
-v115 = t0
-t0 = 4
-v116 = t0
-t3 = 5
-t0 = v116
-s8 = t0 - t3
-t0 = v115
-s6 = [t0 + 0]
-t1 = j
-s10 = s8 < t1
-t0 = j
-s9 = t0 < s6
-t4 = s10 * s9
-if0 t4 goto lbl_OutOfBounds_123
+s9 = s10 * t5
+s9 = s9 + s10
+s9 = s1 + s9
+[s9 + 0] =s4
+t5 = [a2 + 4]
+s3 = 4
+s8 = 5
+s7 = s3 - s8
+s6 = [t5 + 0]
+s5 = s7 < s2
+s10 = s2 < s6
+s1 = s5 * s10
+if0 s1 goto lbl_OutOfBounds_123
 goto lbl_Inbound_124
 lbl_OutOfBounds_123:
 error ("array index out of bounds")
 lbl_Inbound_124:
-t0 = v116
-t1 = j
-s11 = t0 * t1
-t1 = v116
-s11 = s11 + t1
-t0 = v115
-s11 = t0 + s11
-t1 = t
-[s11 + 0] =t1
+s4 = s3 * s2
+s4 = s4 + s3
+s4 = t5 + s4
+[s4 + 0] =s11
 goto lbl_IfEnd_76
 lbl_Else_75:
-t2 = 0
-s4 = t2
+t5 = 0
+s9 = t5
 lbl_IfEnd_76:
-s1 = 1
-t0 = j
-t5 = t0 + s1
-t1 = t5
-j= t1
+t5 = 1
+s8 = s2 + t5
+s2 = s8
 goto lbl_While_44
 lbl_WhileExit_45:
-s2 = 1
-t0 = i
-s5 = t0 - s2
-t1 = s5
-i= t1
+t5 = 1
+s7 = t3 - t5
+t3 = s7
 goto lbl_While_40
 lbl_WhileExit_41:
-s3 = 0
-v131 = s3
-s7 = stack_s7
-s11 = stack_s11
-s8 = stack_s8
-s9 = stack_s9
-s10 = stack_s10
-s6 = stack_s6
-s9 = stack_s9
-s6 = stack_s6
-s11 = stack_s11
-s1 = stack_s1
-s2 = stack_s2
-s3 = stack_s3
-s2 = stack_s2
-s4 = stack_s4
-s5 = stack_s5
-s3 = stack_s3
-s5 = stack_s5
-s1 = stack_s1
-s8 = stack_s8
-s7 = stack_s7
-s6 = stack_s6
-s4 = stack_s4
-s11 = stack_s11
-s9 = stack_s9
-s9 = stack_s9
-s10 = stack_s10
-s10 = stack_s10
-s8 = stack_s8
-s6 = stack_s6
-s11 = stack_s11
-s1 = stack_s1
-s2 = stack_s2
-s7 = stack_s7
-s5 = stack_s5
-s3 = stack_s3
-s2 = stack_s2
-s1 = stack_s1
-s2 = stack_s2
-s4 = stack_s4
-s5 = stack_s5
-s3 = stack_s3
-s1 = stack_s1
-s4 = stack_s4
+t5 = 0
+v131 = t5
 s5 = stack_s5
 s4 = stack_s4
 s3 = stack_s3
 s8 = stack_s8
-s10 = stack_s10
+s1 = stack_s1
+s8 = stack_s8
 s7 = stack_s7
-t0 = v131
+s6 = stack_s6
+s6 = stack_s6
+s4 = stack_s4
+s5 = stack_s5
+s5 = stack_s5
+s8 = stack_s8
+s9 = stack_s9
+s7 = stack_s7
+s10 = stack_s10
+s10 = stack_s10
+s9 = stack_s9
+s3 = stack_s3
+s1 = stack_s1
+s11 = stack_s11
+s3 = stack_s3
+s8 = stack_s8
+s7 = stack_s7
+s7 = stack_s7
+s10 = stack_s10
+s8 = stack_s8
+s9 = stack_s9
+s1 = stack_s1
+s11 = stack_s11
+s3 = stack_s3
+s4 = stack_s4
+s9 = stack_s9
+s4 = stack_s4
+s10 = stack_s10
+s1 = stack_s1
+s6 = stack_s6
+s5 = stack_s5
+s5 = stack_s5
+s7 = stack_s7
+s6 = stack_s6
+s8 = stack_s8
+s3 = stack_s3
+s8 = stack_s8
+s1 = stack_s1
+s9 = stack_s9
+s2 = stack_s2
+s6 = stack_s6
+s5 = stack_s5
+s10 = stack_s10
+s9 = stack_s9
+s1 = stack_s1
+s11 = stack_s11
+s7 = stack_s7
+s7 = stack_s7
+s6 = stack_s6
+s4 = stack_s4
+s11 = stack_s11
+s3 = stack_s3
+s5 = stack_s5
+s8 = stack_s8
+s10 = stack_s10
+s9 = stack_s9
+s3 = stack_s3
+s4 = stack_s4
 return v131
 func BBS_Print()
-this = a2
-stack_s8 = s8
-stack_s1 = s1
-stack_s10 = s10
-stack_s6 = s6
-stack_s7 = s7
-stack_s4 = s4
-stack_s5 = s5
-stack_s3 = s3
 stack_s2 = s2
-stack_s9 = s9
+stack_s7 = s7
+stack_s5 = s5
+stack_s6 = s6
+stack_s3 = s3
+stack_s4 = s4
+stack_s1 = s1
 t3 = 0
-t1 = t3
-j= t1
+t4 = t3
 lbl_While_133:
-t0 = this
-t5 = [t0 + 8]
-t0 = j
-t4 = t0 < t5
-if0 t4 goto lbl_WhileExit_134
-t0 = this
-t0 =[t0 + 4]
-v137 = t0
-t0 = 4
-v138 = t0
-t2 = 5
-t0 = v138
-s1 = t0 - t2
-t0 = v137
-s3 = [t0 + 0]
-t1 = j
-s2 = s1 < t1
-t0 = j
-s4 = t0 < s3
-s5 = s2 * s4
-if0 s5 goto lbl_OutOfBounds_145
+t5 = [a2 + 8]
+t3 = t4 < t5
+if0 t3 goto lbl_WhileExit_134
+t5 = [a2 + 4]
+t3 = 4
+s1 = 5
+s2 = t3 - s1
+s3 = [t5 + 0]
+s4 = s2 < t4
+s5 = t4 < s3
+s6 = s4 * s5
+if0 s6 goto lbl_OutOfBounds_145
 goto lbl_Inbound_146
 lbl_OutOfBounds_145:
 error ("array index out of bounds")
 lbl_Inbound_146:
-t0 = v138
-t1 = j
-s6 = t0 * t1
-t1 = v138
-s6 = s6 + t1
-t0 = v137
-s6 = t0 + s6
-s7 = [s6 + 0]
-print (s7)
-s8 = 1
-t0 = j
-s9 = t0 + s8
-t1 = s9
-j= t1
+s7 = t3 * t4
+s7 = s7 + t3
+s7 = t5 + s7
+t3 = [s7 + 0]
+print (t3)
+t5 = 1
+t3 = t4 + t5
+t4 = t3
 goto lbl_While_133
 lbl_WhileExit_134:
-s10 = 0
-v151 = s10
-s8 = stack_s8
-s1 = stack_s1
-s10 = stack_s10
-s6 = stack_s6
-s7 = stack_s7
-s4 = stack_s4
-s5 = stack_s5
-s3 = stack_s3
+t5 = 0
+v151 = t5
 s2 = stack_s2
-s9 = stack_s9
-t0 = v151
+s7 = stack_s7
+s5 = stack_s5
+s6 = stack_s6
+s3 = stack_s3
+s4 = stack_s4
+s1 = stack_s1
 return v151
 func BBS_Init()
-this = a2
-sz = a3
-stack_s8 = s8
-stack_s4 = s4
-stack_s3 = s3
-stack_s5 = s5
-stack_s2 = s2
-stack_s3 = s3
-stack_s2 = s2
-stack_s1 = s1
-stack_s3 = s3
-stack_s4 = s4
-stack_s7 = s7
-stack_s6 = s6
-stack_s2 = s2
-stack_s7 = s7
-stack_s8 = s8
-stack_s11 = s11
-stack_s5 = s5
-stack_s10 = s10
-stack_s9 = s9
-stack_s11 = s11
-stack_s10 = s10
-stack_s9 = s9
-stack_s7 = s7
-stack_s1 = s1
 stack_s8 = s8
 stack_s1 = s1
 stack_s2 = s2
-stack_s5 = s5
-stack_s10 = s10
-stack_s11 = s11
-stack_s10 = s10
-stack_s11 = s11
-stack_s6 = s6
-stack_s8 = s8
 stack_s9 = s9
-stack_s1 = s1
-stack_s4 = s4
+stack_s10 = s10
 stack_s5 = s5
-stack_s7 = s7
+stack_s6 = s6
 stack_s3 = s3
+stack_s4 = s4
+stack_s11 = s11
+stack_s1 = s1
 stack_s2 = s2
+stack_s7 = s7
+stack_s10 = s10
+stack_s2 = s2
+stack_s9 = s9
+stack_s3 = s3
+stack_s10 = s10
+stack_s7 = s7
+stack_s8 = s8
+stack_s7 = s7
+stack_s2 = s2
+stack_s8 = s8
 stack_s6 = s6
+stack_s10 = s10
+stack_s6 = s6
+stack_s7 = s7
+stack_s2 = s2
+stack_s4 = s4
+stack_s1 = s1
+stack_s5 = s5
+stack_s11 = s11
 stack_s4 = s4
 stack_s3 = s3
 stack_s1 = s1
-stack_s5 = s5
-stack_s4 = s4
+stack_s6 = s6
+stack_s7 = s7
+stack_s6 = s6
+stack_s9 = s9
+stack_s11 = s11
+stack_s8 = s8
+stack_s2 = s2
 stack_s9 = s9
 stack_s7 = s7
+stack_s2 = s2
+stack_s5 = s5
+stack_s10 = s10
+stack_s9 = s9
+stack_s4 = s4
 stack_s8 = s8
-stack_s6 = s6
-stack_s6 = s6
+stack_s4 = s4
+stack_s5 = s5
+stack_s1 = s1
+stack_s3 = s3
 stack_s10 = s10
 stack_s11 = s11
+stack_s3 = s3
+stack_s1 = s1
 stack_s9 = s9
-t0 = this
-t1 = sz
-[t0 + 8] =t1
+stack_s11 = s11
+stack_s8 = s8
+stack_s5 = s5
+stack_s6 = s6
+stack_s3 = s3
+stack_s4 = s4
+stack_s11 = s11
+stack_s9 = s9
+stack_s3 = s3
+stack_s4 = s4
+stack_s11 = s11
+stack_s1 = s1
+stack_s2 = s2
+stack_s10 = s10
+stack_s7 = s7
+stack_s5 = s5
+stack_s5 = s5
+stack_s3 = s3
+stack_s8 = s8
+stack_s1 = s1
+stack_s6 = s6
+[a2 + 8] =a3
 t4 = 1
-t3 = 4
-t0 = sz
-t2 = t0 + t4
-t2 = t2 * t3
-t5 = alloc(t2)
-if0 t5 goto lbl_NullPtr_156
+t5 = 4
+s1 = a3 + t4
+s1 = s1 * t5
+t4 = alloc(s1)
+if0 t4 goto lbl_NullPtr_156
 goto lbl_GoodPtr_157
 lbl_NullPtr_156:
 error ("null pointer")
 lbl_GoodPtr_157:
-t1 = sz
-[t5 + 0] =t1
-t0 = this
-[t0 + 4] =t5
-t0 = 0
-v158 = t0
-t0 = this
-t0 =[t0 + 4]
-v159 = t0
-t0 = 20
-v160 = t0
-t0 = 4
-v161 = t0
-s2 = 5
-t0 = v161
-s3 = t0 - s2
-t0 = v159
-s4 = [t0 + 0]
-t1 = v158
-s1 = s3 < t1
-t0 = v158
-s5 = t0 < s4
-s6 = s1 * s5
-if0 s6 goto lbl_OutOfBounds_168
+[t4 + 0] =a3
+[a2 + 4] =t4
+t5 = 0
+t2 = [a2 + 4]
+t4 = 20
+s2 = 4
+s3 = 5
+s4 = s2 - s3
+s5 = [t2 + 0]
+s6 = s4 < t5
+s7 = t5 < s5
+s8 = s6 * s7
+if0 s8 goto lbl_OutOfBounds_168
 goto lbl_Inbound_169
 lbl_OutOfBounds_168:
 error ("array index out of bounds")
 lbl_Inbound_169:
-t0 = v161
-t1 = v158
-s7 = t0 * t1
-t1 = v161
-s7 = s7 + t1
-t0 = v159
-s7 = t0 + s7
-t1 = v160
-[s7 + 0] =t1
-t0 = 1
-v171 = t0
-t0 = this
-t0 =[t0 + 4]
-v172 = t0
-t0 = 7
-v173 = t0
-t0 = 4
-v174 = t0
-s9 = 5
-t0 = v174
-s10 = t0 - s9
-t0 = v172
-s11 = [t0 + 0]
-t1 = v171
-s8 = s10 < t1
-t0 = v171
-t4 = t0 < s11
-t3 = s8 * t4
-if0 t3 goto lbl_OutOfBounds_181
+s9 = s2 * t5
+s9 = s9 + s2
+s9 = t2 + s9
+[s9 + 0] =t4
+t5 = 1
+t2 = [a2 + 4]
+t4 = 7
+s10 = 4
+s11 = 5
+s1 = s10 - s11
+s3 = [t2 + 0]
+s4 = s1 < t5
+s5 = t5 < s3
+s6 = s4 * s5
+if0 s6 goto lbl_OutOfBounds_181
 goto lbl_Inbound_182
 lbl_OutOfBounds_181:
 error ("array index out of bounds")
 lbl_Inbound_182:
-t0 = v174
-t1 = v171
-t2 = t0 * t1
-t1 = v174
-t2 = t2 + t1
-t0 = v172
-t2 = t0 + t2
-t1 = v173
-[t2 + 0] =t1
-t0 = 2
-v184 = t0
-t0 = this
-t0 =[t0 + 4]
-v185 = t0
-t0 = 12
-v186 = t0
-t0 = 4
-v187 = t0
+s7 = s10 * t5
+s7 = s7 + s10
+s7 = t2 + s7
+[s7 + 0] =t4
+t5 = 2
+t2 = [a2 + 4]
+t4 = 12
+s8 = 4
 s2 = 5
-t0 = v187
-s3 = t0 - s2
-t0 = v185
-s4 = [t0 + 0]
-t1 = v184
-t5 = s3 < t1
-t0 = v184
-s1 = t0 < s4
-s5 = t5 * s1
-if0 s5 goto lbl_OutOfBounds_194
+s9 = s8 - s2
+s11 = [t2 + 0]
+s1 = s9 < t5
+s3 = t5 < s11
+s4 = s1 * s3
+if0 s4 goto lbl_OutOfBounds_194
 goto lbl_Inbound_195
 lbl_OutOfBounds_194:
 error ("array index out of bounds")
 lbl_Inbound_195:
-t0 = v187
-t1 = v184
-s6 = t0 * t1
-t1 = v187
-s6 = s6 + t1
-t0 = v185
-s6 = t0 + s6
-t1 = v186
-[s6 + 0] =t1
-t0 = 3
-v197 = t0
-t0 = this
-t0 =[t0 + 4]
-v198 = t0
-t0 = 18
-v199 = t0
-t0 = 4
-v200 = t0
-s9 = 5
-t0 = v200
-s10 = t0 - s9
-t0 = v198
-s11 = [t0 + 0]
-t1 = v197
-s7 = s10 < t1
-t0 = v197
-s8 = t0 < s11
-t4 = s7 * s8
-if0 t4 goto lbl_OutOfBounds_207
+s5 = s8 * t5
+s5 = s5 + s8
+s5 = t2 + s5
+[s5 + 0] =t4
+t5 = 3
+t2 = [a2 + 4]
+t4 = 18
+s6 = 4
+s10 = 5
+s7 = s6 - s10
+s2 = [t2 + 0]
+s9 = s7 < t5
+s11 = t5 < s2
+s1 = s9 * s11
+if0 s1 goto lbl_OutOfBounds_207
 goto lbl_Inbound_208
 lbl_OutOfBounds_207:
 error ("array index out of bounds")
 lbl_Inbound_208:
-t0 = v200
-t1 = v197
-t3 = t0 * t1
-t1 = v200
-t3 = t3 + t1
-t0 = v198
-t3 = t0 + t3
-t1 = v199
-[t3 + 0] =t1
-t0 = 4
-v210 = t0
-t0 = this
-t0 =[t0 + 4]
-v211 = t0
-t0 = 2
-v212 = t0
-t0 = 4
-v213 = t0
-s2 = 5
-t0 = v213
-s3 = t0 - s2
-t0 = v211
-s4 = [t0 + 0]
-t1 = v210
-t2 = s3 < t1
-t0 = v210
-t5 = t0 < s4
-s1 = t2 * t5
-if0 s1 goto lbl_OutOfBounds_220
+s3 = s6 * t5
+s3 = s3 + s6
+s3 = t2 + s3
+[s3 + 0] =t4
+t5 = 4
+t2 = [a2 + 4]
+t4 = 2
+s4 = 4
+s8 = 5
+s5 = s4 - s8
+s10 = [t2 + 0]
+s7 = s5 < t5
+s2 = t5 < s10
+s9 = s7 * s2
+if0 s9 goto lbl_OutOfBounds_220
 goto lbl_Inbound_221
 lbl_OutOfBounds_220:
 error ("array index out of bounds")
 lbl_Inbound_221:
-t0 = v213
-t1 = v210
-s5 = t0 * t1
-t1 = v213
-s5 = s5 + t1
-t0 = v211
-s5 = t0 + s5
-t1 = v212
-[s5 + 0] =t1
-t0 = 5
-v223 = t0
-t0 = this
-t0 =[t0 + 4]
-v224 = t0
-t0 = 11
-v225 = t0
-t0 = 4
-v226 = t0
-s9 = 5
-t0 = v226
-s10 = t0 - s9
-t0 = v224
-s11 = [t0 + 0]
-t1 = v223
-s6 = s10 < t1
-t0 = v223
-s7 = t0 < s11
-s8 = s6 * s7
-if0 s8 goto lbl_OutOfBounds_233
+s11 = s4 * t5
+s11 = s11 + s4
+s11 = t2 + s11
+[s11 + 0] =t4
+t5 = 5
+t2 = [a2 + 4]
+t4 = 11
+s1 = 4
+s6 = 5
+s3 = s1 - s6
+s8 = [t2 + 0]
+s5 = s3 < t5
+s10 = t5 < s8
+s7 = s5 * s10
+if0 s7 goto lbl_OutOfBounds_233
 goto lbl_Inbound_234
 lbl_OutOfBounds_233:
 error ("array index out of bounds")
 lbl_Inbound_234:
-t0 = v226
-t1 = v223
-t4 = t0 * t1
-t1 = v226
-t4 = t4 + t1
-t0 = v224
-t4 = t0 + t4
-t1 = v225
-[t4 + 0] =t1
-t0 = 6
-v236 = t0
-t0 = this
-t0 =[t0 + 4]
-v237 = t0
-t0 = 6
-v238 = t0
-t0 = 4
-v239 = t0
-s2 = 5
-t0 = v239
-s3 = t0 - s2
-t0 = v237
-s4 = [t0 + 0]
-t1 = v236
-t3 = s3 < t1
-t0 = v236
-t2 = t0 < s4
-t5 = t3 * t2
-if0 t5 goto lbl_OutOfBounds_246
+s2 = s1 * t5
+s2 = s2 + s1
+s2 = t2 + s2
+[s2 + 0] =t4
+t5 = 6
+t2 = [a2 + 4]
+t4 = 6
+s9 = 4
+s4 = 5
+s11 = s9 - s4
+s6 = [t2 + 0]
+s3 = s11 < t5
+s8 = t5 < s6
+s5 = s3 * s8
+if0 s5 goto lbl_OutOfBounds_246
 goto lbl_Inbound_247
 lbl_OutOfBounds_246:
 error ("array index out of bounds")
 lbl_Inbound_247:
-t0 = v239
-t1 = v236
-s1 = t0 * t1
-t1 = v239
-s1 = s1 + t1
-t0 = v237
-s1 = t0 + s1
-t1 = v238
-[s1 + 0] =t1
-t0 = 7
-v249 = t0
-t0 = this
-t0 =[t0 + 4]
-v250 = t0
-t0 = 9
-v251 = t0
-t0 = 4
-v252 = t0
-s9 = 5
-t0 = v252
-s10 = t0 - s9
-t0 = v250
-s11 = [t0 + 0]
-t1 = v249
-s5 = s10 < t1
-t0 = v249
-s6 = t0 < s11
-s7 = s5 * s6
-if0 s7 goto lbl_OutOfBounds_259
+s10 = s9 * t5
+s10 = s10 + s9
+s10 = t2 + s10
+[s10 + 0] =t4
+t5 = 7
+t2 = [a2 + 4]
+t4 = 9
+s7 = 4
+s1 = 5
+s2 = s7 - s1
+s4 = [t2 + 0]
+s11 = s2 < t5
+s6 = t5 < s4
+s3 = s11 * s6
+if0 s3 goto lbl_OutOfBounds_259
 goto lbl_Inbound_260
 lbl_OutOfBounds_259:
 error ("array index out of bounds")
 lbl_Inbound_260:
-t0 = v252
-t1 = v249
-s8 = t0 * t1
-t1 = v252
-s8 = s8 + t1
-t0 = v250
-s8 = t0 + s8
-t1 = v251
-[s8 + 0] =t1
-t0 = 8
-v262 = t0
-t0 = this
-t0 =[t0 + 4]
-v263 = t0
-t0 = 19
-v264 = t0
-t0 = 4
-v265 = t0
-s2 = 5
-t0 = v265
-s3 = t0 - s2
-t0 = v263
-s4 = [t0 + 0]
-t1 = v262
-t4 = s3 < t1
-t0 = v262
-t3 = t0 < s4
-t2 = t4 * t3
-if0 t2 goto lbl_OutOfBounds_272
+s8 = s7 * t5
+s8 = s8 + s7
+s8 = t2 + s8
+[s8 + 0] =t4
+t5 = 8
+t2 = [a2 + 4]
+t4 = 19
+s5 = 4
+s9 = 5
+s10 = s5 - s9
+s1 = [t2 + 0]
+s2 = s10 < t5
+s4 = t5 < s1
+s11 = s2 * s4
+if0 s11 goto lbl_OutOfBounds_272
 goto lbl_Inbound_273
 lbl_OutOfBounds_272:
 error ("array index out of bounds")
 lbl_Inbound_273:
-t0 = v265
-t1 = v262
-t5 = t0 * t1
-t1 = v265
-t5 = t5 + t1
-t0 = v263
-t5 = t0 + t5
-t1 = v264
-[t5 + 0] =t1
-t0 = 9
-v275 = t0
-t0 = this
-t0 =[t0 + 4]
-v276 = t0
-t0 = 5
-v277 = t0
-t0 = 4
-v278 = t0
-s9 = 5
-t0 = v278
-s10 = t0 - s9
-t0 = v276
-s11 = [t0 + 0]
-t1 = v275
-s1 = s10 < t1
-t0 = v275
-s5 = t0 < s11
-s6 = s1 * s5
-if0 s6 goto lbl_OutOfBounds_285
+s6 = s5 * t5
+s6 = s6 + s5
+s6 = t2 + s6
+[s6 + 0] =t4
+t5 = 9
+t2 = [a2 + 4]
+t4 = 5
+t3 = 4
+s3 = 5
+s7 = t3 - s3
+s8 = [t2 + 0]
+s9 = s7 < t5
+s10 = t5 < s8
+s1 = s9 * s10
+if0 s1 goto lbl_OutOfBounds_285
 goto lbl_Inbound_286
 lbl_OutOfBounds_285:
 error ("array index out of bounds")
 lbl_Inbound_286:
-t0 = v278
-t1 = v275
-s7 = t0 * t1
-t1 = v278
-s7 = s7 + t1
-t0 = v276
-s7 = t0 + s7
-t1 = v277
-[s7 + 0] =t1
-s8 = 0
-v288 = s8
-s8 = stack_s8
-s4 = stack_s4
-s3 = stack_s3
-s5 = stack_s5
-s2 = stack_s2
-s3 = stack_s3
-s2 = stack_s2
-s1 = stack_s1
-s3 = stack_s3
-s4 = stack_s4
-s7 = stack_s7
-s6 = stack_s6
-s2 = stack_s2
-s7 = stack_s7
-s8 = stack_s8
-s11 = stack_s11
-s5 = stack_s5
-s10 = stack_s10
-s9 = stack_s9
-s11 = stack_s11
-s10 = stack_s10
-s9 = stack_s9
-s7 = stack_s7
-s1 = stack_s1
+s2 = t3 * t5
+s2 = s2 + t3
+s2 = t2 + s2
+[s2 + 0] =t4
+t5 = 0
+v288 = t5
 s8 = stack_s8
 s1 = stack_s1
 s2 = stack_s2
-s5 = stack_s5
-s10 = stack_s10
-s11 = stack_s11
-s10 = stack_s10
-s11 = stack_s11
-s6 = stack_s6
-s8 = stack_s8
 s9 = stack_s9
-s1 = stack_s1
-s4 = stack_s4
+s10 = stack_s10
 s5 = stack_s5
-s7 = stack_s7
+s6 = stack_s6
 s3 = stack_s3
+s4 = stack_s4
+s11 = stack_s11
+s1 = stack_s1
 s2 = stack_s2
+s7 = stack_s7
+s10 = stack_s10
+s2 = stack_s2
+s9 = stack_s9
+s3 = stack_s3
+s10 = stack_s10
+s7 = stack_s7
+s8 = stack_s8
+s7 = stack_s7
+s2 = stack_s2
+s8 = stack_s8
 s6 = stack_s6
+s10 = stack_s10
+s6 = stack_s6
+s7 = stack_s7
+s2 = stack_s2
+s4 = stack_s4
+s1 = stack_s1
+s5 = stack_s5
+s11 = stack_s11
 s4 = stack_s4
 s3 = stack_s3
 s1 = stack_s1
-s5 = stack_s5
-s4 = stack_s4
+s6 = stack_s6
+s7 = stack_s7
+s6 = stack_s6
+s9 = stack_s9
+s11 = stack_s11
+s8 = stack_s8
+s2 = stack_s2
 s9 = stack_s9
 s7 = stack_s7
+s2 = stack_s2
+s5 = stack_s5
+s10 = stack_s10
+s9 = stack_s9
+s4 = stack_s4
 s8 = stack_s8
-s6 = stack_s6
-s6 = stack_s6
+s4 = stack_s4
+s5 = stack_s5
+s1 = stack_s1
+s3 = stack_s3
 s10 = stack_s10
 s11 = stack_s11
+s3 = stack_s3
+s1 = stack_s1
 s9 = stack_s9
-t0 = v288
+s11 = stack_s11
+s8 = stack_s8
+s5 = stack_s5
+s6 = stack_s6
+s3 = stack_s3
+s4 = stack_s4
+s11 = stack_s11
+s9 = stack_s9
+s3 = stack_s3
+s4 = stack_s4
+s11 = stack_s11
+s1 = stack_s1
+s2 = stack_s2
+s10 = stack_s10
+s7 = stack_s7
+s5 = stack_s5
+s5 = stack_s5
+s3 = stack_s3
+s8 = stack_s8
+s1 = stack_s1
+s6 = stack_s6
 return v288

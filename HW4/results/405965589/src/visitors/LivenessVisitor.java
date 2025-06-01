@@ -49,7 +49,7 @@ public class LivenessVisitor implements ArgRetVisitor<Triple, Temp> {
         }
         n.block.accept(this, t);
         LinearScan ls = new LinearScan(intervalMap.get(funcName));
-        ls.LinearScanRegisterAllocation(3);
+        ls.LinearScanRegisterAllocation(15);
         lsMap.put(funcName, ls);
         return null;
     }
